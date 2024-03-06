@@ -11,6 +11,7 @@ module ActiveLook {
         }
 
         var lapNumber as Lang.Number = 0;
+        var intervalNumber as Lang.Number = 0;
 
         var lapStartTotalHeartRate as Lang.Number = 0;
         var lapStartTotalPower as Lang.Number = 0;
@@ -49,6 +50,11 @@ module ActiveLook {
 
         function addLap(activityInfo as Activity.Info) as Void {
             lapNumber += 1;
+            //#!JFS!# calculate the interval number from the laps
+            if($.lapsPerInterval > 1) {
+                intervalNumber = Toybox.Math.floor((lapNumber-1)/$.lapsPerInterval) + 1;
+            }
+
             lapStartTimerTime = hasValue(activityInfo, :timerTime) ? activityInfo.timerTime : 0;
             lapStartElapsedDistance = hasValue(activityInfo, :elapsedDistance) ? activityInfo.elapsedDistance : 0.0;
             lapStartTotalAscent = hasValue(activityInfo, :totalAscent) ? activityInfo.totalAscent : 0;
@@ -68,6 +74,7 @@ module ActiveLook {
 
         function onSessionStart() as Void {
             lapNumber = 0;
+            intervalNumber = 0;
             lapStartTimerTime = 0;
             lapStartElapsedDistance = 0.0;
             lapStartTotalAscent = 0;

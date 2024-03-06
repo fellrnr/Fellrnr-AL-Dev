@@ -1,6 +1,8 @@
 <strings>
-    <string id="AppName">ActiveLook Datafield - Sport Smartglasses</string>
+    <string id="AppName">Fellrnr2 ActiveLook</string>
     <string id="settings_glasses_name">Glasses name</string>
+    <string id="laps_per_interval">The number of laps for each interval</string>
+    <string id="lap_freeze_seconds">How long to freeze the display after the lap button (seconds)</string>
     <string id="settings_screens">Default screens set</string>
     <string id="settings_run">Running screens set (if supported by your device. API level 3.2 or higher)</string>
     <string id="settings_bike">Cycling screens set (if supported by your device. API level 3.2 or higher)</string>

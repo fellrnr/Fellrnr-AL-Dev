@@ -44,6 +44,7 @@ module ActiveLook {
         var __nbStepLength as Lang.Number = 0;
         var __totalStepLength as Lang.Number = 0;
         var averageStepLength as Lang.Float?;
+        var strideLength as Lang.Float?;
 
         var __asSamples as Lang.Array<Lang.Number> = [];
         var averageAscentSpeed as Lang.Float?;
@@ -69,11 +70,14 @@ module ActiveLook {
             __nbStepLength = 0;
             __totalStepLength = 0;
             averageStepLength = null;
+            strideLength = null;
             __asSamples = [];
             averageAscentSpeed = null;
             ActiveLook.Laps.onSessionStart();
         }
 
+        //#!JFS!# Method to get from a symbol to a value, heart of the mapping
+        //look in augmented activity info, activity info, running dynamics, in that order
         function get(sym as Lang.Symbol) as Lang.Number or Lang.Float or Lang.Boolean or Null {
             if (AugmentedActivityInfo has sym) {
                 return AugmentedActivityInfo[sym];
@@ -205,6 +209,15 @@ module ActiveLook {
             } else if (tmpValid == 1) {
                 averageAscentSpeed = __asSamples[0].toFloat();
             }
+
+
+            //#!JFS!# calculate stride length
+            if(info.currentCadence == null || info.currentCadence  == 0 || info.currentSpeed == null || info.currentSpeed == 0) {
+                strideLength = null;
+            } else {
+                strideLength = (info.currentSpeed * 60) / info.currentCadence * 1000; //this DF code expects it in mm
+            }
+            
         }
 
     }
@@ -229,6 +242,8 @@ module ActiveLook {
             [        :chrono,  :elapsedDistance,     :currentPace,      :totalAscent, :altitude ],
         ];
 
+        //The numbers used in the page layouts are offsets to these fields
+        //https://help.activelook.net/en/articles/7185487-garmin-data-fields-for-use-with-activelook
         const LAYOUTS as Lang.Array<Lang.Symbol> = [
             :chrono,           :elapsedDistance,   :distanceToDestination,
             :currentHeartRate, :maxHeartRate,      :averageHeartRate,
@@ -248,6 +263,7 @@ module ActiveLook {
             :lapTotalAscent, :lapTotalDescent, :lapAverageAscentSpeed,
             :lapCalories,
             :lapAverageGroundContactTime, :lapAverageVerticalOscillation, :lapAverageStepLength,
+            :strideLength, //#!JFS!# Add stride length, number 47
         ];
 
         //ToDo : A modifier avec les bonnes positions
@@ -261,6 +277,10 @@ module ActiveLook {
             [ 0x00019D9D, 0x00011E9D, 0x00019D5F, 0x00011E5F, 0x00019A22, 0x00011E22 ],
         ];
 
+        //#!JFS!# Mapping the text page display like "(0,1,2,3),(34,35,9)(0)" to pages
+        //pages is an array of PageSpec
+        //PageSpec is Lang.Array<Lang.Symbol>
+        //So return an array of array of symbols
         function strToPages(spec as Lang.String?, onError as Lang.String?) as Lang.Array<PageSpec> {
             if (spec == null) { spec = ""; }
             var pages = [] as Lang.Array<PageSpec>;
@@ -445,6 +465,9 @@ module ActiveLook {
          * ---------------------------------|------------------------|-----------|--------|---------|------------------------------------------
          *  Lap Average Vertical Oscillation | :lapAverageVerticalOscillation | mm |  cm  |   in    | a += "%0.2X%0.2X%0.2X%0.2X\n" % (200, 201, 202, 202)
          *  Lap Average Step Length         | :lapAverageStepLength  |      mm   |   m    |   ft    | a += "%0.2X%0.2X%0.2X%0.2X\n" % (194, 195, 196, 196)
+        //#!JFS!# Add stride length to comment 
+         * ---------------------------------|------------------------|-----------|--------|---------|------------------------------------------
+         *  Stride Length (calculated)      | :strideLength          |      mm   |   m    |   ft    | a += "%0.2X%0.2X%0.2X%0.2X\n" % (194, 195, 196, 196)
          */
         const IDS_CONVERT as Lang.Dictionary<Lang.Symbol, { :id as Lang.Number, :statuteSwitch as Lang.Symbol, :toMetric as Lang.Float?, :toStatute as Lang.Float? }> = {
             :elapsedDistance       => { :id => 0x0C232E2E, :statuteSwitch => :distanceUnits,  :toMetric => 0.001,  :toStatute => 0.000621371 },
@@ -471,6 +494,7 @@ module ActiveLook {
             :lapAverageAscentSpeed => { :id => 0x14283B3B, :statuteSwitch => :paceUnits,      :toMetric => 3600.0, :toStatute => 11811.024   },
             :lapAverageVerticalOscillation => { :id => 0xC8C9CACA, :statuteSwitch => :heightUnits, :toMetric => 0.1,   :toStatute => 0.0393701  },
             :lapAverageStepLength          => { :id => 0xC2C3C4C4, :statuteSwitch => :heightUnits, :toMetric => 0.001, :toStatute => 0.00328084 },
+            :strideLength                 => { :id => 0xC2C3C4C4, :statuteSwitch => :heightUnits, :toMetric => 0.001, :toStatute => 0.00328084 }, //#!JFS!# hopefully the id will be okay. 
         };
 
         const CUSTOM_TO_STR as Lang.Dictionary<Lang.Symbol, {
@@ -502,15 +526,15 @@ module ActiveLook {
             return Lang.format("$1$:$2$", [ value[1].format("%02d"), value[2].format("%02d") ]);
         }
 		function currentPaceFullFormat(value as Lang.Number or Lang.Float or Null) as Lang.String {
-            if (value != null) {
-	            value = round5(Math.round(value).toLong());
-            }
+            // if (value != null) {
+	        //     value = round5(Math.round(value).toLong());
+            // }
             return paceFullFormat(value);
         }
 		function currentPaceHalfFormat(value as Lang.Number or Lang.Float or Null) as Lang.String {
-            if (value != null) {
-	            value = round5(Math.round(value).toLong());
-            }
+            // if (value != null) {
+	        //     value = round5(Math.round(value).toLong());
+            // }
             return paceHalfFormat(value);
         }
 

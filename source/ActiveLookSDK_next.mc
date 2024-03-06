@@ -96,6 +96,8 @@ module ActiveLookSDK {
     var battery = null; var batteryError = null;
     var rawcmd = null;  var rawcmdError = null;
     var ble = null;     var listener = null;
+    var lapMessageError = "1st";
+    var forceTimeLapRefresh = true;
 
     var _cbCharacteristicWrite   = null;
 
@@ -139,7 +141,7 @@ module ActiveLookSDK {
         function disconnect() {
             _log("disconnect", []);
             if (isReady()) {
-                self.clearScreen();
+                self.clearScreen(true); //#!JFS!# default to refreshing the top line
             }
             isReconnecting = false;
             tearDownDevice();
@@ -149,12 +151,13 @@ module ActiveLookSDK {
             _log("resyncGlasses", []);
             if (rawcmdError != null)  { self.sendRawCmd([]b); }
             if (clearError == true) {
-                self.clearScreen();
+                self.clearScreen(true); //#!JFS!# default to refreshing the top line
             }
             if (clearError != true) {
                 if (batteryError != null) { self.setBattery(batteryError); }
+                if (lapMessageError != null) { self.setLap(lapMessageError); }
                 for (var i = 0; i < buffers.size(); i ++) {
-                    var pos = (i + rotate) % buffers.size();
+                    //var pos = (i + rotate) % buffers.size();
                     if (buffers[i] != null) {
                         self.__updateLayoutValueBuffer(i);
                     }
@@ -229,21 +232,96 @@ module ActiveLookSDK {
         //////////////
         function setBattery(arg) {
             batteryError = null;
+            System.println("in setBattery " + arg);
             if (arg != battery) {
                 try {
                     var data = [0x07]b;
                     data.addAll(self.stringToPadByteArray(arg.toString(), 3, true));
-                    System.println(Lang.format("setBattery $1$", [data]));
+                    //System.println(Lang.format("setBattery $1$", [data]));
+                    System.println("setBattery " + data);
                     ble.getBleCharacteristicActiveLookRx()
                         .requestWrite(self.commandBuffer(0x62, data), {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
                     battery = arg;
                 } catch (e) {
+                    System.println("setBattery error " + e.getErrorMessage());
                     batteryError = arg;
                     onBleError(e);
                 }
             }
         }
 
+
+
+        //#!JFS!# setLap method
+        function setLap(msg) {
+            lapMessageError = null;
+            //forceTimeLapRefresh = true; //hack - always update lap
+            //if (msg != lapMessageCache || forceTimeLapRefresh) {
+            if (forceTimeLapRefresh) { //don't update as soon as the lap changes, but wait for the screen to clear after the pause for the lap message
+                try {
+                    System.println("setLap " + msg);
+                    var value = msg;
+                    var data = [0x0A]b;
+                    data.addAll(self.stringToPadByteArray(value, null, null));
+                    ble.getBleCharacteristicActiveLookRx()
+                        .requestWrite(self.commandBuffer(0x62, data), {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
+                    forceTimeLapRefresh = false;
+                    System.println("setLap success " + msg);
+                } catch (e) {
+                    forceTimeLapRefresh = true;
+                    lapMessageError = msg;
+                    System.println("setLap Error " + e.getErrorMessage());
+                    onBleError(e);
+                }
+            } else {
+                System.println("setLap, no change");
+            }
+        }
+
+
+        function setTime(hour, minute) {
+            if (time != minute || forceTimeLapRefresh) {
+                try {
+                    time = minute;
+                    var value = hour.format("%02d") + ":" + minute.format("%02d");
+                    var data = [0x0A]b;
+                    data.addAll(self.stringToPadByteArray(value, null, null));
+                    System.println("setTime " + data);
+                    ble.getBleCharacteristicActiveLookRx()
+                        .requestWrite(self.commandBuffer(0x62, data), {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
+                    forceTimeLapRefresh = false;
+                } catch (e) {
+                    System.println("setTime Error " + e.getErrorMessage());
+                    time = null;
+                    onBleError(e);
+                }
+            } else {
+                System.println("setTime, no change"); //#!JFS!#
+            }
+        }
+
+        function clearScreen(refresh) {
+            clearError = null;
+            try {
+                //log(Lang.format("clearScreen $1$", [1]));
+                self.sendRawCmd(self.commandBuffer(0x01, []b));
+                // ble.getBleCharacteristicActiveLookRx()
+                //     .requestWrite([0xFF, 0x01, 0x00, 0x05, 0xAA]b, {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
+                if(refresh) {
+                    time = null;
+                    forceTimeLapRefresh = true; //#!JFS!#
+                    if (batteryError == null) {
+                        batteryError = battery;
+                    }
+                    battery = null;
+                }
+                self.resetLayouts([]);
+                self.resyncGlasses(); 
+            } catch (e) {
+                clearError = true;
+                onBleError(e);
+            }
+        }
         function cfgRead() {
             try {
                 var data = [0x41, 0x4C, 0x6F, 0x6F, 0x4B]b; // ALooK
@@ -252,43 +330,6 @@ module ActiveLookSDK {
             } catch (e) {
                 isReadingCfgVersion = false;
                 cfgVersion = null;
-                onBleError(e);
-            }
-        }
-
-        function setTime(hour, minute) {
-            if (time != minute) {
-                try {
-                    time = minute;
-                    var value = hour.format("%02d") + ":" + minute.format("%02d");
-                    var data = [0x0A]b;
-                    data.addAll(self.stringToPadByteArray(value, null, null));
-                    System.println(Lang.format("setTime $1$", [data]));
-                    ble.getBleCharacteristicActiveLookRx()
-                        .requestWrite(self.commandBuffer(0x62, data), {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
-                } catch (e) {
-                    time = null;
-                    onBleError(e);
-                }
-            }
-        }
-
-        function clearScreen() {
-            clearError = null;
-            try {
-                System.println(Lang.format("clearScreen $1$", [1]));
-                self.sendRawCmd(self.commandBuffer(0x01, []b));
-                // ble.getBleCharacteristicActiveLookRx()
-                //     .requestWrite([0xFF, 0x01, 0x00, 0x05, 0xAA]b, {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
-                time = null;
-                if (batteryError == null) {
-                    batteryError = battery;
-                }
-                battery = null;
-                self.resetLayouts([]);
-                self.resyncGlasses();
-            } catch (e) {
-                clearError = true;
                 onBleError(e);
             }
         }
@@ -376,7 +417,7 @@ module ActiveLookSDK {
             var data = buffers[pos];
             buffers[pos] = null;
             try {
-                System.println(Lang.format("__updateLayoutValueBuffer $1$", [data]));
+                // System.println(Lang.format("__updateLayoutValueBuffer $1$", [data])); //#!JFS!# there's only 5Kb of text in .LOG and .BAK
                 ble.getBleCharacteristicActiveLookRx()
                     .requestWrite(self.commandBuffer(layoutCmdId, data), {:writeType => BluetoothLowEnergy.WRITE_TYPE_DEFAULT});
                 rotate = (rotate + 1) % buffers.size();
@@ -496,7 +537,8 @@ module ActiveLookSDK {
 
         function tearDownDevice() as Void {
             _log("tearDownDevice", [ActiveLookSDK.device]);
-            time = null;    var clearError = null;
+            time = null;    //var clearError = null;
+            lapMessage = null;
             rawcmd = null;  rawcmdError = null;
             var newBuffers = [];
             var newValues = [];
