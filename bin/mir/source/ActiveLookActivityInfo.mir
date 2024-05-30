@@ -2683,69 +2683,23 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Active
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookActivityInfo.mc"; @line = 528; ]
         function currentPaceFullFormat(value as Lang.Number or Lang.Float or Null) as Lang.String {
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_528_92_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookActivityInfo.mc" 529 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_529_12_if_stmt:
-            %tmp.2 = lgetv %value;
-            %tmp.3 = null;
-            %tmp.4 = ne %tmp.2 %tmp.3;
-            bf %tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_529_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_529_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_529_31_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookActivityInfo.mc" 530 13 ]
-            %tmp.5 = self;
-            %tmp.6 = getv function %tmp.5 :round5;
-            %tmp.7 = getm $.Toybox.Math;
-            %tmp.8 = getv function %tmp.7 :round;
-            %tmp.10 = lgetv %value;
-            %tmp.11 = as %tmp.10 { (!Null) };
-            %tmp.12 = invoke %tmp.7 %tmp.8(%tmp.11);
-            %tmp.13 = getv function %tmp.12 :toLong;
-            %tmp.14 = invoke %tmp.12 %tmp.13();
-            %tmp.15 = invoke %tmp.5 %tmp.6(%tmp.14);
-            lputv %value %tmp.15;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_529_31_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_529_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_529_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookActivityInfo.mc" 532 12 ]
-            %tmp.16 = self;
-            %tmp.17 = getv function %tmp.16 :paceFullFormat;
-            %tmp.19 = lgetv %value;
-            %tmp.20 = invoke %tmp.16 %tmp.17(%tmp.19);
-            ret %tmp.20;
+            %tmp.1 = self;
+            %tmp.2 = getv function %tmp.1 :paceFullFormat;
+            %tmp.4 = lgetv %value;
+            %tmp.5 = invoke %tmp.1 %tmp.2(%tmp.4);
+            ret %tmp.5;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_528_92_stop:
         }
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookActivityInfo.mc"; @line = 534; ]
         function currentPaceHalfFormat(value as Lang.Number or Lang.Float or Null) as Lang.String {
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_534_92_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookActivityInfo.mc" 535 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_535_12_if_stmt:
-            %tmp.2 = lgetv %value;
-            %tmp.3 = null;
-            %tmp.4 = ne %tmp.2 %tmp.3;
-            bf %tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_535_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_535_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_535_31_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookActivityInfo.mc" 536 13 ]
-            %tmp.5 = self;
-            %tmp.6 = getv function %tmp.5 :round5;
-            %tmp.7 = getm $.Toybox.Math;
-            %tmp.8 = getv function %tmp.7 :round;
-            %tmp.10 = lgetv %value;
-            %tmp.11 = as %tmp.10 { (!Null) };
-            %tmp.12 = invoke %tmp.7 %tmp.8(%tmp.11);
-            %tmp.13 = getv function %tmp.12 :toLong;
-            %tmp.14 = invoke %tmp.12 %tmp.13();
-            %tmp.15 = invoke %tmp.5 %tmp.6(%tmp.14);
-            lputv %value %tmp.15;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_535_31_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_535_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_535_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookActivityInfo.mc" 538 12 ]
-            %tmp.16 = self;
-            %tmp.17 = getv function %tmp.16 :paceHalfFormat;
-            %tmp.19 = lgetv %value;
-            %tmp.20 = invoke %tmp.16 %tmp.17(%tmp.19);
-            ret %tmp.20;
+            %tmp.1 = self;
+            %tmp.2 = getv function %tmp.1 :paceHalfFormat;
+            %tmp.4 = lgetv %value;
+            %tmp.5 = invoke %tmp.1 %tmp.2(%tmp.4);
+            ret %tmp.5;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookActivityInfo_mc_534_92_stop:
         }
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookActivityInfo.mc"; @line = 541; ]

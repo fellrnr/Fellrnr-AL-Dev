@@ -412,12 +412,18 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
                 data.addAll($.sdk.numberToFixedSizeByteArray(250, 2));
                 data.addAll($.sdk.numberToFixedSizeByteArray(170, 2));
                 data.addAll([4, 3, 15]b);
-                if($.lapsPerInterval > 1) {
+
+                ////#!JFS!# Get workout data if it's there
+                var workoutMsg = getWorkoutDetails();
+
+                if(workoutMsg != "") {
+                    $.lapMessage = workoutMsg;
+                } else if($.lapsPerInterval > 1) {
                     var intNo = ActiveLook.Laps.intervalNumber % 100;
                     if(ActiveLook.Laps.lapNumber % $.lapsPerInterval == 0) { //note, modulo the lap number not the interval number! 
-                        $.lapMessage = "Rec" + intNo.format("%02d");
+                        $.lapMessage = "R" + intNo.format("%02d") + workoutMsg;
                     } else {
-                        $.lapMessage = "Int" + intNo.format("%02d");
+                        $.lapMessage = "I" + intNo.format("%02d") + workoutMsg;
                     }
                 } else {
                     $.lapMessage = Toybox.Lang.format("Lap $1$", [ActiveLook.Laps.lapNumber % 100]);
@@ -431,6 +437,91 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
         }
         log("onTimerLap {exit} ", [self.__heart_count]);
     }
+
+    function getWorkoutDetails() {
+        var workoutMsg = "";
+        if (Activity has :getCurrentWorkoutStep) {
+            var workoutStepInfo = Activity.getCurrentWorkoutStep();
+            if (workoutStepInfo != null) {
+                if (workoutStepInfo has :step && workoutStepInfo.step != null) {
+                    if (workoutStepInfo.step instanceof Activity.WorkoutStep) {
+                        //workoutMsg += "S";
+                        workoutMsg += getWorkoutStepDetails(workoutStepInfo, workoutStepInfo.step);
+                    }
+                    else if (workoutStepInfo.step instanceof Activity.WorkoutIntervalStep) {
+
+                        if($.workoutIntervalIsActive) {
+                            workoutMsg += "A";
+                            if (workoutStepInfo.step has :activeStep && workoutStepInfo.step.activeStep != null) {
+                                workoutMsg += getWorkoutStepDetails(workoutStepInfo, workoutStepInfo.step.activeStep);
+                            }
+                            $.workoutIntervalIsActive = false;
+                        } else {
+                            workoutMsg += "R";
+                            if (workoutStepInfo.step has :restStep && workoutStepInfo.step.restStep != null) {
+                                workoutMsg += getWorkoutStepDetails(workoutStepInfo, workoutStepInfo.step.restStep);
+                            }
+                            $.workoutIntervalIsActive = true;
+                        }
+
+                    }
+                }
+            }
+        }
+        return workoutMsg;
+
+    }
+
+    function getWorkoutStepDetails(workoutStepInfo, workoutStep) {
+        var workoutMsg = "";
+        var intensityType = "";
+
+        if (workoutStepInfo has :intensity && workoutStepInfo.intensity != null) {
+            if(workoutStepInfo.intensity == Activity.WORKOUT_INTENSITY_ACTIVE) {
+                $.workoutCounter++;
+                intensityType = "a";
+            } else if(workoutStepInfo.intensity == Activity.WORKOUT_INTENSITY_REST) {
+                intensityType = "b";
+            } else if(workoutStepInfo.intensity == Activity.WORKOUT_INTENSITY_WARMUP) {
+                intensityType = "wu";
+            } else if(workoutStepInfo.intensity == Activity.WORKOUT_INTENSITY_COOLDOWN) {
+                intensityType = "cd";
+            } else if(workoutStepInfo.intensity == Activity.WORKOUT_INTENSITY_RECOVERY) {
+                intensityType = "r";
+            } else if(workoutStepInfo.intensity == Activity.WORKOUT_INTENSITY_INTERVAL) {
+                $.workoutCounter++;
+                intensityType = "i";
+            } else {
+                intensityType = "?";
+            } 
+        } else {
+            intensityType = "!";
+        } 
+
+        workoutMsg += $.workoutCounter.format("%02d") + intensityType;
+
+        if (workoutStep has :durationValue && workoutStep.durationValue != null && workoutStep.durationValue != 0) {
+            workoutMsg += workoutStep.durationValue.format("%d");
+        } else {
+            workoutMsg += ":";
+        }
+
+        if (workoutStep has :durationType && workoutStep.durationType != null) {
+            if(workoutStep.durationType == Activity.WORKOUT_STEP_DURATION_DISTANCE) {
+                workoutMsg += "m";
+            } else if(workoutStep.durationType == Activity.WORKOUT_STEP_DURATION_TIME) {
+                workoutMsg += "s";
+            } else if(workoutStep.durationType == Activity.WORKOUT_STEP_DURATION_OPEN) {
+                workoutMsg += "p";
+            } else {
+                workoutMsg += workoutStep.durationType;
+            }
+        }
+
+        return workoutMsg;
+    }
+
+
     function onNextMultisportLeg() as Void {
         self.onTimerLap();
     }
@@ -519,6 +610,8 @@ var lapsPerInterval as Toybox.Lang.Number = 0; //#!JFS!#
 var lapFreezeSeconds as Toybox.Lang.Number = 10; //#!JFS!#
 var replaceTimeWithLap = true; //#!JFS!# (make this configurable if it works)
 var lapMessage = "WU 0";
+var workoutIntervalIsActive = true;
+var workoutCounter = 0;
 
 //! Reset global variables.
 //! They represent the actual state of the DataField.
