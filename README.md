@@ -27,8 +27,8 @@ If you have a structured workout, that information is used on the lap messages. 
 - Duration is the duration value
 - Type is m=meters, s=seconds, p=lap press (there are lots of other codes I've not mapped.)
 
-#Other fields
+# Other fields
 I added stride length based on pace and cadence to the available fields. 
 
-#Freeze time
+# Freeze time
 The time the screen is frozen after a lap button press is now configurable (it was too long for very short intervals.)
