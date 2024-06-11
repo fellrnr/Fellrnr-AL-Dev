@@ -314,19 +314,19 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
         if (ActiveLookSDK.isReady()) {
 //            log("compute::updateFields  ", [self.__heart_count]);//#!JFS!#
             $.updateFields();
-            if ($.tempo_off < 0 && $.tempo_pause <= 0 && $.tempo_congrats < 0 && $.tempo_lap_freeze < 0) { //#!JFS!# don't refresh lap/tim/battery when screen is paused
+            //if ($.tempo_off < 0 && $.tempo_pause <= 0 && $.tempo_congrats < 0 && $.tempo_lap_freeze < 0) { //#!JFS!# don't refresh lap/tim/battery when screen is paused
                 if($.replaceTimeWithLap) {
                     log("compute-{lap} ", [self.__heart_count]);
                     $.sdk.setLap($.lapMessage);
                 } else {
                     log("compute-{time}  ", [self.__heart_count]);
                     $.sdk.setTime(hour, ct.min);
+                    $.sdk.setBattery($.battery);
                 }
-                $.sdk.setBattery($.battery);
                 $.sdk.resyncGlasses(); 
-            } else {
-                log("compute-{pause}  ", [self.__heart_count]);
-            }
+            //} else {
+            //    log("compute-{pause}  ", [self.__heart_count]);
+            //}
         }
         return null;
     }
@@ -409,21 +409,30 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
         if ($.tempo_off == -1) {
             if (ActiveLookSDK.isReady()) {
                 var data = []b;
-                data.addAll($.sdk.numberToFixedSizeByteArray(250, 2));
-                data.addAll($.sdk.numberToFixedSizeByteArray(170, 2));
-                data.addAll([4, 3, 15]b);
+                //data for 0x37 command, display text
+                //data.addAll($.sdk.numberToFixedSizeByteArray(250, 2)); //x 
+                //data.addAll($.sdk.numberToFixedSizeByteArray(170, 2)); //y
+                //data.addAll([4, 3, 15]b); //rotation (4=norma), font size, color?
+                //font 1=24px, 2=38, 3=64, 4=75, 5=82
+                //screen size is 304; 256
+
+                //smaller font for more data
+                data.addAll($.sdk.numberToFixedSizeByteArray(280, 2)); //x 
+                data.addAll($.sdk.numberToFixedSizeByteArray(170, 2)); //y
+                data.addAll([4, 2, 15]b); //rotation (4=norma), font size, color?
+
 
                 ////#!JFS!# Get workout data if it's there
                 var workoutMsg = getWorkoutDetails();
 
-                if(workoutMsg != "") {
+                if(workoutMsg != null) {
                     $.lapMessage = workoutMsg;
                 } else if($.lapsPerInterval > 1) {
                     var intNo = ActiveLook.Laps.intervalNumber % 100;
                     if(ActiveLook.Laps.lapNumber % $.lapsPerInterval == 0) { //note, modulo the lap number not the interval number! 
-                        $.lapMessage = "R" + intNo.format("%02d") + workoutMsg;
+                        $.lapMessage = "R" + intNo.format("%02d");
                     } else {
-                        $.lapMessage = "I" + intNo.format("%02d") + workoutMsg;
+                        $.lapMessage = "I" + intNo.format("%02d");
                     }
                 } else {
                     $.lapMessage = Toybox.Lang.format("Lap $1$", [ActiveLook.Laps.lapNumber % 100]);
@@ -439,25 +448,25 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
     }
 
     function getWorkoutDetails() {
-        var workoutMsg = "";
+        var workoutMsg = null;
         if (Activity has :getCurrentWorkoutStep) {
             var workoutStepInfo = Activity.getCurrentWorkoutStep();
             if (workoutStepInfo != null) {
                 if (workoutStepInfo has :step && workoutStepInfo.step != null) {
                     if (workoutStepInfo.step instanceof Activity.WorkoutStep) {
                         //workoutMsg += "S";
-                        workoutMsg += getWorkoutStepDetails(workoutStepInfo, workoutStepInfo.step);
+                        workoutMsg = getWorkoutStepDetails(workoutStepInfo, workoutStepInfo.step);
                     }
-                    else if (workoutStepInfo.step instanceof Activity.WorkoutIntervalStep) {
+                    else if (workoutStepInfo.step instanceof Activity.WorkoutIntervalStep) { //we never go down this path, so consider removing to save space
 
                         if($.workoutIntervalIsActive) {
-                            workoutMsg += "A";
+                            workoutMsg = "A";
                             if (workoutStepInfo.step has :activeStep && workoutStepInfo.step.activeStep != null) {
                                 workoutMsg += getWorkoutStepDetails(workoutStepInfo, workoutStepInfo.step.activeStep);
                             }
                             $.workoutIntervalIsActive = false;
                         } else {
-                            workoutMsg += "R";
+                            workoutMsg = "R";
                             if (workoutStepInfo.step has :restStep && workoutStepInfo.step.restStep != null) {
                                 workoutMsg += getWorkoutStepDetails(workoutStepInfo, workoutStepInfo.step.restStep);
                             }
@@ -479,18 +488,18 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
         if (workoutStepInfo has :intensity && workoutStepInfo.intensity != null) {
             if(workoutStepInfo.intensity == Activity.WORKOUT_INTENSITY_ACTIVE) {
                 $.workoutCounter++;
-                intensityType = "a";
+                intensityType = "go";
             } else if(workoutStepInfo.intensity == Activity.WORKOUT_INTENSITY_REST) {
-                intensityType = "b";
+                intensityType = "rest";
             } else if(workoutStepInfo.intensity == Activity.WORKOUT_INTENSITY_WARMUP) {
                 intensityType = "wu";
             } else if(workoutStepInfo.intensity == Activity.WORKOUT_INTENSITY_COOLDOWN) {
                 intensityType = "cd";
             } else if(workoutStepInfo.intensity == Activity.WORKOUT_INTENSITY_RECOVERY) {
-                intensityType = "r";
+                intensityType = "rec";
             } else if(workoutStepInfo.intensity == Activity.WORKOUT_INTENSITY_INTERVAL) {
                 $.workoutCounter++;
-                intensityType = "i";
+                intensityType = "int";
             } else {
                 intensityType = "?";
             } 
@@ -516,6 +525,10 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
             } else {
                 workoutMsg += workoutStep.durationType;
             }
+        }
+
+        if (workoutStepInfo has :notes && workoutStepInfo.notes != null) {
+            workoutMsg += ":" + workoutStepInfo.notes.substring(null, 20);
         }
 
         return workoutMsg;
@@ -638,6 +651,8 @@ function resetGlobalsNext() as Void {
     var __lap_freeze_seconds = Toybox.Application.Properties.getValue("lap_freeze_seconds") as Toybox.Lang.Number or Null;
     if (__lap_freeze_seconds == null) { __lap_freeze_seconds = 10; }
     $.lapFreezeSeconds = __lap_freeze_seconds;
+
+    lapMessage = "WU 0";
 }
 
 //! Global ScanRescult handler.

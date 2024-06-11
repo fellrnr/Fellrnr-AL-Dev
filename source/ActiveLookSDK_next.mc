@@ -96,7 +96,7 @@ module ActiveLookSDK {
     var battery = null; var batteryError = null;
     var rawcmd = null;  var rawcmdError = null;
     var ble = null;     var listener = null;
-    var lapMessageError = "1st";
+    var lapMessageError = "Start";
     var forceTimeLapRefresh = true;
 
     var _cbCharacteristicWrite   = null;
@@ -154,7 +154,7 @@ module ActiveLookSDK {
                 self.clearScreen(true); //#!JFS!# default to refreshing the top line
             }
             if (clearError != true) {
-                if (batteryError != null) { self.setBattery(batteryError); }
+                if (batteryError != null && !replaceTimeWithLap) { self.setBattery(batteryError); }
                 if (lapMessageError != null) { self.setLap(lapMessageError); }
                 for (var i = 0; i < buffers.size(); i ++) {
                     //var pos = (i + rotate) % buffers.size();
@@ -259,13 +259,33 @@ module ActiveLookSDK {
             //if (msg != lapMessageCache || forceTimeLapRefresh) {
             if (forceTimeLapRefresh) { //don't update as soon as the lap changes, but wait for the screen to clear after the pause for the lap message
                 try {
+                    /*
+                    //command 0x62 is layoutDisplay, with 0x0A as the layout id
+                    //0x0A is "time", 
+                    //https://github.com/ActiveLook/Activelook-Visual-Assets
+                    //https://github.com/ActiveLook/Activelook-API-Documentation/blob/main/ActiveLook_API.md 
                     System.println("setLap " + msg);
                     var value = msg;
                     var data = [0x0A]b;
                     data.addAll(self.stringToPadByteArray(value, null, null));
                     ble.getBleCharacteristicActiveLookRx()
                         .requestWrite(self.commandBuffer(0x62, data), {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
-                    forceTimeLapRefresh = false;
+                        */
+
+                    var data = []b;
+                    //font 1=24px, 2=38, 3=64, 4=75, 5=82
+                    //screen size is 304; 256
+
+                    //Override time and battery area
+                    data.addAll($.sdk.numberToFixedSizeByteArray(290, 2)); //x 
+                    data.addAll($.sdk.numberToFixedSizeByteArray(230, 2)); //y (210 too low, overwrites fields, 256 less font 1 is 24 px, so set to 230? )
+                    data.addAll([4, 1, 15]b); //rotation (4=norma), font size, color?
+                    data.addAll($.sdk.stringToPadByteArray(msg, null, null));
+                    var fullBuffer = $.sdk.commandBuffer(0x37, data); // Text lap number
+                    $.sdk.sendRawCmd(fullBuffer);
+
+                    //trying to do the refresh every time
+                    //forceTimeLapRefresh = false;
                     System.println("setLap success " + msg);
                 } catch (e) {
                     forceTimeLapRefresh = true;

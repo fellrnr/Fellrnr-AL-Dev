@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">Fellrnr2 ActiveLook</string>
+    <string id="AppName">Fellrnr ActiveLook</string>
     <string id="settings_glasses_name">Glasses name</string>
     <string id="laps_per_interval">The number of laps for each interval</string>
     <string id="lap_freeze_seconds">How long to freeze the display after the lap button (seconds)</string>

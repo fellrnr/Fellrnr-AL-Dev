@@ -16,15 +16,15 @@ module ActiveLook {
         }
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc"; @line = 9; ]
         function hasValue(object as Lang.Object, symbol as Lang.Symbol) as Lang.Boolean {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_9_88_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_9_88_11_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 10 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_19_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_19_10_58_begin:
             %tmp.2 = lgetv %object;
             %tmp.4 = lgetv %symbol;
             %tmp.5 = canhazplz %tmp.2 %tmp.4;
             %tmp.6 = dup %tmp.5;
-            bf %tmp.6 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_40_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_40_true:
+            bf %tmp.6 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_40_10_58_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_40_10_58_true:
             %tmp.8 = lgetv %object;
             %tmp.10 = lgetv %symbol;
             %tmp.11 = agetv %tmp.8 %tmp.10;
@@ -32,10 +32,10 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_m
             %tmp.13 = ne %tmp.11 %tmp.12;
             %tmp.14 = and %tmp.5 %tmp.13;
             push %tmp.14;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_40_end:
-            %tmp.15 = phi [%tmp.6 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_19_begin] [%tmp.14 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_40_true] [%tmp.15 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_40_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_40_10_58_end:
+            %tmp.15 = phi [%tmp.6 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_19_10_58_begin] [%tmp.14 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_40_10_58_true] [%tmp.15 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_10_40_10_58_end];
             ret %tmp.15;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_9_88_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_9_88_11_8_stop:
         }
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc"; @line = 13; @position = 12; ]
         var lapNumber as Lang.Number = 0;
@@ -103,21 +103,21 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_m
         var lapAverageStepLength as Lang.Float or Null;
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc"; @line = 51; ]
         function addLap(activityInfo as Activity.Info) as Void {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_51_63_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_51_63_73_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 52 12 ]
             %tmp.1 = getv self :lapNumber;
             %tmp.2 = 1;
             %tmp.3 = add %tmp.1 %tmp.2;
             putv self :lapNumber dup %tmp.3;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 54 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_12_if_stmt:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_12_56_12_if_stmt:
             %tmp.4 = getm $;
             %tmp.5 = getv %tmp.4 :lapsPerInterval;
             %tmp.6 = 1;
             %tmp.7 = gt %tmp.5 %tmp.6;
-            bf %tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_38_start:
+            bf %tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_12_56_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_12_56_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_38_56_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 55 16 ]
             %tmp.8 = getm $.Toybox.Math;
             %tmp.9 = getv function %tmp.8 :floor;
@@ -131,186 +131,186 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_m
             %tmp.18 = 1;
             %tmp.19 = add %tmp.17 %tmp.18;
             putv self :intervalNumber %tmp.19;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_38_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_12_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_38_56_12_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_12_56_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_54_12_56_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 58 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_58_94_begin:
             %tmp.20 = self;
             %tmp.21 = getv function %tmp.20 :hasValue;
             %tmp.23 = lgetv %activityInfo;
             %tmp.25 = const :timerTime;
             %tmp.26 = invoke %tmp.20 %tmp.21(%tmp.23, %tmp.25);
-            bf %tmp.26 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_true:
+            bf %tmp.26 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_58_94_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_58_94_true:
             %tmp.27 = lgetv %activityInfo;
             %tmp.28 = getv %tmp.27 :timerTime;
             push %tmp.28;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_58_94_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_58_94_false:
             %tmp.29 = 0;
             push %tmp.29;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_end:
-            %tmp.30 = phi [%tmp.26 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_begin] [%tmp.28 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_true] [%tmp.29 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_false] [%tmp.30 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_58_94_end:
+            %tmp.30 = phi [%tmp.26 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_58_94_begin] [%tmp.28 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_58_94_true] [%tmp.29 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_58_94_false] [%tmp.30 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_58_32_58_94_end];
             putv self :lapStartTimerTime %tmp.30;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 59 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_59_112_begin:
             %tmp.31 = self;
             %tmp.32 = getv function %tmp.31 :hasValue;
             %tmp.34 = lgetv %activityInfo;
             %tmp.36 = const :elapsedDistance;
             %tmp.37 = invoke %tmp.31 %tmp.32(%tmp.34, %tmp.36);
-            bf %tmp.37 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_true:
+            bf %tmp.37 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_59_112_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_59_112_true:
             %tmp.38 = lgetv %activityInfo;
             %tmp.39 = getv %tmp.38 :elapsedDistance;
             push %tmp.39;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_59_112_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_59_112_false:
             %tmp.40 = 0.0;
             push %tmp.40;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_end:
-            %tmp.41 = phi [%tmp.37 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_begin] [%tmp.39 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_true] [%tmp.40 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_false] [%tmp.41 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_59_112_end:
+            %tmp.41 = phi [%tmp.37 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_59_112_begin] [%tmp.39 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_59_112_true] [%tmp.40 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_59_112_false] [%tmp.41 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_59_38_59_112_end];
             putv self :lapStartElapsedDistance %tmp.41;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 60 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_60_100_begin:
             %tmp.42 = self;
             %tmp.43 = getv function %tmp.42 :hasValue;
             %tmp.45 = lgetv %activityInfo;
             %tmp.47 = const :totalAscent;
             %tmp.48 = invoke %tmp.42 %tmp.43(%tmp.45, %tmp.47);
-            bf %tmp.48 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_true:
+            bf %tmp.48 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_60_100_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_60_100_true:
             %tmp.49 = lgetv %activityInfo;
             %tmp.50 = getv %tmp.49 :totalAscent;
             push %tmp.50;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_60_100_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_60_100_false:
             %tmp.51 = 0;
             push %tmp.51;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_end:
-            %tmp.52 = phi [%tmp.48 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_begin] [%tmp.50 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_true] [%tmp.51 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_false] [%tmp.52 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_60_100_end:
+            %tmp.52 = phi [%tmp.48 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_60_100_begin] [%tmp.50 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_60_100_true] [%tmp.51 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_60_100_false] [%tmp.52 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_60_34_60_100_end];
             putv self :lapStartTotalAscent %tmp.52;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 61 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_61_103_begin:
             %tmp.53 = self;
             %tmp.54 = getv function %tmp.53 :hasValue;
             %tmp.56 = lgetv %activityInfo;
             %tmp.58 = const :totalDescent;
             %tmp.59 = invoke %tmp.53 %tmp.54(%tmp.56, %tmp.58);
-            bf %tmp.59 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_true:
+            bf %tmp.59 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_61_103_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_61_103_true:
             %tmp.60 = lgetv %activityInfo;
             %tmp.61 = getv %tmp.60 :totalDescent;
             push %tmp.61;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_61_103_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_61_103_false:
             %tmp.62 = 0;
             push %tmp.62;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_end:
-            %tmp.63 = phi [%tmp.59 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_begin] [%tmp.61 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_true] [%tmp.62 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_false] [%tmp.63 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_61_103_end:
+            %tmp.63 = phi [%tmp.59 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_61_103_begin] [%tmp.61 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_61_103_true] [%tmp.62 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_61_103_false] [%tmp.63 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_61_35_61_103_end];
             putv self :lapStartTotalDescent %tmp.63;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 62 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_62_91_begin:
             %tmp.64 = self;
             %tmp.65 = getv function %tmp.64 :hasValue;
             %tmp.67 = lgetv %activityInfo;
             %tmp.69 = const :calories;
             %tmp.70 = invoke %tmp.64 %tmp.65(%tmp.67, %tmp.69);
-            bf %tmp.70 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_true:
+            bf %tmp.70 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_62_91_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_62_91_true:
             %tmp.71 = lgetv %activityInfo;
             %tmp.72 = getv %tmp.71 :calories;
             push %tmp.72;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_62_91_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_62_91_false:
             %tmp.73 = 0;
             push %tmp.73;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_end:
-            %tmp.74 = phi [%tmp.70 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_begin] [%tmp.72 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_true] [%tmp.73 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_false] [%tmp.74 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_62_91_end:
+            %tmp.74 = phi [%tmp.70 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_62_91_begin] [%tmp.72 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_62_91_true] [%tmp.73 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_62_91_false] [%tmp.74 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_62_31_62_91_end];
             putv self :lapStartCalories %tmp.74;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 63 12 ]
             %tmp.76 = getv ? :lapStartTimerTime;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_63_134_begin:
             %tmp.77 = self;
             %tmp.78 = getv function %tmp.77 :hasValue;
             %tmp.80 = lgetv %activityInfo;
             %tmp.82 = const :averageHeartRate;
             %tmp.83 = invoke %tmp.77 %tmp.78(%tmp.80, %tmp.82);
-            bf %tmp.83 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_true:
+            bf %tmp.83 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_63_134_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_63_134_true:
             %tmp.84 = lgetv %activityInfo;
             %tmp.85 = getv %tmp.84 :averageHeartRate;
             push %tmp.85;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_63_134_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_63_134_false:
             %tmp.86 = 0;
             push %tmp.86;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_end:
-            %tmp.87 = phi [%tmp.83 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_begin] [%tmp.85 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_true] [%tmp.86 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_false] [%tmp.87 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_63_134_end:
+            %tmp.87 = phi [%tmp.83 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_63_134_begin] [%tmp.85 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_63_134_true] [%tmp.86 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_63_134_false] [%tmp.87 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_63_58_63_134_end];
             %tmp.88 = mul %tmp.76 %tmp.87;
             putv self :lapStartTotalHeartRate %tmp.88;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 64 12 ]
             %tmp.90 = getv ? :lapStartTimerTime;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_64_122_begin:
             %tmp.91 = self;
             %tmp.92 = getv function %tmp.91 :hasValue;
             %tmp.94 = lgetv %activityInfo;
             %tmp.96 = const :averagePower;
             %tmp.97 = invoke %tmp.91 %tmp.92(%tmp.94, %tmp.96);
-            bf %tmp.97 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_true:
+            bf %tmp.97 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_64_122_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_64_122_true:
             %tmp.98 = lgetv %activityInfo;
             %tmp.99 = getv %tmp.98 :averagePower;
             push %tmp.99;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_64_122_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_64_122_false:
             %tmp.100 = 0;
             push %tmp.100;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_end:
-            %tmp.101 = phi [%tmp.97 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_begin] [%tmp.99 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_true] [%tmp.100 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_false] [%tmp.101 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_64_122_end:
+            %tmp.101 = phi [%tmp.97 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_64_122_begin] [%tmp.99 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_64_122_true] [%tmp.100 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_64_122_false] [%tmp.101 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_64_54_64_122_end];
             %tmp.102 = mul %tmp.90 %tmp.101;
             putv self :lapStartTotalPower %tmp.102;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 65 12 ]
             %tmp.104 = getv ? :lapStartTimerTime;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_65_122_begin:
             %tmp.105 = self;
             %tmp.106 = getv function %tmp.105 :hasValue;
             %tmp.108 = lgetv %activityInfo;
             %tmp.110 = const :averageSpeed;
             %tmp.111 = invoke %tmp.105 %tmp.106(%tmp.108, %tmp.110);
-            bf %tmp.111 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_true:
+            bf %tmp.111 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_65_122_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_65_122_true:
             %tmp.112 = lgetv %activityInfo;
             %tmp.113 = getv %tmp.112 :averageSpeed;
             push %tmp.113;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_65_122_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_65_122_false:
             %tmp.114 = 0.0;
             push %tmp.114;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_end:
-            %tmp.115 = phi [%tmp.111 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_begin] [%tmp.113 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_true] [%tmp.114 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_false] [%tmp.115 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_65_122_end:
+            %tmp.115 = phi [%tmp.111 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_65_122_begin] [%tmp.113 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_65_122_true] [%tmp.114 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_65_122_false] [%tmp.115 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_65_54_65_122_end];
             %tmp.116 = mul %tmp.104 %tmp.115;
             putv self :lapStartTotalSpeed %tmp.116;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 66 12 ]
             %tmp.118 = getv ? :lapStartTimerTime;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_66_128_begin:
             %tmp.119 = self;
             %tmp.120 = getv function %tmp.119 :hasValue;
             %tmp.122 = lgetv %activityInfo;
             %tmp.124 = const :averageCadence;
             %tmp.125 = invoke %tmp.119 %tmp.120(%tmp.122, %tmp.124);
-            bf %tmp.125 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_true:
+            bf %tmp.125 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_66_128_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_66_128_true:
             %tmp.126 = lgetv %activityInfo;
             %tmp.127 = getv %tmp.126 :averageCadence;
             push %tmp.127;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_66_128_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_66_128_false:
             %tmp.128 = 0;
             push %tmp.128;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_end:
-            %tmp.129 = phi [%tmp.125 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_begin] [%tmp.127 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_true] [%tmp.128 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_false] [%tmp.129 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_66_128_end:
+            %tmp.129 = phi [%tmp.125 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_66_128_begin] [%tmp.127 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_66_128_true] [%tmp.128 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_66_128_false] [%tmp.129 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_66_56_66_128_end];
             %tmp.130 = mul %tmp.118 %tmp.129;
             putv self :lapStartTotalCadence %tmp.130;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 67 12 ]
@@ -331,11 +331,11 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_m
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 72 12 ]
             %tmp.136 = 0;
             putv self :__totalStepLength %tmp.136;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_51_63_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_51_63_73_8_stop:
         }
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc"; @line = 75; ]
         function onSessionStart() as Void {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_75_42_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_75_42_93_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 76 12 ]
             %tmp.1 = 0;
             putv self :lapNumber %tmp.1;
@@ -387,554 +387,546 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_m
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 92 12 ]
             %tmp.17 = 0;
             putv self :__totalStepLength %tmp.17;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_75_42_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_75_42_93_8_stop:
         }
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc"; @line = 95; ]
         function accumulateRunningDynamics(runningDynamicsData as AntPlus.RunningDynamicsData or Null) as Void {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_95_103_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_95_103_111_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 96 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_12_if_stmt:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_12_98_12_if_stmt:
             %tmp.2 = lgetv %runningDynamicsData;
             %tmp.3 = null;
             %tmp.4 = eq %tmp.2 %tmp.3;
-            bf %tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_45_start:
+            bf %tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_12_98_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_12_98_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_45_98_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 97 16 ]
             ret ?;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_45_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_12_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_45_98_12_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_12_98_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_96_12_98_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 99 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_12_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_16_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_12_102_12_if_stmt:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_16_99_103_begin:
             %tmp.6 = lgetv %runningDynamicsData;
             %tmp.8 = const :groundContactTime;
             %tmp.9 = canhazplz %tmp.6 %tmp.8;
-            %tmp.10 = dup %tmp.9;
-            bf %tmp.10 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_62_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_62_true:
-            %tmp.11 = lgetv %runningDynamicsData;
-            %tmp.12 = as %tmp.11 { (interface { var groundContactTime; }) };
-            %tmp.13 = getv %tmp.12 :groundContactTime;
-            %tmp.14 = null;
-            %tmp.15 = ne %tmp.13 %tmp.14;
-            %tmp.16 = and %tmp.9 %tmp.15;
-            push %tmp.16;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_62_end:
-            %tmp.17 = phi [%tmp.10 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_16_begin] [%tmp.16 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_62_true] [%tmp.17 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_62_end];
-            bf %tmp.17 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_109_start:
+            bf %tmp.9 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_12_102_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_62_99_103_true:
+            %tmp.10 = lgetv %runningDynamicsData;
+            %tmp.11 = as %tmp.10 { (interface { var groundContactTime; }) };
+            %tmp.12 = getv %tmp.11 :groundContactTime;
+            %tmp.13 = null;
+            %tmp.14 = ne %tmp.12 %tmp.13;
+            push %tmp.14;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_62_99_103_end:
+            %tmp.15 = phi [%tmp.9 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_16_99_103_begin] [%tmp.14 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_62_99_103_true] [%tmp.15 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_62_99_103_end];
+            bf %tmp.15 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_12_102_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_12_102_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_109_102_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 100 16 ]
-            %tmp.18 = getv self :__totalGroundContactTime;
-            %tmp.19 = lgetv %runningDynamicsData;
-            %tmp.20 = as %tmp.19 { (interface { var groundContactTime; }) };
-            %tmp.21 = getv %tmp.20 :groundContactTime;
-            %tmp.22 = add %tmp.18 %tmp.21;
-            putv self :__totalGroundContactTime dup %tmp.22;
+            %tmp.16 = getv self :__totalGroundContactTime;
+            %tmp.17 = lgetv %runningDynamicsData;
+            %tmp.18 = as %tmp.17 { (interface { var groundContactTime; }) };
+            %tmp.19 = getv %tmp.18 :groundContactTime;
+            %tmp.20 = add %tmp.16 %tmp.19;
+            putv self :__totalGroundContactTime dup %tmp.20;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 101 16 ]
-            %tmp.25 = getv ? :__nbGroundContactTime;
-            %tmp.26 = add %tmp.25 1;
-            putv self :__nbGroundContactTime dup %tmp.26;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_109_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_12_if_end:
+            %tmp.23 = getv ? :__nbGroundContactTime;
+            %tmp.24 = add %tmp.23 1;
+            putv self :__nbGroundContactTime dup %tmp.24;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_109_102_12_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_12_102_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_99_12_102_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 103 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_12_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_16_begin:
-            %tmp.28 = lgetv %runningDynamicsData;
-            %tmp.30 = const :verticalOscillation;
-            %tmp.31 = canhazplz %tmp.28 %tmp.30;
-            %tmp.32 = dup %tmp.31;
-            bf %tmp.32 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_64_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_64_true:
-            %tmp.33 = lgetv %runningDynamicsData;
-            %tmp.34 = as %tmp.33 { (interface { var verticalOscillation; }) };
-            %tmp.35 = getv %tmp.34 :verticalOscillation;
-            %tmp.36 = null;
-            %tmp.37 = ne %tmp.35 %tmp.36;
-            %tmp.38 = and %tmp.31 %tmp.37;
-            push %tmp.38;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_64_end:
-            %tmp.39 = phi [%tmp.32 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_16_begin] [%tmp.38 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_64_true] [%tmp.39 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_64_end];
-            bf %tmp.39 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_113_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_12_106_12_if_stmt:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_16_103_107_begin:
+            %tmp.26 = lgetv %runningDynamicsData;
+            %tmp.28 = const :verticalOscillation;
+            %tmp.29 = canhazplz %tmp.26 %tmp.28;
+            bf %tmp.29 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_12_106_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_64_103_107_true:
+            %tmp.30 = lgetv %runningDynamicsData;
+            %tmp.31 = as %tmp.30 { (interface { var verticalOscillation; }) };
+            %tmp.32 = getv %tmp.31 :verticalOscillation;
+            %tmp.33 = null;
+            %tmp.34 = ne %tmp.32 %tmp.33;
+            push %tmp.34;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_64_103_107_end:
+            %tmp.35 = phi [%tmp.29 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_16_103_107_begin] [%tmp.34 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_64_103_107_true] [%tmp.35 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_64_103_107_end];
+            bf %tmp.35 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_12_106_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_12_106_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_113_106_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 104 16 ]
-            %tmp.40 = getv self :__totalVerticalOscillation;
-            %tmp.41 = lgetv %runningDynamicsData;
-            %tmp.42 = as %tmp.41 { (interface { var verticalOscillation; }) };
-            %tmp.43 = getv %tmp.42 :verticalOscillation;
-            %tmp.44 = add %tmp.40 %tmp.43;
-            putv self :__totalVerticalOscillation dup %tmp.44;
+            %tmp.36 = getv self :__totalVerticalOscillation;
+            %tmp.37 = lgetv %runningDynamicsData;
+            %tmp.38 = as %tmp.37 { (interface { var verticalOscillation; }) };
+            %tmp.39 = getv %tmp.38 :verticalOscillation;
+            %tmp.40 = add %tmp.36 %tmp.39;
+            putv self :__totalVerticalOscillation dup %tmp.40;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 105 16 ]
-            %tmp.47 = getv ? :__nbVerticalOscillation;
-            %tmp.48 = add %tmp.47 1;
-            putv self :__nbVerticalOscillation dup %tmp.48;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_113_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_12_if_end:
+            %tmp.43 = getv ? :__nbVerticalOscillation;
+            %tmp.44 = add %tmp.43 1;
+            putv self :__nbVerticalOscillation dup %tmp.44;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_113_106_12_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_12_106_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_103_12_106_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 107 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_12_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_16_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_12_110_12_if_stmt:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_16_107_89_begin:
+            %tmp.46 = lgetv %runningDynamicsData;
+            %tmp.48 = const :stepLength;
+            %tmp.49 = canhazplz %tmp.46 %tmp.48;
+            bf %tmp.49 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_12_110_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_55_107_89_true:
             %tmp.50 = lgetv %runningDynamicsData;
-            %tmp.52 = const :stepLength;
-            %tmp.53 = canhazplz %tmp.50 %tmp.52;
-            %tmp.54 = dup %tmp.53;
-            bf %tmp.54 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_55_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_55_true:
-            %tmp.55 = lgetv %runningDynamicsData;
-            %tmp.56 = as %tmp.55 { (interface { var stepLength; }) };
-            %tmp.57 = getv %tmp.56 :stepLength;
-            %tmp.58 = null;
-            %tmp.59 = ne %tmp.57 %tmp.58;
-            %tmp.60 = and %tmp.53 %tmp.59;
-            push %tmp.60;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_55_end:
-            %tmp.61 = phi [%tmp.54 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_16_begin] [%tmp.60 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_55_true] [%tmp.61 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_55_end];
-            bf %tmp.61 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_95_start:
+            %tmp.51 = as %tmp.50 { (interface { var stepLength; }) };
+            %tmp.52 = getv %tmp.51 :stepLength;
+            %tmp.53 = null;
+            %tmp.54 = ne %tmp.52 %tmp.53;
+            push %tmp.54;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_55_107_89_end:
+            %tmp.55 = phi [%tmp.49 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_16_107_89_begin] [%tmp.54 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_55_107_89_true] [%tmp.55 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_55_107_89_end];
+            bf %tmp.55 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_12_110_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_12_110_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_95_110_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 108 16 ]
-            %tmp.62 = getv self :__totalStepLength;
-            %tmp.63 = lgetv %runningDynamicsData;
-            %tmp.64 = as %tmp.63 { (interface { var stepLength; }) };
-            %tmp.65 = getv %tmp.64 :stepLength;
-            %tmp.66 = add %tmp.62 %tmp.65;
-            putv self :__totalStepLength dup %tmp.66;
+            %tmp.56 = getv self :__totalStepLength;
+            %tmp.57 = lgetv %runningDynamicsData;
+            %tmp.58 = as %tmp.57 { (interface { var stepLength; }) };
+            %tmp.59 = getv %tmp.58 :stepLength;
+            %tmp.60 = add %tmp.56 %tmp.59;
+            putv self :__totalStepLength dup %tmp.60;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 109 16 ]
-            %tmp.69 = getv ? :__nbStepLength;
-            %tmp.70 = add %tmp.69 1;
-            putv self :__nbStepLength dup %tmp.70;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_95_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_12_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_95_103_stop:
+            %tmp.63 = getv ? :__nbStepLength;
+            %tmp.64 = add %tmp.63 1;
+            putv self :__nbStepLength dup %tmp.64;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_95_110_12_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_12_110_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_107_12_110_12_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_95_103_111_8_stop:
         }
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc"; @line = 113; ]
         function computeRunningDynamics(runningDynamicsData as AntPlus.RunningDynamicsData) as Void {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_113_99_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_113_99_123_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 114 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_12_if_stmt:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_12_116_12_if_stmt:
             %tmp.2 = getv ? :__nbGroundContactTime;
             %tmp.3 = 0;
             %tmp.4 = gt %tmp.2 %tmp.3;
-            bf %tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_43_start:
+            bf %tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_12_116_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_12_116_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_43_116_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 115 16 ]
             %tmp.6 = getv ? :__totalGroundContactTime;
             %tmp.8 = getv ? :__nbGroundContactTime;
             %tmp.9 = div %tmp.6 %tmp.8;
             putv self :lapAverageGroundContactTime %tmp.9;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_43_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_12_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_43_116_12_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_12_116_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_114_12_116_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 117 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_12_if_stmt:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_12_119_12_if_stmt:
             %tmp.11 = getv ? :__nbVerticalOscillation;
             %tmp.12 = 0;
             %tmp.13 = gt %tmp.11 %tmp.12;
-            bf %tmp.13 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_45_start:
+            bf %tmp.13 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_12_119_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_12_119_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_45_119_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 118 16 ]
             %tmp.15 = getv ? :__totalVerticalOscillation;
             %tmp.17 = getv ? :__nbVerticalOscillation;
             %tmp.18 = div %tmp.15 %tmp.17;
             putv self :lapAverageVerticalOscillation %tmp.18;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_45_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_12_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_45_119_12_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_12_119_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_117_12_119_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 120 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_12_if_stmt:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_12_122_12_if_stmt:
             %tmp.20 = getv ? :__nbStepLength;
             %tmp.21 = 0;
             %tmp.22 = gt %tmp.20 %tmp.21;
-            bf %tmp.22 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_36_start:
+            bf %tmp.22 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_12_122_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_12_122_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_36_122_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 121 16 ]
             %tmp.24 = getv ? :__totalStepLength;
             %tmp.26 = getv ? :__nbStepLength;
             %tmp.27 = div %tmp.24 %tmp.26;
             putv self :lapAverageStepLength %tmp.27;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_36_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_12_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_113_99_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_36_122_12_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_12_122_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_120_12_122_12_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_113_99_123_8_stop:
         }
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc"; @line = 125; ]
         function compute(activityInfo as Activity.Info) as Void {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_125_64_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_125_64_177_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 126 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_126_133_begin:
             %tmp.1 = self;
             %tmp.2 = getv function %tmp.1 :hasValue;
             %tmp.4 = lgetv %activityInfo;
             %tmp.6 = const :elapsedDistance;
             %tmp.7 = invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-            bf %tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_true:
+            bf %tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_126_133_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_126_133_true:
             %tmp.8 = lgetv %activityInfo;
             %tmp.9 = getv %tmp.8 :elapsedDistance;
             %tmp.11 = getv ? :lapStartElapsedDistance;
             %tmp.12 = sub %tmp.9 %tmp.11;
             push %tmp.12;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_126_133_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_126_133_false:
             %tmp.13 = null;
             push %tmp.13;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_end:
-            %tmp.14 = phi [%tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_begin] [%tmp.12 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_true] [%tmp.13 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_false] [%tmp.14 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_126_133_end:
+            %tmp.14 = phi [%tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_126_133_begin] [%tmp.12 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_126_133_true] [%tmp.13 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_126_133_false] [%tmp.14 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_126_33_126_133_end];
             putv self :lapElapsedDistance %tmp.14;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 127 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_127_117_begin:
             %tmp.15 = self;
             %tmp.16 = getv function %tmp.15 :hasValue;
             %tmp.18 = lgetv %activityInfo;
             %tmp.20 = const :totalAscent;
             %tmp.21 = invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-            bf %tmp.21 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_true:
+            bf %tmp.21 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_127_117_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_127_117_true:
             %tmp.22 = lgetv %activityInfo;
             %tmp.23 = getv %tmp.22 :totalAscent;
             %tmp.25 = getv ? :lapStartTotalAscent;
             %tmp.26 = sub %tmp.23 %tmp.25;
             push %tmp.26;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_127_117_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_127_117_false:
             %tmp.27 = null;
             push %tmp.27;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_end:
-            %tmp.28 = phi [%tmp.21 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_begin] [%tmp.26 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_true] [%tmp.27 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_false] [%tmp.28 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_127_117_end:
+            %tmp.28 = phi [%tmp.21 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_127_117_begin] [%tmp.26 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_127_117_true] [%tmp.27 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_127_117_false] [%tmp.28 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_127_29_127_117_end];
             putv self :lapTotalAscent %tmp.28;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 128 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_128_121_begin:
             %tmp.29 = self;
             %tmp.30 = getv function %tmp.29 :hasValue;
             %tmp.32 = lgetv %activityInfo;
             %tmp.34 = const :totalDescent;
             %tmp.35 = invoke %tmp.29 %tmp.30(%tmp.32, %tmp.34);
-            bf %tmp.35 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_true:
+            bf %tmp.35 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_128_121_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_128_121_true:
             %tmp.36 = lgetv %activityInfo;
             %tmp.37 = getv %tmp.36 :totalDescent;
             %tmp.39 = getv ? :lapStartTotalDescent;
             %tmp.40 = sub %tmp.37 %tmp.39;
             push %tmp.40;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_128_121_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_128_121_false:
             %tmp.41 = null;
             push %tmp.41;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_end:
-            %tmp.42 = phi [%tmp.35 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_begin] [%tmp.40 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_true] [%tmp.41 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_false] [%tmp.42 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_128_121_end:
+            %tmp.42 = phi [%tmp.35 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_128_121_begin] [%tmp.40 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_128_121_true] [%tmp.41 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_128_121_false] [%tmp.42 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_128_30_128_121_end];
             putv self :lapTotalDescent %tmp.42;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 129 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_129_105_begin:
             %tmp.43 = self;
             %tmp.44 = getv function %tmp.43 :hasValue;
             %tmp.46 = lgetv %activityInfo;
             %tmp.48 = const :calories;
             %tmp.49 = invoke %tmp.43 %tmp.44(%tmp.46, %tmp.48);
-            bf %tmp.49 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_true:
+            bf %tmp.49 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_129_105_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_129_105_true:
             %tmp.50 = lgetv %activityInfo;
             %tmp.51 = getv %tmp.50 :calories;
             %tmp.53 = getv ? :lapStartCalories;
             %tmp.54 = sub %tmp.51 %tmp.53;
             push %tmp.54;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_129_105_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_129_105_false:
             %tmp.55 = null;
             push %tmp.55;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_end:
-            %tmp.56 = phi [%tmp.49 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_begin] [%tmp.54 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_true] [%tmp.55 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_false] [%tmp.56 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_129_105_end:
+            %tmp.56 = phi [%tmp.49 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_129_105_begin] [%tmp.54 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_129_105_true] [%tmp.55 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_129_105_false] [%tmp.56 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_129_26_129_105_end];
             putv self :lapCalories %tmp.56;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 130 12 ]
-            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_125_64_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_125_64_stop" ]
+            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_125_64_177_8_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_125_64_177_8_stop" ]
             %sessionTimerTime.1 = local;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_130_97_begin:
             %tmp.57 = self;
             %tmp.58 = getv function %tmp.57 :hasValue;
             %tmp.60 = lgetv %activityInfo;
             %tmp.62 = const :timerTime;
             %tmp.63 = invoke %tmp.57 %tmp.58(%tmp.60, %tmp.62);
-            bf %tmp.63 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_true:
+            bf %tmp.63 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_130_97_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_130_97_true:
             %tmp.64 = lgetv %activityInfo;
             %tmp.65 = getv %tmp.64 :timerTime;
             push %tmp.65;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_false:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_130_97_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_130_97_false:
             %tmp.66 = null;
             push %tmp.66;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_end:
-            %tmp.67 = phi [%tmp.63 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_begin] [%tmp.65 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_true] [%tmp.66 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_false] [%tmp.67 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_end];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_130_97_end:
+            %tmp.67 = phi [%tmp.63 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_130_97_begin] [%tmp.65 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_130_97_true] [%tmp.66 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_130_97_false] [%tmp.67 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_130_35_130_97_end];
             lputv %sessionTimerTime.1 %tmp.67;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 131 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_12_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_16_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_12_176_12_if_stmt:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_16_131_63_begin:
             %tmp.69 = lgetv %sessionTimerTime.1;
             %tmp.70 = null;
             %tmp.71 = ne %tmp.69 %tmp.70;
-            %tmp.72 = dup %tmp.71;
-            bf %tmp.72 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_44_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_44_true:
-            %tmp.74 = lgetv %sessionTimerTime.1;
-            %tmp.75 = as %tmp.74 { (!Null) };
-            %tmp.77 = getv ? :lapStartTimerTime;
-            %tmp.78 = gt %tmp.75 %tmp.77;
-            %tmp.79 = and %tmp.71 %tmp.78;
-            push %tmp.79;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_44_end:
-            %tmp.80 = phi [%tmp.72 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_16_begin] [%tmp.79 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_44_true] [%tmp.80 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_44_end];
-            bf %tmp.80 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_12_if_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_82_start:
+            bf %tmp.71 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_12_176_12_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_44_131_63_true:
+            %tmp.73 = lgetv %sessionTimerTime.1;
+            %tmp.74 = as %tmp.73 { (!Null) };
+            %tmp.76 = getv ? :lapStartTimerTime;
+            %tmp.77 = gt %tmp.74 %tmp.76;
+            push %tmp.77;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_44_131_63_end:
+            %tmp.78 = phi [%tmp.71 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_16_131_63_begin] [%tmp.77 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_44_131_63_true] [%tmp.78 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_44_131_63_end];
+            bf %tmp.78 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_12_176_12_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_12_176_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_82_167_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 132 16 ]
-            %tmp.82 = lgetv %sessionTimerTime.1;
-            %tmp.83 = as %tmp.82 { (!Null) };
-            %tmp.85 = getv ? :lapStartTimerTime;
-            %tmp.86 = sub %tmp.83 %tmp.85;
-            putv self :lapTimerTime %tmp.86;
+            %tmp.80 = lgetv %sessionTimerTime.1;
+            %tmp.81 = as %tmp.80 { (!Null) };
+            %tmp.83 = getv ? :lapStartTimerTime;
+            %tmp.84 = sub %tmp.81 %tmp.83;
+            putv self :lapTimerTime %tmp.84;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 133 16 ]
-            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_82_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_82_stop" ]
+            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_82_167_12_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_82_167_12_stop" ]
             %sec.2 = local;
-            %tmp.88 = getv ? :lapTimerTime;
-            %tmp.89 = 1000;
-            %tmp.90 = div %tmp.88 %tmp.89;
-            lputv %sec.2 %tmp.90;
+            %tmp.86 = getv ? :lapTimerTime;
+            %tmp.87 = 1000;
+            %tmp.88 = div %tmp.86 %tmp.87;
+            lputv %sec.2 %tmp.88;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 134 16 ]
-            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_82_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_82_stop" ]
+            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_82_167_12_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_82_167_12_stop" ]
             %mn.3 = local;
-            %tmp.92 = lgetv %sec.2;
-            %tmp.93 = 60;
-            %tmp.94 = div %tmp.92 %tmp.93;
-            lputv %mn.3 %tmp.94;
+            %tmp.90 = lgetv %sec.2;
+            %tmp.91 = 60;
+            %tmp.92 = div %tmp.90 %tmp.91;
+            lputv %mn.3 %tmp.92;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 135 16 ]
-            %tmp.95 = newa 4;
-            %tmp.97 = lgetv %mn.3;
-            %tmp.98 = 60;
-            %tmp.99 = div %tmp.97 %tmp.98;
-            %tmp.100 = dup %tmp.95;
-            %tmp.101 = aputv %tmp.100 0 %tmp.99;
-            %tmp.103 = lgetv %mn.3;
-            %tmp.104 = 60;
-            %tmp.105 = mod %tmp.103 %tmp.104;
-            %tmp.106 = dup %tmp.101;
-            %tmp.107 = aputv %tmp.106 1 %tmp.105;
-            %tmp.109 = lgetv %sec.2;
-            %tmp.110 = 60;
-            %tmp.111 = mod %tmp.109 %tmp.110;
-            %tmp.112 = dup %tmp.107;
-            %tmp.113 = aputv %tmp.112 2 %tmp.111;
-            %tmp.115 = getv ? :lapTimerTime;
-            %tmp.116 = 1000;
-            %tmp.117 = mod %tmp.115 %tmp.116;
-            %tmp.118 = dup %tmp.113;
-            %tmp.119 = aputv %tmp.118 3 %tmp.117;
-            putv self :lapChrono %tmp.119;
+            %tmp.93 = newa 4;
+            %tmp.95 = lgetv %mn.3;
+            %tmp.96 = 60;
+            %tmp.97 = div %tmp.95 %tmp.96;
+            %tmp.98 = dup %tmp.93;
+            %tmp.99 = aputv %tmp.98 0 %tmp.97;
+            %tmp.101 = lgetv %mn.3;
+            %tmp.102 = 60;
+            %tmp.103 = mod %tmp.101 %tmp.102;
+            %tmp.104 = dup %tmp.99;
+            %tmp.105 = aputv %tmp.104 1 %tmp.103;
+            %tmp.107 = lgetv %sec.2;
+            %tmp.108 = 60;
+            %tmp.109 = mod %tmp.107 %tmp.108;
+            %tmp.110 = dup %tmp.105;
+            %tmp.111 = aputv %tmp.110 2 %tmp.109;
+            %tmp.113 = getv ? :lapTimerTime;
+            %tmp.114 = 1000;
+            %tmp.115 = mod %tmp.113 %tmp.114;
+            %tmp.116 = dup %tmp.111;
+            %tmp.117 = aputv %tmp.116 3 %tmp.115;
+            putv self :lapChrono %tmp.117;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 136 16 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_16_if_stmt:
-            %tmp.121 = getv ? :lapTotalAscent;
-            %tmp.122 = null;
-            %tmp.123 = ne %tmp.121 %tmp.122;
-            bf %tmp.123 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_16_if_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_16_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_44_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_16_140_16_if_stmt:
+            %tmp.119 = getv ? :lapTotalAscent;
+            %tmp.120 = null;
+            %tmp.121 = ne %tmp.119 %tmp.120;
+            bf %tmp.121 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_16_140_16_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_16_140_16_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_44_138_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 137 20 ]
-            %tmp.125 = getv ? :lapTotalAscent;
-            %tmp.126 = as %tmp.125 { (!Null) };
-            %tmp.128 = getv ? :lapTimerTime;
-            %tmp.129 = div %tmp.126 %tmp.128;
-            putv self :lapAverageAscentSpeed %tmp.129;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_44_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_16_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_16_if_false:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_138_23_start:
+            %tmp.123 = getv ? :lapTotalAscent;
+            %tmp.124 = as %tmp.123 { (!Null) };
+            %tmp.126 = getv ? :lapTimerTime;
+            %tmp.127 = div %tmp.124 %tmp.126;
+            putv self :lapAverageAscentSpeed %tmp.127;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_44_138_16_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_16_140_16_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_16_140_16_if_false:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_138_23_140_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 139 20 ]
-            %tmp.130 = null;
-            putv self :lapAverageAscentSpeed %tmp.130;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_138_23_stop:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_16_if_end:
+            %tmp.128 = null;
+            putv self :lapAverageAscentSpeed %tmp.128;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_138_23_140_16_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_136_16_140_16_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 141 16 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_16_if_stmt:
-            %tmp.131 = self;
-            %tmp.132 = getv function %tmp.131 :hasValue;
-            %tmp.134 = lgetv %activityInfo;
-            %tmp.136 = const :averageHeartRate;
-            %tmp.137 = invoke %tmp.131 %tmp.132(%tmp.134, %tmp.136);
-            bf %tmp.137 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_16_if_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_16_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_63_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_16_145_16_if_stmt:
+            %tmp.129 = self;
+            %tmp.130 = getv function %tmp.129 :hasValue;
+            %tmp.132 = lgetv %activityInfo;
+            %tmp.134 = const :averageHeartRate;
+            %tmp.135 = invoke %tmp.129 %tmp.130(%tmp.132, %tmp.134);
+            bf %tmp.135 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_16_145_16_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_16_145_16_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_63_143_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 142 20 ]
-            %tmp.139 = lgetv %sessionTimerTime.1;
-            %tmp.140 = as %tmp.139 { (!Null) };
-            %tmp.141 = lgetv %activityInfo;
-            %tmp.142 = getv %tmp.141 :averageHeartRate;
-            %tmp.143 = mul %tmp.140 %tmp.142;
-            %tmp.145 = getv ? :lapStartTotalHeartRate;
-            %tmp.146 = sub %tmp.143 %tmp.145;
-            %tmp.148 = getv ? :lapTimerTime;
-            %tmp.149 = div %tmp.146 %tmp.148;
-            putv self :lapAverageHeartRate %tmp.149;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_63_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_16_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_16_if_false:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_143_23_start:
+            %tmp.137 = lgetv %sessionTimerTime.1;
+            %tmp.138 = as %tmp.137 { (!Null) };
+            %tmp.139 = lgetv %activityInfo;
+            %tmp.140 = getv %tmp.139 :averageHeartRate;
+            %tmp.141 = mul %tmp.138 %tmp.140;
+            %tmp.143 = getv ? :lapStartTotalHeartRate;
+            %tmp.144 = sub %tmp.141 %tmp.143;
+            %tmp.146 = getv ? :lapTimerTime;
+            %tmp.147 = div %tmp.144 %tmp.146;
+            putv self :lapAverageHeartRate %tmp.147;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_63_143_16_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_16_145_16_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_16_145_16_if_false:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_143_23_145_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 144 20 ]
-            %tmp.150 = null;
-            putv self :lapAverageHeartRate %tmp.150;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_143_23_stop:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_16_if_end:
+            %tmp.148 = null;
+            putv self :lapAverageHeartRate %tmp.148;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_143_23_145_16_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_141_16_145_16_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 146 16 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_16_if_stmt:
-            %tmp.151 = self;
-            %tmp.152 = getv function %tmp.151 :hasValue;
-            %tmp.154 = lgetv %activityInfo;
-            %tmp.156 = const :averagePower;
-            %tmp.157 = invoke %tmp.151 %tmp.152(%tmp.154, %tmp.156);
-            bf %tmp.157 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_16_if_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_16_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_59_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_16_150_16_if_stmt:
+            %tmp.149 = self;
+            %tmp.150 = getv function %tmp.149 :hasValue;
+            %tmp.152 = lgetv %activityInfo;
+            %tmp.154 = const :averagePower;
+            %tmp.155 = invoke %tmp.149 %tmp.150(%tmp.152, %tmp.154);
+            bf %tmp.155 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_16_150_16_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_16_150_16_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_59_148_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 147 20 ]
-            %tmp.159 = lgetv %sessionTimerTime.1;
-            %tmp.160 = as %tmp.159 { (!Null) };
-            %tmp.161 = lgetv %activityInfo;
-            %tmp.162 = getv %tmp.161 :averagePower;
-            %tmp.163 = mul %tmp.160 %tmp.162;
-            %tmp.165 = getv ? :lapStartTotalPower;
-            %tmp.166 = sub %tmp.163 %tmp.165;
-            %tmp.168 = getv ? :lapTimerTime;
-            %tmp.169 = div %tmp.166 %tmp.168;
-            putv self :lapAveragePower %tmp.169;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_59_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_16_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_16_if_false:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_148_23_start:
+            %tmp.157 = lgetv %sessionTimerTime.1;
+            %tmp.158 = as %tmp.157 { (!Null) };
+            %tmp.159 = lgetv %activityInfo;
+            %tmp.160 = getv %tmp.159 :averagePower;
+            %tmp.161 = mul %tmp.158 %tmp.160;
+            %tmp.163 = getv ? :lapStartTotalPower;
+            %tmp.164 = sub %tmp.161 %tmp.163;
+            %tmp.166 = getv ? :lapTimerTime;
+            %tmp.167 = div %tmp.164 %tmp.166;
+            putv self :lapAveragePower %tmp.167;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_59_148_16_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_16_150_16_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_16_150_16_if_false:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_148_23_150_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 149 20 ]
-            %tmp.170 = null;
-            putv self :lapAveragePower %tmp.170;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_148_23_stop:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_16_if_end:
+            %tmp.168 = null;
+            putv self :lapAveragePower %tmp.168;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_148_23_150_16_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_146_16_150_16_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 151 16 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_16_if_stmt:
-            %tmp.171 = self;
-            %tmp.172 = getv function %tmp.171 :hasValue;
-            %tmp.174 = lgetv %activityInfo;
-            %tmp.176 = const :averageSpeed;
-            %tmp.177 = invoke %tmp.171 %tmp.172(%tmp.174, %tmp.176);
-            bf %tmp.177 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_16_if_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_16_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_59_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_16_161_16_if_stmt:
+            %tmp.169 = self;
+            %tmp.170 = getv function %tmp.169 :hasValue;
+            %tmp.172 = lgetv %activityInfo;
+            %tmp.174 = const :averageSpeed;
+            %tmp.175 = invoke %tmp.169 %tmp.170(%tmp.172, %tmp.174);
+            bf %tmp.175 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_16_161_16_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_16_161_16_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_59_158_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 152 20 ]
-            %tmp.179 = lgetv %sessionTimerTime.1;
-            %tmp.180 = as %tmp.179 { (!Null) };
-            %tmp.181 = lgetv %activityInfo;
-            %tmp.182 = getv %tmp.181 :averageSpeed;
-            %tmp.183 = mul %tmp.180 %tmp.182;
-            %tmp.185 = getv ? :lapStartTotalSpeed;
-            %tmp.186 = sub %tmp.183 %tmp.185;
-            %tmp.188 = getv ? :lapTimerTime;
-            %tmp.189 = div %tmp.186 %tmp.188;
-            putv self :lapAverageSpeed %tmp.189;
+            %tmp.177 = lgetv %sessionTimerTime.1;
+            %tmp.178 = as %tmp.177 { (!Null) };
+            %tmp.179 = lgetv %activityInfo;
+            %tmp.180 = getv %tmp.179 :averageSpeed;
+            %tmp.181 = mul %tmp.178 %tmp.180;
+            %tmp.183 = getv ? :lapStartTotalSpeed;
+            %tmp.184 = sub %tmp.181 %tmp.183;
+            %tmp.186 = getv ? :lapTimerTime;
+            %tmp.187 = div %tmp.184 %tmp.186;
+            putv self :lapAverageSpeed %tmp.187;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 153 20 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_20_if_stmt:
-            %tmp.191 = getv ? :lapAverageSpeed;
-            %tmp.192 = 0.0;
-            %tmp.193 = gt %tmp.191 %tmp.192;
-            bf %tmp.193 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_20_if_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_20_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_47_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_20_157_20_if_stmt:
+            %tmp.189 = getv ? :lapAverageSpeed;
+            %tmp.190 = 0.0;
+            %tmp.191 = gt %tmp.189 %tmp.190;
+            bf %tmp.191 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_20_157_20_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_20_157_20_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_47_155_20_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 154 24 ]
-            %tmp.194 = 1.0;
-            %tmp.196 = getv ? :lapAverageSpeed;
-            %tmp.197 = div %tmp.194 %tmp.196;
-            putv self :lapAveragePace %tmp.197;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_47_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_20_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_20_if_false:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_155_27_start:
+            %tmp.192 = 1.0;
+            %tmp.194 = getv ? :lapAverageSpeed;
+            %tmp.195 = div %tmp.192 %tmp.194;
+            putv self :lapAveragePace %tmp.195;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_47_155_20_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_20_157_20_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_20_157_20_if_false:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_155_27_157_20_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 156 24 ]
+            %tmp.196 = null;
+            putv self :lapAveragePace %tmp.196;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_155_27_157_20_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_20_157_20_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_59_158_16_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_16_161_16_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_16_161_16_if_false:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_158_23_161_16_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 159 20 ]
+            %tmp.197 = null;
+            putv self :lapAverageSpeed %tmp.197;
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 160 20 ]
             %tmp.198 = null;
             putv self :lapAveragePace %tmp.198;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_155_27_stop:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_153_20_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_59_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_16_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_16_if_false:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_158_23_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 159 20 ]
-            %tmp.199 = null;
-            putv self :lapAverageSpeed %tmp.199;
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 160 20 ]
-            %tmp.200 = null;
-            putv self :lapAveragePace %tmp.200;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_158_23_stop:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_16_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_158_23_161_16_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_151_16_161_16_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 162 16 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_16_if_stmt:
-            %tmp.201 = self;
-            %tmp.202 = getv function %tmp.201 :hasValue;
-            %tmp.204 = lgetv %activityInfo;
-            %tmp.206 = const :averageCadence;
-            %tmp.207 = invoke %tmp.201 %tmp.202(%tmp.204, %tmp.206);
-            bf %tmp.207 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_16_if_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_16_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_61_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_16_166_16_if_stmt:
+            %tmp.199 = self;
+            %tmp.200 = getv function %tmp.199 :hasValue;
+            %tmp.202 = lgetv %activityInfo;
+            %tmp.204 = const :averageCadence;
+            %tmp.205 = invoke %tmp.199 %tmp.200(%tmp.202, %tmp.204);
+            bf %tmp.205 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_16_166_16_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_16_166_16_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_61_164_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 163 20 ]
-            %tmp.209 = lgetv %sessionTimerTime.1;
-            %tmp.210 = as %tmp.209 { (!Null) };
-            %tmp.211 = lgetv %activityInfo;
-            %tmp.212 = getv %tmp.211 :averageCadence;
-            %tmp.213 = mul %tmp.210 %tmp.212;
-            %tmp.215 = getv ? :lapStartTotalCadence;
-            %tmp.216 = sub %tmp.213 %tmp.215;
-            %tmp.218 = getv ? :lapTimerTime;
-            %tmp.219 = div %tmp.216 %tmp.218;
-            putv self :lapAverageCadence %tmp.219;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_61_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_16_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_16_if_false:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_164_23_start:
+            %tmp.207 = lgetv %sessionTimerTime.1;
+            %tmp.208 = as %tmp.207 { (!Null) };
+            %tmp.209 = lgetv %activityInfo;
+            %tmp.210 = getv %tmp.209 :averageCadence;
+            %tmp.211 = mul %tmp.208 %tmp.210;
+            %tmp.213 = getv ? :lapStartTotalCadence;
+            %tmp.214 = sub %tmp.211 %tmp.213;
+            %tmp.216 = getv ? :lapTimerTime;
+            %tmp.217 = div %tmp.214 %tmp.216;
+            putv self :lapAverageCadence %tmp.217;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_61_164_16_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_16_166_16_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_16_166_16_if_false:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_164_23_166_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 165 20 ]
-            %tmp.220 = null;
-            putv self :lapAverageCadence %tmp.220;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_164_23_stop:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_16_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_82_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_12_if_false:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_167_19_start:
+            %tmp.218 = null;
+            putv self :lapAverageCadence %tmp.218;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_164_23_166_16_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_162_16_166_16_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_82_167_12_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_12_176_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_12_176_12_if_false:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_167_19_176_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 168 16 ]
-            %tmp.221 = null;
-            putv self :lapAverageHeartRate %tmp.221;
+            %tmp.219 = null;
+            putv self :lapAverageHeartRate %tmp.219;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 169 16 ]
-            %tmp.222 = null;
-            putv self :lapAveragePower %tmp.222;
+            %tmp.220 = null;
+            putv self :lapAveragePower %tmp.220;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 170 16 ]
-            %tmp.223 = null;
-            putv self :lapAveragePace %tmp.223;
+            %tmp.221 = null;
+            putv self :lapAveragePace %tmp.221;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 171 16 ]
-            %tmp.224 = null;
-            putv self :lapAverageSpeed %tmp.224;
+            %tmp.222 = null;
+            putv self :lapAverageSpeed %tmp.222;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 172 16 ]
-            %tmp.225 = null;
-            putv self :lapAverageCadence %tmp.225;
+            %tmp.223 = null;
+            putv self :lapAverageCadence %tmp.223;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 173 16 ]
-            %tmp.226 = null;
-            putv self :lapAverageAscentSpeed %tmp.226;
+            %tmp.224 = null;
+            putv self :lapAverageAscentSpeed %tmp.224;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 174 16 ]
-            %tmp.227 = null;
-            putv self :lapTimerTime %tmp.227;
+            %tmp.225 = null;
+            putv self :lapTimerTime %tmp.225;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\Laps.mc" 175 16 ]
-            %tmp.228 = null;
-            putv self :lapChrono %tmp.228;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_167_19_stop:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_12_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_125_64_stop:
+            %tmp.226 = null;
+            putv self :lapChrono %tmp.226;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_167_19_176_12_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_131_12_176_12_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_Laps_mc_125_64_177_8_stop:
         }
     }
 }

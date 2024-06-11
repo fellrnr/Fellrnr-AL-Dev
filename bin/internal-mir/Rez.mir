@@ -19,7 +19,7 @@ module Rez {
         <init> {
         }
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
-        var LauncherIcon as Symbol;
+        var LauncherIcon as ResourceId;
     }
     [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 12; ]
     module Fonts {
@@ -27,1130 +27,1380 @@ module Rez {
         <init> {
         }
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 13; @position = 27; initialized = true; ]
-        var alfont as Symbol;
+        var alfont as ResourceId;
     }
     [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 16; ]
-    module JsonData {
+    module Strings {
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 16; ]
         <init> {
         }
-    }
-    [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 19; ]
-    module Layouts {
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 19; ]
-        <init> {
-        }
-    }
-    [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 22; ]
-    module Menus {
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 22; ]
-        <init> {
-        }
-    }
-    [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 25; ]
-    module Strings {
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 25; ]
-        <init> {
-        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 17; @position = 27; initialized = true; ]
+        var lap_freeze_seconds as ResourceId;
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 18; @position = 27; initialized = true; ]
+        var settings_run as ResourceId;
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 19; @position = 27; initialized = true; ]
+        var settings_glasses_name as ResourceId;
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 20; @position = 27; initialized = true; ]
+        var update_glasses_second_row as ResourceId;
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 21; @position = 27; initialized = true; ]
+        var laps_per_interval as ResourceId;
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 22; @position = 27; initialized = true; ]
+        var update_glasses_third_row as ResourceId;
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 23; @position = 27; initialized = true; ]
+        var settings_screens as ResourceId;
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 24; @position = 27; initialized = true; ]
+        var settings_bike as ResourceId;
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 25; @position = 27; initialized = true; ]
+        var update_glasses as ResourceId;
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 26; @position = 27; initialized = true; ]
-        var lap_freeze_seconds as Symbol;
+        var update_datafield as ResourceId;
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 27; @position = 27; initialized = true; ]
-        var settings_run as Symbol;
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 28; @position = 27; initialized = true; ]
-        var settings_glasses_name as Symbol;
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 29; @position = 27; initialized = true; ]
-        var update_glasses_second_row as Symbol;
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 30; @position = 27; initialized = true; ]
-        var laps_per_interval as Symbol;
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 31; @position = 27; initialized = true; ]
-        var update_glasses_third_row as Symbol;
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 32; @position = 27; initialized = true; ]
-        var settings_screens as Symbol;
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 33; @position = 27; initialized = true; ]
-        var settings_bike as Symbol;
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 34; @position = 27; initialized = true; ]
-        var update_glasses as Symbol;
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 35; @position = 27; initialized = true; ]
-        var update_datafield as Symbol;
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 36; @position = 27; initialized = true; ]
-        var AppName as Symbol;
+        var AppName as ResourceId;
     }
-    [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 39; ]
+    [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 30; ]
     module Styles {
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 39; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 30; ]
         <init> {
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 31; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 31; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 32; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 35; ]
+        module system_size__menu_header {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 35; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 36; @position = 18; ]
+            const width as Number = 280;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 37; @position = 18; ]
+            const height as Number = 87;
         }
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 40; ]
-        module system_size__menu_header {
+        module system_loc__hint_button_left_bottom {
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 40; ]
             <init> {
             }
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 41; @position = 18; ]
-            const width as Number = 280;
+            const x as Number = 11;
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 42; @position = 18; ]
-            const height as Number = 87;
+            const y as Number = 185;
         }
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 45; ]
-        module system_icon_dark__hint_button_left_bottom {
+        module prompt_font_enhanced_readability__body_no_title {
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 45; ]
             <init> {
             }
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 46; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_left_bottom.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 47; @position = 18; ]
-            const dithering as String = "none";
+            const exclude as Boolean = true;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 50; ]
-        module system_loc__hint_button_left_bottom {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 50; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 51; @position = 18; ]
-            const x as Number = 11;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 52; @position = 18; ]
-            const y as Number = 185;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 55; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 49; ]
         module prompt_loc__body_no_title {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 55; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 49; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 56; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 50; @position = 18; ]
             const x as Number = 28;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 57; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 51; @position = 18; ]
             const y as Number = 28;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 60; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 54; ]
         module system_icon_dark__about {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 60; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 54; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 61; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 55; @position = 18; ]
             const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__about.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 62; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 56; @position = 18; ]
             const compress as String = "true";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 63; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 57; @position = 18; ]
             const dithering as String = "none";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 64; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 58; @position = 18; ]
             const automaticPalette as String = "true";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 67; ]
-        module system_loc__hint_button_right_bottom {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 67; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 68; @position = 18; ]
-            const x as Number = 242;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 69; @position = 18; ]
-            const y as Number = 185;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 72; ]
-        module confirmation_color_dark__body {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 72; ]
-            <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 74 18 ]
-                %tmp.1 = getm $.Toybox.Graphics;
-                %tmp.2 = getv %tmp.1 :COLOR_TRANSPARENT;
-                putv self :background %tmp.2;
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 73; @position = 18; ]
-            const color as Number = 0xFFFFFF;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 74; @position = 18; ]
-            const background;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 77; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 61; ]
         module system_icon_light__question {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 77; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 61; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 78; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 62; @position = 18; ]
             const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__question.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 79; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 63; @position = 18; ]
             const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 82; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 66; ]
         module system_loc__hint_button_left_top {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 66; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 67; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 70; ]
+        module prompt_font__title {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 70; ]
+            <init> {
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 71 18 ]
+                %tmp.1 = getm $.Toybox.Graphics;
+                %tmp.2 = getv %tmp.1 :TEXT_JUSTIFY_CENTER;
+                %tmp.3 = getm $.Toybox.Graphics;
+                %tmp.4 = getv %tmp.3 :TEXT_JUSTIFY_VCENTER;
+                %tmp.5 = bitor %tmp.2 %tmp.4;
+                putv self :justification %tmp.5;
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 72 18 ]
+                %tmp.6 = getm $.Toybox.Graphics;
+                %tmp.7 = getv %tmp.6 :FONT_XTINY;
+                putv self :font %tmp.7;
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 71; @position = 18; ]
+            const justification;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 72; @position = 18; ]
+            const font;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 75; ]
+        module system_icon_dark__discard {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 75; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 76; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__discard.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 77; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 78; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 79; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 82; ]
+        module system_size__menu_item {
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 82; ]
             <init> {
             }
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 83; @position = 18; ]
-            const exclude as Boolean = true;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 86; ]
-        module prompt_font__title {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 86; ]
-            <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 87 18 ]
-                %tmp.3 = getm $.Toybox.Graphics;
-                %tmp.4 = getv %tmp.3 :TEXT_JUSTIFY_CENTER;
-                %tmp.5 = getm $.Toybox.Graphics;
-                %tmp.6 = getv %tmp.5 :TEXT_JUSTIFY_VCENTER;
-                %tmp.7 = bitor %tmp.4 %tmp.6;
-                putv self :justification %tmp.7;
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 88 18 ]
-                %tmp.8 = getm $.Toybox.Graphics;
-                %tmp.9 = getv %tmp.8 :FONT_XTINY;
-                putv self :font %tmp.9;
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 87; @position = 18; ]
-            const justification;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 88; @position = 18; ]
-            const font;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 91; ]
-        module system_icon_dark__discard {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 91; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 92; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__discard.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 93; @position = 18; ]
-            const compress as String = "true";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 94; @position = 18; ]
-            const dithering as String = "none";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 95; @position = 18; ]
-            const automaticPalette as String = "true";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 98; ]
-        module system_size__menu_item {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 98; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 99; @position = 18; ]
             const width as Number = 280;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 100; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 84; @position = 18; ]
             const height as Number = 73;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 103; ]
-        module prompt_color_dark__title {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 103; ]
-            <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 105 18 ]
-                %tmp.10 = getm $.Toybox.Graphics;
-                %tmp.11 = getv %tmp.10 :COLOR_TRANSPARENT;
-                putv self :background %tmp.11;
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 104; @position = 18; ]
-            const color as Number = 0xFFFFFF;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 105; @position = 18; ]
-            const background;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 108; ]
-        module system_icon_destructive__cancel {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 108; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 109; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__cancel.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 110; @position = 18; ]
-            const dithering as String = "none";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 113; ]
-        module system_icon_light__hint_button_right_bottom {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 113; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 114; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_right_bottom.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 115; @position = 18; ]
-            const dithering as String = "none";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 118; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 87; ]
         module system_color_dark__text {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 118; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 87; ]
             <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 120 18 ]
-                %tmp.12 = getm $.Toybox.Graphics;
-                %tmp.13 = getv %tmp.12 :COLOR_TRANSPARENT;
-                putv self :background %tmp.13;
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 89 18 ]
+                %tmp.8 = getm $.Toybox.Graphics;
+                %tmp.9 = getv %tmp.8 :COLOR_TRANSPARENT;
+                putv self :background %tmp.9;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 119; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 88; @position = 18; ]
             const color as Number = 0xFFFFFF;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 120; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 89; @position = 18; ]
             const background;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 123; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 92; ]
         module system_icon_destructive__discard {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 123; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 92; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 124; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 93; @position = 18; ]
             const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__discard.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 125; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 94; @position = 18; ]
             const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 128; ]
-        module prompt_loc__title {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 128; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 129; @position = 18; ]
-            const x as Number = 28;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 130; @position = 18; ]
-            const y as Number = 21;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 133; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 97; ]
         module system_icon_dark__hint_action_menu {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 133; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 97; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 134; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 98; @position = 18; ]
             const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_right_top.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 135; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 99; @position = 18; ]
             const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 138; ]
-        module prompt_color_light__title {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 138; ]
-            <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 140 18 ]
-                %tmp.14 = getm $.Toybox.Graphics;
-                %tmp.15 = getv %tmp.14 :COLOR_TRANSPARENT;
-                putv self :background %tmp.15;
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 139; @position = 18; ]
-            const color as Number = 0x000000;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 140; @position = 18; ]
-            const background;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 143; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 102; ]
         module prompt_size__title {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 143; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 102; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 144; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 103; @position = 18; ]
             const width as Number = 224;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 145; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 104; @position = 18; ]
             const height as Number = 42;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 148; ]
-        module system_icon_dark__hint_button_right_top {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 148; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 107; ]
+        module confirmation_font__body {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 107; ]
+            <init> {
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 108 18 ]
+                %tmp.10 = getm $.Toybox.Graphics;
+                %tmp.11 = getv %tmp.10 :TEXT_JUSTIFY_CENTER;
+                %tmp.12 = getm $.Toybox.Graphics;
+                %tmp.13 = getv %tmp.12 :TEXT_JUSTIFY_VCENTER;
+                %tmp.14 = bitor %tmp.11 %tmp.13;
+                putv self :justification %tmp.14;
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 109 18 ]
+                %tmp.15 = getm $.Toybox.Graphics;
+                %tmp.16 = getv %tmp.15 :FONT_TINY;
+                putv self :font %tmp.16;
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 108; @position = 18; ]
+            const justification;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 109; @position = 18; ]
+            const font;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 112; ]
+        module system_color_dark__background {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 112; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 149; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_right_top.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 150; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 113; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 114; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 117; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 117; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 118; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__hint_button_left_top.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 119; @position = 18; ]
             const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 153; ]
-        module confirmation_font__body {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 153; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 122; ]
+        module system_size__launch_icon {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 122; ]
             <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 154 18 ]
-                %tmp.16 = getm $.Toybox.Graphics;
-                %tmp.17 = getv %tmp.16 :TEXT_JUSTIFY_CENTER;
-                %tmp.18 = getm $.Toybox.Graphics;
-                %tmp.19 = getv %tmp.18 :TEXT_JUSTIFY_VCENTER;
-                %tmp.20 = bitor %tmp.17 %tmp.19;
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 123; @position = 18; ]
+            const scaleX as Number = 40;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 124; @position = 18; ]
+            const scaleY as Number = 40;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 125; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 128; ]
+        module confirmation_input__confirm {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 128; ]
+            <init> {
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 129 18 ]
+                %tmp.17 = getm $.Toybox.WatchUi;
+                %tmp.18 = getv %tmp.17 :KEY_ENTER;
+                putv self :button %tmp.18;
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 129; @position = 18; ]
+            const button;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 132; ]
+        module prompt_font__body_with_title {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 132; ]
+            <init> {
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 133 18 ]
+                %tmp.19 = getm $.Toybox.Graphics;
+                %tmp.20 = getv %tmp.19 :TEXT_JUSTIFY_CENTER;
                 putv self :justification %tmp.20;
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 155 18 ]
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 134 18 ]
                 %tmp.21 = getm $.Toybox.Graphics;
                 %tmp.22 = getv %tmp.21 :FONT_TINY;
                 putv self :font %tmp.22;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 154; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 133; @position = 18; ]
             const justification;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 155; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 134; @position = 18; ]
             const font;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 158; ]
-        module system_icon_dark__hint_button_left_middle {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 158; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 137; ]
+        module confirmation_loc__body {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 137; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 159; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_left_middle.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 160; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 138; @position = 18; ]
+            const x as Number = 56;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 139; @position = 18; ]
+            const y as Number = 56;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 142; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 142; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 143; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 144; @position = 18; ]
             const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 163; ]
-        module system_color_dark__background {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 163; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 147; ]
+        module prompt_color_dark__background {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 147; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 164; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 148; @position = 18; ]
             const color as Number = 0x000000;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 165; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 149; @position = 18; ]
             const background as Number = 0x000000;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 168; ]
-        module system_icon_light__cancel {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 168; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 152; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 152; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 169; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__cancel.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 170; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 153; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 154; @position = 18; ]
             const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 173; ]
-        module system_size__launch_icon {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 173; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 157; ]
+        module system_loc__hint_action_menu {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 157; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 174; @position = 18; ]
-            const scaleX as Number = 40;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 175; @position = 18; ]
-            const scaleY as Number = 40;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 176; @position = 18; ]
-            const scaleRelativeTo as String = "screen";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 158; @position = 18; ]
+            const x as Number = 242;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 159; @position = 18; ]
+            const y as Number = 52;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 179; ]
-        module confirmation_input__confirm {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 179; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 162; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 162; ]
             <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 180 18 ]
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 163; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 164; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 167; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 167; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 168; @position = 18; ]
+            const x as Number = 3;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 169; @position = 18; ]
+            const y as Number = 116;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 172; ]
+        module prompt_size__body_no_title {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 172; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 173; @position = 18; ]
+            const width as Number = 224;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 174; @position = 18; ]
+            const height as Number = 224;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 177; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 177; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 178; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_left_top.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 179; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 182; ]
+        module prompt_color_light__background {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 182; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 183; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 184; @position = 18; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 187; ]
+        module confirmation_input__delete {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 187; ]
+            <init> {
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 188 18 ]
                 %tmp.23 = getm $.Toybox.WatchUi;
                 %tmp.24 = getv %tmp.23 :KEY_ENTER;
                 putv self :button %tmp.24;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 180; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 188; @position = 18; ]
             const button;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 183; ]
-        module system_icon_light__about {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 183; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 191; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 191; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 184; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__about.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 185; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 192; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_left_top.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 193; @position = 18; ]
             const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 188; ]
-        module system_size__toast_icon {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 188; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 196; ]
+        module system_input__action_menu {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 196; ]
             <init> {
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 197 18 ]
+                %tmp.25 = getm $.Toybox.WatchUi;
+                %tmp.26 = getv %tmp.25 :KEY_ENTER;
+                putv self :button %tmp.26;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 189; @position = 18; ]
-            const scaleX as Number = 40;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 190; @position = 18; ]
-            const scaleY as Number = 40;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 191; @position = 18; ]
-            const scaleRelativeTo as String = "screen";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 197; @position = 18; ]
+            const button;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 194; ]
-        module confirmation_icon__hint_reject {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 194; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 200; ]
+        module system_icon_light__save {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 200; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 195; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_reject.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 196; @position = 18; ]
-            const dithering as String = "none";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 199; ]
-        module system_icon_light__hint_action_menu {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 199; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 200; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_right_top.svg";
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 201; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__save.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 202; @position = 18; ]
             const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 204; ]
-        module prompt_font__body_with_title {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 204; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 205; ]
+        module prompt_color_light__body {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 205; ]
             <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 205 18 ]
-                %tmp.25 = getm $.Toybox.Graphics;
-                %tmp.26 = getv %tmp.25 :TEXT_JUSTIFY_CENTER;
-                putv self :justification %tmp.26;
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 206 18 ]
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 207 18 ]
                 %tmp.27 = getm $.Toybox.Graphics;
-                %tmp.28 = getv %tmp.27 :FONT_TINY;
-                putv self :font %tmp.28;
+                %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+                putv self :background %tmp.28;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 205; @position = 18; ]
-            const justification;
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 206; @position = 18; ]
-            const font;
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 207; @position = 18; ]
+            const background;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 209; ]
-        module confirmation_loc__body {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 209; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 210; ]
+        module system_loc__subwindow {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 210; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 210; @position = 18; ]
-            const x as Number = 56;
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 211; @position = 18; ]
-            const y as Number = 56;
+            const exclude as Boolean = true;
         }
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 214; ]
-        module prompt_color_dark__background {
+        module system_icon_light__warning {
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 214; ]
             <init> {
             }
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 215; @position = 18; ]
-            const color as Number = 0x000000;
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__warning.svg";
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 216; @position = 18; ]
-            const background as Number = 0x000000;
+            const dithering as String = "none";
         }
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 219; ]
-        module system_loc__hint_action_menu {
+        module confirmation_color_light__body {
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 219; ]
             <init> {
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 221 18 ]
+                %tmp.29 = getm $.Toybox.Graphics;
+                %tmp.30 = getv %tmp.29 :COLOR_TRANSPARENT;
+                putv self :background %tmp.30;
             }
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 220; @position = 18; ]
-            const x as Number = 242;
+            const color as Number = 0x000000;
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 221; @position = 18; ]
-            const y as Number = 52;
+            const background;
         }
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 224; ]
-        module confirmation_icon__hint_confirm {
+        module confirmation_icon_light__hint_keep {
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 224; ]
             <init> {
             }
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 225; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_completion.svg";
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_keep.svg";
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 226; @position = 18; ]
             const dithering as String = "none";
         }
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 229; ]
-        module confirmation_loc__hint_reject {
+        module activity_color_light__background {
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 229; ]
             <init> {
             }
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 230; @position = 18; ]
-            const x as Number = 11;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 231; @position = 18; ]
-            const y as Number = 185;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 232; @position = 18; ]
-            const horizontalJustification as String = "left";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 235; ]
-        module system_loc__hint_button_left_middle {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 235; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 236; @position = 18; ]
-            const x as Number = 3;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 237; @position = 18; ]
-            const y as Number = 116;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 240; ]
-        module activity_color_dark__background {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 240; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 241; @position = 18; ]
-            const color as Number = 0x000000;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 242; @position = 18; ]
-            const background as Number = 0x000000;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 245; ]
-        module prompt_size__body_no_title {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 245; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 246; @position = 18; ]
-            const width as Number = 224;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 247; @position = 18; ]
-            const height as Number = 224;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 250; ]
-        module system_icon_light__hint_button_left_bottom {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 250; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 251; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_left_bottom.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 252; @position = 18; ]
-            const dithering as String = "none";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 255; ]
-        module system_size__menu_icon {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 255; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 256; @position = 18; ]
-            const scaleX as Number = 40;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 257; @position = 18; ]
-            const scaleY as Number = 40;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 258; @position = 18; ]
-            const scaleRelativeTo as String = "screen";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 261; ]
-        module system_icon_destructive__warning {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 261; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 262; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__warning.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 263; @position = 18; ]
-            const dithering as String = "none";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 266; ]
-        module system_icon_light__hint_button_left_top {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 266; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 267; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_left_top.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 268; @position = 18; ]
-            const dithering as String = "none";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 271; ]
-        module prompt_color_light__background {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 271; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 272; @position = 18; ]
             const color as Number = 0xFFFFFF;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 273; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 231; @position = 18; ]
             const background as Number = 0xFFFFFF;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 276; ]
-        module system_loc__hint_button_right_middle {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 276; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 234; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 234; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 277; @position = 18; ]
-            const exclude as Boolean = true;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 280; ]
-        module system_icon_dark__cancel {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 280; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 281; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__cancel.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 282; @position = 18; ]
-            const compress as String = "true";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 283; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 235; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 236; @position = 18; ]
             const dithering as String = "none";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 284; @position = 18; ]
-            const automaticPalette as String = "true";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 287; ]
-        module confirmation_input__delete {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 287; ]
-            <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 288 18 ]
-                %tmp.29 = getm $.Toybox.WatchUi;
-                %tmp.30 = getv %tmp.29 :KEY_ENTER;
-                putv self :button %tmp.30;
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 288; @position = 18; ]
-            const button;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 291; ]
-        module prompt_size__body_with_title {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 291; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 239; ]
+        module system_size__screen {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 239; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 292; @position = 18; ]
-            const width as Number = 224;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 293; @position = 18; ]
-            const height as Number = 168;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 240; @position = 18; ]
+            const width as Number = 280;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 241; @position = 18; ]
+            const height as Number = 280;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 296; ]
-        module system_loc__hint_button_right_top {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 296; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 244; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 244; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 297; @position = 18; ]
-            const x as Number = 242;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 298; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 245; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 246; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 249; ]
+        module system_color_light__background {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 249; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 250; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 251; @position = 18; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 254; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 254; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 255; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 256; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 259; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 259; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 260; @position = 18; ]
+            const x as Number = 226;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 261; @position = 18; ]
             const y as Number = 52;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 301; ]
-        module system_icon_dark__hint_button_left_top {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 301; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 264; ]
+        module activity_color_dark__text {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 264; ]
             <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 302; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_left_top.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 303; @position = 18; ]
-            const dithering as String = "none";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 306; ]
-        module system_color_light__text {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 306; ]
-            <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 308 18 ]
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 266 18 ]
                 %tmp.31 = getm $.Toybox.Graphics;
                 %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
                 putv self :background %tmp.32;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 307; @position = 18; ]
-            const color as Number = 0x000000;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 308; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 265; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 266; @position = 18; ]
             const background;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 311; ]
-        module system_input__action_menu {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 311; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 269; ]
+        module confirmation_input__keep {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 269; ]
             <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 312 18 ]
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 270 18 ]
                 %tmp.33 = getm $.Toybox.WatchUi;
-                %tmp.34 = getv %tmp.33 :KEY_ENTER;
+                %tmp.34 = getv %tmp.33 :KEY_DOWN;
                 putv self :button %tmp.34;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 312; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 270; @position = 18; ]
             const button;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 315; ]
-        module system_icon_light__save {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 315; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 273; ]
+        module prompt_loc__body_with_title {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 273; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 316; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__save.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 317; @position = 18; ]
-            const dithering as String = "none";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 274; @position = 18; ]
+            const x as Number = 28;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 275; @position = 18; ]
+            const y as Number = 84;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 320; ]
-        module system_icon_light__check {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 320; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 278; ]
+        module system_icon_dark__search {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 278; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 321; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__check.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 322; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 279; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__search.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 280; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 281; @position = 18; ]
             const dithering as String = "none";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 282; @position = 18; ]
+            const automaticPalette as String = "true";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 325; ]
-        module prompt_color_light__body {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 325; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 285; ]
+        module activity_color_light__text {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 285; ]
             <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 327 18 ]
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 287 18 ]
                 %tmp.35 = getm $.Toybox.Graphics;
                 %tmp.36 = getv %tmp.35 :COLOR_TRANSPARENT;
                 putv self :background %tmp.36;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 326; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 286; @position = 18; ]
             const color as Number = 0x000000;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 327; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 287; @position = 18; ]
             const background;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 330; ]
-        module system_loc__subwindow {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 330; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 290; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 290; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 331; @position = 18; ]
-            const exclude as Boolean = true;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 291; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 292; @position = 18; ]
+            const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 334; ]
-        module confirmation_input__reject {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 334; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 295; ]
+        module system_icon_dark__save {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 295; ]
             <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 335 18 ]
-                %tmp.37 = getm $.Toybox.WatchUi;
-                %tmp.38 = getv %tmp.37 :KEY_DOWN;
-                putv self :button %tmp.38;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 335; @position = 18; ]
-            const button;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 296; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__save.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 297; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 298; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 299; @position = 18; ]
+            const automaticPalette as String = "true";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 338; ]
-        module system_icon_light__warning {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 338; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 302; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 302; ]
             <init> {
             }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 303; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__hint_button_left_middle.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 304; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 307; ]
+        module system_icon_light__search {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 307; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 308; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__search.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 309; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 312; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 312; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 313; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 314; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 317; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 317; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 318; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_positive__hint_button_left_top.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 319; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 322; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 322; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 323; @position = 18; ]
+            const x as Number = 242;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 324; @position = 18; ]
+            const y as Number = 185;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 327; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 327; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 328; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 329; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 332; ]
+        module confirmation_color_dark__body {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 332; ]
+            <init> {
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 334 18 ]
+                %tmp.37 = getm $.Toybox.Graphics;
+                %tmp.38 = getv %tmp.37 :COLOR_TRANSPARENT;
+                putv self :background %tmp.38;
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 333; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 334; @position = 18; ]
+            const background;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 337; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 337; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 338; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_completion.svg";
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 339; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__warning.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 340; @position = 18; ]
             const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 343; ]
-        module system_icon_light__revert {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 343; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 342; ]
+        module prompt_color_dark__title {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 342; ]
             <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 344; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__revert.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 345; @position = 18; ]
-            const dithering as String = "none";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 348; ]
-        module system_size__subwindow {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 348; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 349; @position = 18; ]
-            const exclude as Boolean = true;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 352; ]
-        module confirmation_color_light__body {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 352; ]
-            <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 354 18 ]
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 344 18 ]
                 %tmp.39 = getm $.Toybox.Graphics;
                 %tmp.40 = getv %tmp.39 :COLOR_TRANSPARENT;
                 putv self :background %tmp.40;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 353; @position = 18; ]
-            const color as Number = 0x000000;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 354; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 343; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 344; @position = 18; ]
             const background;
         }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 347; ]
+        module system_icon_destructive__cancel {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 347; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 348; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__cancel.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 349; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 352; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 352; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 353; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 354; @position = 18; ]
+            const dithering as String = "none";
+        }
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 357; ]
-        module activity_color_light__background {
+        module prompt_loc__title {
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 357; ]
             <init> {
             }
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 358; @position = 18; ]
-            const color as Number = 0xFFFFFF;
+            const x as Number = 28;
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 359; @position = 18; ]
-            const background as Number = 0xFFFFFF;
+            const y as Number = 21;
         }
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 362; ]
-        module system_icon_dark__check {
+        module confirmation_font_enhanced_readability__body {
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 362; ]
             <init> {
             }
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 363; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__check.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 364; @position = 18; ]
-            const compress as String = "true";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 365; @position = 18; ]
-            const dithering as String = "none";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 366; @position = 18; ]
-            const automaticPalette as String = "true";
+            const exclude as Boolean = true;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 369; ]
-        module confirmation_loc__hint_keep {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 369; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 366; ]
+        module prompt_color_light__title {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 366; ]
             <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 370; @position = 18; ]
-            const x as Number = 11;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 371; @position = 18; ]
-            const y as Number = 185;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 372; @position = 18; ]
-            const horizontalJustification as String = "left";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 375; ]
-        module confirmation_loc__hint_delete {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 375; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 376; @position = 18; ]
-            const x as Number = 226;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 377; @position = 18; ]
-            const y as Number = 52;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 380; ]
-        module system_size__screen {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 380; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 381; @position = 18; ]
-            const width as Number = 280;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 382; @position = 18; ]
-            const height as Number = 280;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 385; ]
-        module system_color_light__background {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 385; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 386; @position = 18; ]
-            const color as Number = 0xFFFFFF;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 387; @position = 18; ]
-            const background as Number = 0xFFFFFF;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 390; ]
-        module system_icon_light__hint_button_left_middle {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 390; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 391; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_left_middle.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 392; @position = 18; ]
-            const dithering as String = "none";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 395; ]
-        module confirmation_loc__hint_confirm {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 395; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 396; @position = 18; ]
-            const x as Number = 226;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 397; @position = 18; ]
-            const y as Number = 52;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 400; ]
-        module system_icon_dark__hint_button_right_bottom {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 400; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 401; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_right_bottom.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 402; @position = 18; ]
-            const dithering as String = "none";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 405; ]
-        module system_icon_dark__revert {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 405; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 406; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__revert.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 407; @position = 18; ]
-            const compress as String = "true";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 408; @position = 18; ]
-            const dithering as String = "none";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 409; @position = 18; ]
-            const automaticPalette as String = "true";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 412; ]
-        module activity_color_dark__text {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 412; ]
-            <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 414 18 ]
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 368 18 ]
                 %tmp.41 = getm $.Toybox.Graphics;
                 %tmp.42 = getv %tmp.41 :COLOR_TRANSPARENT;
                 putv self :background %tmp.42;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 413; @position = 18; ]
-            const color as Number = 0xFFFFFF;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 414; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 367; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 368; @position = 18; ]
             const background;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 417; ]
-        module confirmation_input__keep {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 417; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 371; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 371; ]
             <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 418 18 ]
-                %tmp.43 = getm $.Toybox.WatchUi;
-                %tmp.44 = getv %tmp.43 :KEY_DOWN;
-                putv self :button %tmp.44;
             }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 372; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 373; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 376; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 376; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 377; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_left_middle.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 378; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 381; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 381; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 382; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 383; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 386; ]
+        module system_icon_light__cancel {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 386; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 387; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__cancel.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 388; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 391; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 391; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 392; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 393; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 396; ]
+        module system_icon_light__about {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 396; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 397; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__about.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 398; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 401; ]
+        module system_size__toast_icon {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 401; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 402; @position = 18; ]
+            const scaleX as Number = 40;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 403; @position = 18; ]
+            const scaleY as Number = 40;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 404; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 407; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 407; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 408; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 411; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 411; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 412; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 413; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 416; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 416; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 417; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_right_top.svg";
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 418; @position = 18; ]
-            const button;
+            const dithering as String = "none";
         }
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 421; ]
-        module prompt_loc__body_with_title {
+        module system_icon_light__hint_button_right_middle {
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 421; ]
             <init> {
             }
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 422; @position = 18; ]
-            const x as Number = 28;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 423; @position = 18; ]
-            const y as Number = 84;
+            const exclude as Boolean = true;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 426; ]
-        module system_icon_dark__question {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 426; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 425; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 425; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 427; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__question.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 428; @position = 18; ]
-            const compress as String = "true";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 429; @position = 18; ]
-            const dithering as String = "none";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 426; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 429; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 429; ]
+            <init> {
+            }
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 430; @position = 18; ]
-            const automaticPalette as String = "true";
+            const x as Number = 11;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 431; @position = 18; ]
+            const y as Number = 185;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 432; @position = 18; ]
+            const horizontalJustification as String = "left";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 433; ]
-        module system_icon_light__discard {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 433; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 435; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 435; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 434; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__discard.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 435; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 436; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 437; @position = 18; ]
             const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 438; ]
-        module device_info {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 438; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 440; ]
+        module activity_color_dark__background {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 440; ]
             <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 440 18 ]
-                %tmp.45 = getm $.Toybox.System;
-                %tmp.46 = getv %tmp.45 :SCREEN_SHAPE_ROUND;
-                putv self :screenShape %tmp.46;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 439; @position = 18; ]
-            const screenWidth as Number = 280;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 440; @position = 18; ]
-            const screenShape;
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 441; @position = 18; ]
-            const hasNightMode as Boolean = false;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 442; @position = 18; ]
-            const screenHeight as Number = 280;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 443; @position = 18; ]
-            const hasTouchScreen as Boolean = false;
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 446; ]
-        module system_icon_dark__search {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 446; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 447; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__search.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 448; @position = 18; ]
-            const compress as String = "true";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 449; @position = 18; ]
-            const dithering as String = "none";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 450; @position = 18; ]
-            const automaticPalette as String = "true";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 453; ]
-        module activity_color_light__text {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 453; ]
-            <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 455 18 ]
-                %tmp.47 = getm $.Toybox.Graphics;
-                %tmp.48 = getv %tmp.47 :COLOR_TRANSPARENT;
-                putv self :background %tmp.48;
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 454; @position = 18; ]
             const color as Number = 0x000000;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 455; @position = 18; ]
-            const background;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 442; @position = 18; ]
+            const background as Number = 0x000000;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 458; ]
-        module confirmation_icon__hint_keep {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 458; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 445; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 445; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 459; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_keep.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 460; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 446; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 447; @position = 18; ]
             const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 463; ]
-        module system_icon_dark__save {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 463; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 450; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 450; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 464; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__save.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 465; @position = 18; ]
-            const compress as String = "true";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 466; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 451; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_positive__hint_button_left_middle.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 452; @position = 18; ]
             const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 455; ]
+        module system_size__menu_icon {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 455; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 456; @position = 18; ]
+            const scaleX as Number = 40;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 457; @position = 18; ]
+            const scaleY as Number = 40;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 458; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 461; ]
+        module system_icon_destructive__warning {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 461; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 462; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_destructive__warning.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 463; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 466; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 466; ]
+            <init> {
+            }
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 467; @position = 18; ]
-            const automaticPalette as String = "true";
+            const exclude as Boolean = true;
         }
         [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 470; ]
-        module prompt_font__body_no_title {
+        module system_icon_dark__cancel {
             [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 470; ]
             <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 471 18 ]
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 471; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__cancel.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 472; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 473; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 474; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 477; ]
+        module prompt_size__body_with_title {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 477; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 478; @position = 18; ]
+            const width as Number = 224;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 479; @position = 18; ]
+            const height as Number = 168;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 482; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 482; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 483; @position = 18; ]
+            const x as Number = 242;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 484; @position = 18; ]
+            const y as Number = 52;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 487; ]
+        module system_color_light__text {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 487; ]
+            <init> {
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 489 18 ]
+                %tmp.43 = getm $.Toybox.Graphics;
+                %tmp.44 = getv %tmp.43 :COLOR_TRANSPARENT;
+                putv self :background %tmp.44;
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 488; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 489; @position = 18; ]
+            const background;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 492; ]
+        module system_icon_light__check {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 492; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 493; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__check.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 494; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 497; ]
+        module confirmation_input__reject {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 497; ]
+            <init> {
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 498 18 ]
+                %tmp.45 = getm $.Toybox.WatchUi;
+                %tmp.46 = getv %tmp.45 :KEY_DOWN;
+                putv self :button %tmp.46;
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 498; @position = 18; ]
+            const button;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 501; ]
+        module system_icon_light__revert {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 501; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 502; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__revert.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 503; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 506; ]
+        module system_size__subwindow {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 506; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 507; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 510; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 510; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 511; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_positive__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 512; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 515; ]
+        module system_icon_dark__check {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 515; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 516; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__check.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 517; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 518; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 519; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 522; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 522; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 523; @position = 18; ]
+            const x as Number = 11;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 524; @position = 18; ]
+            const y as Number = 185;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 525; @position = 18; ]
+            const horizontalJustification as String = "left";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 528; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 528; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 529; @position = 18; ]
+            const x as Number = 226;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 530; @position = 18; ]
+            const y as Number = 52;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 533; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 533; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 534; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 535; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 538; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 538; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 539; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 542; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 542; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 543; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_left_middle.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 544; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 547; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 547; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 548; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 549; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 552; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 552; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 553; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 554; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 557; ]
+        module system_icon_dark__revert {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 557; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 558; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__revert.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 559; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 560; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 561; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 564; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 564; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 565; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 566; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 569; ]
+        module system_icon_dark__question {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 569; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 570; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__question.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 571; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 572; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 573; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 576; ]
+        module system_icon_light__discard {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 576; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 577; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__discard.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 578; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 581; ]
+        module device_info {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 581; ]
+            <init> {
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 583 18 ]
+                %tmp.47 = getm $.Toybox.System;
+                %tmp.48 = getv %tmp.47 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.48;
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 582; @position = 18; ]
+            const screenWidth as Number = 280;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 583; @position = 18; ]
+            const screenShape;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 584; @position = 18; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 585; @position = 18; ]
+            const hasGpu as Boolean = false;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 586; @position = 18; ]
+            const screenHeight as Number = 280;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 587; @position = 18; ]
+            const hasTouchScreen as Boolean = false;
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 588; @position = 18; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 591; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 591; ]
+            <init> {
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 592; @position = 18; ]
+            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 593; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 596; ]
+        module prompt_font__body_no_title {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 596; ]
+            <init> {
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 597 18 ]
                 %tmp.49 = getm $.Toybox.Graphics;
                 %tmp.50 = getv %tmp.49 :TEXT_JUSTIFY_CENTER;
                 %tmp.51 = getm $.Toybox.Graphics;
                 %tmp.52 = getv %tmp.51 :TEXT_JUSTIFY_VCENTER;
                 %tmp.53 = bitor %tmp.50 %tmp.52;
                 putv self :justification %tmp.53;
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 472 18 ]
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 598 18 ]
                 %tmp.54 = getm $.Toybox.Graphics;
                 %tmp.55 = getv %tmp.54 :FONT_TINY;
                 putv self :font %tmp.55;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 471; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 597; @position = 18; ]
             const justification;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 472; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 598; @position = 18; ]
             const font;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 475; ]
-        module system_icon_light__search {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 475; ]
-            <init> {
-            }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 476; @position = 18; ]
-            const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__search.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 477; @position = 18; ]
-            const dithering as String = "none";
-        }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 480; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 601; ]
         module prompt_size__title_icon {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 480; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 601; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 481; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 602; @position = 18; ]
             const scaleX as Float = 0.15;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 482; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 603; @position = 18; ]
             const scaleRelativeTo as String = "screen";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 485; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 606; ]
         module system_icon_dark__warning {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 485; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 606; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 486; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 607; @position = 18; ]
             const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_dark__warning.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 487; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 608; @position = 18; ]
             const compress as String = "true";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 488; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 609; @position = 18; ]
             const dithering as String = "none";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 489; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 610; @position = 18; ]
             const automaticPalette as String = "true";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 492; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 613; ]
         module prompt_loc__title_icon {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 492; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 613; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 493; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 614; @position = 18; ]
             const x as Number = 140;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 494; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 615; @position = 18; ]
             const y as Number = 42;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 495; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 616; @position = 18; ]
             const horizontalJustification as String = "center";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 496; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 617; @position = 18; ]
             const verticalJustification as String = "center";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 499; ]
-        module prompt_color_dark__body {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 499; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 620; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 620; ]
             <init> {
-[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 501 18 ]
+            }
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 621; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 624; ]
+        module prompt_color_dark__body {
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 624; ]
+            <init> {
+[ "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen" 626 18 ]
                 %tmp.56 = getm $.Toybox.Graphics;
                 %tmp.57 = getv %tmp.56 :COLOR_TRANSPARENT;
                 putv self :background %tmp.57;
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 500; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 625; @position = 18; ]
             const color as Number = 0xFFFFFF;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 501; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 626; @position = 18; ]
             const background;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 504; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 629; ]
         module confirmation_icon__hint_delete {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 504; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 629; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 505; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 630; @position = 18; ]
             const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\confirmation_icon__hint_delete.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 506; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 631; @position = 18; ]
             const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 509; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 634; ]
         module system_icon_light__hint_button_right_top {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 509; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 634; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 510; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 635; @position = 18; ]
             const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_light__hint_button_right_top.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 511; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 636; @position = 18; ]
             const dithering as String = "none";
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 514; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 639; ]
         module confirmation_size__body {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 514; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 639; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 515; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 640; @position = 18; ]
             const width as Number = 168;
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 516; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 641; @position = 18; ]
             const height as Number = 168;
         }
-        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 519; ]
+        [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 644; ]
         module system_icon_positive__check {
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 519; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 644; ]
             <init> {
             }
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 520; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 645; @position = 18; ]
             const filename as String = "C:\\Users\\jfsav\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fenix6xpro\\system_icon_positive__check.svg";
-            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 521; @position = 18; ]
+            [ @file = "c:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\bin\gen\006-B3291-00\source\Rez.mcgen"; @line = 646; @position = 18; ]
             const dithering as String = "none";
         }
     }
