@@ -13,19 +13,20 @@ I've added the configuration of the number of laps per interval, then shown the 
 
 # Structured workouts
 If you have a structured workout, that information is used on the lap messages. The messages then have the format
-'[AR][nn][intensity][duration][type]
+'[AR][nn][intensity][duration][type][notes]
 
 - AR is active or recovery segements of a repeat, though I never got this to work on my Fenix 6x, and it always blank.
 - nn is the interval counter, which is incremented each time the intensity is "Active" or "Interval"
 - intensity is a one or two character code
-  - Active=a
-  - Rest=b (break)
+  - Active=go
+  - Rest=rest
   - Warmup=wu
   - Cooldown=cd
-  - Recovery=r
-  - Interval=i
+  - Recovery=rec
+  - Interval=int
 - Duration is the duration value
 - Type is m=meters, s=seconds, p=lap press (there are lots of other codes I've not mapped.)
+- Notes are the notes field from the workout truncated to the available screen space
 
 # Other fields
 I added stride length based on pace and cadence to the available fields. 
