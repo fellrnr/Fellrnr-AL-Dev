@@ -13,7 +13,8 @@ using ActiveLook.Layouts;
 using ActiveLook.Laps;
 
 //! Private logger enabled in debug and disabled in release mode
-(:release) function log(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {}
+(:release) function log(msg as Toybox.Lang.String) as Void {}
+(:release) function dmsg(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {} //#!JFS!#
 (:release) function arrayToHex(array as Toybox.Lang.ByteArray or Toybox.Lang.Array<Toybox.Lang.Integer>) as Toybox.Lang.String { return ""; }
 (:debug)   function arrayToHex(array as Toybox.Lang.ByteArray or Toybox.Lang.Array<Toybox.Lang.Integer>) as Toybox.Lang.String {
     var msg = "[";
@@ -30,6 +31,8 @@ using ActiveLook.Laps;
     if (data instanceof Toybox.Lang.Exception) { data.printStackTrace() ; data = data.getErrorMessage(); }
     Toybox.System.println(Toybox.Lang.format("[D]$1$ $2$", [msg, data]));
 }
+
+(:debug) function dmsg(msg as Toybox.Lang.String) as Void { Toybox.System.println(msg); } //#!JFS!#
 
 var sdk as ActiveLookSDK.ALSDK = null as ActiveLookSDK.ALSDK;
 
@@ -111,6 +114,8 @@ function updateCurrentLayouts(incr as Lang.Number) as Void {
 function updateFields() as Void {
     var after = $.currentLayouts.size();
     if ($.swipe == true) {
+        dmsg("updateFields, swipe");
+
         //Todo reset tempo
          if($.tempo_off > 0){
             $.tempo_off = 0;
@@ -123,6 +128,7 @@ function updateFields() as Void {
          }
     }
     if ($.tempo_off > 0) {
+        dmsg("updateFields, $.tempo_off is >0: " + $.tempo_off);
         $.tempo_off -= 1;
         if ($.tempo_off == 0) {
             var fullBuffer = $.sdk.commandBuffer(0x01, []b) as Lang.ByteArray; // Clear Screen after being set to "(0)" screen, don't refresh time/battery
@@ -133,6 +139,7 @@ function updateFields() as Void {
         return;
     }
     if ($.tempo_pause > 0) {
+        dmsg("updateFields, $.tempo_pause is >0: " + $.tempo_pause);
         $.tempo_pause -= 1;
         if ($.tempo_pause == 0) {
             var fullBuffer = $.sdk.commandBuffer(0x01, []b) as Lang.ByteArray; // Clear Screen after watch paused, don't refresh time/battery
@@ -143,6 +150,7 @@ function updateFields() as Void {
         return;
     }
     if ($.tempo_congrats > 0) {
+        dmsg("updateFields, $.tempo_congrats is >0: " + $.tempo_congrats);
         $.tempo_congrats -= 1;
         if ($.tempo_congrats == 0) {
             var fullBuffer = $.sdk.commandBuffer(0x01, []b) as Lang.ByteArray; // Clear Screen after session end, don't refresh time/battery
@@ -153,16 +161,27 @@ function updateFields() as Void {
         return;
     }
     if ($.tempo_congrats == 0) {
+        dmsg("updateFields, $.tempo_congrats ==0: " + $.tempo_congrats);
         return;
     }
     //#!JFS!# change the pause then clear logic to use a variable freeze time
+    //in compute below we check if $.tempo_lap_freeze == -1 before updating the screen
     if ($.tempo_lap_freeze >= 0) {
-        $.tempo_lap_freeze -= 1;
-        if ($.tempo_lap_freeze >= ($.lapFreezeSeconds-2)) {
+        dmsg("update fields, $.tempo_lap_freeze is >=0: " + $.tempo_lap_freeze);
+        //$.tempo_lap_freeze -= 1; //decrement earlier so we don't add another second to the freeze time
+
+        if ($.lapFreezeSeconds == 1 && $.tempo_lap_freeze == 0) { //#!JFS!# really short freeze time means we have to clear the screen earlier than normal
+            dmsg("clear screen, as $.lapFreezeSeconds == 1 and $.tempo_lap_freeze is  " + $.tempo_lap_freeze);
+            $.sdk.clearScreen(true); //#!JFS!# this is the right time to refresh the top line, after clearing the lap message
+        }
+
+        if ($.tempo_lap_freeze >= ($.lapFreezeSeconds-1)) {
+            dmsg("update fields, freeze as $.tempo_lap_freeze is  " + $.tempo_lap_freeze);
             return;
         }
         //#!JFS!# This clearing of the screen gets rid of the "Lap #xx" message, otherwise we end up with noise on the screen
-        if ($.tempo_lap_freeze >= ($.lapFreezeSeconds-3)) { //#!JFS!# Did add, but removed  || $.tempo_lap_freeze == 0
+        if ($.tempo_lap_freeze >= ($.lapFreezeSeconds-2)) { 
+            dmsg("clear screen, as $.tempo_lap_freeze is  " + $.tempo_lap_freeze);
             $.sdk.clearScreen(true); //#!JFS!# this is the right time to refresh the top line, after clearing the lap message
         }
     }
@@ -222,19 +241,18 @@ class DataFieldDrawable extends WatchUi.Drawable {
             dc.drawText(midX, midY - 20d, Graphics.FONT_XTINY, self.updateMsgSecondRow, justify); // (50%, 40%)
             dc.drawText(midX, midY, Graphics.FONT_XTINY, self.updateMsgThirdRow, justify); // (50%, 60%)
         }else if (self.updateMsg != null) {
-            dc.drawText(midX, midY / 4, Graphics.FONT_XTINY, "Fellrnr ActiveLook", justify); // (50%, 15%)
+            dc.drawText(midX, midY / 4, Graphics.FONT_XTINY, "ActiveLook (Fellrnr)", justify); // (50%, 15%)
             dc.drawText(midX, midY, Graphics.FONT_XTINY, self.updateMsg, justify); // (50%, 60%)
         }else {
-            dc.drawText(midX, midY / 4, Graphics.FONT_XTINY, "Fellrnr ActiveLook", justify); // (50%, 15%)
+            dc.drawText(midX, midY / 4, Graphics.FONT_XTINY, "Fellrnr's ActiveLook", justify); // (50%, 15%)
+
+            //note, the icon's are done using a custom font, with each number mapped to a png image in the assets/fonts/alfont folder
             var font = WatchUi.loadResource(Rez.Fonts.alfont) as Graphics.FontType;
             if (!ActiveLookSDK.isReady()) {
-                // status: 5 = not connected
                 dc.drawText(midX, midY, font, "5", justify); // (50%, 60%)
             } else {
                 // status: 4 = connected
                 dc.drawText(midX / 2, midY, font, "4", justify); // (25%, 60%)
-                // page number = pageIdx + 1
-                dc.drawText(midX, midY, Graphics.FONT_MEDIUM, ($.pageIdx + 1).format("%d"), justify); // (50%, 60%)
                 // battery;
                 if ($.battery != null) {
                     var batteryStr =
@@ -243,6 +261,13 @@ class DataFieldDrawable extends WatchUi.Drawable {
                         : $.battery < 90 ? "2"
                         : "3";
                     dc.drawText(midX * 3 / 2, midY, font, batteryStr, justify); // (75%, 60%)
+                    //show the actual battery percent, as the icon is only a rough range (0-10-50-90-100)
+                    dc.drawText(midX, midY, Graphics.FONT_MEDIUM, ($.battery).format("%d") + "%", justify); // (50%, 60%)
+                } else {
+                    // page number = pageIdx + 1
+                    //not much use, so only show page if no battery
+                    dc.drawText(midX, midY, Graphics.FONT_MEDIUM, ($.pageIdx + 1).format("%d"), justify); // (50%, 60%)
+
                 }
             }
         }
@@ -282,11 +307,19 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
             AugmentedActivityInfo.accumulateRunningDynamics(rdd);
             AugmentedActivityInfo.computeRunningDynamics(rdd);
         }
+
+        //decrement $.tempo_lap_freeze here rather than below in updateFields
+        if ($.tempo_lap_freeze >= 0) {
+            $.tempo_lap_freeze -= 1;
+        }
+
         if ($.tempo_lap_freeze == -1) {
             ActiveLook.Laps.compute(info);
             if (rdd != null) {
                 ActiveLook.Laps.computeRunningDynamics(rdd);
             }
+        } else {
+            dmsg("don't call laps.compute (freeze),  as $.tempo_lap_freeze is  " + $.tempo_lap_freeze);
         }
         self.__heart_count += 1;
         if (self.__heart_count < 0) {
@@ -316,10 +349,10 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
             $.updateFields();
             //if ($.tempo_off < 0 && $.tempo_pause <= 0 && $.tempo_congrats < 0 && $.tempo_lap_freeze < 0) { //#!JFS!# don't refresh lap/tim/battery when screen is paused
                 if($.replaceTimeWithLap) {
-                    log("compute-{lap} ", [self.__heart_count]);
+                    //log("compute-{lap} ", [self.__heart_count]);
                     $.sdk.setLap($.lapMessage);
                 } else {
-                    log("compute-{time}  ", [self.__heart_count]);
+                    //log("compute-{time}  ", [self.__heart_count]);
                     $.sdk.setTime(hour, ct.min);
                     $.sdk.setBattery($.battery);
                 }
@@ -337,6 +370,17 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
     function onTimerStart() {
         if ($.tempo_pause == -1) { // If not in pause mode, it is a new session
             AugmentedActivityInfo.onSessionStart();
+
+            var workoutMsg = getWorkoutDetails();
+
+            if(workoutMsg != null) {
+                log("onTimerStart: " + workoutMsg, [self.__heart_count]);
+                $.lapMessage = workoutMsg; 
+            }else {
+                log("onTimerStart, no workout", [self.__heart_count]);
+                $.lapMessage = "Warm Up"; //a default friendly message
+            }
+
         }
         self.onTimerResume();
     }
@@ -393,6 +437,8 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
         } else {
             $.tempo_congrats = 1;
         }
+        $.lapMessage = "Done";
+
     }
 
     function onTimerLap() as Void {
@@ -404,6 +450,7 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
 
         //#!JFS!# Don't freeze the display for 10 seconds, and add the option to count intervals rather than laps
         $.tempo_lap_freeze = $.lapFreezeSeconds;
+        log("timer lap, set $.tempo_lap_freeze to: " + $.tempo_lap_freeze, [self.__heart_count]);
         $.tempo_pause = -1;
         $.tempo_congrats = -1;
         if ($.tempo_off == -1) {
@@ -509,17 +556,36 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
 
         workoutMsg += $.workoutCounter.format("%02d") + intensityType;
 
+        var duration = 0;
+
         if (workoutStep has :durationValue && workoutStep.durationValue != null && workoutStep.durationValue != 0) {
-            workoutMsg += workoutStep.durationValue.format("%d");
-        } else {
-            workoutMsg += ":";
+            duration = workoutStep.durationValue;
         }
 
         if (workoutStep has :durationType && workoutStep.durationType != null) {
             if(workoutStep.durationType == Activity.WORKOUT_STEP_DURATION_DISTANCE) {
-                workoutMsg += "m";
+                if(duration > 1000) {
+                    var durationKm = duration / 1000.0;
+                    duration = duration.toNumber();
+                    if(duration % 100 == 0) {
+                        workoutMsg += durationKm.format("%.1f") + "km";
+                    } else if(duration % 10 == 0) {
+                        workoutMsg += durationKm.format("%.2f") + "km";
+                    } else {
+                        workoutMsg += durationKm.format("%.3f") + "km";
+                    }
+                } else {
+                    workoutMsg += duration.format("%d") + "m";
+                }
+
             } else if(workoutStep.durationType == Activity.WORKOUT_STEP_DURATION_TIME) {
-                workoutMsg += "s";
+                if(duration > 60) {
+                    var value = Math.round(duration).toLong();
+                    workoutMsg += Lang.format("$1$:$2$", [ (value / 60).format("%02d"), (value % 60).format("%02d") ]);                    
+                } else {
+                    workoutMsg += duration.format("%d") + "s";
+                }
+
             } else if(workoutStep.durationType == Activity.WORKOUT_STEP_DURATION_OPEN) {
                 workoutMsg += "p";
             } else {
@@ -649,8 +715,8 @@ function resetGlobalsNext() as Void {
 
     //#!JFS!# add lap freeze seconds
     var __lap_freeze_seconds = Toybox.Application.Properties.getValue("lap_freeze_seconds") as Toybox.Lang.Number or Null;
-    if (__lap_freeze_seconds == null) { __lap_freeze_seconds = 10; }
-    $.lapFreezeSeconds = __lap_freeze_seconds;
+    if (__lap_freeze_seconds == null) { __lap_freeze_seconds = 9; }
+    $.lapFreezeSeconds = __lap_freeze_seconds -1; //counter goes to reach -1, 
 
     lapMessage = "WU 0";
 }

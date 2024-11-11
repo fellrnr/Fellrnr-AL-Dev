@@ -2,6 +2,10 @@
 
 This is a modification of the ActiveLook DataField, which they have kindly open sourced. 
 
+# Repurpose top line
+Instead of showing the time and battery charge, the top line is now used for the workout information. The data that is shown when the lap button is pressed is shown in the top line. This is most useful when doing a structured workout (see below).
+
+
 # Intervals not Laps
 I've added the configuration of the number of laps per interval, then shown the interval and recovery numbers rather than lap numbers. That's easier if you're doing large numbers of intervals. I've also replaced the time in the top left with the interval/recovery number. This approach is a simple counter, so 
 - lap 0 is considered the warmup

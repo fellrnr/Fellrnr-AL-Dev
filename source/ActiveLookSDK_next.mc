@@ -286,7 +286,7 @@ module ActiveLookSDK {
 
                     //trying to do the refresh every time
                     //forceTimeLapRefresh = false;
-                    System.println("setLap success " + msg);
+                    //System.println("setLap success " + msg);
                 } catch (e) {
                     forceTimeLapRefresh = true;
                     lapMessageError = msg;
