@@ -1,13 +1,77 @@
 <strings>
-    <string id="AppName">Fellrnr ActiveLook</string>
+    <string id="AppName">Fellrnr AL Dev</string>
     <string id="settings_glasses_name">Glasses name</string>
+    
+    <string id="settings_description">Configure data screens</string>    
+    
     <string id="laps_per_interval">The number of laps for each interval</string>
     <string id="lap_freeze_seconds">How long to freeze the display after the lap button (seconds), 2 is no freeze after lap message </string>
     <string id="settings_screens">Default screens set</string>
     <string id="settings_run">Running screens set (if supported by your device. API level 3.2 or higher)</string>
     <string id="settings_bike">Cycling screens set (if supported by your device. API level 3.2 or higher)</string>
+    <string id="settings_is_gesture_enable">Enable the gesture sensor</string>
+    
+    <string id="settings_is_auto_loop">Auto-cycle data screens</string>
+    <string id="settings_loop_timer">Adjust screen change interval (sec)</string>
+
+    <string id="settings_is_als_enable">Display auto brightness</string>
     <string id="update_datafield">Update this datafield</string>
     <string id="update_glasses">Update your glasses</string>
     <string id="update_glasses_second_row">using ActiveLook</string>
     <string id="update_glasses_third_row">mobile application</string>
+
+    <string id="Pwr">Power</string>
+    <string id="Watts">Watts</string>
+    <string id="EUnits">mW.HR-1</string>
+    <string id="ZeroPowerHRTitle">Heart Rate at Zero Power</string>
+    <string id="ZeroPowerHRPrompt">This is above resting HR, representing the HR when not running, but standing</string>
+	<string id="HrPwrSmoothingTitle">HrPwr Smoothing</string>
+	<string id="HrPwrSmoothingPrompt">Seconds of smoothing to apply to HrPwr</string>
+	<string id="PaceSmoothingTitle">Pace Smoothing</string>
+	<string id="PaceSmoothingPrompt">Seconds of smoothing to apply to Pace</string>
+
+    <string id="fit_core_temp_label">CORE Temperature</string>
+    <string id="fit_core_avg_label">CORE Avg Temp</string>
+    <string id="fit_core_min_label">CORE Min Temp</string>
+    <string id="fit_core_max_label">CORE Max Temp</string>
+    <string id="fit_skin_temp_label">Skin Temperature</string>
+    <string id="fit_core_qual_label">CORE DataQuality</string>
+    <string id="fit_core_resv_label">CoreReserved</string>
+    <string id="fit_core_temp_units"><![CDATA[°C]]></string>
+    <string id="fit_core_qual_units">Q</string>
+    <string id="fit_core_resv_units">kcal</string>
+
+    <string id="fit_hsi_label">CORE Heat Strain Index</string>
+    <string id="fit_hsi_units">HSI</string>
+
+	<string id="FieldsDefaultTitle">Field List (default)</string>
+	<string id="FieldsDefaultPrompt">Field list as CSV, see documentation</string>
+	<string id="FieldsRunTitle">Field List (run)</string>
+	<string id="FieldsRunPrompt">Field list as CSV, see documentation</string>
+	<string id="FieldsTrailTitle">Field List (trail)</string>
+	<string id="FieldsTrailPrompt">Field list as CSV, see documentation</string>
+
+	<string id="StoreNativePowerTitle">Store Native Power</string>
+	<string id="StoreNativePowerPrompt">Put the power data into native power field in FIT, where it will get to Strava</string>
+
+	<string id="TargetCadenceTitle">Target cadence (SPM)</string>
+	<string id="TargetCadencePrompt">Target cadence (Use 180 not 90)</string>
+
+	<string id="WalkingCadenceTitle">Cadence for walking</string>
+	<string id="WalkingCadencePrompt">Below this cadence, color as walking</string>
+
+	<string id="CadenceColorStepTitle">Steps for coloring cadence field</string>
+	<string id="CadenceColorStepPrompt">Target cadence plus/minus this step for coloring</string>
+
+    <string id="CORE_ANT_ID_title">CORE Sensor Id:</string>
+  	<string id="CORE_ANT_ID_prompt">Enter ANT+ id between 1 and 65535, 0 = use any CORE</string>
+	<string id="CORE_ANT_ID_error_msg">only numbers between 0 and 65535</string>
+
+  	<string id="UseCore">Try to use CORE sensor?</string>
+  	<string id="StoreCore">Store CORE data into FIT file?</string>
+
+	<string id="StrydIdTitle">Ant Id of Stryd sensor (0=ignore)</string>
+	<string id="StrydIdPrompt">Ant Id for Stryd</string>
+
+
 </strings>

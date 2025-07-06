@@ -2,8 +2,8 @@
     <setting propertyKey="@Properties.glasses_name" title="@Strings.settings_glasses_name">
         <settingConfig type="alphaNumeric" />
     </setting>
-    <setting propertyKey="@Properties.screens" title="@Strings.settings_screens">
-        <settingConfig type="alphaNumeric" />
+    <setting propertyKey="@Properties.settings_description" title="@Strings.settings_description">
+        <settingConfig type="alphaNumeric" readonly="true"/>
     </setting>
     <setting propertyKey="@Properties.run" title="@Strings.settings_run">
         <settingConfig type="alphaNumeric" />
@@ -11,10 +11,50 @@
     <setting propertyKey="@Properties.bike" title="@Strings.settings_bike">
         <settingConfig type="alphaNumeric" />
     </setting>
+    <setting propertyKey="@Properties.screens" title="@Strings.settings_screens">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.is_gesture_enable" title="@Strings.settings_is_gesture_enable">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.is_auto_loop" title="@Strings.settings_is_auto_loop">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.loop_timer" title="@Strings.settings_loop_timer">
+        <settingConfig type="numeric" min="1" max="30"/>
+    </setting>
+    <setting propertyKey="@Properties.is_als_enable" title="@Strings.settings_is_als_enable">
+        <settingConfig type="boolean" />
+    </setting>    
+    
     <setting propertyKey="@Properties.laps_per_interval" title="@Strings.laps_per_interval">
         <settingConfig type="numeric" min="0" max="10" />
     </setting>
     <setting propertyKey="@Properties.lap_freeze_seconds" title="@Strings.lap_freeze_seconds">
         <settingConfig type="numeric" min="0" max="30" />
+    </setting>
+
+    <setting propertyKey="@Properties.ZeroPowerHR" title="@Strings.ZeroPowerHRTitle" prompt="@Strings.ZeroPowerHRPrompt">
+		  <settingConfig type="numeric" min="20" max="200" />
+    </setting>
+    <setting propertyKey="@Properties.PaceSmoothing" title="@Strings.PaceSmoothingTitle" prompt="@Strings.PaceSmoothingPrompt">
+		  <settingConfig type="numeric" min="0" max="3600" />
+    </setting>
+    <setting propertyKey="@Properties.HrPwrSmoothing" title="@Strings.HrPwrSmoothingTitle" prompt="@Strings.HrPwrSmoothingPrompt">
+		  <settingConfig type="numeric" min="0" max="3600" />
+    </setting>
+    <setting propertyKey="@Properties.CORE_ANT_ID" title="@Strings.CORE_ANT_ID_title" prompt="@Strings.CORE_ANT_ID_prompt" helpUrl="https://corebodytemp.com/coreconnectiqmanual/">
+        <settingConfig type="numeric" readonly="false" 
+            required="false" min="0" max="65535" errorMessage="@Strings.CORE_ANT_ID_error_msg"  />
+    </setting>
+
+    <setting propertyKey="@Properties.UseCore" title="@Strings.UseCore">
+        <settingConfig type="boolean"/>
+    </setting>
+    <setting propertyKey="@Properties.StoreCore" title="@Strings.StoreCore">
+        <settingConfig type="boolean"/>
+    </setting>
+    <setting propertyKey="@Properties.StrydId" title="@Strings.StrydIdTitle" prompt="@Strings.StrydIdPrompt">
+		  <settingConfig type="numeric" />
     </setting>
 </settings>

@@ -32,6 +32,9 @@ module ActiveLook {
         var __pAccuNb as Lang.Number = 0;
         var threeSecPower as Lang.Float?;
         var normalizedPower as Lang.Float?;
+        var maxPower as Lang.Float?;
+        var averagePower as Lang.Float?;
+        var __pavgAccuNb as Lang.Float = 0.0;
 
         var __nbGroundContactTime as Lang.Number = 0;
         var __totalGroundContactTime as Lang.Number = 0;
@@ -44,7 +47,18 @@ module ActiveLook {
         var __nbStepLength as Lang.Number = 0;
         var __totalStepLength as Lang.Number = 0;
         var averageStepLength as Lang.Float?;
+
+        //#!JFS!# define extra variables
         var strideLength as Lang.Float?;
+        var coreTemperature = -4.0;
+        var skinTemperature = -4.0;
+        var heatStrainIndex = -4.0;
+        var heatIndicator = -4.0;
+        var smoothhr=0;
+        var smoothpwr=0;
+        var smoothHrPwrCounter=0;
+        var hrPwr = 12.34;
+        var ourPwr = 0;
 
         var __asSamples as Lang.Array<Lang.Number> = [];
         var averageAscentSpeed as Lang.Float?;
@@ -61,6 +75,9 @@ module ActiveLook {
             __pAccuNb = 0;
             threeSecPower = null;
             normalizedPower = null;
+            maxPower = null;
+            averagePower = null;
+            __pavgAccuNb = 0.0;
             __nbGroundContactTime = 0;
             __totalGroundContactTime = 0;
             averageGroundContactTime = null;
@@ -74,6 +91,14 @@ module ActiveLook {
             __asSamples = [];
             averageAscentSpeed = null;
             ActiveLook.Laps.onSessionStart();
+        }
+
+        //#!JFS!# simply copy over the values rather than making the get function even more complex and hard to merge with future updates
+        function getCore(coreField) {
+            coreTemperature = coreField.coreTemperature;
+            skinTemperature = coreField.skinTemperature;
+            heatStrainIndex = coreField.heatStrainIndex;
+            heatIndicator = coreField.heatIndicator;
         }
 
         //#!JFS!# Method to get from a symbol to a value, heart of the mapping
@@ -99,9 +124,16 @@ module ActiveLook {
             if (info == null) {
                 return;
             }
+
             // Three seconds power & Normalized power
-            if (info has :currentPower && info.currentPower != null) {
-                __pSamples.add(info.currentPower);
+            var pwr = null;
+            if(strydSensor != null) {
+                pwr = strydSensor.currentPower;
+            } else if (info has :currentPower && info.currentPower != null) {
+                pwr = info.currentPower;
+            }
+            if(pwr != null) {
+                __pSamples.add(pwr);
                 if (__pSamples.size() >= 30) {
                     __pSamples = __pSamples.slice(-30, null);
                     var tmp = 0;
@@ -188,9 +220,9 @@ module ActiveLook {
             averagePace = tmpValid ? 1.0 / tmp : null;
 
             // Three seconds power
-            if (__pSamples.size() >= 3) {
-                tmp = __pSamples.slice(-3, null);
-                threeSecPower = (tmp[0] + tmp[1] + tmp[2]) / 3.0;
+            if (__pSamples.size() >= 6) {
+                tmp = __pSamples.slice(-6, null);
+                threeSecPower = (tmp[0] + tmp[1] + tmp[2] + tmp[3] + tmp[4] + tmp[5]) / 6.0;
             } else {
                 threeSecPower = null;
             }
@@ -200,7 +232,47 @@ module ActiveLook {
             } else {
                 normalizedPower = null;
             }
+            // Workaround : Some devices don't have averagePower & maxPower in Activity.info so we calculated them
+            // Max power
+            //tmp = get(:currentPower);
+            var pwr = null;
+            if(strydSensor != null) {
+                pwr = strydSensor.currentPower;
 
+                // var myTime = System.getClockTime(); // ClockTime object
+                // System.println(
+                //     myTime.hour.format("%02d") + ":" +
+                //     myTime.min.format("%02d") + ":" +
+                //     myTime.sec.format("%02d") + " Power from Stryd is " + pwr
+                //     );
+            } else if (info has :currentPower && info.currentPower != null) {
+                pwr = info.currentPower;
+            }
+            ourPwr = pwr; 
+            var pwrValid = pwr != null && pwr != false && pwr > 0.0;
+            if(pwrValid){
+                 maxPower = maxPower == null ? pwr : pwr > maxPower ? pwr : maxPower;
+            }
+            // Average power
+            if (__ai != null && __ai has :averagePower) {
+                tmp = __ai.averagePower;
+                tmpValid = tmp != null && tmp != false && tmp > 0.0;
+                if(tmpValid){
+                    averagePower = tmp;
+                }else{
+                    // tmp = get(:currentPower);
+                    // tmpValid = tmp != null && tmp != false && tmp > 0.0;
+                    if(pwrValid){
+                        if(averagePower != null){
+                            averagePower = ((averagePower * __pavgAccuNb) + pwr) / (__pavgAccuNb + 1);
+                        } else{
+                            averagePower = pwr;
+                        }
+                        __pavgAccuNb+=1;
+                    }
+                }
+            }
+        
             // Average ascent speed
             tmpValid = __asSamples.size();
             if (tmpValid > 1) {
@@ -218,6 +290,23 @@ module ActiveLook {
                 strideLength = (info.currentSpeed * 60) / info.currentCadence * 1000; //this DF code expects it in mm
             }
             
+
+            //#!JFS!# calculate HrPwr
+            //use ourPwr from above
+            if(ourPwr != null && ourPwr != 0 && info.currentHeartRate != null && info.currentHeartRate > ZeroPowerHR) {
+                if(smoothHrPwrCounter < HrPwrSmoothing) {
+                    smoothHrPwrCounter++;
+                }
+                
+                smoothhr = (smoothhr*(smoothHrPwrCounter-1.0)/smoothHrPwrCounter) + info.currentHeartRate.toFloat()/smoothHrPwrCounter;
+                smoothpwr = (smoothpwr*(smoothHrPwrCounter-1.0)/smoothHrPwrCounter) + ourPwr/smoothHrPwrCounter;
+                
+                var hrpwraw = ((smoothpwr * 1000.0) / weight) / (smoothhr - ZeroPowerHR);
+                hrPwr = Math.round(hrpwraw*10)/10.0;
+            } else {
+                hrPwr = 1.23; //some value to test with
+            }
+
         }
 
     }
@@ -247,7 +336,7 @@ module ActiveLook {
         const LAYOUTS as Lang.Array<Lang.Symbol> = [
             :chrono,           :elapsedDistance,   :distanceToDestination,
             :currentHeartRate, :maxHeartRate,      :averageHeartRate,
-            :currentPower,     :maxPower,          :averagePower,          :threeSecPower, :normalizedPower,
+            :ourPwr,           :maxPower,          :averagePower,          :threeSecPower, :normalizedPower,
             :currentSpeed,     :maxSpeed,          :averageSpeed,
             :currentPace,      :fastestPace,       :averagePace,
             :currentCadence,   :maxCadence,        :averageCadence,
@@ -264,6 +353,11 @@ module ActiveLook {
             :lapCalories,
             :lapAverageGroundContactTime, :lapAverageVerticalOscillation, :lapAverageStepLength,
             :strideLength, //#!JFS!# Add stride length, number 47
+            :coreTemperature, //48
+            :skinTemperature, //49
+            :heatStrainIndex, //50
+            :heatIndicator, //51
+            :hrPwr, //52
         ];
 
         //ToDo : A modifier avec les bonnes positions
@@ -350,7 +444,7 @@ module ActiveLook {
          *  Heart Rate                      | :currentHeartRate      |     bpm   |       bpm        | a += "%0.2X%0.2X%0.2X%0.2X\n" % (21, 21, 49, 49)
          *  Max HeartRate                   | :maxHeartRate          |     bpm   |       bpm        | a += "%0.2X%0.2X%0.2X%0.2X\n" % (29, 29, 61, 61)
          *  Average Heart Rate              | :averageHeartRate      |     bpm   |       bpm        | a += "%0.2X%0.2X%0.2X%0.2X\n" % (24, 24, 52, 52)
-         *  Power                           | :currentPower          |      W    |        W         | a += "%0.2X%0.2X%0.2X%0.2X\n" % (22, 22, 56, 56)
+         *  Power                           | :ourPwr                |      W    |        W         | a += "%0.2X%0.2X%0.2X%0.2X\n" % (22, 22, 56, 56)
          *  Max Power                       | :maxPower              |      W    |        W         | a += "%0.2X%0.2X%0.2X%0.2X\n" % (30, 30, 62, 62)
          *  Average Power                   | :averagePower          |      W    |        W         | a += "%0.2X%0.2X%0.2X%0.2X\n" % (25, 25, 53, 53)
          *  Power 3s                        | :threeSecPower         |      W    |        W         | a += "%0.2X%0.2X%0.2X%0.2X\n" % (42, 42, 65, 65)
@@ -378,13 +472,21 @@ module ActiveLook {
          * ---------------------------------|------------------------|-----------|--------|---------|------------------------------------------
          *  Lap Average Ground Contact Time | :lapAverageGroundContactTime | ms  |        ms        | a += "%0.2X%0.2X%0.2X%0.2X\n" % (189, 189, 190, 190)
          * ---------------------------------|------------------------|-----------|--------|---------|------------------------------------------
+         *  Core Data                       | Symbol                 | U Garmin  | Metric | Statute | python converter: a = ""
+         * ---------------------------------|------------------------|-----------|--------|---------|------------------------------------------
+         *  Skin Temp                       | :skinTemperature       |           |                  | 
+         *  Core Temp                       | :coreTemperature       |           |                  | 
+         *  Heat Strain Index               | :heatStrainIndex       |           |                  | 
+         * ---------------------------------|------------------------|-----------|--------|---------|------------------------------------------
          */
+         //https://github.com/ActiveLook/Activelook-API-Documentation
+         //https://github.com/ActiveLook/Activelook-Visual-Assets
         const IDS_NO_CONVERT as Lang.Dictionary<Lang.Symbol, Lang.Number> = {
             :chrono                => 0x0B0B2B2B,
             :currentHeartRate      => 0x15153131,
             :maxHeartRate          => 0x1D1D3D3D,
             :averageHeartRate      => 0x18183434,
-            :currentPower          => 0x16163838,
+            :ourPwr                => 0x16163838,
             :maxPower              => 0x1E1E3E3E,
             :averagePower          => 0x19193535,
             :threeSecPower         => 0x2A2A4141,
@@ -402,6 +504,13 @@ module ActiveLook {
             :lapAverageCadence           => 0x17173333,
             :lapCalories                 => 0x11113636,
             :lapAverageGroundContactTime => 0xBDBDBEBE,
+            //#!JFS!# lets go with the symbol for energy expendature for now. I can't work out how to map the numbers to the symbols
+            :coreTemperature    => 0x1B1B3A3A,
+            :skinTemperature    => 0x1B1B3A3A,
+            :heatStrainIndex    => 0x1B1B3A3A,
+            :heatIndicator      => 0x1B1B3A3A,
+            :hrPwr              => 0x45454646, //normalized power icon
+
         };
 
         /*
@@ -470,7 +579,7 @@ module ActiveLook {
          *  Stride Length (calculated)      | :strideLength          |      mm   |   m    |   ft    | a += "%0.2X%0.2X%0.2X%0.2X\n" % (194, 195, 196, 196)
          */
         const IDS_CONVERT as Lang.Dictionary<Lang.Symbol, { :id as Lang.Number, :statuteSwitch as Lang.Symbol, :toMetric as Lang.Float?, :toStatute as Lang.Float? }> = {
-            :elapsedDistance       => { :id => 0x0C232E2E, :statuteSwitch => :distanceUnits,  :toMetric => 0.001,  :toStatute => 0.000621371 },
+            :elapsedDistance       => { :id => 0x0C232E2E, :statuteSwitch => :distanceUnits,  :toMetric => 0.001,  :toStatute => 0.000621371 }, //#2
             :distanceToDestination => { :id => 0x65666767, :statuteSwitch => :distanceUnits,  :toMetric => 0.001,  :toStatute => 0.000621371 },
             :currentSpeed          => { :id => 0x0D212C2C, :statuteSwitch => :paceUnits,      :toMetric => 3.6,    :toStatute => 2.236936    },
             :maxSpeed              => { :id => 0x1F293F3F, :statuteSwitch => :paceUnits,      :toMetric => 3.6,    :toStatute => 2.236936    },
@@ -497,6 +606,7 @@ module ActiveLook {
             :strideLength                 => { :id => 0xC2C3C4C4, :statuteSwitch => :heightUnits, :toMetric => 0.001, :toStatute => 0.00328084 }, //#!JFS!# hopefully the id will be okay. 
         };
 
+        //Full width and half width? 
         const CUSTOM_TO_STR as Lang.Dictionary<Lang.Symbol, {
             :full as Method(value as Lang.Numeric or Lang.Array<Lang.Numeric> or Null) as Lang.String,
             :half as Method(value as Lang.Numeric or Lang.Array<Lang.Numeric> or Null) as Lang.String
@@ -507,6 +617,10 @@ module ActiveLook {
             :averagePace 			=> { :full => :paceFullFormat,  :half => :paceHalfFormat  },
             :lapChrono      		=> { :full => :toFullChronoStr, :half => :toHalfChronoStr },
             :lapAveragePace 		=> { :full => :paceFullFormat,  :half => :paceHalfFormat  },
+            :averagePower 		    => { :full => :averagePowerFullFormat,  :half => :averagePowerHalfFormat  },
+            :lapAveragePower 		=> { :full => :averagePowerFullFormat,  :half => :averagePowerHalfFormat  },
+            :normalizedPower 		=> { :full => :averagePowerFullFormat,  :half => :averagePowerHalfFormat  },
+            :threeSecPower 		    => { :full => :averagePowerFullFormat,  :half => :averagePowerHalfFormat  },
         };
 
         function toFullChronoStr(value as Lang.Array<Lang.Number> or Null) as Lang.String {
@@ -563,7 +677,20 @@ module ActiveLook {
                 return Lang.format("$1$:$2$", [ (value / 60).format("%02d"), ((value % 60) / 6).format("%1d") ]);
             }
         }
-
+        
+        function averagePowerFullFormat(value as Lang.Number or Lang.Float or Null) as Lang.String {
+            if (value == null) {
+                return toFullStr("-");
+            }
+            return toFullStr(Math.round(value).format("%.0f"));
+        }
+        
+        function averagePowerHalfFormat(value as Lang.Number or Lang.Float or Null) as Lang.String {
+            if (value == null) {
+                return toHalfStr("-");
+            }
+            return toHalfStr(Math.round(value).format("%.0f"));
+        }
 
         function toSizedStringDeprecated(value as Lang.Number or Lang.Float or Null, size as Lang.Number) as Lang.String {
             var tmp = "-";
@@ -633,6 +760,7 @@ module ActiveLook {
       		return tmp;
         }
 
+        //#!JFS!# looks like this might actully be left and right alignment
         function toFullStr(value as Lang.Number or Lang.Float or Null) as Lang.String {
 			if(ActiveLookSDK.cfgVersion >= 10){
 				return toSizedString(value, 4, true);
@@ -692,9 +820,11 @@ module ActiveLook {
                 var mode = (pos & 0x00010000) >> 12; // (pos & 0x00FF0000 != 0) ? 16 : 0;
                 if (IDS_NO_CONVERT.hasKey(newElem[:sym])) {
                     newElem[:id] = IDS_NO_CONVERT[newElem[:sym]];
-                    if ( Toybox.Activity.getProfileInfo().sport == Toybox.Activity.SPORT_RUNNING) {
-                        if (IDS_NO_CONVERT_RUNNING_OVERRIDE.hasKey(newElem[:sym])) {
-                            newElem[:id] = IDS_NO_CONVERT_RUNNING_OVERRIDE[newElem[:sym]];
+			        if(Toybox.Activity has :ProfileInfo) { 			//API Level 3.2.0
+                        if ( Toybox.Activity.getProfileInfo().sport == Toybox.Activity.SPORT_RUNNING) {
+                            if (IDS_NO_CONVERT_RUNNING_OVERRIDE.hasKey(newElem[:sym])) {
+                                newElem[:id] = IDS_NO_CONVERT_RUNNING_OVERRIDE[newElem[:sym]];
+                            }
                         }
                     }
                 } else {

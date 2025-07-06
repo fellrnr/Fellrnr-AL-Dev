@@ -25,6 +25,7 @@ module ActiveLook {
 
         var lapAverageHeartRate as Lang.Number or Null = null;
         var lapAveragePower as Lang.Number or Null = null;
+        var lapAveragePowerPrevious as Lang.Number or Null = 0;
         var lapAveragePace as Lang.Float or Null = null;
         var lapAverageSpeed as Lang.Float or Null = null;
         var lapAverageCadence as Lang.Number or Null = null;
@@ -54,6 +55,12 @@ module ActiveLook {
             if($.lapsPerInterval > 1) {
                 intervalNumber = Toybox.Math.floor((lapNumber-1)/$.lapsPerInterval) + 1;
             }
+            //#!JFS!# preserve lap avg power for message
+            if(lapAveragePower != null && lapAveragePower != 0) {
+                lapAveragePowerPrevious = Toybox.Math.round(lapAveragePower);
+            } else {
+                lapAveragePowerPrevious = -1;
+            }
 
             lapStartTimerTime = hasValue(activityInfo, :timerTime) ? activityInfo.timerTime : 0;
             lapStartElapsedDistance = hasValue(activityInfo, :elapsedDistance) ? activityInfo.elapsedDistance : 0.0;
@@ -61,7 +68,7 @@ module ActiveLook {
             lapStartTotalDescent = hasValue(activityInfo, :totalDescent) ? activityInfo.totalDescent : 0;
             lapStartCalories = hasValue(activityInfo, :calories) ? activityInfo.calories : 0;
             lapStartTotalHeartRate = lapStartTimerTime * (hasValue(activityInfo, :averageHeartRate) ? activityInfo.averageHeartRate : 0);
-            lapStartTotalPower = lapStartTimerTime * (hasValue(activityInfo, :averagePower) ? activityInfo.averagePower : 0);
+            lapStartTotalPower = lapStartTimerTime * ( AugmentedActivityInfo.averagePower != null  ? AugmentedActivityInfo.averagePower : 0);
             lapStartTotalSpeed = lapStartTimerTime * (hasValue(activityInfo, :averageSpeed) ? activityInfo.averageSpeed : 0.0);
             lapStartTotalCadence = lapStartTimerTime * (hasValue(activityInfo, :averageCadence) ? activityInfo.averageCadence : 0);
             __nbGroundContactTime = 0;
@@ -143,8 +150,8 @@ module ActiveLook {
                 } else {
                     lapAverageHeartRate = null;
                 }
-                if (hasValue(activityInfo, :averagePower)) {
-                    lapAveragePower = (sessionTimerTime * activityInfo.averagePower - lapStartTotalPower) / lapTimerTime;
+                if (AugmentedActivityInfo.averagePower != null) {
+                    lapAveragePower = (sessionTimerTime * AugmentedActivityInfo.averagePower - lapStartTotalPower) / lapTimerTime;
                 } else {
                     lapAveragePower = null;
                 }

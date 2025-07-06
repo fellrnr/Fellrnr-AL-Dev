@@ -1,0 +1,739 @@
+[ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Ant,3,13,16]; ]
+using Toybox.Ant;
+[ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Time,4,13,17]; ]
+using Toybox.Time;
+[ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [System,5,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 8; release = true; @symbol_functiondef = [strydmsg,8,20,28]; @symbol_param<0> = [msg,8,29,32]; @symbol_param<0>_type<0> = [Toybox,8,36,42]; @symbol_param<0>_type<1> = [Lang,8,43,47]; @symbol_param<0>_type<2> = [String,8,48,54]; @symbol_param<1> = [data,8,56,60]; @symbol_param<1>_type<0> = [Toybox,8,64,70]; @symbol_param<1>_type<1> = [Lang,8,71,75]; @symbol_param<1>_type<2> = [Object,8,76,82]; ]
+function strydmsg(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {
+}
+[ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 9; debug = true; @symbol_functiondef = [strydmsg,9,18,26]; @symbol_param<0> = [msg,9,27,30]; @symbol_param<0>_type<0> = [Toybox,9,34,40]; @symbol_param<0>_type<1> = [Lang,9,41,45]; @symbol_param<0>_type<2> = [String,9,46,52]; ]
+function strydmsg(msg as Toybox.Lang.String) as Void {
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_9_62_16_0_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 10 4 ]
+    [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_9_62_16_0_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_9_62_16_0_stop" ]
+    %myTime.1 = local;
+    symbol [ myTime %myTime.1 10 8 14 ];
+    symbol [ System %tmp.1 10 17 23 ];
+    %tmp.1 = getm $.Toybox.System;
+    symbol [ getClockTime %tmp.2 10 24 36 ];
+    %tmp.2 = getv function %tmp.1 :getClockTime;
+    %tmp.3 = invoke %tmp.1 %tmp.2();
+    lputv %myTime.1 %tmp.3;
+    symbol [ myTime %myTime.1 10 8 14 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 11 4 ]
+    symbol [ System %tmp.4 11 4 10 ];
+    %tmp.4 = getm $.Toybox.System;
+    symbol [ println %tmp.5 11 11 18 ];
+    %tmp.5 = getv function %tmp.4 :println;
+    %tmp.6 = lgetv %myTime.1;
+    symbol [ myTime %tmp.6 12 8 14 ];
+    symbol [ hour %tmp.7 12 15 19 ];
+    %tmp.7 = getv %tmp.6 :hour;
+    symbol [ format %tmp.8 12 20 26 ];
+    %tmp.8 = getv function %tmp.7 :format;
+    %tmp.9 = "%02d";
+    %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+    %tmp.11 = ":";
+    %tmp.12 = add %tmp.10 %tmp.11;
+    %tmp.13 = lgetv %myTime.1;
+    symbol [ myTime %tmp.13 13 8 14 ];
+    symbol [ min %tmp.14 13 15 18 ];
+    %tmp.14 = getv %tmp.13 :min;
+    symbol [ format %tmp.15 13 19 25 ];
+    %tmp.15 = getv function %tmp.14 :format;
+    %tmp.16 = "%02d";
+    %tmp.17 = invoke %tmp.14 %tmp.15(%tmp.16);
+    %tmp.18 = add %tmp.12 %tmp.17;
+    %tmp.19 = ":";
+    %tmp.20 = add %tmp.18 %tmp.19;
+    %tmp.21 = lgetv %myTime.1;
+    symbol [ myTime %tmp.21 14 8 14 ];
+    symbol [ sec %tmp.22 14 15 18 ];
+    %tmp.22 = getv %tmp.21 :sec;
+    symbol [ format %tmp.23 14 19 25 ];
+    %tmp.23 = getv function %tmp.22 :format;
+    %tmp.24 = "%02d";
+    %tmp.25 = invoke %tmp.22 %tmp.23(%tmp.24);
+    %tmp.26 = add %tmp.20 %tmp.25;
+    %tmp.27 = ": ";
+    %tmp.28 = add %tmp.26 %tmp.27;
+    %tmp.29 = lgetv %msg;
+    symbol [ msg %tmp.29 14 43 46 ];
+    %tmp.30 = add %tmp.28 %tmp.29;
+    invoke %tmp.4 %tmp.5(%tmp.30);
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_9_62_16_0_stop:
+}
+[ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 19; @symbol_classdef = [StrydSensor,19,6,17]; @symbol_extends<0> = [Ant,19,26,29]; @symbol_extends<1> = [GenericChannel,19,30,44]; ]
+class StrydSensor extends Ant.GenericChannel {
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 19; ]
+    <init> {
+    }
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 19; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 20; @position = 8; @symbol_vardef = [searching,20,8,17]; ]
+    var searching;
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 21; @position = 8; @symbol_vardef = [failedInit,21,8,18]; ]
+    var failedInit = false;
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 22; @position = 8; @symbol_vardef = [searchingCount,22,8,22]; ]
+    var searchingCount = 0;
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 24; @position = 5; @symbol_vardef = [currentPower,24,5,17]; ]
+    var currentPower = -9;
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 26; @position = 10; @symbol_constdef = [PAGE_NUMBER,26,10,21]; ]
+    const PAGE_NUMBER = 0x10;
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 28; @position = 8; @symbol_vardef = [deviceNumber,28,8,20]; ]
+    var deviceNumber;
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 30; @symbol_functiondef = [initialize,30,13,23]; @symbol_param<0> = [devNumber,30,24,33]; ]
+    function initialize(devNumber) as Void {
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_30_35_40_4_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 31 8 ]
+        %tmp.1 = self;
+        symbol [ strydmsg %tmp.2 31 8 16 ];
+        %tmp.2 = getv function %tmp.1 :strydmsg;
+        %tmp.3 = "Create StrydSensor, antId:";
+        %tmp.4 = lgetv %devNumber;
+        symbol [ devNumber %tmp.4 31 48 57 ];
+        %tmp.5 = add %tmp.3 %tmp.4;
+        invoke %tmp.1 %tmp.2(%tmp.5);
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 32 5 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_32_5_35_5_if_stmt:
+        %tmp.6 = lgetv %devNumber;
+        symbol [ devNumber %tmp.6 32 9 18 ];
+        %tmp.7 = 0;
+        %tmp.8 = lt %tmp.6 %tmp.7;
+        bf %tmp.8 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_32_5_35_5_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_32_5_35_5_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_33_5_35_5_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 34 6 ]
+        ret ?;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_33_5_35_5_stop:
+        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_32_5_35_5_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_32_5_35_5_if_end:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 36 5 ]
+        %tmp.9 = lgetv %devNumber;
+        symbol [ devNumber %tmp.9 36 20 29 ];
+        symbol [ deviceNumber ? 36 5 17 ];
+        putv self :deviceNumber %tmp.9;
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 37 8 ]
+        %tmp.10 = self;
+        symbol [ init %tmp.11 37 8 12 ];
+        %tmp.11 = getv function %tmp.10 :init;
+        invoke %tmp.10 %tmp.11();
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_30_35_40_4_stop:
+    }
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 42; @symbol_functiondef = [init,42,13,17]; ]
+    function init() {
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_42_20_66_4_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 43 8 ]
+        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_42_20_66_4_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_42_20_66_4_stop" ]
+        %chanAssign.1 = local;
+        symbol [ chanAssign %chanAssign.1 43 12 22 ];
+        symbol [ Ant %tmp.3 43 29 32 ];
+        %tmp.3 = getm $.Toybox.Ant;
+        symbol [ ChannelAssignment %tmp.4 43 33 50 ];
+        %tmp.4 = getv function ? %tmp.3 :ChannelAssignment;
+        symbol [ Toybox %tmp.6 44 12 18 ];
+        %tmp.6 = getv ? :Toybox;
+        symbol [ Ant %tmp.7 44 19 22 ];
+        %tmp.7 = getv %tmp.6 :Ant;
+        symbol [ CHANNEL_TYPE_RX_NOT_TX %tmp.8 44 23 45 ];
+        %tmp.8 = getv %tmp.7 :CHANNEL_TYPE_RX_NOT_TX;
+        symbol [ Toybox %tmp.10 45 12 18 ];
+        %tmp.10 = getv ? :Toybox;
+        symbol [ Ant %tmp.11 45 19 22 ];
+        %tmp.11 = getv %tmp.10 :Ant;
+        symbol [ NETWORK_PLUS %tmp.12 45 23 35 ];
+        %tmp.12 = getv %tmp.11 :NETWORK_PLUS;
+        %tmp.1 = newc %tmp.4 (%tmp.8, %tmp.12);
+        lputv %chanAssign.1 %tmp.1;
+        symbol [ chanAssign %chanAssign.1 43 12 22 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 46 8 ]
+        try @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_beginTry @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_endTry @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_catch @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_finally;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_beginTry:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_12_48_8_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 47 12 ]
+        symbol [ GenericChannel %tmp.14 47 12 26 ];
+        %tmp.14 = getv ? :GenericChannel;
+        symbol [ initialize %tmp.15 47 27 37 ];
+        %tmp.15 = getv function %tmp.14 :initialize;
+        %tmp.16 = self;
+        symbol [ method %tmp.17 47 38 44 ];
+        %tmp.17 = getv function %tmp.16 :method;
+        %tmp.19 = const :onMessage;
+        symbol [ onMessage %tmp.19 47 46 55 const ];
+        %tmp.20 = invoke %tmp.16 %tmp.17(%tmp.19);
+        %tmp.21 = lgetv %chanAssign.1;
+        symbol [ chanAssign %tmp.21 47 58 68 ];
+        invoke %tmp.14 %tmp.15(%tmp.20, %tmp.21);
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_12_48_8_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_endTry:
+        jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_finally;
+        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_catch:
+        %tmp.22 = exception;
+        push %tmp.22;
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 48 10 ]
+        %tmp.23 = dup %tmp.22;
+        symbol [ Ant %tmp.24 48 29 32 ];
+        %tmp.24 = getm $.Toybox.Ant;
+        symbol [ UnableToAcquireChannelException %tmp.25 48 33 64 ];
+        %tmp.25 = getv %tmp.24 :UnableToAcquireChannelException;
+        %tmp.26 = isa %tmp.23 %tmp.25;
+        bf %tmp.26 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_48_10_52_8_next;
+        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_catch" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_48_10_52_8_next" ]
+        %e.2 = local;
+        symbol [ e %e.2 48 16 17 ];
+        %tmp.27 = dup %tmp.22;
+        %tmp.28 = as %tmp.27 Ant.UnableToAcquireChannelException;
+        lputv %e.2 %tmp.28;
+        symbol [ e %e.2 48 16 17 ];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_48_66_52_8_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 49 12 ]
+        %tmp.29 = self;
+        symbol [ strydmsg %tmp.30 49 12 20 ];
+        %tmp.30 = getv function %tmp.29 :strydmsg;
+        %tmp.31 = "Failed to aquire channel for stryd ";
+        %tmp.32 = lgetv %e.2;
+        symbol [ e %tmp.32 49 61 62 ];
+        symbol [ getErrorMessage %tmp.33 49 63 78 ];
+        %tmp.33 = getv function %tmp.32 :getErrorMessage;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        %tmp.35 = add %tmp.31 %tmp.34;
+        invoke %tmp.29 %tmp.30(%tmp.35);
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 50 12 ]
+        %tmp.36 = true;
+        symbol [ failedInit ? 50 12 22 ];
+        putv self :failedInit %tmp.36;
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 51 12 ]
+        pop;
+        jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_finally;
+        ret ?;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_48_66_52_8_stop:
+        jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_finally;
+        pop;
+        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_48_10_52_8_next:
+        try @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_catch @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_48_10_52_8_next @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_48_10_52_8_next @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_finally;
+        jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_finally;
+        throw %tmp.22;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_finally:
+        jsrret;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_46_8_52_8_end:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 56 8 ]
+        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_42_20_66_4_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_42_20_66_4_stop" ]
+        %deviceCfg.3 = local;
+        symbol [ deviceCfg %deviceCfg.3 56 12 21 ];
+        symbol [ Ant %tmp.39 56 28 31 ];
+        %tmp.39 = getm $.Toybox.Ant;
+        symbol [ DeviceConfig %tmp.40 56 32 44 ];
+        %tmp.40 = getv function ? %tmp.39 :DeviceConfig;
+        %tmp.41 = newd 7;
+        %tmp.43 = const :deviceNumber;
+        symbol [ deviceNumber %tmp.43 57 13 25 const ];
+        symbol [ deviceNumber %tmp.45 57 29 41 ];
+        %tmp.45 = getv ? :deviceNumber;
+        %tmp.46 = dup %tmp.41;
+        %tmp.47 = aputv %tmp.46 %tmp.43 %tmp.45;
+        %tmp.49 = const :deviceType;
+        symbol [ deviceType %tmp.49 58 13 23 const ];
+        %tmp.50 = 11;
+        %tmp.51 = dup %tmp.47;
+        %tmp.52 = aputv %tmp.51 %tmp.49 %tmp.50;
+        %tmp.54 = const :transmissionType;
+        symbol [ transmissionType %tmp.54 59 13 29 const ];
+        %tmp.55 = 5;
+        %tmp.56 = dup %tmp.52;
+        %tmp.57 = aputv %tmp.56 %tmp.54 %tmp.55;
+        %tmp.59 = const :messagePeriod;
+        symbol [ messagePeriod %tmp.59 60 13 26 const ];
+        %tmp.60 = 8182;
+        %tmp.61 = dup %tmp.57;
+        %tmp.62 = aputv %tmp.61 %tmp.59 %tmp.60;
+        %tmp.64 = const :radioFrequency;
+        symbol [ radioFrequency %tmp.64 61 13 27 const ];
+        %tmp.65 = 57;
+        %tmp.66 = dup %tmp.62;
+        %tmp.67 = aputv %tmp.66 %tmp.64 %tmp.65;
+        %tmp.69 = const :searchTimeoutLowPriority;
+        symbol [ searchTimeoutLowPriority %tmp.69 62 13 37 const ];
+        %tmp.70 = 10;
+        %tmp.71 = dup %tmp.67;
+        %tmp.72 = aputv %tmp.71 %tmp.69 %tmp.70;
+        %tmp.74 = const :searchThreshold;
+        symbol [ searchThreshold %tmp.74 63 13 28 const ];
+        %tmp.75 = 0;
+        %tmp.76 = dup %tmp.72;
+        %tmp.77 = aputv %tmp.76 %tmp.74 %tmp.75;
+        %tmp.37 = newc %tmp.40 (%tmp.77);
+        lputv %deviceCfg.3 %tmp.37;
+        symbol [ deviceCfg %deviceCfg.3 56 12 21 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 65 8 ]
+        symbol [ GenericChannel %tmp.79 65 8 22 ];
+        %tmp.79 = getv ? :GenericChannel;
+        symbol [ setDeviceConfig %tmp.80 65 23 38 ];
+        %tmp.80 = getv function %tmp.79 :setDeviceConfig;
+        %tmp.81 = lgetv %deviceCfg.3;
+        symbol [ deviceCfg %tmp.81 65 39 48 ];
+        invoke %tmp.79 %tmp.80(%tmp.81);
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_42_20_66_4_stop:
+    }
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 67; @symbol_functiondef = [open,67,13,17]; ]
+    function open() {
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_67_20_73_4_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 68 8 ]
+        %tmp.1 = -8;
+        symbol [ currentPower ? 68 8 20 ];
+        putv self :currentPower %tmp.1;
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 69 8 ]
+        %tmp.2 = true;
+        symbol [ searching ? 69 8 17 ];
+        putv self :searching %tmp.2;
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 70 8 ]
+        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_67_20_73_4_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_67_20_73_4_stop" ]
+        %retval.1 = local;
+        symbol [ retval %retval.1 70 12 18 ];
+        symbol [ GenericChannel %tmp.4 70 21 35 ];
+        %tmp.4 = getv ? :GenericChannel;
+        symbol [ open %tmp.5 70 36 40 ];
+        %tmp.5 = getv function %tmp.4 :open;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %retval.1 %tmp.6;
+        symbol [ retval %retval.1 70 12 18 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 71 8 ]
+        %tmp.7 = self;
+        symbol [ strydmsg %tmp.8 71 8 16 ];
+        %tmp.8 = getv function %tmp.7 :strydmsg;
+        %tmp.9 = "Stryd open ";
+        %tmp.10 = lgetv %retval.1;
+        symbol [ retval %tmp.10 71 33 39 ];
+        %tmp.11 = add %tmp.9 %tmp.10;
+        invoke %tmp.7 %tmp.8(%tmp.11);
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 72 8 ]
+        %tmp.12 = lgetv %retval.1;
+        symbol [ retval %tmp.12 72 15 21 ];
+        ret %tmp.12;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_67_20_73_4_stop:
+    }
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 75; @symbol_functiondef = [close,75,13,18]; ]
+    function close() {
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_75_21_81_4_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 76 8 ]
+        %tmp.1 = -7;
+        symbol [ currentPower ? 76 8 20 ];
+        putv self :currentPower %tmp.1;
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 77 8 ]
+        %tmp.2 = true;
+        symbol [ searching ? 77 8 17 ];
+        putv self :searching %tmp.2;
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 78 8 ]
+        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_75_21_81_4_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_75_21_81_4_stop" ]
+        %retval.1 = local;
+        symbol [ retval %retval.1 78 12 18 ];
+        symbol [ GenericChannel %tmp.4 78 21 35 ];
+        %tmp.4 = getv ? :GenericChannel;
+        symbol [ close %tmp.5 78 36 41 ];
+        %tmp.5 = getv function %tmp.4 :close;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %retval.1 %tmp.6;
+        symbol [ retval %retval.1 78 12 18 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 79 8 ]
+        %tmp.7 = self;
+        symbol [ strydmsg %tmp.8 79 8 16 ];
+        %tmp.8 = getv function %tmp.7 :strydmsg;
+        %tmp.9 = "Stryd close ";
+        %tmp.10 = lgetv %retval.1;
+        symbol [ retval %tmp.10 79 34 40 ];
+        %tmp.11 = add %tmp.9 %tmp.10;
+        invoke %tmp.7 %tmp.8(%tmp.11);
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 80 8 ]
+        %tmp.12 = lgetv %retval.1;
+        symbol [ retval %tmp.12 80 15 21 ];
+        ret %tmp.12;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_75_21_81_4_stop:
+    }
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 85; @symbol_functiondef = [computeStryd,85,13,25]; ]
+    function computeStryd() {
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_85_28_95_4_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 86 8 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_8_88_8_if_stmt:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_11_86_31_begin:
+        symbol [ currentPower %tmp.2 86 11 23 ];
+        %tmp.2 = getv ? :currentPower;
+        %tmp.3 = 0;
+        %tmp.4 = lt %tmp.2 %tmp.3;
+        bt %tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_8_88_8_if_true;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_31_86_31_false:
+        symbol [ searching %tmp.6 86 31 40 ];
+        %tmp.6 = getv ? :searching;
+        push %tmp.6;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_31_86_31_end:
+        %tmp.7 = phi [%tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_11_86_31_begin] [%tmp.6 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_31_86_31_false] [%tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_31_86_31_end];
+        bf %tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_8_88_8_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_8_88_8_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_42_88_8_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 87 12 ]
+        symbol [ searchingCount %tmp.10 87 12 26 ];
+        %tmp.10 = getv ? :searchingCount;
+        %tmp.11 = add %tmp.10 1;
+        symbol [ searchingCount ? 87 12 26 ];
+        putv self :searchingCount dup %tmp.11;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_42_88_8_stop:
+        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_8_88_8_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_86_8_88_8_if_end:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 90 8 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_90_8_93_8_if_stmt:
+        symbol [ searchingCount %tmp.13 90 11 25 ];
+        %tmp.13 = getv ? :searchingCount;
+        %tmp.14 = 29;
+        %tmp.15 = gt %tmp.13 %tmp.14;
+        bf %tmp.15 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_90_8_93_8_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_90_8_93_8_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_90_32_93_8_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 91 12 ]
+        %tmp.16 = self;
+        symbol [ strydmsg %tmp.17 91 12 20 ];
+        %tmp.17 = getv function %tmp.16 :strydmsg;
+        %tmp.18 = "Stryd searching timeout, reset";
+        invoke %tmp.16 %tmp.17(%tmp.18);
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 92 12 ]
+        %tmp.19 = self;
+        symbol [ reset %tmp.20 92 12 17 ];
+        %tmp.20 = getv function %tmp.19 :reset;
+        invoke %tmp.19 %tmp.20();
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_90_32_93_8_stop:
+        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_90_8_93_8_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_90_8_93_8_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_85_28_95_4_stop:
+    }
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 97; @symbol_functiondef = [reset,97,13,18]; ]
+    function reset() {
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_97_21_104_4_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 98 12 ]
+        %tmp.1 = self;
+        symbol [ strydmsg %tmp.2 98 12 20 ];
+        %tmp.2 = getv function %tmp.1 :strydmsg;
+        %tmp.3 = "Stryd close, release and reopen";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 99 12 ]
+        symbol [ GenericChannel %tmp.5 99 12 26 ];
+        %tmp.5 = getv ? :GenericChannel;
+        symbol [ close %tmp.6 99 27 32 ];
+        %tmp.6 = getv function %tmp.5 :close;
+        invoke %tmp.5 %tmp.6();
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 100 12 ]
+        symbol [ GenericChannel %tmp.8 100 12 26 ];
+        %tmp.8 = getv ? :GenericChannel;
+        symbol [ release %tmp.9 100 27 34 ];
+        %tmp.9 = getv function %tmp.8 :release;
+        invoke %tmp.8 %tmp.9();
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 101 12 ]
+        %tmp.10 = self;
+        symbol [ init %tmp.11 101 12 16 ];
+        %tmp.11 = getv function %tmp.10 :init;
+        invoke %tmp.10 %tmp.11();
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 102 12 ]
+        symbol [ GenericChannel %tmp.13 102 12 26 ];
+        %tmp.13 = getv ? :GenericChannel;
+        symbol [ open %tmp.14 102 27 31 ];
+        %tmp.14 = getv function %tmp.13 :open;
+        invoke %tmp.13 %tmp.14();
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 103 12 ]
+        %tmp.15 = 0;
+        symbol [ searchingCount ? 103 12 26 ];
+        putv self :searchingCount %tmp.15;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_97_21_104_4_stop:
+    }
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 106; @symbol_functiondef = [onMessage,106,13,22]; @symbol_param<0> = [msg,106,23,26]; ]
+    function onMessage(msg) {
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_106_28_180_4_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 108 8 ]
+        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_106_28_180_4_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_106_28_180_4_stop" ]
+        %payload.1 = local;
+        symbol [ payload %payload.1 108 12 19 ];
+        %tmp.1 = lgetv %msg;
+        symbol [ msg %tmp.1 108 22 25 ];
+        symbol [ getPayload %tmp.2 108 26 36 ];
+        %tmp.2 = getv function %tmp.1 :getPayload;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %payload.1 %tmp.3;
+        symbol [ payload %payload.1 108 12 19 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 109 8 ]
+        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_106_28_180_4_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_106_28_180_4_stop" ]
+        %payload0.2 = local;
+        symbol [ payload0 %payload0.2 109 12 20 ];
+        %tmp.4 = lgetv %payload.1;
+        symbol [ payload %tmp.4 109 23 30 ];
+        %tmp.5 = 0;
+        %tmp.6 = agetv %tmp.4 %tmp.5;
+        lputv %payload0.2 %tmp.6;
+        symbol [ payload0 %payload0.2 109 12 20 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 110 8 ]
+        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_106_28_180_4_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_106_28_180_4_stop" ]
+        %payload1.3 = local;
+        symbol [ payload1 %payload1.3 110 12 20 ];
+        %tmp.7 = lgetv %payload.1;
+        symbol [ payload %tmp.7 110 23 30 ];
+        %tmp.8 = 1;
+        %tmp.9 = agetv %tmp.7 %tmp.8;
+        lputv %payload1.3 %tmp.9;
+        symbol [ payload1 %payload1.3 110 12 20 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 113 8 ]
+        %tmp.10 = self;
+        symbol [ strydmsg %tmp.11 113 8 16 ];
+        %tmp.11 = getv function %tmp.10 :strydmsg;
+        %tmp.12 = "SoM, deviceNumber ";
+        %tmp.13 = lgetv %msg;
+        symbol [ msg %tmp.13 113 40 43 ];
+        symbol [ deviceNumber %tmp.14 113 44 56 ];
+        %tmp.14 = getv %tmp.13 :deviceNumber;
+        %tmp.15 = add %tmp.12 %tmp.14;
+        invoke %tmp.10 %tmp.11(%tmp.15);
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 114 8 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_114_8_179_8_if_stmt:
+        symbol [ Ant %tmp.16 114 12 15 ];
+        %tmp.16 = getm $.Toybox.Ant;
+        symbol [ MSG_ID_BROADCAST_DATA %tmp.17 114 16 37 ];
+        %tmp.17 = getv %tmp.16 :MSG_ID_BROADCAST_DATA;
+        %tmp.18 = lgetv %msg;
+        symbol [ msg %tmp.18 114 42 45 ];
+        symbol [ messageId %tmp.19 114 46 55 ];
+        %tmp.19 = getv %tmp.18 :messageId;
+        %tmp.20 = eq %tmp.17 %tmp.19;
+        bf %tmp.20 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_114_8_179_8_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_114_8_179_8_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_114_57_136_8_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 115 12 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_115_12_135_12_if_stmt:
+        symbol [ PAGE_NUMBER %tmp.22 115 15 26 ];
+        %tmp.22 = getv ? :PAGE_NUMBER;
+        %tmp.23 = lgetv %payload0.2;
+        symbol [ payload0 %tmp.23 115 30 38 ];
+        %tmp.24 = eq %tmp.22 %tmp.23;
+        bf %tmp.24 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_115_12_135_12_if_else_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_115_12_135_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_115_40_133_12_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 117 16 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_117_16_121_16_if_stmt:
+        symbol [ searching %tmp.26 117 20 29 ];
+        %tmp.26 = getv ? :searching;
+        bf %tmp.26 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_117_16_121_16_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_117_16_121_16_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_117_31_121_16_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 118 20 ]
+        %tmp.27 = false;
+        symbol [ searching ? 118 20 29 ];
+        putv self :searching %tmp.27;
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 119 20 ]
+        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_117_31_121_16_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_117_31_121_16_stop" ]
+        %deviceCfg.4 = local;
+        symbol [ deviceCfg %deviceCfg.4 119 24 33 ];
+        symbol [ GenericChannel %tmp.29 119 36 50 ];
+        %tmp.29 = getv ? :GenericChannel;
+        symbol [ getDeviceConfig %tmp.30 119 51 66 ];
+        %tmp.30 = getv function %tmp.29 :getDeviceConfig;
+        %tmp.31 = invoke %tmp.29 %tmp.30();
+        lputv %deviceCfg.4 %tmp.31;
+        symbol [ deviceCfg %deviceCfg.4 119 24 33 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 120 20 ]
+        %tmp.32 = self;
+        symbol [ strydmsg %tmp.33 120 20 28 ];
+        %tmp.33 = getv function %tmp.32 :strydmsg;
+        %tmp.34 = "Found Stryd, device id ";
+        %tmp.35 = lgetv %deviceCfg.4;
+        symbol [ deviceCfg %tmp.35 120 57 66 ];
+        symbol [ deviceNumber %tmp.36 120 67 79 ];
+        %tmp.36 = getv %tmp.35 :deviceNumber;
+        %tmp.37 = add %tmp.34 %tmp.36;
+        invoke %tmp.32 %tmp.33(%tmp.37);
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_117_31_121_16_stop:
+        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_117_16_121_16_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_117_16_121_16_if_end:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 130 16 ]
+        %tmp.38 = lgetv %payload.1;
+        symbol [ payload %tmp.38 130 31 38 ];
+        %tmp.39 = 6;
+        %tmp.40 = agetv %tmp.38 %tmp.39;
+        %tmp.41 = lgetv %payload.1;
+        symbol [ payload %tmp.41 130 46 53 ];
+        %tmp.42 = 7;
+        %tmp.43 = agetv %tmp.41 %tmp.42;
+        %tmp.44 = 8;
+        %tmp.45 = shl %tmp.43 %tmp.44;
+        %tmp.46 = bitor %tmp.40 %tmp.45;
+        symbol [ currentPower ? 130 16 28 ];
+        putv self :currentPower %tmp.46;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_115_40_133_12_stop:
+        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_115_12_135_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_115_12_135_12_if_else_false:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_133_19_135_12_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 134 16 ]
+        %tmp.47 = self;
+        symbol [ strydmsg %tmp.48 134 16 24 ];
+        %tmp.48 = getv function %tmp.47 :strydmsg;
+        %tmp.49 = "SoM (bd) payload0? ";
+        %tmp.50 = lgetv %payload0.2;
+        symbol [ payload0 %tmp.50 134 49 57 ];
+        symbol [ format %tmp.51 134 58 64 ];
+        %tmp.51 = getv function %tmp.50 :format;
+        %tmp.52 = "%2x";
+        %tmp.53 = invoke %tmp.50 %tmp.51(%tmp.52);
+        %tmp.54 = add %tmp.49 %tmp.53;
+        %tmp.55 = ", payload ";
+        %tmp.56 = add %tmp.54 %tmp.55;
+        %tmp.57 = lgetv %payload.1;
+        symbol [ payload %tmp.57 134 89 96 ];
+        %tmp.58 = add %tmp.56 %tmp.57;
+        invoke %tmp.47 %tmp.48(%tmp.58);
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_133_19_135_12_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_115_12_135_12_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_114_57_136_8_stop:
+        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_114_8_179_8_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_114_8_179_8_if_false:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 136 15 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_136_15_179_8_if_stmt:
+        symbol [ Ant %tmp.59 136 19 22 ];
+        %tmp.59 = getm $.Toybox.Ant;
+        symbol [ MSG_ID_CHANNEL_RESPONSE_EVENT %tmp.60 136 23 52 ];
+        %tmp.60 = getv %tmp.59 :MSG_ID_CHANNEL_RESPONSE_EVENT;
+        %tmp.61 = lgetv %msg;
+        symbol [ msg %tmp.61 136 56 59 ];
+        symbol [ messageId %tmp.62 136 60 69 ];
+        %tmp.62 = getv %tmp.61 :messageId;
+        %tmp.63 = eq %tmp.60 %tmp.62;
+        bf %tmp.63 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_136_15_179_8_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_136_15_179_8_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_136_71_179_8_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 137 12 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_137_12_152_12_if_stmt:
+        symbol [ Ant %tmp.64 137 16 19 ];
+        %tmp.64 = getm $.Toybox.Ant;
+        symbol [ MSG_ID_RF_EVENT %tmp.65 137 20 35 ];
+        %tmp.65 = getv %tmp.64 :MSG_ID_RF_EVENT;
+        %tmp.66 = lgetv %payload0.2;
+        symbol [ payload0 %tmp.66 137 39 47 ];
+        %tmp.67 = eq %tmp.65 %tmp.66;
+        bf %tmp.67 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_137_12_152_12_if_else_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_137_12_152_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_137_49_150_12_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 138 16 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_138_16_149_16_if_stmt:
+        symbol [ Ant %tmp.68 138 20 23 ];
+        %tmp.68 = getm $.Toybox.Ant;
+        symbol [ MSG_CODE_EVENT_CHANNEL_CLOSED %tmp.69 138 24 53 ];
+        %tmp.69 = getv %tmp.68 :MSG_CODE_EVENT_CHANNEL_CLOSED;
+        %tmp.70 = lgetv %payload1.3;
+        symbol [ payload1 %tmp.70 138 57 65 ];
+        %tmp.71 = eq %tmp.69 %tmp.70;
+        bf %tmp.71 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_138_16_149_16_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_138_16_149_16_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_138_67_142_16_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 139 20 ]
+        %tmp.72 = self;
+        symbol [ strydmsg %tmp.73 139 20 28 ];
+        %tmp.73 = getv function %tmp.72 :strydmsg;
+        %tmp.74 = "SoM closed message";
+        invoke %tmp.72 %tmp.73(%tmp.74);
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 141 20 ]
+        %tmp.75 = self;
+        symbol [ reset %tmp.76 141 20 25 ];
+        %tmp.76 = getv function %tmp.75 :reset;
+        invoke %tmp.75 %tmp.76();
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_138_67_142_16_stop:
+        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_138_16_149_16_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_138_16_149_16_if_false:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 142 23 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_142_23_149_16_if_stmt:
+        symbol [ Ant %tmp.77 142 27 30 ];
+        %tmp.77 = getm $.Toybox.Ant;
+        symbol [ MSG_CODE_EVENT_RX_FAIL_GO_TO_SEARCH %tmp.78 142 31 66 ];
+        %tmp.78 = getv %tmp.77 :MSG_CODE_EVENT_RX_FAIL_GO_TO_SEARCH;
+        %tmp.79 = lgetv %payload1.3;
+        symbol [ payload1 %tmp.79 142 70 78 ];
+        %tmp.80 = eq %tmp.78 %tmp.79;
+        bf %tmp.80 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_142_23_149_16_if_else_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_142_23_149_16_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_142_80_147_16_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 143 20 ]
+        %tmp.81 = self;
+        symbol [ strydmsg %tmp.82 143 20 28 ];
+        %tmp.82 = getv function %tmp.81 :strydmsg;
+        %tmp.83 = "SoM failed to search";
+        invoke %tmp.81 %tmp.82(%tmp.83);
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 144 20 ]
+        %tmp.84 = self;
+        symbol [ reset %tmp.85 144 20 25 ];
+        %tmp.85 = getv function %tmp.84 :reset;
+        invoke %tmp.84 %tmp.85();
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 145 17 ]
+        %tmp.86 = -2;
+        symbol [ currentPower ? 145 17 29 ];
+        putv self :currentPower %tmp.86;
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 146 20 ]
+        %tmp.87 = true;
+        symbol [ searching ? 146 20 29 ];
+        putv self :searching %tmp.87;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_142_80_147_16_stop:
+        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_142_23_149_16_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_142_23_149_16_if_else_false:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_147_23_149_16_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 148 20 ]
+        %tmp.88 = self;
+        symbol [ strydmsg %tmp.89 148 20 28 ];
+        %tmp.89 = getv function %tmp.88 :strydmsg;
+        %tmp.90 = "SoM (channel rx, unknown payload1), payload0 ";
+        %tmp.91 = lgetv %payload0.2;
+        symbol [ payload0 %tmp.91 148 79 87 ];
+        symbol [ format %tmp.92 148 88 94 ];
+        %tmp.92 = getv function %tmp.91 :format;
+        %tmp.93 = "%2x";
+        %tmp.94 = invoke %tmp.91 %tmp.92(%tmp.93);
+        %tmp.95 = add %tmp.90 %tmp.94;
+        %tmp.96 = ", payload1 ";
+        %tmp.97 = add %tmp.95 %tmp.96;
+        %tmp.98 = lgetv %payload1.3;
+        symbol [ payload1 %tmp.98 148 120 128 ];
+        symbol [ format %tmp.99 148 129 135 ];
+        %tmp.99 = getv function %tmp.98 :format;
+        %tmp.100 = "%2x";
+        %tmp.101 = invoke %tmp.98 %tmp.99(%tmp.100);
+        %tmp.102 = add %tmp.97 %tmp.101;
+        invoke %tmp.88 %tmp.89(%tmp.102);
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_147_23_149_16_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_142_23_149_16_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_138_16_149_16_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_137_49_150_12_stop:
+        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_137_12_152_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_137_12_152_12_if_else_false:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_150_19_152_12_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc" 151 16 ]
+        %tmp.103 = self;
+        symbol [ strydmsg %tmp.104 151 16 24 ];
+        %tmp.104 = getv function %tmp.103 :strydmsg;
+        %tmp.105 = "SoM (crx) payload0? ";
+        %tmp.106 = lgetv %payload0.2;
+        symbol [ payload0 %tmp.106 151 50 58 ];
+        symbol [ format %tmp.107 151 59 65 ];
+        %tmp.107 = getv function %tmp.106 :format;
+        %tmp.108 = "%2x";
+        %tmp.109 = invoke %tmp.106 %tmp.107(%tmp.108);
+        %tmp.110 = add %tmp.105 %tmp.109;
+        %tmp.111 = ", payload ";
+        %tmp.112 = add %tmp.110 %tmp.111;
+        %tmp.113 = lgetv %payload.1;
+        symbol [ payload %tmp.113 151 90 97 ];
+        %tmp.114 = add %tmp.112 %tmp.113;
+        invoke %tmp.103 %tmp.104(%tmp.114);
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_150_19_152_12_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_137_12_152_12_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_136_71_179_8_stop:
+        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_136_15_179_8_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_136_15_179_8_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_114_8_179_8_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_StrydSensor_mc_106_28_180_4_stop:
+    }
+}
+[ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\StrydSensor.mc"; @line = 3; ]
+<init> {
+}

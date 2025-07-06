@@ -1,8 +1,26 @@
 <properties>
     <property id="glasses_name" type="string"></property>
     <property id="screens" type="string">(33,34,7,4,15,18)</property>
-    <property id="run" type="string">(38,34,7,4,15,18)(47,34,7,4,15,18),(33,34,7,4,15,18),(36,34,7,4,15,18)</property>
+    <property id="run" type="string">(36,34,7,4,15,18)(38,34,7,4,15,18)(33,34,7,4,15,18)(52,27,7,4,15,18)</property>
     <property id="bike" type="string">(1,2,4)(12,18)(6,14,20,24)(5,13,19,22)(0)</property>
+    <property id="is_gesture_enable" type="boolean">true</property>
+    <property id="is_auto_loop" type="boolean">false</property>
+    <property id="loop_timer" type="number">10</property>
+    <property id="is_als_enable" type="boolean">true</property>
+    <property id="settings_description" type="string">Details on Garmin page of Activelook website.</property>
+    
+    
+    
   	<property id="laps_per_interval" type="number">2</property>
-  	<property id="lap_freeze_seconds" type="number">3</property>
+  	<property id="lap_freeze_seconds" type="number">5</property>
+
+    <property id="ZeroPowerHR" type="number">45</property>
+  	<property id="PaceSmoothing" type="number">30</property>
+  	<property id="HrPwrSmoothing" type="number">10</property>
+
+    <property id="CORE_ANT_ID" type="number">0</property>
+    <property id="UseCore" type="boolean">false</property>
+    <property id="StoreCore" type="boolean">false</property>
+  	<property id="StrydId" type="number">0</property>
+
 </properties>

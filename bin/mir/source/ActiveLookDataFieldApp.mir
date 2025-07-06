@@ -1,43 +1,70 @@
-[ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookDataFieldApp.mc"; @line = 1; ]
+[ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Application,1,13,24]; ]
 using Toybox.Application;
-[ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookDataFieldApp.mc"; @line = 3; typecheck = false; ]
-class ActiveLookDataFieldApp extends Application.AppBase{
-    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookDataFieldApp.mc"; @line = 4; ]
+[ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc"; @line = 4; typecheck = false; @symbol_classdef = [ActiveLookDataFieldApp,4,6,28]; @symbol_extends<0> = [Application,4,37,48]; @symbol_extends<1> = [AppBase,4,49,56]; ]
+class ActiveLookDataFieldApp extends Application.AppBase {
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc"; @line = 4; ]
     <init> {
     }
-    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookDataFieldApp.mc"; @line = 4; ]
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc"; @line = 4; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookDataFieldApp.mc"; @line = 6; ]
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc"; @line = 6; @position = 16; @symbol_vardef = [_view,6,16,21]; ]
+    private
+    var _view;
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc"; @line = 8; @symbol_functiondef = [initialize,8,13,23]; ]
     function initialize() as Void {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookDataFieldApp_mc_6_26_8_4_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookDataFieldApp.mc" 7 8 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookDataFieldApp_mc_8_26_11_4_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc" 9 8 ]
+        symbol [ AppBase %tmp.2 9 8 15 ];
         %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 9 16 26 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookDataFieldApp_mc_6_26_8_4_stop:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc" 10 8 ]
+        symbol [ ActiveLookDataFieldView %tmp.7 10 20 43 ];
+        %tmp.7 = getv ? :ActiveLookDataFieldView;
+        %tmp.4 = newc %tmp.7 ();
+        symbol [ _view ? 10 8 13 ];
+        putv self :_view %tmp.4;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookDataFieldApp_mc_8_26_11_4_stop:
     }
-    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookDataFieldApp.mc"; @line = 11; ]
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc"; @line = 14; @symbol_functiondef = [onStart,14,13,20]; @symbol_param<0> = [state,14,21,26]; ]
     function onStart(state) {
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookDataFieldApp_mc_14_28_16_4_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc" 15 8 ]
+        symbol [ _view %tmp.2 15 8 13 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ onStart %tmp.3 15 14 21 ];
+        %tmp.3 = getv function %tmp.2 :onStart;
+        invoke %tmp.2 %tmp.3();
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookDataFieldApp_mc_14_28_16_4_stop:
     }
-    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookDataFieldApp.mc"; @line = 15; ]
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc"; @line = 19; @symbol_functiondef = [onStop,19,13,19]; @symbol_param<0> = [state,19,20,25]; ]
     function onStop(state) {
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookDataFieldApp_mc_19_27_21_4_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc" 20 8 ]
+        symbol [ _view %tmp.2 20 8 13 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ onStop %tmp.3 20 14 20 ];
+        %tmp.3 = getv function %tmp.2 :onStop;
+        invoke %tmp.2 %tmp.3();
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookDataFieldApp_mc_19_27_21_4_stop:
     }
     //! Return the initial view of your application here
-    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookDataFieldApp.mc"; @line = 19; ]
+    [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc"; @line = 24; @symbol_functiondef = [getInitialView,24,13,27]; ]
     function getInitialView() {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookDataFieldApp_mc_19_30_21_4_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookDataFieldApp.mc" 20 8 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookDataFieldApp_mc_24_30_26_4_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc" 25 8 ]
         %tmp.1 = newa 1;
-        %tmp.5 = getv ? :ActiveLookDataFieldView;
-        %tmp.2 = newc %tmp.5 ();
-        %tmp.6 = dup %tmp.1;
-        %tmp.7 = aputv %tmp.6 0 %tmp.2;
-        ret %tmp.7;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnrs_Datafield_ActiveLook_source_ActiveLookDataFieldApp_mc_19_30_21_4_stop:
+        symbol [ _view %tmp.3 25 17 22 ];
+        %tmp.3 = getv ? :_view;
+        %tmp.4 = dup %tmp.1;
+        %tmp.5 = aputv %tmp.4 0 %tmp.3;
+        ret %tmp.5;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookDataFieldApp_mc_24_30_26_4_stop:
     }
 }
-[ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnrs-Datafield-ActiveLook\source\ActiveLookDataFieldApp.mc"; @line = 1; ]
+[ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookDataFieldApp.mc"; @line = 1; ]
 <init> {
 }
