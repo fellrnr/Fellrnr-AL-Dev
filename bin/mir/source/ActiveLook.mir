@@ -93,53 +93,9 @@ module ActiveLookBLE {
         }
         //! Private logger enabled in debug and disabled in release mode
         //! Comment and uncomment as needed.
-        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 72; release = true; @symbol_functiondef = [_log,72,43,47]; @symbol_param<0> = [msg,72,48,51]; @symbol_param<0>_type<0> = [Toybox,72,55,61]; @symbol_param<0>_type<1> = [Lang,72,62,66]; @symbol_param<0>_type<2> = [String,72,67,73]; @symbol_param<1> = [data,72,75,79]; @symbol_param<1>_type<0> = [Toybox,72,83,89]; @symbol_param<1>_type<1> = [Lang,72,90,94]; @symbol_param<1>_type<2> = [Object,72,95,101]; ]
-        private static
-        function _log(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {
-        }
-        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 73; debug = true; @symbol_functiondef = [_log,73,43,47]; @symbol_param<0> = [msg,73,48,51]; @symbol_param<0>_type<0> = [Toybox,73,55,61]; @symbol_param<0>_type<1> = [Lang,73,62,66]; @symbol_param<0>_type<2> = [String,73,67,73]; @symbol_param<1> = [data,73,75,79]; @symbol_param<1>_type<0> = [Toybox,73,83,89]; @symbol_param<1>_type<1> = [Lang,73,90,94]; @symbol_param<1>_type<2> = [Object,73,95,101]; ]
-        private static
-        function _log(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_73_119_75_8_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 74 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_74_12_74_105_if_stmt:
-            symbol [ $ %tmp.1 74 16 17 ];
-            %tmp.1 = getm $;
-            %tmp.3 = const :log;
-            symbol [ log %tmp.3 74 23 26 const ];
-            %tmp.4 = canhazplz %tmp.1 %tmp.3;
-            bf %tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_74_12_74_105_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_74_12_74_105_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_74_28_74_105_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 74 30 ]
-            symbol [ $ %tmp.5 74 30 31 ];
-            %tmp.5 = getm $;
-            symbol [ log %tmp.6 74 32 35 ];
-            %tmp.6 = getv function %tmp.5 :log;
-            symbol [ Toybox %tmp.8 74 36 42 ];
-            %tmp.8 = getv ? :Toybox;
-            symbol [ Lang %tmp.9 74 43 47 ];
-            %tmp.9 = getv %tmp.8 :Lang;
-            symbol [ format %tmp.10 74 48 54 ];
-            %tmp.10 = getv function %tmp.9 :format;
-            %tmp.11 = "[ActiveLookBLE::ActiveLook] $1$";
-            %tmp.12 = newa 1;
-            %tmp.13 = lgetv %msg;
-            symbol [ msg %tmp.13 74 91 94 ];
-            %tmp.14 = dup %tmp.12;
-            %tmp.15 = aputv %tmp.14 0 %tmp.13;
-            %tmp.16 = invoke %tmp.9 %tmp.10(%tmp.11, %tmp.15);
-            %tmp.17 = lgetv %data;
-            symbol [ data %tmp.17 74 98 102 ];
-            invoke %tmp.5 %tmp.6(%tmp.16, %tmp.17);
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_74_28_74_105_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_74_12_74_105_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_74_12_74_105_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_73_119_75_8_stop:
-        }
         //! Interface for delegate
-        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 78; @symbol_typedef = [ActiveLookDelegate,78,16,34]; @symbol_type<0> = [onCharacteristicChanged,79,21,44]; @symbol_type<1> = [characteristic,79,45,59]; @symbol_type<2> = [Toybox,79,63,69]; @symbol_type<3> = [BluetoothLowEnergy,79,70,88]; @symbol_type<4> = [Characteristic,79,89,103]; @symbol_type<5> = [value,79,105,110]; @symbol_type<6> = [Toybox,79,114,120]; @symbol_type<7> = [Lang,79,121,125]; @symbol_type<8> = [ByteArray,79,126,135]; @symbol_type<9> = [onCharacteristicRead,80,21,41]; @symbol_type<10> = [characteristic,80,42,56]; @symbol_type<11> = [Toybox,80,60,66]; @symbol_type<12> = [BluetoothLowEnergy,80,67,85]; @symbol_type<13> = [Characteristic,80,86,100]; @symbol_type<14> = [status,80,102,108]; @symbol_type<15> = [Toybox,80,112,118]; @symbol_type<16> = [BluetoothLowEnergy,80,119,137]; @symbol_type<17> = [Status,80,138,144]; @symbol_type<18> = [value,80,146,151]; @symbol_type<19> = [Toybox,80,155,161]; @symbol_type<20> = [Lang,80,162,166]; @symbol_type<21> = [ByteArray,80,167,176]; @symbol_type<22> = [onCharacteristicWrite,81,21,42]; @symbol_type<23> = [characteristic,81,43,57]; @symbol_type<24> = [Toybox,81,61,67]; @symbol_type<25> = [BluetoothLowEnergy,81,68,86]; @symbol_type<26> = [Characteristic,81,87,101]; @symbol_type<27> = [status,81,103,109]; @symbol_type<28> = [Toybox,81,113,119]; @symbol_type<29> = [BluetoothLowEnergy,81,120,138]; @symbol_type<30> = [Status,81,139,145]; @symbol_type<31> = [onConnectedStateChanged,82,21,44]; @symbol_type<32> = [device,82,45,51]; @symbol_type<33> = [Toybox,82,55,61]; @symbol_type<34> = [BluetoothLowEnergy,82,62,80]; @symbol_type<35> = [Device,82,81,87]; @symbol_type<36> = [state,82,89,94]; @symbol_type<37> = [Toybox,82,98,104]; @symbol_type<38> = [BluetoothLowEnergy,82,105,123]; @symbol_type<39> = [ConnectionState,82,124,139]; @symbol_type<40> = [onDescriptorRead,83,21,37]; @symbol_type<41> = [descriptor,83,38,48]; @symbol_type<42> = [Toybox,83,52,58]; @symbol_type<43> = [BluetoothLowEnergy,83,59,77]; @symbol_type<44> = [Descriptor,83,78,88]; @symbol_type<45> = [status,83,90,96]; @symbol_type<46> = [Toybox,83,100,106]; @symbol_type<47> = [BluetoothLowEnergy,83,107,125]; @symbol_type<48> = [Status,83,126,132]; @symbol_type<49> = [value,83,134,139]; @symbol_type<50> = [Toybox,83,143,149]; @symbol_type<51> = [Lang,83,150,154]; @symbol_type<52> = [ByteArray,83,155,164]; @symbol_type<53> = [onDescriptorWrite,84,21,38]; @symbol_type<54> = [descriptor,84,39,49]; @symbol_type<55> = [Toybox,84,53,59]; @symbol_type<56> = [BluetoothLowEnergy,84,60,78]; @symbol_type<57> = [Descriptor,84,79,89]; @symbol_type<58> = [status,84,91,97]; @symbol_type<59> = [Toybox,84,101,107]; @symbol_type<60> = [BluetoothLowEnergy,84,108,126]; @symbol_type<61> = [Status,84,127,133]; @symbol_type<62> = [onScanResult,85,21,33]; @symbol_type<63> = [scanResult,85,34,44]; @symbol_type<64> = [Toybox,85,48,54]; @symbol_type<65> = [BluetoothLowEnergy,85,55,73]; @symbol_type<66> = [ScanResult,85,74,84]; @symbol_type<67> = [onScanStateChange,86,21,38]; @symbol_type<68> = [scanState,86,39,48]; @symbol_type<69> = [Toybox,86,52,58]; @symbol_type<70> = [BluetoothLowEnergy,86,59,77]; @symbol_type<71> = [ScanState,86,78,87]; @symbol_type<72> = [status,86,89,95]; @symbol_type<73> = [Toybox,86,99,105]; @symbol_type<74> = [BluetoothLowEnergy,86,106,124]; @symbol_type<75> = [Status,86,125,131]; @symbol_type<76> = [onPassiveConnection,87,21,40]; @symbol_type<77> = [device,87,41,47]; @symbol_type<78> = [Toybox,87,51,57]; @symbol_type<79> = [BluetoothLowEnergy,87,58,76]; @symbol_type<80> = [Device,87,77,83]; @symbol_type<81> = [profileRegistrationStart,88,21,45]; @symbol_type<82> = [profileRegistrationComplete,89,21,48]; @symbol_type<83> = [onBleError,90,21,31]; @symbol_type<84> = [exception,90,32,41]; @symbol_type<85> = [Toybox,90,45,51]; @symbol_type<86> = [Lang,90,52,56]; @symbol_type<87> = [Exception,90,57,66]; ]
-        type ActiveLookDelegate as interface {function onCharacteristicChanged(characteristic as Toybox.BluetoothLowEnergy.Characteristic, value as Toybox.Lang.ByteArray) as Void;function onCharacteristicRead(characteristic as Toybox.BluetoothLowEnergy.Characteristic, status as Toybox.BluetoothLowEnergy.Status, value as Toybox.Lang.ByteArray) as Void;function onCharacteristicWrite(characteristic as Toybox.BluetoothLowEnergy.Characteristic, status as Toybox.BluetoothLowEnergy.Status) as Void;function onConnectedStateChanged(device as Toybox.BluetoothLowEnergy.Device, state as Toybox.BluetoothLowEnergy.ConnectionState) as Void;function onDescriptorRead(descriptor as Toybox.BluetoothLowEnergy.Descriptor, status as Toybox.BluetoothLowEnergy.Status, value as Toybox.Lang.ByteArray) as Void;function onDescriptorWrite(descriptor as Toybox.BluetoothLowEnergy.Descriptor, status as Toybox.BluetoothLowEnergy.Status) as Void;function onScanResult(scanResult as Toybox.BluetoothLowEnergy.ScanResult) as Void;function onScanStateChange(scanState as Toybox.BluetoothLowEnergy.ScanState, status as Toybox.BluetoothLowEnergy.Status) as Void;function onPassiveConnection(device as Toybox.BluetoothLowEnergy.Device) as Void;function profileRegistrationStart() as Void;function profileRegistrationComplete() as Void;function onBleError(exception as Toybox.Lang.Exception) as Void;};
+        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 78; @symbol_typedef = [ActiveLookDelegate,78,16,34]; @symbol_type<0> = [onCharacteristicChanged,79,21,44]; @symbol_type<1> = [characteristic,79,45,59]; @symbol_type<2> = [Toybox,79,63,69]; @symbol_type<3> = [BluetoothLowEnergy,79,70,88]; @symbol_type<4> = [Characteristic,79,89,103]; @symbol_type<5> = [value,79,105,110]; @symbol_type<6> = [Toybox,79,114,120]; @symbol_type<7> = [Lang,79,121,125]; @symbol_type<8> = [ByteArray,79,126,135]; @symbol_type<9> = [onCharacteristicRead,80,21,41]; @symbol_type<10> = [characteristic,80,42,56]; @symbol_type<11> = [Toybox,80,60,66]; @symbol_type<12> = [BluetoothLowEnergy,80,67,85]; @symbol_type<13> = [Characteristic,80,86,100]; @symbol_type<14> = [status,80,102,108]; @symbol_type<15> = [Toybox,80,112,118]; @symbol_type<16> = [BluetoothLowEnergy,80,119,137]; @symbol_type<17> = [Status,80,138,144]; @symbol_type<18> = [value,80,146,151]; @symbol_type<19> = [Toybox,80,155,161]; @symbol_type<20> = [Lang,80,162,166]; @symbol_type<21> = [ByteArray,80,167,176]; @symbol_type<22> = [onCharacteristicWrite,81,21,42]; @symbol_type<23> = [characteristic,81,43,57]; @symbol_type<24> = [Toybox,81,61,67]; @symbol_type<25> = [BluetoothLowEnergy,81,68,86]; @symbol_type<26> = [Characteristic,81,87,101]; @symbol_type<27> = [status,81,103,109]; @symbol_type<28> = [Toybox,81,113,119]; @symbol_type<29> = [BluetoothLowEnergy,81,120,138]; @symbol_type<30> = [Status,81,139,145]; @symbol_type<31> = [onConnectedStateChanged,82,21,44]; @symbol_type<32> = [device,82,45,51]; @symbol_type<33> = [Toybox,82,55,61]; @symbol_type<34> = [BluetoothLowEnergy,82,62,80]; @symbol_type<35> = [Device,82,81,87]; @symbol_type<36> = [state,82,89,94]; @symbol_type<37> = [Toybox,82,98,104]; @symbol_type<38> = [BluetoothLowEnergy,82,105,123]; @symbol_type<39> = [ConnectionState,82,124,139]; @symbol_type<40> = [onDescriptorRead,83,21,37]; @symbol_type<41> = [descriptor,83,38,48]; @symbol_type<42> = [Toybox,83,52,58]; @symbol_type<43> = [BluetoothLowEnergy,83,59,77]; @symbol_type<44> = [Descriptor,83,78,88]; @symbol_type<45> = [status,83,90,96]; @symbol_type<46> = [Toybox,83,100,106]; @symbol_type<47> = [BluetoothLowEnergy,83,107,125]; @symbol_type<48> = [Status,83,126,132]; @symbol_type<49> = [value,83,134,139]; @symbol_type<50> = [Toybox,83,143,149]; @symbol_type<51> = [Lang,83,150,154]; @symbol_type<52> = [ByteArray,83,155,164]; @symbol_type<53> = [onDescriptorWrite,84,21,38]; @symbol_type<54> = [descriptor,84,39,49]; @symbol_type<55> = [Toybox,84,53,59]; @symbol_type<56> = [BluetoothLowEnergy,84,60,78]; @symbol_type<57> = [Descriptor,84,79,89]; @symbol_type<58> = [status,84,91,97]; @symbol_type<59> = [Toybox,84,101,107]; @symbol_type<60> = [BluetoothLowEnergy,84,108,126]; @symbol_type<61> = [Status,84,127,133]; @symbol_type<62> = [onScanResult,85,21,33]; @symbol_type<63> = [scanResult,85,34,44]; @symbol_type<64> = [Toybox,85,48,54]; @symbol_type<65> = [BluetoothLowEnergy,85,55,73]; @symbol_type<66> = [ScanResult,85,74,84]; @symbol_type<67> = [onScanStateChange,86,21,38]; @symbol_type<68> = [scanState,86,39,48]; @symbol_type<69> = [Toybox,86,52,58]; @symbol_type<70> = [BluetoothLowEnergy,86,59,77]; @symbol_type<71> = [ScanState,86,78,87]; @symbol_type<72> = [status,86,89,95]; @symbol_type<73> = [Toybox,86,99,105]; @symbol_type<74> = [BluetoothLowEnergy,86,106,124]; @symbol_type<75> = [Status,86,125,131]; @symbol_type<76> = [onPassiveConnection,87,21,40]; @symbol_type<77> = [device,87,41,47]; @symbol_type<78> = [Toybox,87,51,57]; @symbol_type<79> = [BluetoothLowEnergy,87,58,76]; @symbol_type<80> = [Device,87,77,83]; @symbol_type<81> = [profileRegistrationStart,88,21,45]; @symbol_type<82> = [profileRegistrationComplete,89,21,48]; @symbol_type<83> = [onBleError,90,21,31]; @symbol_type<84> = [msg,90,32,35]; @symbol_type<85> = [exception,90,37,46]; @symbol_type<86> = [Toybox,90,50,56]; @symbol_type<87> = [Lang,90,57,61]; @symbol_type<88> = [Exception,90,62,71]; ]
+        type ActiveLookDelegate as interface {function onCharacteristicChanged(characteristic as Toybox.BluetoothLowEnergy.Characteristic, value as Toybox.Lang.ByteArray) as Void;function onCharacteristicRead(characteristic as Toybox.BluetoothLowEnergy.Characteristic, status as Toybox.BluetoothLowEnergy.Status, value as Toybox.Lang.ByteArray) as Void;function onCharacteristicWrite(characteristic as Toybox.BluetoothLowEnergy.Characteristic, status as Toybox.BluetoothLowEnergy.Status) as Void;function onConnectedStateChanged(device as Toybox.BluetoothLowEnergy.Device, state as Toybox.BluetoothLowEnergy.ConnectionState) as Void;function onDescriptorRead(descriptor as Toybox.BluetoothLowEnergy.Descriptor, status as Toybox.BluetoothLowEnergy.Status, value as Toybox.Lang.ByteArray) as Void;function onDescriptorWrite(descriptor as Toybox.BluetoothLowEnergy.Descriptor, status as Toybox.BluetoothLowEnergy.Status) as Void;function onScanResult(scanResult as Toybox.BluetoothLowEnergy.ScanResult) as Void;function onScanStateChange(scanState as Toybox.BluetoothLowEnergy.ScanState, status as Toybox.BluetoothLowEnergy.Status) as Void;function onPassiveConnection(device as Toybox.BluetoothLowEnergy.Device) as Void;function profileRegistrationStart() as Void;function profileRegistrationComplete() as Void;function onBleError(msg, exception as Toybox.Lang.Exception) as Void;};
         //! Type for registering profile
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 94; @symbol_typedef = [BleProfile,94,16,26]; @symbol_type<0> = [Toybox,95,21,27]; @symbol_type<1> = [BluetoothLowEnergy,95,28,46]; @symbol_type<2> = [Uuid,95,47,51]; @symbol_type<3> = [Toybox,96,32,38]; @symbol_type<4> = [Lang,96,39,43]; @symbol_type<5> = [Array,96,44,49]; @symbol_type<6> = [Toybox,97,25,31]; @symbol_type<7> = [BluetoothLowEnergy,97,32,50]; @symbol_type<8> = [Uuid,97,51,55]; @symbol_type<9> = [Toybox,98,32,38]; @symbol_type<10> = [Lang,98,39,43]; @symbol_type<11> = [Array,98,44,49]; @symbol_type<12> = [Toybox,98,50,56]; @symbol_type<13> = [BluetoothLowEnergy,98,57,75]; @symbol_type<14> = [Uuid,98,76,80]; @symbol_type_const<0> = [uuid,95,13,17]; @symbol_type_const<1> = [uuid,97,17,21]; @symbol_type_const<2> = [descriptors,98,17,28]; @symbol_type_const<3> = [characteristics,96,13,28]; ]
         type BleProfile as {:uuid as Toybox.BluetoothLowEnergy.Uuid, :characteristics as Toybox.Lang.Array<{:uuid as Toybox.BluetoothLowEnergy.Uuid, :descriptors as Toybox.Lang.Array<Toybox.BluetoothLowEnergy.Uuid>}>};
@@ -165,9 +121,10 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_107_93_
             %tmp.5 = getv function %tmp.4 :initialize;
             invoke %tmp.4 %tmp.5();
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 109 12 ]
-            %tmp.6 = self;
-            symbol [ _log %tmp.7 109 12 16 ];
-            %tmp.7 = getv function %tmp.6 :_log;
+            symbol [ $ %tmp.6 109 12 13 ];
+            %tmp.6 = getm $;
+            symbol [ log %tmp.7 109 14 17 ];
+            %tmp.7 = getv function %tmp.6 :log;
             %tmp.8 = "initialize";
             %tmp.9 = newa 0;
             invoke %tmp.6 %tmp.7(%tmp.8, %tmp.9);
@@ -225,17 +182,18 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_107_93_
         function setUp(delegate as ActiveLookBLE.ActiveLook.ActiveLookDelegate) as ActiveLookBLE.ActiveLook {
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_142_115_176_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 143 12 ]
-            %tmp.1 = self;
-            symbol [ _log %tmp.2 143 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
+            symbol [ $ %tmp.1 143 12 13 ];
+            %tmp.1 = getm $;
+            symbol [ log %tmp.2 143 14 17 ];
+            %tmp.2 = getv function %tmp.1 :log;
             %tmp.3 = "setUp";
             %tmp.4 = newa 2;
-            symbol [ _activeLook %tmp.6 143 27 38 ];
+            symbol [ _activeLook %tmp.6 143 28 39 ];
             %tmp.6 = getv ? :_activeLook;
             %tmp.7 = dup %tmp.4;
             %tmp.8 = aputv %tmp.7 0 %tmp.6;
             %tmp.9 = lgetv %delegate;
-            symbol [ delegate %tmp.9 143 40 48 ];
+            symbol [ delegate %tmp.9 143 41 49 ];
             %tmp.10 = dup %tmp.8;
             %tmp.11 = aputv %tmp.10 1 %tmp.9;
             invoke %tmp.1 %tmp.2(%tmp.3, %tmp.11);
@@ -319,9 +277,10 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_151_29_
             symbol [ _device ? 152 16 23 ];
             putv self :_device %tmp.38;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 153 16 ]
-            %tmp.39 = self;
-            symbol [ _log %tmp.40 153 16 20 ];
-            %tmp.40 = getv function %tmp.39 :_log;
+            symbol [ $ %tmp.39 153 16 17 ];
+            %tmp.39 = getm $;
+            symbol [ log %tmp.40 153 18 21 ];
+            %tmp.40 = getv function %tmp.39 :log;
             %tmp.41 = "setUp";
             %tmp.42 = "Passive connection exist";
             invoke %tmp.39 %tmp.40(%tmp.41, %tmp.42);
@@ -447,18 +406,19 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_163_69_
             symbol [ BleProfile %tmp.114 165 141 151 ];
             invoke %tmp.104 %tmp.105(%tmp.114);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 166 16 ]
-            %tmp.115 = self;
-            symbol [ _log %tmp.116 166 16 20 ];
-            %tmp.116 = getv function %tmp.115 :_log;
+            symbol [ $ %tmp.115 166 16 17 ];
+            %tmp.115 = getm $;
+            symbol [ log %tmp.116 166 18 21 ];
+            %tmp.116 = getv function %tmp.115 :log;
             %tmp.117 = "setUp";
             %tmp.118 = newa 1;
-            symbol [ ACTIVELOOK_PROFILES %tmp.120 166 31 50 ];
+            symbol [ ACTIVELOOK_PROFILES %tmp.120 166 32 51 ];
             %tmp.120 = getv ? :ACTIVELOOK_PROFILES;
-            symbol [ _profileIndexToRegister %tmp.122 166 51 74 ];
+            symbol [ _profileIndexToRegister %tmp.122 166 52 75 ];
             %tmp.122 = getv ? :_profileIndexToRegister;
             %tmp.123 = agetv %tmp.120 %tmp.122;
             %tmp.125 = const :label;
-            symbol [ label %tmp.125 166 77 82 const ];
+            symbol [ label %tmp.125 166 78 83 const ];
             %tmp.126 = agetv %tmp.123 %tmp.125;
             %tmp.127 = " registered";
             %tmp.128 = add %tmp.126 %tmp.127;
@@ -495,13 +455,14 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_142_115
         function requestScanning(state as Toybox.Lang.Boolean) as Void {
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_186_78_199_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 187 12 ]
-            %tmp.1 = self;
-            symbol [ _log %tmp.2 187 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
+            symbol [ $ %tmp.1 187 12 13 ];
+            %tmp.1 = getm $;
+            symbol [ log %tmp.2 187 14 17 ];
+            %tmp.2 = getv function %tmp.1 :log;
             %tmp.3 = "requestScanning";
             %tmp.4 = newa 1;
             %tmp.5 = lgetv %state;
-            symbol [ state %tmp.5 187 37 42 ];
+            symbol [ state %tmp.5 187 38 43 ];
             %tmp.6 = dup %tmp.4;
             %tmp.7 = aputv %tmp.6 0 %tmp.5;
             invoke %tmp.1 %tmp.2(%tmp.3, %tmp.7);
@@ -612,20 +573,21 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_186_78_
         function fixScanState() as Toybox.Lang.Boolean {
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_212_62_223_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 213 12 ]
-            %tmp.1 = self;
-            symbol [ _log %tmp.2 213 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
+            symbol [ $ %tmp.1 213 12 13 ];
+            %tmp.1 = getm $;
+            symbol [ log %tmp.2 213 14 17 ];
+            %tmp.2 = getv function %tmp.1 :log;
             %tmp.3 = "fixScanState";
             %tmp.4 = newa 3;
-            symbol [ _fixScanStateNbSwitch %tmp.6 213 34 55 ];
+            symbol [ _fixScanStateNbSwitch %tmp.6 213 35 56 ];
             %tmp.6 = getv ? :_fixScanStateNbSwitch;
             %tmp.7 = dup %tmp.4;
             %tmp.8 = aputv %tmp.7 0 %tmp.6;
-            symbol [ _currentScanState %tmp.10 213 57 74 ];
+            symbol [ _currentScanState %tmp.10 213 58 75 ];
             %tmp.10 = getv ? :_currentScanState;
             %tmp.11 = dup %tmp.8;
             %tmp.12 = aputv %tmp.11 1 %tmp.10;
-            symbol [ _desiredScanState %tmp.14 213 76 93 ];
+            symbol [ _desiredScanState %tmp.14 213 77 94 ];
             %tmp.14 = getv ? :_desiredScanState;
             %tmp.15 = dup %tmp.12;
             %tmp.16 = aputv %tmp.15 2 %tmp.14;
@@ -703,17 +665,18 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_212_62_
         function onCharacteristicChanged(characteristic as Toybox.BluetoothLowEnergy.Characteristic, value as Toybox.Lang.ByteArray) as Void {
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_226_141_229_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 227 12 ]
-            %tmp.1 = self;
-            symbol [ _log %tmp.2 227 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
+            symbol [ $ %tmp.1 227 12 13 ];
+            %tmp.1 = getm $;
+            symbol [ log %tmp.2 227 14 17 ];
+            %tmp.2 = getv function %tmp.1 :log;
             %tmp.3 = "onCharacteristicChanged";
             %tmp.4 = newa 2;
             %tmp.5 = lgetv %characteristic;
-            symbol [ characteristic %tmp.5 227 45 59 ];
+            symbol [ characteristic %tmp.5 227 46 60 ];
             %tmp.6 = dup %tmp.4;
             %tmp.7 = aputv %tmp.6 0 %tmp.5;
             %tmp.8 = lgetv %value;
-            symbol [ value %tmp.8 227 61 66 ];
+            symbol [ value %tmp.8 227 62 67 ];
             %tmp.9 = dup %tmp.7;
             %tmp.10 = aputv %tmp.9 1 %tmp.8;
             invoke %tmp.1 %tmp.2(%tmp.3, %tmp.10);
@@ -734,21 +697,22 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_226_141
         function onCharacteristicRead(characteristic as Toybox.BluetoothLowEnergy.Characteristic, status as Toybox.BluetoothLowEnergy.Status, value as Toybox.Lang.ByteArray) as Void {
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_232_182_235_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 233 12 ]
-            %tmp.1 = self;
-            symbol [ _log %tmp.2 233 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
+            symbol [ $ %tmp.1 233 12 13 ];
+            %tmp.1 = getm $;
+            symbol [ log %tmp.2 233 14 17 ];
+            %tmp.2 = getv function %tmp.1 :log;
             %tmp.3 = "onCharacteristicRead";
             %tmp.4 = newa 3;
             %tmp.5 = lgetv %characteristic;
-            symbol [ characteristic %tmp.5 233 42 56 ];
+            symbol [ characteristic %tmp.5 233 43 57 ];
             %tmp.6 = dup %tmp.4;
             %tmp.7 = aputv %tmp.6 0 %tmp.5;
             %tmp.8 = lgetv %status;
-            symbol [ status %tmp.8 233 58 64 ];
+            symbol [ status %tmp.8 233 59 65 ];
             %tmp.9 = dup %tmp.7;
             %tmp.10 = aputv %tmp.9 1 %tmp.8;
             %tmp.11 = lgetv %value;
-            symbol [ value %tmp.11 233 66 71 ];
+            symbol [ value %tmp.11 233 67 72 ];
             %tmp.12 = dup %tmp.10;
             %tmp.13 = aputv %tmp.12 2 %tmp.11;
             invoke %tmp.1 %tmp.2(%tmp.3, %tmp.13);
@@ -787,17 +751,18 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_238_151
         function onConnectedStateChanged(device as Toybox.BluetoothLowEnergy.Device, state as Toybox.BluetoothLowEnergy.ConnectionState) as Void {
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_244_145_252_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 245 12 ]
-            %tmp.1 = self;
-            symbol [ _log %tmp.2 245 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
+            symbol [ $ %tmp.1 245 12 13 ];
+            %tmp.1 = getm $;
+            symbol [ log %tmp.2 245 14 17 ];
+            %tmp.2 = getv function %tmp.1 :log;
             %tmp.3 = "onConnectedStateChanged";
             %tmp.4 = newa 2;
             %tmp.5 = lgetv %device;
-            symbol [ device %tmp.5 245 45 51 ];
+            symbol [ device %tmp.5 245 46 52 ];
             %tmp.6 = dup %tmp.4;
             %tmp.7 = aputv %tmp.6 0 %tmp.5;
             %tmp.8 = lgetv %state;
-            symbol [ state %tmp.8 245 53 58 ];
+            symbol [ state %tmp.8 245 54 59 ];
             %tmp.9 = dup %tmp.7;
             %tmp.10 = aputv %tmp.9 1 %tmp.8;
             invoke %tmp.1 %tmp.2(%tmp.3, %tmp.10);
@@ -847,21 +812,22 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_244_145
         function onDescriptorRead(descriptor as Toybox.BluetoothLowEnergy.Descriptor, status as Toybox.BluetoothLowEnergy.Status, value as Toybox.Lang.ByteArray) as Void {
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_255_170_258_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 256 12 ]
-            %tmp.1 = self;
-            symbol [ _log %tmp.2 256 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
+            symbol [ $ %tmp.1 256 12 13 ];
+            %tmp.1 = getm $;
+            symbol [ log %tmp.2 256 14 17 ];
+            %tmp.2 = getv function %tmp.1 :log;
             %tmp.3 = "onDescriptorRead";
             %tmp.4 = newa 3;
             %tmp.5 = lgetv %descriptor;
-            symbol [ descriptor %tmp.5 256 38 48 ];
+            symbol [ descriptor %tmp.5 256 39 49 ];
             %tmp.6 = dup %tmp.4;
             %tmp.7 = aputv %tmp.6 0 %tmp.5;
             %tmp.8 = lgetv %status;
-            symbol [ status %tmp.8 256 50 56 ];
+            symbol [ status %tmp.8 256 51 57 ];
             %tmp.9 = dup %tmp.7;
             %tmp.10 = aputv %tmp.9 1 %tmp.8;
             %tmp.11 = lgetv %value;
-            symbol [ value %tmp.11 256 58 63 ];
+            symbol [ value %tmp.11 256 59 64 ];
             %tmp.12 = dup %tmp.10;
             %tmp.13 = aputv %tmp.12 2 %tmp.11;
             invoke %tmp.1 %tmp.2(%tmp.3, %tmp.13);
@@ -884,17 +850,18 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_255_170
         function onDescriptorWrite(descriptor as Toybox.BluetoothLowEnergy.Descriptor, status as Toybox.BluetoothLowEnergy.Status) as Void {
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_261_139_264_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 262 12 ]
-            %tmp.1 = self;
-            symbol [ _log %tmp.2 262 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
+            symbol [ $ %tmp.1 262 12 13 ];
+            %tmp.1 = getm $;
+            symbol [ log %tmp.2 262 14 17 ];
+            %tmp.2 = getv function %tmp.1 :log;
             %tmp.3 = "onDescriptorWrite";
             %tmp.4 = newa 2;
             %tmp.5 = lgetv %descriptor;
-            symbol [ descriptor %tmp.5 262 39 49 ];
+            symbol [ descriptor %tmp.5 262 40 50 ];
             %tmp.6 = dup %tmp.4;
             %tmp.7 = aputv %tmp.6 0 %tmp.5;
             %tmp.8 = lgetv %status;
-            symbol [ status %tmp.8 262 51 57 ];
+            symbol [ status %tmp.8 262 52 58 ];
             %tmp.9 = dup %tmp.7;
             %tmp.10 = aputv %tmp.9 1 %tmp.8;
             invoke %tmp.1 %tmp.2(%tmp.3, %tmp.10);
@@ -915,22 +882,23 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_261_139
         function onProfileRegister(uuid as Toybox.BluetoothLowEnergy.Uuid, status as Toybox.BluetoothLowEnergy.Status) as Void {
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_267_127_283_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 268 12 ]
-            %tmp.1 = self;
-            symbol [ _log %tmp.2 268 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
+            symbol [ $ %tmp.1 268 12 13 ];
+            %tmp.1 = getm $;
+            symbol [ log %tmp.2 268 14 17 ];
+            %tmp.2 = getv function %tmp.1 :log;
             %tmp.3 = "onProfileRegister";
             %tmp.4 = newa 3;
             %tmp.5 = lgetv %uuid;
-            symbol [ uuid %tmp.5 268 39 43 ];
+            symbol [ uuid %tmp.5 268 40 44 ];
             %tmp.6 = dup %tmp.4;
             %tmp.7 = aputv %tmp.6 0 %tmp.5;
             %tmp.8 = lgetv %status;
-            symbol [ status %tmp.8 268 45 51 ];
+            symbol [ status %tmp.8 268 46 52 ];
             %tmp.9 = dup %tmp.7;
             %tmp.10 = aputv %tmp.9 1 %tmp.8;
-            symbol [ _registeredProfile %tmp.12 268 53 71 ];
+            symbol [ _registeredProfile %tmp.12 268 54 72 ];
             %tmp.12 = getv ? :_registeredProfile;
-            symbol [ size %tmp.13 268 72 76 ];
+            symbol [ size %tmp.13 268 73 77 ];
             %tmp.13 = getv function %tmp.12 :size;
             %tmp.14 = invoke %tmp.12 %tmp.13();
             %tmp.15 = dup %tmp.10;
@@ -973,25 +941,26 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_270_60_
             symbol [ uuid %tmp.33 271 43 47 ];
             invoke %tmp.31 %tmp.32(%tmp.33);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 272 20 ]
-            %tmp.34 = self;
-            symbol [ _log %tmp.35 272 20 24 ];
-            %tmp.35 = getv function %tmp.34 :_log;
+            symbol [ $ %tmp.34 272 20 21 ];
+            %tmp.34 = getm $;
+            symbol [ log %tmp.35 272 22 25 ];
+            %tmp.35 = getv function %tmp.34 :log;
             %tmp.36 = "onProfileRegister";
             %tmp.37 = newa 4;
             %tmp.38 = "+1";
             %tmp.39 = dup %tmp.37;
             %tmp.40 = aputv %tmp.39 0 %tmp.38;
             %tmp.41 = lgetv %uuid;
-            symbol [ uuid %tmp.41 272 53 57 ];
+            symbol [ uuid %tmp.41 272 54 58 ];
             %tmp.42 = dup %tmp.40;
             %tmp.43 = aputv %tmp.42 1 %tmp.41;
             %tmp.44 = lgetv %status;
-            symbol [ status %tmp.44 272 59 65 ];
+            symbol [ status %tmp.44 272 60 66 ];
             %tmp.45 = dup %tmp.43;
             %tmp.46 = aputv %tmp.45 2 %tmp.44;
-            symbol [ _registeredProfile %tmp.48 272 67 85 ];
+            symbol [ _registeredProfile %tmp.48 272 68 86 ];
             %tmp.48 = getv ? :_registeredProfile;
-            symbol [ size %tmp.49 272 86 90 ];
+            symbol [ size %tmp.49 272 87 91 ];
             %tmp.49 = getv function %tmp.48 :size;
             %tmp.50 = invoke %tmp.48 %tmp.49();
             %tmp.51 = dup %tmp.46;
@@ -1056,18 +1025,19 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_277_73_
             symbol [ BleProfile %tmp.82 278 146 156 ];
             invoke %tmp.72 %tmp.73(%tmp.82);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 279 20 ]
-            %tmp.83 = self;
-            symbol [ _log %tmp.84 279 20 24 ];
-            %tmp.84 = getv function %tmp.83 :_log;
+            symbol [ $ %tmp.83 279 20 21 ];
+            %tmp.83 = getm $;
+            symbol [ log %tmp.84 279 22 25 ];
+            %tmp.84 = getv function %tmp.83 :log;
             %tmp.85 = "onProfileRegister";
             %tmp.86 = newa 1;
-            symbol [ ACTIVELOOK_PROFILES %tmp.88 279 47 66 ];
+            symbol [ ACTIVELOOK_PROFILES %tmp.88 279 48 67 ];
             %tmp.88 = getv ? :ACTIVELOOK_PROFILES;
-            symbol [ _profileIndexToRegister %tmp.90 279 67 90 ];
+            symbol [ _profileIndexToRegister %tmp.90 279 68 91 ];
             %tmp.90 = getv ? :_profileIndexToRegister;
             %tmp.91 = agetv %tmp.88 %tmp.90;
             %tmp.93 = const :label;
-            symbol [ label %tmp.93 279 93 98 const ];
+            symbol [ label %tmp.93 279 94 99 const ];
             %tmp.94 = agetv %tmp.91 %tmp.93;
             %tmp.95 = " registered";
             %tmp.96 = add %tmp.94 %tmp.95;
@@ -1093,13 +1063,14 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_267_127
         function onScanResults(scanResults as Toybox.BluetoothLowEnergy.Iterator) as Void {
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_286_90_329_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 287 12 ]
-            %tmp.1 = self;
-            symbol [ _log %tmp.2 287 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
+            symbol [ $ %tmp.1 287 12 13 ];
+            %tmp.1 = getm $;
+            symbol [ log %tmp.2 287 14 17 ];
+            %tmp.2 = getv function %tmp.1 :log;
             %tmp.3 = "onScanResults";
             %tmp.4 = newa 1;
             %tmp.5 = lgetv %scanResults;
-            symbol [ scanResults %tmp.5 287 35 46 ];
+            symbol [ scanResults %tmp.5 287 36 47 ];
             %tmp.6 = dup %tmp.4;
             %tmp.7 = aputv %tmp.6 0 %tmp.5;
             invoke %tmp.1 %tmp.2(%tmp.3, %tmp.7);
@@ -1116,17 +1087,18 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_288_12_
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_288_12_291_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_288_47_291_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 289 16 ]
-            %tmp.14 = self;
-            symbol [ _log %tmp.15 289 16 20 ];
-            %tmp.15 = getv function %tmp.14 :_log;
+            symbol [ $ %tmp.14 289 16 17 ];
+            %tmp.14 = getm $;
+            symbol [ log %tmp.15 289 18 21 ];
+            %tmp.15 = getv function %tmp.14 :log;
             %tmp.16 = "onScanResults";
             %tmp.17 = newa 2;
             %tmp.18 = "Profile not registered yet";
             %tmp.19 = dup %tmp.17;
             %tmp.20 = aputv %tmp.19 0 %tmp.18;
-            symbol [ _registeredProfile %tmp.22 289 69 87 ];
+            symbol [ _registeredProfile %tmp.22 289 70 88 ];
             %tmp.22 = getv ? :_registeredProfile;
-            symbol [ size %tmp.23 289 88 92 ];
+            symbol [ size %tmp.23 289 89 93 ];
             %tmp.23 = getv function %tmp.22 :size;
             %tmp.24 = invoke %tmp.22 %tmp.23();
             %tmp.25 = dup %tmp.20;
@@ -1163,9 +1135,10 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_292_12_
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_292_12_328_12_for_begin:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_292_135_328_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 293 16 ]
-            %tmp.34 = self;
-            symbol [ _log %tmp.35 293 16 20 ];
-            %tmp.35 = getv function %tmp.34 :_log;
+            symbol [ $ %tmp.34 293 16 17 ];
+            %tmp.34 = getm $;
+            symbol [ log %tmp.35 293 18 21 ];
+            %tmp.35 = getv function %tmp.34 :log;
             %tmp.36 = "onScanResults";
             %tmp.37 = newa 6;
             %tmp.38 = "rssi";
@@ -1219,16 +1192,17 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_298_16_
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_298_16_301_16_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_298_50_301_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 299 20 ]
-            %tmp.74 = self;
-            symbol [ _log %tmp.75 299 20 24 ];
-            %tmp.75 = getv function %tmp.74 :_log;
+            symbol [ $ %tmp.74 299 20 21 ];
+            %tmp.74 = getm $;
+            symbol [ log %tmp.75 299 22 25 ];
+            %tmp.75 = getv function %tmp.74 :log;
             %tmp.76 = "onScanResults";
             %tmp.77 = newa 2;
             %tmp.78 = "No getDeviceName";
             %tmp.79 = dup %tmp.77;
             %tmp.80 = aputv %tmp.79 0 %tmp.78;
             %tmp.81 = lgetv %device.1;
-            symbol [ device %tmp.81 299 63 69 ];
+            symbol [ device %tmp.81 299 64 70 ];
             %tmp.82 = as %tmp.81 { (!interface { var getDeviceName; }) && (!Null) };
             %tmp.83 = dup %tmp.80;
             %tmp.84 = aputv %tmp.83 1 %tmp.82;
@@ -1388,16 +1362,17 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_309_40_
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_309_24_313_24_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_309_163_313_24_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 310 28 ]
-            %tmp.147 = self;
-            symbol [ _log %tmp.148 310 28 32 ];
-            %tmp.148 = getv function %tmp.147 :_log;
+            symbol [ $ %tmp.147 310 28 29 ];
+            %tmp.147 = getm $;
+            symbol [ log %tmp.148 310 30 33 ];
+            %tmp.148 = getv function %tmp.147 :log;
             %tmp.149 = "onScanResults";
             %tmp.150 = newa 2;
             %tmp.151 = "Microoled partner";
             %tmp.152 = dup %tmp.150;
             %tmp.153 = aputv %tmp.152 0 %tmp.151;
             %tmp.154 = lgetv %msd.4;
-            symbol [ msd %tmp.154 310 72 75 ];
+            symbol [ msd %tmp.154 310 73 76 ];
             %tmp.155 = as %tmp.154 { (!Null) };
             %tmp.156 = dup %tmp.153;
             %tmp.157 = aputv %tmp.156 1 %tmp.155;
@@ -1442,16 +1417,17 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_303_43_
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_303_16_316_16_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_303_16_316_16_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 317 16 ]
-            %tmp.165 = self;
-            symbol [ _log %tmp.166 317 16 20 ];
-            %tmp.166 = getv function %tmp.165 :_log;
+            symbol [ $ %tmp.165 317 16 17 ];
+            %tmp.165 = getm $;
+            symbol [ log %tmp.166 317 18 21 ];
+            %tmp.166 = getv function %tmp.165 :log;
             %tmp.167 = "onScanResults";
             %tmp.168 = newa 2;
             %tmp.169 = "Microoled";
             %tmp.170 = dup %tmp.168;
             %tmp.171 = aputv %tmp.170 0 %tmp.169;
             %tmp.172 = lgetv %device.1;
-            symbol [ device %tmp.172 317 52 58 ];
+            symbol [ device %tmp.172 317 53 59 ];
             %tmp.173 = as %tmp.172 { (!Null) };
             %tmp.174 = dup %tmp.171;
             %tmp.175 = aputv %tmp.174 1 %tmp.173;
@@ -1626,7 +1602,7 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_332_137
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 366; @symbol_functiondef = [tryGetServiceCharacteristic,366,19,46]; @symbol_param<0> = [serviceUuid,367,12,23]; @symbol_param<0>_type<0> = [Toybox,367,34,40]; @symbol_param<0>_type<1> = [BluetoothLowEnergy,367,41,59]; @symbol_param<0>_type<2> = [Uuid,367,60,64]; @symbol_param<1> = [characteristicUuid,368,12,30]; @symbol_param<1>_type<0> = [Toybox,368,34,40]; @symbol_param<1>_type<1> = [BluetoothLowEnergy,368,41,59]; @symbol_param<1>_type<2> = [Uuid,368,60,64]; @symbol_param<2> = [nbRetry,369,12,19]; @symbol_param<2>_type<0> = [Toybox,369,36,42]; @symbol_param<2>_type<1> = [Lang,369,43,47]; @symbol_param<2>_type<2> = [Number,369,48,54]; @symbol_return<0> = [Toybox,370,13,19]; @symbol_return<1> = [BluetoothLowEnergy,370,20,38]; @symbol_return<2> = [Characteristic,370,39,53]; ]
         private
         function tryGetServiceCharacteristic(serviceUuid as Toybox.BluetoothLowEnergy.Uuid, characteristicUuid as Toybox.BluetoothLowEnergy.Uuid, nbRetry as Toybox.Lang.Number) as Toybox.BluetoothLowEnergy.Characteristic {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_370_54_393_2_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_370_54_397_2_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 371 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_371_12_371_101_if_stmt:
             symbol [ _device %tmp.2 371 16 23 ];
@@ -1650,7 +1626,7 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_371_33_
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_371_12_371_101_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_371_12_371_101_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 372 12 ]
-            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_370_54_393_2_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_370_54_393_2_stop" ]
+            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_370_54_397_2_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_370_54_397_2_stop" ]
             %dev.1 = local;
             symbol [ dev %dev.1 372 16 19 ];
             symbol [ _device %tmp.13 372 22 29 ];
@@ -1662,7 +1638,7 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_371_12_
             lputv %dev.1 %tmp.14;
             symbol [ dev %dev.1 372 16 19 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 373 12 ]
-            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_370_54_393_2_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_370_54_393_2_stop" ]
+            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_370_54_397_2_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_370_54_397_2_stop" ]
             %service.2 = local;
             symbol [ service %service.2 373 16 23 ];
             %tmp.15 = lgetv %dev.1;
@@ -1675,31 +1651,31 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_371_12_
             lputv %service.2 %tmp.18;
             symbol [ service %service.2 373 16 23 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 374 12 ]
-            for @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_384_12_for_test @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_384_12_for_incr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_384_12_for_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_384_12_for_init:
-            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_384_12_for_begin" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_384_12_for_end" ]
+            for @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_388_12_for_test @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_388_12_for_incr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_388_12_for_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_388_12_for_init:
+            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_388_12_for_begin" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_388_12_for_end" ]
             %i.3 = local;
             symbol [ i %i.3 374 21 22 ];
             %tmp.19 = 0;
             lputv %i.3 %tmp.19;
             symbol [ i %i.3 374 21 22 ];
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_384_12_for_test:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_388_12_for_test:
             %tmp.20 = lgetv %i.3;
             symbol [ i %tmp.20 374 28 29 ];
             %tmp.21 = lgetv %nbRetry;
             symbol [ nbRetry %tmp.21 374 32 39 ];
             %tmp.22 = lt %tmp.20 %tmp.21;
-            bf %tmp.22 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_384_12_for_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_384_12_for_begin:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_47_384_12_start:
+            bf %tmp.22 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_388_12_for_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_388_12_for_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_47_388_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 375 16 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_16_383_16_if_stmt:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_16_387_16_if_stmt:
             %tmp.23 = lgetv %service.2;
             symbol [ service %tmp.23 375 20 27 ];
             %tmp.24 = null;
             %tmp.25 = eq %tmp.23 %tmp.24;
-            bf %tmp.25 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_16_383_16_if_else_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_16_383_16_if_true:
+            bf %tmp.25 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_16_387_16_if_else_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_16_387_16_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_37_377_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 376 20 ]
             %tmp.26 = lgetv %dev.1;
@@ -1712,109 +1688,155 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_37_
             lputv %service.2 %tmp.29;
             symbol [ service %service.2 376 20 27 ];
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_37_377_16_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_16_383_16_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_16_383_16_if_else_false:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_377_23_383_16_start:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_16_387_16_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_16_387_16_if_else_false:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_377_23_387_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 378 20 ]
-            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_377_23_383_16_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_377_23_383_16_stop" ]
-            %characteristic.4 = local;
-            symbol [ characteristic %characteristic.4 378 24 38 ];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_378_20_386_20_if_stmt:
             %tmp.30 = lgetv %service.2;
-            symbol [ service %tmp.30 378 41 48 ];
+            symbol [ service %tmp.30 378 23 30 ];
             %tmp.31 = as %tmp.30 { (!Null) };
-            symbol [ getCharacteristic %tmp.32 378 49 66 ];
-            %tmp.32 = getv function %tmp.31 :getCharacteristic;
-            %tmp.33 = lgetv %characteristicUuid;
-            symbol [ characteristicUuid %tmp.33 378 67 85 ];
-            %tmp.34 = invoke %tmp.31 %tmp.32(%tmp.33);
-            lputv %characteristic.4 %tmp.34;
-            symbol [ characteristic %characteristic.4 378 24 38 ];
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 379 20 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_379_20_382_20_if_stmt:
-            %tmp.35 = lgetv %characteristic.4;
-            symbol [ characteristic %tmp.35 379 24 38 ];
-            %tmp.36 = null;
-            %tmp.37 = ne %tmp.35 %tmp.36;
-            bf %tmp.37 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_379_20_382_20_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_379_20_382_20_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_379_48_382_20_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 381 24 ]
-            %tmp.38 = lgetv %characteristic.4;
-            symbol [ characteristic %tmp.38 381 31 45 ];
-            %tmp.39 = as %tmp.38 { (!Null) };
-            ret %tmp.39;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_379_48_382_20_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_379_20_382_20_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_379_20_382_20_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_377_23_383_16_stop:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_16_383_16_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_47_384_12_stop:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_384_12_for_incr:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 374 ]
-            %tmp.42 = lgetv %i.3;
-            symbol [ i %tmp.42 374 41 42 ];
-            %tmp.43 = add %tmp.42 1;
-            lputv %i.3 %tmp.43;
-            symbol [ i %i.3 374 41 42 ];
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_384_12_for_test;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_384_12_for_end:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 385 3 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_385_3_389_12_if_stmt:
-            %tmp.44 = lgetv %service.2;
-            symbol [ service %tmp.44 385 6 13 ];
-            %tmp.45 = null;
-            %tmp.46 = eq %tmp.44 %tmp.45;
-            bf %tmp.46 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_385_3_389_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_385_3_389_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_385_23_389_12_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 386 16 ]
-            symbol [ Toybox %tmp.50 386 26 32 ];
-            %tmp.50 = getv ? :Toybox;
-            symbol [ Lang %tmp.51 386 33 37 ];
-            %tmp.51 = getv %tmp.50 :Lang;
-            symbol [ InvalidValueException %tmp.52 386 38 59 ];
-            %tmp.52 = getv %tmp.51 :InvalidValueException;
-            symbol [ Toybox %tmp.54 387 20 26 ];
-            %tmp.54 = getv ? :Toybox;
-            symbol [ Lang %tmp.55 387 27 31 ];
-            %tmp.55 = getv %tmp.54 :Lang;
-            symbol [ format %tmp.56 387 32 38 ];
-            %tmp.56 = getv function %tmp.55 :format;
-            %tmp.57 = "(E) Could not get service $1$";
-            %tmp.58 = newa 1;
-            %tmp.59 = lgetv %serviceUuid;
-            symbol [ serviceUuid %tmp.59 387 73 84 ];
+            %tmp.33 = const :getCharacteristic;
+            symbol [ getCharacteristic %tmp.33 378 36 53 const ];
+            %tmp.34 = canhazplz %tmp.31 %tmp.33;
+            bf %tmp.34 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_378_20_386_20_if_else_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_378_20_386_20_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_378_55_384_20_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 379 24 ]
+            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_378_55_384_20_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_378_55_384_20_stop" ]
+            %characteristic.4 = local;
+            symbol [ characteristic %characteristic.4 379 28 42 ];
+            %tmp.35 = lgetv %service.2;
+            symbol [ service %tmp.35 379 45 52 ];
+            %tmp.36 = as %tmp.35 { (interface { var getCharacteristic; }) && (!Null) };
+            symbol [ getCharacteristic %tmp.37 379 53 70 ];
+            %tmp.37 = getv function %tmp.36 :getCharacteristic;
+            %tmp.38 = lgetv %characteristicUuid;
+            symbol [ characteristicUuid %tmp.38 379 71 89 ];
+            %tmp.39 = invoke %tmp.36 %tmp.37(%tmp.38);
+            lputv %characteristic.4 %tmp.39;
+            symbol [ characteristic %characteristic.4 379 28 42 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 380 24 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_380_24_383_24_if_stmt:
+            %tmp.40 = lgetv %characteristic.4;
+            symbol [ characteristic %tmp.40 380 28 42 ];
+            %tmp.41 = null;
+            %tmp.42 = ne %tmp.40 %tmp.41;
+            bf %tmp.42 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_380_24_383_24_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_380_24_383_24_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_380_52_383_24_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 382 28 ]
+            %tmp.43 = lgetv %characteristic.4;
+            symbol [ characteristic %tmp.43 382 35 49 ];
+            %tmp.44 = as %tmp.43 { (!Null) };
+            ret %tmp.44;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_380_52_383_24_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_380_24_383_24_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_380_24_383_24_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_378_55_384_20_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_378_20_386_20_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_378_20_386_20_if_else_false:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_384_27_386_20_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 385 24 ]
+            symbol [ $ %tmp.45 385 24 25 ];
+            %tmp.45 = getm $;
+            symbol [ log %tmp.46 385 26 29 ];
+            %tmp.46 = getv function %tmp.45 :log;
+            %tmp.47 = "tryGetServiceCharacteristic no getCharacteristic";
+            %tmp.48 = newa 5;
+            %tmp.49 = lgetv %service.2;
+            symbol [ service %tmp.49 385 83 90 ];
+            %tmp.50 = as %tmp.49 { (!interface { var getCharacteristic; }) && (!Null) };
+            %tmp.51 = dup %tmp.48;
+            %tmp.52 = aputv %tmp.51 0 %tmp.50;
+            %tmp.53 = lgetv %serviceUuid;
+            symbol [ serviceUuid %tmp.53 385 92 103 ];
+            %tmp.54 = dup %tmp.52;
+            %tmp.55 = aputv %tmp.54 1 %tmp.53;
+            %tmp.56 = lgetv %characteristicUuid;
+            symbol [ characteristicUuid %tmp.56 385 105 123 ];
+            %tmp.57 = dup %tmp.55;
+            %tmp.58 = aputv %tmp.57 2 %tmp.56;
+            %tmp.59 = lgetv %nbRetry;
+            symbol [ nbRetry %tmp.59 385 125 132 ];
             %tmp.60 = dup %tmp.58;
-            %tmp.61 = aputv %tmp.60 0 %tmp.59;
-            %tmp.62 = invoke %tmp.55 %tmp.56(%tmp.57, %tmp.61);
-            %tmp.47 = newc %tmp.52 (%tmp.62);
-            throw %tmp.47;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_385_23_389_12_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_385_3_389_12_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_385_3_389_12_if_end:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 390 12 ]
-            symbol [ Toybox %tmp.66 390 22 28 ];
-            %tmp.66 = getv ? :Toybox;
-            symbol [ Lang %tmp.67 390 29 33 ];
-            %tmp.67 = getv %tmp.66 :Lang;
-            symbol [ InvalidValueException %tmp.68 390 34 55 ];
-            %tmp.68 = getv %tmp.67 :InvalidValueException;
-            symbol [ Toybox %tmp.70 391 16 22 ];
-            %tmp.70 = getv ? :Toybox;
-            symbol [ Lang %tmp.71 391 23 27 ];
-            %tmp.71 = getv %tmp.70 :Lang;
-            symbol [ format %tmp.72 391 28 34 ];
-            %tmp.72 = getv function %tmp.71 :format;
-            %tmp.73 = "(E) Could not get characteristic $1$";
-            %tmp.74 = newa 1;
-            %tmp.75 = lgetv %characteristicUuid;
-            symbol [ characteristicUuid %tmp.75 391 76 94 ];
-            %tmp.76 = dup %tmp.74;
-            %tmp.77 = aputv %tmp.76 0 %tmp.75;
-            %tmp.78 = invoke %tmp.71 %tmp.72(%tmp.73, %tmp.77);
-            %tmp.63 = newc %tmp.68 (%tmp.78);
-            throw %tmp.63;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_370_54_393_2_stop:
+            %tmp.61 = aputv %tmp.60 3 %tmp.59;
+            %tmp.62 = lgetv %i.3;
+            symbol [ i %tmp.62 385 134 135 ];
+            %tmp.63 = dup %tmp.61;
+            %tmp.64 = aputv %tmp.63 4 %tmp.62;
+            invoke %tmp.45 %tmp.46(%tmp.47, %tmp.64);
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_384_27_386_20_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_378_20_386_20_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_377_23_387_16_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_375_16_387_16_if_end:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_47_388_12_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_388_12_for_incr:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 374 ]
+            %tmp.67 = lgetv %i.3;
+            symbol [ i %tmp.67 374 41 42 ];
+            %tmp.68 = add %tmp.67 1;
+            lputv %i.3 %tmp.68;
+            symbol [ i %i.3 374 41 42 ];
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_388_12_for_test;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_374_12_388_12_for_end:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 389 3 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_389_3_393_12_if_stmt:
+            %tmp.69 = lgetv %service.2;
+            symbol [ service %tmp.69 389 6 13 ];
+            %tmp.70 = null;
+            %tmp.71 = eq %tmp.69 %tmp.70;
+            bf %tmp.71 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_389_3_393_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_389_3_393_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_389_23_393_12_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 390 16 ]
+            symbol [ Toybox %tmp.75 390 26 32 ];
+            %tmp.75 = getv ? :Toybox;
+            symbol [ Lang %tmp.76 390 33 37 ];
+            %tmp.76 = getv %tmp.75 :Lang;
+            symbol [ InvalidValueException %tmp.77 390 38 59 ];
+            %tmp.77 = getv %tmp.76 :InvalidValueException;
+            symbol [ Toybox %tmp.79 391 20 26 ];
+            %tmp.79 = getv ? :Toybox;
+            symbol [ Lang %tmp.80 391 27 31 ];
+            %tmp.80 = getv %tmp.79 :Lang;
+            symbol [ format %tmp.81 391 32 38 ];
+            %tmp.81 = getv function %tmp.80 :format;
+            %tmp.82 = "(E) Could not get service $1$";
+            %tmp.83 = newa 1;
+            %tmp.84 = lgetv %serviceUuid;
+            symbol [ serviceUuid %tmp.84 391 73 84 ];
+            %tmp.85 = dup %tmp.83;
+            %tmp.86 = aputv %tmp.85 0 %tmp.84;
+            %tmp.87 = invoke %tmp.80 %tmp.81(%tmp.82, %tmp.86);
+            %tmp.72 = newc %tmp.77 (%tmp.87);
+            throw %tmp.72;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_389_23_393_12_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_389_3_393_12_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_389_3_393_12_if_end:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 394 12 ]
+            symbol [ Toybox %tmp.91 394 22 28 ];
+            %tmp.91 = getv ? :Toybox;
+            symbol [ Lang %tmp.92 394 29 33 ];
+            %tmp.92 = getv %tmp.91 :Lang;
+            symbol [ InvalidValueException %tmp.93 394 34 55 ];
+            %tmp.93 = getv %tmp.92 :InvalidValueException;
+            symbol [ Toybox %tmp.95 395 16 22 ];
+            %tmp.95 = getv ? :Toybox;
+            symbol [ Lang %tmp.96 395 23 27 ];
+            %tmp.96 = getv %tmp.95 :Lang;
+            symbol [ format %tmp.97 395 28 34 ];
+            %tmp.97 = getv function %tmp.96 :format;
+            %tmp.98 = "(E) Could not get characteristic $1$";
+            %tmp.99 = newa 1;
+            %tmp.100 = lgetv %characteristicUuid;
+            symbol [ characteristicUuid %tmp.100 395 76 94 ];
+            %tmp.101 = dup %tmp.99;
+            %tmp.102 = aputv %tmp.101 0 %tmp.100;
+            %tmp.103 = invoke %tmp.96 %tmp.97(%tmp.98, %tmp.102);
+            %tmp.88 = newc %tmp.93 (%tmp.103);
+            throw %tmp.88;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_370_54_397_2_stop:
         }
         //! Try 5 times to get the <code>BLE_CHAR_ACTIVELOOK_RX</code> characteristic
         //! from the <code>BLE_SERV_ACTIVELOOK</code> service.
@@ -1822,21 +1844,21 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_370_54_
         //! @return The Bluetooth characteristic.
         //! @throws A <code>Toybox.Lang.InvalidValueException</code>
         //!         if the characteristic could not be retrieved after 5 attempts.
-        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 401; @symbol_functiondef = [getBleCharacteristicActiveLookRx,401,17,49]; @symbol_return<0> = [Toybox,401,55,61]; @symbol_return<1> = [BluetoothLowEnergy,401,62,80]; @symbol_return<2> = [Characteristic,401,81,95]; ]
+        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 405; @symbol_functiondef = [getBleCharacteristicActiveLookRx,405,17,49]; @symbol_return<0> = [Toybox,405,55,61]; @symbol_return<1> = [BluetoothLowEnergy,405,62,80]; @symbol_return<2> = [Characteristic,405,81,95]; ]
         function getBleCharacteristicActiveLookRx() as Toybox.BluetoothLowEnergy.Characteristic {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_401_96_404_8_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 403 12 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_405_96_408_8_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 407 12 ]
             %tmp.1 = self;
-            symbol [ tryGetServiceCharacteristic %tmp.2 403 19 46 ];
+            symbol [ tryGetServiceCharacteristic %tmp.2 407 19 46 ];
             %tmp.2 = getv function %tmp.1 :tryGetServiceCharacteristic;
-            symbol [ BLE_SERV_ACTIVELOOK %tmp.4 403 47 66 ];
+            symbol [ BLE_SERV_ACTIVELOOK %tmp.4 407 47 66 ];
             %tmp.4 = getv ? :BLE_SERV_ACTIVELOOK;
-            symbol [ BLE_CHAR_ACTIVELOOK_RX %tmp.6 403 68 90 ];
+            symbol [ BLE_CHAR_ACTIVELOOK_RX %tmp.6 407 68 90 ];
             %tmp.6 = getv ? :BLE_CHAR_ACTIVELOOK_RX;
             %tmp.7 = 5;
             %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6, %tmp.7);
             ret %tmp.8;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_401_96_404_8_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_405_96_408_8_stop:
         }
         //! Try 5 times to get the <code>BLE_CHAR_ACTIVELOOK_TX</code> characteristic
         //! from the <code>BLE_SERV_ACTIVELOOK</code> service.
@@ -1844,21 +1866,21 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_401_96_
         //! @return The Bluetooth characteristic.
         //! @throws A <code>Toybox.Lang.InvalidValueException</code>
         //!         if the characteristic could not be retrieved after 5 attempts.
-        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 412; @symbol_functiondef = [getBleCharacteristicActiveLookTx,412,17,49]; @symbol_return<0> = [Toybox,412,55,61]; @symbol_return<1> = [BluetoothLowEnergy,412,62,80]; @symbol_return<2> = [Characteristic,412,81,95]; ]
+        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 416; @symbol_functiondef = [getBleCharacteristicActiveLookTx,416,17,49]; @symbol_return<0> = [Toybox,416,55,61]; @symbol_return<1> = [BluetoothLowEnergy,416,62,80]; @symbol_return<2> = [Characteristic,416,81,95]; ]
         function getBleCharacteristicActiveLookTx() as Toybox.BluetoothLowEnergy.Characteristic {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_412_96_415_8_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 414 12 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_416_96_419_8_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 418 12 ]
             %tmp.1 = self;
-            symbol [ tryGetServiceCharacteristic %tmp.2 414 19 46 ];
+            symbol [ tryGetServiceCharacteristic %tmp.2 418 19 46 ];
             %tmp.2 = getv function %tmp.1 :tryGetServiceCharacteristic;
-            symbol [ BLE_SERV_ACTIVELOOK %tmp.4 414 47 66 ];
+            symbol [ BLE_SERV_ACTIVELOOK %tmp.4 418 47 66 ];
             %tmp.4 = getv ? :BLE_SERV_ACTIVELOOK;
-            symbol [ BLE_CHAR_ACTIVELOOK_TX %tmp.6 414 68 90 ];
+            symbol [ BLE_CHAR_ACTIVELOOK_TX %tmp.6 418 68 90 ];
             %tmp.6 = getv ? :BLE_CHAR_ACTIVELOOK_TX;
             %tmp.7 = 5;
             %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6, %tmp.7);
             ret %tmp.8;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_412_96_415_8_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_416_96_419_8_stop:
         }
         //! Try 5 times to get the <code>BLE_CHAR_ACTIVELOOK_GESTURE_EVENT</code> characteristic
         //! from the <code>BLE_SERV_ACTIVELOOK</code> service.
@@ -1866,21 +1888,21 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_412_96_
         //! @return The Bluetooth characteristic.
         //! @throws A <code>Toybox.Lang.InvalidValueException</code>
         //!         if the characteristic could not be retrieved after 5 attempts.
-        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 423; @symbol_functiondef = [getBleCharacteristicActiveLookGesture,423,17,54]; @symbol_return<0> = [Toybox,423,60,66]; @symbol_return<1> = [BluetoothLowEnergy,423,67,85]; @symbol_return<2> = [Characteristic,423,86,100]; ]
+        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 427; @symbol_functiondef = [getBleCharacteristicActiveLookGesture,427,17,54]; @symbol_return<0> = [Toybox,427,60,66]; @symbol_return<1> = [BluetoothLowEnergy,427,67,85]; @symbol_return<2> = [Characteristic,427,86,100]; ]
         function getBleCharacteristicActiveLookGesture() as Toybox.BluetoothLowEnergy.Characteristic {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_423_101_426_8_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 425 12 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_427_101_430_8_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 429 12 ]
             %tmp.1 = self;
-            symbol [ tryGetServiceCharacteristic %tmp.2 425 19 46 ];
+            symbol [ tryGetServiceCharacteristic %tmp.2 429 19 46 ];
             %tmp.2 = getv function %tmp.1 :tryGetServiceCharacteristic;
-            symbol [ BLE_SERV_ACTIVELOOK %tmp.4 425 47 66 ];
+            symbol [ BLE_SERV_ACTIVELOOK %tmp.4 429 47 66 ];
             %tmp.4 = getv ? :BLE_SERV_ACTIVELOOK;
-            symbol [ BLE_CHAR_ACTIVELOOK_GESTURE_EVENT %tmp.6 425 68 101 ];
+            symbol [ BLE_CHAR_ACTIVELOOK_GESTURE_EVENT %tmp.6 429 68 101 ];
             %tmp.6 = getv ? :BLE_CHAR_ACTIVELOOK_GESTURE_EVENT;
             %tmp.7 = 5;
             %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6, %tmp.7);
             ret %tmp.8;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_423_101_426_8_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_427_101_430_8_stop:
         }
         //! Try 5 times to get the <code>BLE_CHAR_FIRMWARE_VERSION</code> characteristic
         //! from the <code>BLE_SERV_DEVICE_INFORMATION</code> service.
@@ -1888,28 +1910,29 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_423_101
         //! @return The Bluetooth characteristic.
         //! @throws A <code>Toybox.Lang.InvalidValueException</code>
         //!         if the characteristic could not be retrieved after 5 attempts.
-        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 458; @symbol_functiondef = [getBleCharacteristicFirmwareVersion,458,17,52]; @symbol_return<0> = [Toybox,458,58,64]; @symbol_return<1> = [BluetoothLowEnergy,458,65,83]; @symbol_return<2> = [Characteristic,458,84,98]; ]
+        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 462; @symbol_functiondef = [getBleCharacteristicFirmwareVersion,462,17,52]; @symbol_return<0> = [Toybox,462,58,64]; @symbol_return<1> = [BluetoothLowEnergy,462,65,83]; @symbol_return<2> = [Characteristic,462,84,98]; ]
         function getBleCharacteristicFirmwareVersion() as Toybox.BluetoothLowEnergy.Characteristic {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_458_99_461_8_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 459 12 ]
-            %tmp.1 = self;
-            symbol [ _log %tmp.2 459 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_462_99_465_8_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 463 12 ]
+            symbol [ $ %tmp.1 463 12 13 ];
+            %tmp.1 = getm $;
+            symbol [ log %tmp.2 463 14 17 ];
+            %tmp.2 = getv function %tmp.1 :log;
             %tmp.3 = "getBleCharacteristicFirmwareVersion";
             %tmp.4 = newa 0;
             invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 460 12 ]
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 464 12 ]
             %tmp.5 = self;
-            symbol [ tryGetServiceCharacteristic %tmp.6 460 19 46 ];
+            symbol [ tryGetServiceCharacteristic %tmp.6 464 19 46 ];
             %tmp.6 = getv function %tmp.5 :tryGetServiceCharacteristic;
-            symbol [ BLE_SERV_DEVICE_INFORMATION %tmp.8 460 47 74 ];
+            symbol [ BLE_SERV_DEVICE_INFORMATION %tmp.8 464 47 74 ];
             %tmp.8 = getv ? :BLE_SERV_DEVICE_INFORMATION;
-            symbol [ BLE_CHAR_FIRMWARE_VERSION %tmp.10 460 76 101 ];
+            symbol [ BLE_CHAR_FIRMWARE_VERSION %tmp.10 464 76 101 ];
             %tmp.10 = getv ? :BLE_CHAR_FIRMWARE_VERSION;
             %tmp.11 = 5;
             %tmp.12 = invoke %tmp.5 %tmp.6(%tmp.8, %tmp.10, %tmp.11);
             ret %tmp.12;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_458_99_461_8_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_462_99_465_8_stop:
         }
         //! Try 5 times to get the <code>BLE_CHAR_BATTERY_LEVEL</code> characteristic
         //! from the <code>BLE_SERV_BATTERY</code> service.
@@ -1917,129 +1940,123 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_458_99_
         //! @return The Bluetooth characteristic.
         //! @throws A <code>Toybox.Lang.InvalidValueException</code>
         //!         if the characteristic could not be retrieved after 5 attempts.
-        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 475; @symbol_functiondef = [getBleCharacteristicBatteryLevel,475,17,49]; @symbol_return<0> = [Toybox,475,55,61]; @symbol_return<1> = [BluetoothLowEnergy,475,62,80]; @symbol_return<2> = [Characteristic,475,81,95]; ]
+        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 479; @symbol_functiondef = [getBleCharacteristicBatteryLevel,479,17,49]; @symbol_return<0> = [Toybox,479,55,61]; @symbol_return<1> = [BluetoothLowEnergy,479,62,80]; @symbol_return<2> = [Characteristic,479,81,95]; ]
         function getBleCharacteristicBatteryLevel() as Toybox.BluetoothLowEnergy.Characteristic {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_475_96_478_8_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 476 12 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_479_96_482_8_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 481 12 ]
             %tmp.1 = self;
-            symbol [ _log %tmp.2 476 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
-            %tmp.3 = "getBleCharacteristicBatteryLevel";
-            %tmp.4 = newa 0;
-            invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 477 12 ]
-            %tmp.5 = self;
-            symbol [ tryGetServiceCharacteristic %tmp.6 477 19 46 ];
-            %tmp.6 = getv function %tmp.5 :tryGetServiceCharacteristic;
-            symbol [ BLE_SERV_BATTERY %tmp.8 477 47 63 ];
-            %tmp.8 = getv ? :BLE_SERV_BATTERY;
-            symbol [ BLE_CHAR_BATTERY_LEVEL %tmp.10 477 65 87 ];
-            %tmp.10 = getv ? :BLE_CHAR_BATTERY_LEVEL;
-            %tmp.11 = 5;
-            %tmp.12 = invoke %tmp.5 %tmp.6(%tmp.8, %tmp.10, %tmp.11);
-            ret %tmp.12;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_475_96_478_8_stop:
+            symbol [ tryGetServiceCharacteristic %tmp.2 481 19 46 ];
+            %tmp.2 = getv function %tmp.1 :tryGetServiceCharacteristic;
+            symbol [ BLE_SERV_BATTERY %tmp.4 481 47 63 ];
+            %tmp.4 = getv ? :BLE_SERV_BATTERY;
+            symbol [ BLE_CHAR_BATTERY_LEVEL %tmp.6 481 65 87 ];
+            %tmp.6 = getv ? :BLE_CHAR_BATTERY_LEVEL;
+            %tmp.7 = 5;
+            %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6, %tmp.7);
+            ret %tmp.8;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_479_96_482_8_stop:
         }
         //! Disconnect and unpair from all paired devices. Normally, there should always be at most one
         //! but to be sure to disconnect from any devices, we unpair every paired devices.
         //!
         //! @return <code>false</code> if there was no device to unpaired, <code>true</code> otherwise.
-        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 484; @symbol_functiondef = [disconnect,484,17,27]; @symbol_return<0> = [Toybox,484,33,39]; @symbol_return<1> = [Lang,484,40,44]; @symbol_return<2> = [Boolean,484,45,52]; ]
+        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 488; @symbol_functiondef = [disconnect,488,17,27]; @symbol_return<0> = [Toybox,488,33,39]; @symbol_return<1> = [Lang,488,40,44]; @symbol_return<2> = [Boolean,488,45,52]; ]
         function disconnect() as Toybox.Lang.Boolean {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_484_53_494_8_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 485 12 ]
-            %tmp.1 = self;
-            symbol [ _log %tmp.2 485 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_488_53_498_8_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 489 12 ]
+            symbol [ $ %tmp.1 489 12 13 ];
+            %tmp.1 = getm $;
+            symbol [ log %tmp.2 489 14 17 ];
+            %tmp.2 = getv function %tmp.1 :log;
             %tmp.3 = "disconnect";
             %tmp.4 = newa 0;
             invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 486 12 ]
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 490 12 ]
             %tmp.5 = null;
-            symbol [ _autoDevice ? 486 12 23 ];
+            symbol [ _autoDevice ? 490 12 23 ];
             putv self :_autoDevice %tmp.5;
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 487 12 ]
-            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_484_53_494_8_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_484_53_494_8_stop" ]
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 491 12 ]
+            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_488_53_498_8_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_488_53_498_8_stop" ]
             %autoDevices.1 = local;
-            symbol [ autoDevices %autoDevices.1 487 16 27 ];
-            symbol [ Toybox %tmp.7 487 30 36 ];
+            symbol [ autoDevices %autoDevices.1 491 16 27 ];
+            symbol [ Toybox %tmp.7 491 30 36 ];
             %tmp.7 = getv ? :Toybox;
-            symbol [ BluetoothLowEnergy %tmp.8 487 37 55 ];
+            symbol [ BluetoothLowEnergy %tmp.8 491 37 55 ];
             %tmp.8 = getv %tmp.7 :BluetoothLowEnergy;
-            symbol [ getPairedDevices %tmp.9 487 56 72 ];
+            symbol [ getPairedDevices %tmp.9 491 56 72 ];
             %tmp.9 = getv function %tmp.8 :getPairedDevices;
             %tmp.10 = invoke %tmp.8 %tmp.9();
             lputv %autoDevices.1 %tmp.10;
-            symbol [ autoDevices %autoDevices.1 487 16 27 ];
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 488 12 ]
-            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_484_53_494_8_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_484_53_494_8_stop" ]
+            symbol [ autoDevices %autoDevices.1 491 16 27 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 492 12 ]
+            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_488_53_498_8_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_488_53_498_8_stop" ]
             %count.2 = local;
-            symbol [ count %count.2 488 16 21 ];
+            symbol [ count %count.2 492 16 21 ];
             %tmp.11 = 0;
             lputv %count.2 %tmp.11;
-            symbol [ count %count.2 488 16 21 ];
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 489 12 ]
-            for @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_12_492_12_for_test @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_12_492_12_for_incr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_12_492_12_for_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_12_492_12_for_init:
-            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_12_492_12_for_begin" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_12_492_12_for_end" ]
+            symbol [ count %count.2 492 16 21 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 493 12 ]
+            for @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_12_496_12_for_test @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_12_496_12_for_incr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_12_496_12_for_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_12_496_12_for_init:
+            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_12_496_12_for_begin" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_12_496_12_for_end" ]
             %autoDevice.3 = local;
-            symbol [ autoDevice %autoDevice.3 489 21 31 ];
+            symbol [ autoDevice %autoDevice.3 493 21 31 ];
             %tmp.12 = lgetv %autoDevices.1;
-            symbol [ autoDevices %tmp.12 489 34 45 ];
-            symbol [ next %tmp.13 489 46 50 ];
+            symbol [ autoDevices %tmp.12 493 34 45 ];
+            symbol [ next %tmp.13 493 46 50 ];
             %tmp.13 = getv function %tmp.12 :next;
             %tmp.14 = invoke %tmp.12 %tmp.13();
             %tmp.15 = as %tmp.14 Toybox.BluetoothLowEnergy.Device;
-            symbol [ Toybox %tmp.15 489 56 62 ];
-            symbol [ BluetoothLowEnergy %tmp.15 489 63 81 ];
-            symbol [ Device %tmp.15 489 82 88 ];
+            symbol [ Toybox %tmp.15 493 56 62 ];
+            symbol [ BluetoothLowEnergy %tmp.15 493 63 81 ];
+            symbol [ Device %tmp.15 493 82 88 ];
             lputv %autoDevice.3 %tmp.15;
-            symbol [ autoDevice %autoDevice.3 489 21 31 ];
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_12_492_12_for_test:
+            symbol [ autoDevice %autoDevice.3 493 21 31 ];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_12_496_12_for_test:
             %tmp.16 = lgetv %autoDevice.3;
-            symbol [ autoDevice %tmp.16 489 90 100 ];
+            symbol [ autoDevice %tmp.16 493 90 100 ];
             %tmp.17 = null;
             %tmp.18 = ne %tmp.16 %tmp.17;
-            bf %tmp.18 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_12_492_12_for_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_12_492_12_for_begin:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_143_492_12_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 490 16 ]
-            symbol [ Toybox %tmp.20 490 16 22 ];
+            bf %tmp.18 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_12_496_12_for_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_12_496_12_for_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_143_496_12_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 494 16 ]
+            symbol [ Toybox %tmp.20 494 16 22 ];
             %tmp.20 = getv ? :Toybox;
-            symbol [ BluetoothLowEnergy %tmp.21 490 23 41 ];
+            symbol [ BluetoothLowEnergy %tmp.21 494 23 41 ];
             %tmp.21 = getv %tmp.20 :BluetoothLowEnergy;
-            symbol [ unpairDevice %tmp.22 490 42 54 ];
+            symbol [ unpairDevice %tmp.22 494 42 54 ];
             %tmp.22 = getv function %tmp.21 :unpairDevice;
             %tmp.23 = lgetv %autoDevice.3;
-            symbol [ autoDevice %tmp.23 490 55 65 ];
+            symbol [ autoDevice %tmp.23 494 55 65 ];
             %tmp.24 = as %tmp.23 { (!Null) };
             invoke %tmp.21 %tmp.22(%tmp.24);
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 491 16 ]
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 495 16 ]
             %tmp.25 = lgetv %count.2;
-            symbol [ count %tmp.25 491 16 21 ];
+            symbol [ count %tmp.25 495 16 21 ];
             %tmp.26 = 1;
             %tmp.27 = add %tmp.25 %tmp.26;
             lputv %count.2 %tmp.27;
-            symbol [ count %count.2 491 16 21 ];
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_143_492_12_stop:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_12_492_12_for_incr:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 489 ]
+            symbol [ count %count.2 495 16 21 ];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_143_496_12_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_12_496_12_for_incr:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 493 ]
             %tmp.28 = lgetv %autoDevices.1;
-            symbol [ autoDevices %tmp.28 489 123 134 ];
-            symbol [ next %tmp.29 489 135 139 ];
+            symbol [ autoDevices %tmp.28 493 123 134 ];
+            symbol [ next %tmp.29 493 135 139 ];
             %tmp.29 = getv function %tmp.28 :next;
             %tmp.30 = invoke %tmp.28 %tmp.29();
             lputv %autoDevice.3 %tmp.30;
-            symbol [ autoDevice %autoDevice.3 489 110 120 ];
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_12_492_12_for_test;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_489_12_492_12_for_end:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 493 12 ]
+            symbol [ autoDevice %autoDevice.3 493 110 120 ];
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_12_496_12_for_test;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_493_12_496_12_for_end:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 497 12 ]
             %tmp.31 = lgetv %count.2;
-            symbol [ count %tmp.31 493 19 24 ];
+            symbol [ count %tmp.31 497 19 24 ];
             %tmp.32 = 0;
             %tmp.33 = ne %tmp.31 %tmp.32;
             ret %tmp.33;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_484_53_494_8_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_488_53_498_8_stop:
         }
         //! Connect and pair to a scanned device. It will first turn off scanning and
         //! disconnect from other device. This is for consistency since we don't allow
@@ -2053,512 +2070,515 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_484_53_
         //! @param scanResult The service uuid.
         //!
         //! @return           <code>true</code> if the operation was successful, <code>false</code> otherwise.
-        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 508; @symbol_functiondef = [connect,508,17,24]; @symbol_param<0> = [scanResult,508,25,35]; @symbol_param<0>_type<0> = [Toybox,508,39,45]; @symbol_param<0>_type<1> = [BluetoothLowEnergy,508,46,64]; @symbol_param<0>_type<2> = [ScanResult,508,65,75]; @symbol_return<0> = [Toybox,508,80,86]; @symbol_return<1> = [Lang,508,87,91]; @symbol_return<2> = [Boolean,508,92,99]; ]
+        [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 512; @symbol_functiondef = [connect,512,17,24]; @symbol_param<0> = [scanResult,512,25,35]; @symbol_param<0>_type<0> = [Toybox,512,39,45]; @symbol_param<0>_type<1> = [BluetoothLowEnergy,512,46,64]; @symbol_param<0>_type<2> = [ScanResult,512,65,75]; @symbol_return<0> = [Toybox,512,80,86]; @symbol_return<1> = [Lang,512,87,91]; @symbol_return<2> = [Boolean,512,92,99]; ]
         function connect(scanResult as Toybox.BluetoothLowEnergy.ScanResult) as Toybox.Lang.Boolean {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_508_100_520_8_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 509 12 ]
-            %tmp.1 = self;
-            symbol [ _log %tmp.2 509 12 16 ];
-            %tmp.2 = getv function %tmp.1 :_log;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_100_524_8_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 513 12 ]
+            symbol [ $ %tmp.1 513 12 13 ];
+            %tmp.1 = getm $;
+            symbol [ log %tmp.2 513 14 17 ];
+            %tmp.2 = getv function %tmp.1 :log;
             %tmp.3 = "connect";
             %tmp.4 = newa 1;
             %tmp.5 = lgetv %scanResult;
-            symbol [ scanResult %tmp.5 509 29 39 ];
+            symbol [ scanResult %tmp.5 513 30 40 ];
             %tmp.6 = dup %tmp.4;
             %tmp.7 = aputv %tmp.6 0 %tmp.5;
             invoke %tmp.1 %tmp.2(%tmp.3, %tmp.7);
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 510 12 ]
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 514 12 ]
             %tmp.8 = self;
-            symbol [ requestScanning %tmp.9 510 12 27 ];
+            symbol [ requestScanning %tmp.9 514 12 27 ];
             %tmp.9 = getv function %tmp.8 :requestScanning;
             %tmp.10 = false;
             invoke %tmp.8 %tmp.9(%tmp.10);
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 511 12 ]
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 515 12 ]
             %tmp.11 = self;
-            symbol [ disconnect %tmp.12 511 12 22 ];
+            symbol [ disconnect %tmp.12 515 12 22 ];
             %tmp.12 = getv function %tmp.11 :disconnect;
             invoke %tmp.11 %tmp.12();
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 512 12 ]
-            try @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_beginTry @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_endTry @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_catch @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_finally;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_beginTry:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_16_516_12_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 513 16 ]
-            symbol [ BluetoothLowEnergy %tmp.13 513 30 48 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 516 12 ]
+            try @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_beginTry @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_endTry @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_catch @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_finally;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_beginTry:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_16_520_12_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 517 16 ]
+            symbol [ BluetoothLowEnergy %tmp.13 517 30 48 ];
             %tmp.13 = getm $.Toybox.BluetoothLowEnergy;
-            symbol [ pairDevice %tmp.14 513 49 59 ];
+            symbol [ pairDevice %tmp.14 517 49 59 ];
             %tmp.14 = getv function %tmp.13 :pairDevice;
             %tmp.15 = lgetv %scanResult;
-            symbol [ scanResult %tmp.15 513 60 70 ];
+            symbol [ scanResult %tmp.15 517 60 70 ];
             %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
-            symbol [ _autoDevice ? 513 16 27 ];
+            symbol [ _autoDevice ? 517 16 27 ];
             putv self :_autoDevice %tmp.16;
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 514 16 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_514_16_514_56_if_stmt:
-            symbol [ _autoDevice %tmp.18 514 20 31 ];
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 518 16 ]
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_518_16_518_56_if_stmt:
+            symbol [ _autoDevice %tmp.18 518 20 31 ];
             %tmp.18 = getv ? :_autoDevice;
             %tmp.19 = null;
             %tmp.20 = ne %tmp.18 %tmp.19;
-            bf %tmp.20 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_514_16_514_56_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_514_16_514_56_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_514_41_514_56_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 514 43 ]
+            bf %tmp.20 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_518_16_518_56_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_518_16_518_56_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_518_41_518_56_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 518 43 ]
             %tmp.21 = true;
-            jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_finally;
+            jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_finally;
             ret %tmp.21;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_514_41_514_56_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_514_16_514_56_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_514_16_514_56_if_end:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 515 16 ]
-            symbol [ _delegate %tmp.23 515 16 25 ];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_518_41_518_56_stop:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_518_16_518_56_if_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_518_16_518_56_if_end:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 519 16 ]
+            symbol [ _delegate %tmp.23 519 16 25 ];
             %tmp.23 = getv ? :_delegate;
-            symbol [ onBleError %tmp.24 515 26 36 ];
+            symbol [ onBleError %tmp.24 519 26 36 ];
             %tmp.24 = getv function %tmp.23 :onBleError;
-            symbol [ Toybox %tmp.28 515 41 47 ];
-            %tmp.28 = getv ? :Toybox;
-            symbol [ System %tmp.29 515 48 54 ];
-            %tmp.29 = getv %tmp.28 :System;
-            symbol [ PreviousOperationNotCompleteException %tmp.30 515 55 92 ];
-            %tmp.30 = getv %tmp.29 :PreviousOperationNotCompleteException;
-            %tmp.31 = "The device could not be paired.";
-            %tmp.25 = newc %tmp.30 (%tmp.31);
-            invoke %tmp.23 %tmp.24(%tmp.25);
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_16_516_12_stop:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_endTry:
-            jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_finally;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_catch:
-            %tmp.32 = exception;
-            push %tmp.32;
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 516 14 ]
-            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_catch" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_14_518_12_end" ]
+            %tmp.25 = "connect";
+            symbol [ Toybox %tmp.29 519 52 58 ];
+            %tmp.29 = getv ? :Toybox;
+            symbol [ System %tmp.30 519 59 65 ];
+            %tmp.30 = getv %tmp.29 :System;
+            symbol [ PreviousOperationNotCompleteException %tmp.31 519 66 103 ];
+            %tmp.31 = getv %tmp.30 :PreviousOperationNotCompleteException;
+            %tmp.32 = "The device could not be paired.";
+            %tmp.26 = newc %tmp.31 (%tmp.32);
+            invoke %tmp.23 %tmp.24(%tmp.25, %tmp.26);
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_16_520_12_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_endTry:
+            jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_finally;
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_catch:
+            %tmp.33 = exception;
+            push %tmp.33;
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 520 14 ]
+            [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_catch" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_520_14_522_12_end" ]
             %e.1 = local;
-            symbol [ e %e.1 516 21 22 ];
-            %tmp.33 = dup %tmp.32;
-            lputv %e.1 %tmp.33;
-            symbol [ e %e.1 516 21 22 ];
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_24_518_12_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 517 16 ]
-            symbol [ _delegate %tmp.35 517 16 25 ];
-            %tmp.35 = getv ? :_delegate;
-            symbol [ onBleError %tmp.36 517 26 36 ];
-            %tmp.36 = getv function %tmp.35 :onBleError;
-            %tmp.37 = lgetv %e.1;
-            symbol [ e %tmp.37 517 37 38 ];
-            invoke %tmp.35 %tmp.36(%tmp.37);
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_24_518_12_stop:
-            jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_finally;
+            symbol [ e %e.1 520 21 22 ];
+            %tmp.34 = dup %tmp.33;
+            lputv %e.1 %tmp.34;
+            symbol [ e %e.1 520 21 22 ];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_520_24_522_12_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 521 16 ]
+            symbol [ _delegate %tmp.36 521 16 25 ];
+            %tmp.36 = getv ? :_delegate;
+            symbol [ onBleError %tmp.37 521 26 36 ];
+            %tmp.37 = getv function %tmp.36 :onBleError;
+            %tmp.38 = "connect";
+            %tmp.39 = lgetv %e.1;
+            symbol [ e %tmp.39 521 48 49 ];
+            invoke %tmp.36 %tmp.37(%tmp.38, %tmp.39);
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_520_24_522_12_stop:
+            jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_finally;
             pop;
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_14_518_12_end:
-            try @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_catch @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_14_518_12_end @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_14_518_12_end @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_finally;
-            jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_finally;
-            throw %tmp.32;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_finally:
+            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_end;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_520_14_522_12_end:
+            try @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_catch @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_520_14_522_12_end @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_520_14_522_12_end @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_finally;
+            jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_finally;
+            throw %tmp.33;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_finally:
             jsrret;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_12_518_12_end:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 519 12 ]
-            %tmp.38 = false;
-            ret %tmp.38;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_508_100_520_8_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_516_12_522_12_end:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 523 12 ]
+            %tmp.40 = false;
+            ret %tmp.40;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLook_mc_512_100_524_8_stop:
         }
     }
 }
 [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc"; @line = 1; ]
 <init> {
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 6 6 ]
-    symbol [ Toybox %tmp.40 6 76 82 ];
-    %tmp.40 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.41 6 83 101 ];
-    %tmp.41 = getv %tmp.40 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.42 6 102 112 ];
-    %tmp.42 = getv function %tmp.41 :longToUuid;
-    %tmp.43 = 0x0783B03E8535B5A0l;
-    %tmp.44 = 0x7140A304D2495CB7l;
-    %tmp.45 = invoke %tmp.41 %tmp.42(%tmp.43, %tmp.44);
-    putv self :BLE_SERV_ACTIVELOOK %tmp.45;
+    symbol [ Toybox %tmp.42 6 76 82 ];
+    %tmp.42 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.43 6 83 101 ];
+    %tmp.43 = getv %tmp.42 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.44 6 102 112 ];
+    %tmp.44 = getv function %tmp.43 :longToUuid;
+    %tmp.45 = 0x0783B03E8535B5A0l;
+    %tmp.46 = 0x7140A304D2495CB7l;
+    %tmp.47 = invoke %tmp.43 %tmp.44(%tmp.45, %tmp.46);
+    putv self :BLE_SERV_ACTIVELOOK %tmp.47;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 8 6 ]
-    symbol [ Toybox %tmp.47 8 76 82 ];
-    %tmp.47 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.48 8 83 101 ];
-    %tmp.48 = getv %tmp.47 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.49 8 102 112 ];
-    %tmp.49 = getv function %tmp.48 :longToUuid;
-    %tmp.50 = 0x0783B03E8535B5A0l;
-    %tmp.51 = 0x7140A304D2495CB8l;
-    %tmp.52 = invoke %tmp.48 %tmp.49(%tmp.50, %tmp.51);
-    putv self :BLE_CHAR_ACTIVELOOK_TX %tmp.52;
+    symbol [ Toybox %tmp.49 8 76 82 ];
+    %tmp.49 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.50 8 83 101 ];
+    %tmp.50 = getv %tmp.49 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.51 8 102 112 ];
+    %tmp.51 = getv function %tmp.50 :longToUuid;
+    %tmp.52 = 0x0783B03E8535B5A0l;
+    %tmp.53 = 0x7140A304D2495CB8l;
+    %tmp.54 = invoke %tmp.50 %tmp.51(%tmp.52, %tmp.53);
+    putv self :BLE_CHAR_ACTIVELOOK_TX %tmp.54;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 9 6 ]
-    symbol [ Toybox %tmp.54 9 76 82 ];
-    %tmp.54 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.55 9 83 101 ];
-    %tmp.55 = getv %tmp.54 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.56 9 102 112 ];
-    %tmp.56 = getv function %tmp.55 :longToUuid;
-    %tmp.57 = 0x0783B03E8535B5A0l;
-    %tmp.58 = 0x7140A304D2495CBAl;
-    %tmp.59 = invoke %tmp.55 %tmp.56(%tmp.57, %tmp.58);
-    putv self :BLE_CHAR_ACTIVELOOK_RX %tmp.59;
+    symbol [ Toybox %tmp.56 9 76 82 ];
+    %tmp.56 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.57 9 83 101 ];
+    %tmp.57 = getv %tmp.56 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.58 9 102 112 ];
+    %tmp.58 = getv function %tmp.57 :longToUuid;
+    %tmp.59 = 0x0783B03E8535B5A0l;
+    %tmp.60 = 0x7140A304D2495CBAl;
+    %tmp.61 = invoke %tmp.57 %tmp.58(%tmp.59, %tmp.60);
+    putv self :BLE_CHAR_ACTIVELOOK_RX %tmp.61;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 10 6 ]
-    symbol [ Toybox %tmp.61 10 76 82 ];
-    %tmp.61 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.62 10 83 101 ];
-    %tmp.62 = getv %tmp.61 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.63 10 102 112 ];
-    %tmp.63 = getv function %tmp.62 :longToUuid;
-    %tmp.64 = 0x0783B03E8535B5A0l;
-    %tmp.65 = 0x7140A304D2495CB9l;
-    %tmp.66 = invoke %tmp.62 %tmp.63(%tmp.64, %tmp.65);
-    putv self :BLE_CHAR_ACTIVELOOK_FLOW_CONTROL %tmp.66;
+    symbol [ Toybox %tmp.63 10 76 82 ];
+    %tmp.63 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.64 10 83 101 ];
+    %tmp.64 = getv %tmp.63 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.65 10 102 112 ];
+    %tmp.65 = getv function %tmp.64 :longToUuid;
+    %tmp.66 = 0x0783B03E8535B5A0l;
+    %tmp.67 = 0x7140A304D2495CB9l;
+    %tmp.68 = invoke %tmp.64 %tmp.65(%tmp.66, %tmp.67);
+    putv self :BLE_CHAR_ACTIVELOOK_FLOW_CONTROL %tmp.68;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 11 6 ]
-    symbol [ Toybox %tmp.68 11 76 82 ];
-    %tmp.68 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.69 11 83 101 ];
-    %tmp.69 = getv %tmp.68 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.70 11 102 112 ];
-    %tmp.70 = getv function %tmp.69 :longToUuid;
-    %tmp.71 = 0x0783B03E8535B5A0l;
-    %tmp.72 = 0x7140A304D2495CBBl;
-    %tmp.73 = invoke %tmp.69 %tmp.70(%tmp.71, %tmp.72);
-    putv self :BLE_CHAR_ACTIVELOOK_GESTURE_EVENT %tmp.73;
+    symbol [ Toybox %tmp.70 11 76 82 ];
+    %tmp.70 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.71 11 83 101 ];
+    %tmp.71 = getv %tmp.70 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.72 11 102 112 ];
+    %tmp.72 = getv function %tmp.71 :longToUuid;
+    %tmp.73 = 0x0783B03E8535B5A0l;
+    %tmp.74 = 0x7140A304D2495CBBl;
+    %tmp.75 = invoke %tmp.71 %tmp.72(%tmp.73, %tmp.74);
+    putv self :BLE_CHAR_ACTIVELOOK_GESTURE_EVENT %tmp.75;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 12 6 ]
-    symbol [ Toybox %tmp.75 12 76 82 ];
-    %tmp.75 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.76 12 83 101 ];
-    %tmp.76 = getv %tmp.75 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.77 12 102 112 ];
-    %tmp.77 = getv function %tmp.76 :longToUuid;
-    %tmp.78 = 0x0783B03E8535B5A0l;
-    %tmp.79 = 0x7140A304D2495CBCl;
-    %tmp.80 = invoke %tmp.76 %tmp.77(%tmp.78, %tmp.79);
-    putv self :BLE_CHAR_ACTIVELOOK_TOUCH_EVENT %tmp.80;
+    symbol [ Toybox %tmp.77 12 76 82 ];
+    %tmp.77 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.78 12 83 101 ];
+    %tmp.78 = getv %tmp.77 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.79 12 102 112 ];
+    %tmp.79 = getv function %tmp.78 :longToUuid;
+    %tmp.80 = 0x0783B03E8535B5A0l;
+    %tmp.81 = 0x7140A304D2495CBCl;
+    %tmp.82 = invoke %tmp.78 %tmp.79(%tmp.80, %tmp.81);
+    putv self :BLE_CHAR_ACTIVELOOK_TOUCH_EVENT %tmp.82;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 15 6 ]
-    symbol [ Toybox %tmp.82 15 76 82 ];
-    %tmp.82 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.83 15 83 101 ];
-    %tmp.83 = getv %tmp.82 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.84 15 102 112 ];
-    %tmp.84 = getv function %tmp.83 :longToUuid;
-    %tmp.85 = 0x0000180A00001000l;
-    %tmp.86 = 0x800000805F9B34FBl;
-    %tmp.87 = invoke %tmp.83 %tmp.84(%tmp.85, %tmp.86);
-    putv self :BLE_SERV_DEVICE_INFORMATION %tmp.87;
+    symbol [ Toybox %tmp.84 15 76 82 ];
+    %tmp.84 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.85 15 83 101 ];
+    %tmp.85 = getv %tmp.84 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.86 15 102 112 ];
+    %tmp.86 = getv function %tmp.85 :longToUuid;
+    %tmp.87 = 0x0000180A00001000l;
+    %tmp.88 = 0x800000805F9B34FBl;
+    %tmp.89 = invoke %tmp.85 %tmp.86(%tmp.87, %tmp.88);
+    putv self :BLE_SERV_DEVICE_INFORMATION %tmp.89;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 17 6 ]
-    symbol [ Toybox %tmp.89 17 76 82 ];
-    %tmp.89 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.90 17 83 101 ];
-    %tmp.90 = getv %tmp.89 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.91 17 102 112 ];
-    %tmp.91 = getv function %tmp.90 :longToUuid;
-    %tmp.92 = 0x00002A2900001000l;
-    %tmp.93 = 0x800000805F9B34FBl;
-    %tmp.94 = invoke %tmp.90 %tmp.91(%tmp.92, %tmp.93);
-    putv self :BLE_CHAR_MANUFACTURER_NAME %tmp.94;
+    symbol [ Toybox %tmp.91 17 76 82 ];
+    %tmp.91 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.92 17 83 101 ];
+    %tmp.92 = getv %tmp.91 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.93 17 102 112 ];
+    %tmp.93 = getv function %tmp.92 :longToUuid;
+    %tmp.94 = 0x00002A2900001000l;
+    %tmp.95 = 0x800000805F9B34FBl;
+    %tmp.96 = invoke %tmp.92 %tmp.93(%tmp.94, %tmp.95);
+    putv self :BLE_CHAR_MANUFACTURER_NAME %tmp.96;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 18 6 ]
-    symbol [ Toybox %tmp.96 18 76 82 ];
-    %tmp.96 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.97 18 83 101 ];
-    %tmp.97 = getv %tmp.96 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.98 18 102 112 ];
-    %tmp.98 = getv function %tmp.97 :longToUuid;
-    %tmp.99 = 0x00002A2400001000l;
-    %tmp.100 = 0x800000805F9B34FBl;
-    %tmp.101 = invoke %tmp.97 %tmp.98(%tmp.99, %tmp.100);
-    putv self :BLE_CHAR_MODEL_NUMBER %tmp.101;
+    symbol [ Toybox %tmp.98 18 76 82 ];
+    %tmp.98 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.99 18 83 101 ];
+    %tmp.99 = getv %tmp.98 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.100 18 102 112 ];
+    %tmp.100 = getv function %tmp.99 :longToUuid;
+    %tmp.101 = 0x00002A2400001000l;
+    %tmp.102 = 0x800000805F9B34FBl;
+    %tmp.103 = invoke %tmp.99 %tmp.100(%tmp.101, %tmp.102);
+    putv self :BLE_CHAR_MODEL_NUMBER %tmp.103;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 19 6 ]
-    symbol [ Toybox %tmp.103 19 76 82 ];
-    %tmp.103 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.104 19 83 101 ];
-    %tmp.104 = getv %tmp.103 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.105 19 102 112 ];
-    %tmp.105 = getv function %tmp.104 :longToUuid;
-    %tmp.106 = 0x00002A2500001000l;
-    %tmp.107 = 0x800000805F9B34FBl;
-    %tmp.108 = invoke %tmp.104 %tmp.105(%tmp.106, %tmp.107);
-    putv self :BLE_CHAR_SERIAL_NUMBER %tmp.108;
+    symbol [ Toybox %tmp.105 19 76 82 ];
+    %tmp.105 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.106 19 83 101 ];
+    %tmp.106 = getv %tmp.105 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.107 19 102 112 ];
+    %tmp.107 = getv function %tmp.106 :longToUuid;
+    %tmp.108 = 0x00002A2500001000l;
+    %tmp.109 = 0x800000805F9B34FBl;
+    %tmp.110 = invoke %tmp.106 %tmp.107(%tmp.108, %tmp.109);
+    putv self :BLE_CHAR_SERIAL_NUMBER %tmp.110;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 20 6 ]
-    symbol [ Toybox %tmp.110 20 76 82 ];
-    %tmp.110 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.111 20 83 101 ];
-    %tmp.111 = getv %tmp.110 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.112 20 102 112 ];
-    %tmp.112 = getv function %tmp.111 :longToUuid;
-    %tmp.113 = 0x00002A2700001000l;
-    %tmp.114 = 0x800000805F9B34FBl;
-    %tmp.115 = invoke %tmp.111 %tmp.112(%tmp.113, %tmp.114);
-    putv self :BLE_CHAR_HARDWARE_VERSION %tmp.115;
+    symbol [ Toybox %tmp.112 20 76 82 ];
+    %tmp.112 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.113 20 83 101 ];
+    %tmp.113 = getv %tmp.112 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.114 20 102 112 ];
+    %tmp.114 = getv function %tmp.113 :longToUuid;
+    %tmp.115 = 0x00002A2700001000l;
+    %tmp.116 = 0x800000805F9B34FBl;
+    %tmp.117 = invoke %tmp.113 %tmp.114(%tmp.115, %tmp.116);
+    putv self :BLE_CHAR_HARDWARE_VERSION %tmp.117;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 21 6 ]
-    symbol [ Toybox %tmp.117 21 76 82 ];
-    %tmp.117 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.118 21 83 101 ];
-    %tmp.118 = getv %tmp.117 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.119 21 102 112 ];
-    %tmp.119 = getv function %tmp.118 :longToUuid;
-    %tmp.120 = 0x00002A2600001000l;
-    %tmp.121 = 0x800000805F9B34FBl;
-    %tmp.122 = invoke %tmp.118 %tmp.119(%tmp.120, %tmp.121);
-    putv self :BLE_CHAR_FIRMWARE_VERSION %tmp.122;
+    symbol [ Toybox %tmp.119 21 76 82 ];
+    %tmp.119 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.120 21 83 101 ];
+    %tmp.120 = getv %tmp.119 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.121 21 102 112 ];
+    %tmp.121 = getv function %tmp.120 :longToUuid;
+    %tmp.122 = 0x00002A2600001000l;
+    %tmp.123 = 0x800000805F9B34FBl;
+    %tmp.124 = invoke %tmp.120 %tmp.121(%tmp.122, %tmp.123);
+    putv self :BLE_CHAR_FIRMWARE_VERSION %tmp.124;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 22 6 ]
-    symbol [ Toybox %tmp.124 22 76 82 ];
-    %tmp.124 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.125 22 83 101 ];
-    %tmp.125 = getv %tmp.124 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.126 22 102 112 ];
-    %tmp.126 = getv function %tmp.125 :longToUuid;
-    %tmp.127 = 0x00002A2800001000l;
-    %tmp.128 = 0x800000805F9B34FBl;
-    %tmp.129 = invoke %tmp.125 %tmp.126(%tmp.127, %tmp.128);
-    putv self :BLE_CHAR_SOFTWARE_VERSION %tmp.129;
+    symbol [ Toybox %tmp.126 22 76 82 ];
+    %tmp.126 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.127 22 83 101 ];
+    %tmp.127 = getv %tmp.126 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.128 22 102 112 ];
+    %tmp.128 = getv function %tmp.127 :longToUuid;
+    %tmp.129 = 0x00002A2800001000l;
+    %tmp.130 = 0x800000805F9B34FBl;
+    %tmp.131 = invoke %tmp.127 %tmp.128(%tmp.129, %tmp.130);
+    putv self :BLE_CHAR_SOFTWARE_VERSION %tmp.131;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 25 6 ]
-    symbol [ Toybox %tmp.131 25 76 82 ];
-    %tmp.131 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.132 25 83 101 ];
-    %tmp.132 = getv %tmp.131 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.133 25 102 112 ];
-    %tmp.133 = getv function %tmp.132 :longToUuid;
-    %tmp.134 = 0x0000180F00001000l;
-    %tmp.135 = 0x800000805F9B34FBl;
-    %tmp.136 = invoke %tmp.132 %tmp.133(%tmp.134, %tmp.135);
-    putv self :BLE_SERV_BATTERY %tmp.136;
+    symbol [ Toybox %tmp.133 25 76 82 ];
+    %tmp.133 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.134 25 83 101 ];
+    %tmp.134 = getv %tmp.133 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.135 25 102 112 ];
+    %tmp.135 = getv function %tmp.134 :longToUuid;
+    %tmp.136 = 0x0000180F00001000l;
+    %tmp.137 = 0x800000805F9B34FBl;
+    %tmp.138 = invoke %tmp.134 %tmp.135(%tmp.136, %tmp.137);
+    putv self :BLE_SERV_BATTERY %tmp.138;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 27 6 ]
-    symbol [ Toybox %tmp.138 27 76 82 ];
-    %tmp.138 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.139 27 83 101 ];
-    %tmp.139 = getv %tmp.138 :BluetoothLowEnergy;
-    symbol [ longToUuid %tmp.140 27 102 112 ];
-    %tmp.140 = getv function %tmp.139 :longToUuid;
-    %tmp.141 = 0x00002A1900001000l;
-    %tmp.142 = 0x800000805F9B34FBl;
-    %tmp.143 = invoke %tmp.139 %tmp.140(%tmp.141, %tmp.142);
-    putv self :BLE_CHAR_BATTERY_LEVEL %tmp.143;
+    symbol [ Toybox %tmp.140 27 76 82 ];
+    %tmp.140 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.141 27 83 101 ];
+    %tmp.141 = getv %tmp.140 :BluetoothLowEnergy;
+    symbol [ longToUuid %tmp.142 27 102 112 ];
+    %tmp.142 = getv function %tmp.141 :longToUuid;
+    %tmp.143 = 0x00002A1900001000l;
+    %tmp.144 = 0x800000805F9B34FBl;
+    %tmp.145 = invoke %tmp.141 %tmp.142(%tmp.143, %tmp.144);
+    putv self :BLE_CHAR_BATTERY_LEVEL %tmp.145;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 29 6 ]
-    %tmp.144 = newd 2;
-    %tmp.146 = const :uuid;
-    symbol [ uuid %tmp.146 30 5 9 const ];
-    symbol [ BLE_SERV_ACTIVELOOK %tmp.148 30 13 32 ];
-    %tmp.148 = getv ? :BLE_SERV_ACTIVELOOK;
-    %tmp.149 = dup %tmp.144;
-    %tmp.150 = aputv %tmp.149 %tmp.146 %tmp.148;
-    %tmp.152 = const :characteristics;
-    symbol [ characteristics %tmp.152 31 5 20 const ];
-    %tmp.153 = newa 3;
-    %tmp.154 = newd 1;
-    %tmp.156 = const :uuid;
-    symbol [ uuid %tmp.156 32 11 15 const ];
-    symbol [ BLE_CHAR_ACTIVELOOK_RX %tmp.158 32 19 41 ];
-    %tmp.158 = getv ? :BLE_CHAR_ACTIVELOOK_RX;
-    %tmp.159 = dup %tmp.154;
-    %tmp.160 = aputv %tmp.159 %tmp.156 %tmp.158;
-    %tmp.161 = dup %tmp.153;
-    %tmp.162 = aputv %tmp.161 0 %tmp.160;
-    %tmp.163 = newd 2;
-    %tmp.165 = const :uuid;
-    symbol [ uuid %tmp.165 33 11 15 const ];
-    symbol [ BLE_CHAR_ACTIVELOOK_TX %tmp.167 33 19 41 ];
-    %tmp.167 = getv ? :BLE_CHAR_ACTIVELOOK_TX;
-    %tmp.168 = dup %tmp.163;
-    %tmp.169 = aputv %tmp.168 %tmp.165 %tmp.167;
-    %tmp.171 = const :descriptors;
-    symbol [ descriptors %tmp.171 33 44 55 const ];
-    %tmp.172 = newa 1;
-    symbol [ Toybox %tmp.174 33 60 66 ];
-    %tmp.174 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.175 33 67 85 ];
-    %tmp.175 = getv %tmp.174 :BluetoothLowEnergy;
-    symbol [ cccdUuid %tmp.176 33 86 94 ];
-    %tmp.176 = getv function %tmp.175 :cccdUuid;
-    %tmp.177 = invoke %tmp.175 %tmp.176();
-    %tmp.178 = dup %tmp.172;
-    %tmp.179 = aputv %tmp.178 0 %tmp.177;
-    %tmp.180 = dup %tmp.169;
-    %tmp.181 = aputv %tmp.180 %tmp.171 %tmp.179;
-    %tmp.182 = dup %tmp.162;
-    %tmp.183 = aputv %tmp.182 1 %tmp.181;
-    %tmp.184 = newd 2;
-    %tmp.186 = const :uuid;
-    symbol [ uuid %tmp.186 34 11 15 const ];
-    symbol [ BLE_CHAR_ACTIVELOOK_GESTURE_EVENT %tmp.188 34 19 52 ];
-    %tmp.188 = getv ? :BLE_CHAR_ACTIVELOOK_GESTURE_EVENT;
-    %tmp.189 = dup %tmp.184;
-    %tmp.190 = aputv %tmp.189 %tmp.186 %tmp.188;
-    %tmp.192 = const :descriptors;
-    symbol [ descriptors %tmp.192 34 55 66 const ];
-    %tmp.193 = newa 1;
-    symbol [ Toybox %tmp.195 34 71 77 ];
-    %tmp.195 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.196 34 78 96 ];
-    %tmp.196 = getv %tmp.195 :BluetoothLowEnergy;
-    symbol [ cccdUuid %tmp.197 34 97 105 ];
-    %tmp.197 = getv function %tmp.196 :cccdUuid;
-    %tmp.198 = invoke %tmp.196 %tmp.197();
-    %tmp.199 = dup %tmp.193;
-    %tmp.200 = aputv %tmp.199 0 %tmp.198;
-    %tmp.201 = dup %tmp.190;
-    %tmp.202 = aputv %tmp.201 %tmp.192 %tmp.200;
-    %tmp.203 = dup %tmp.183;
-    %tmp.204 = aputv %tmp.203 2 %tmp.202;
-    %tmp.205 = dup %tmp.150;
-    %tmp.206 = aputv %tmp.205 %tmp.152 %tmp.204;
-    %tmp.207 = as %tmp.206 ActiveLookBLE.ActiveLook.BleProfile;
-    symbol [ ActiveLookBLE %tmp.207 36 6 19 ];
-    symbol [ ActiveLook %tmp.207 36 20 30 ];
-    symbol [ BleProfile %tmp.207 36 31 41 ];
-    putv self :PROFILE_ACTIVE_LOOK %tmp.207;
+    %tmp.146 = newd 2;
+    %tmp.148 = const :uuid;
+    symbol [ uuid %tmp.148 30 5 9 const ];
+    symbol [ BLE_SERV_ACTIVELOOK %tmp.150 30 13 32 ];
+    %tmp.150 = getv ? :BLE_SERV_ACTIVELOOK;
+    %tmp.151 = dup %tmp.146;
+    %tmp.152 = aputv %tmp.151 %tmp.148 %tmp.150;
+    %tmp.154 = const :characteristics;
+    symbol [ characteristics %tmp.154 31 5 20 const ];
+    %tmp.155 = newa 3;
+    %tmp.156 = newd 1;
+    %tmp.158 = const :uuid;
+    symbol [ uuid %tmp.158 32 11 15 const ];
+    symbol [ BLE_CHAR_ACTIVELOOK_RX %tmp.160 32 19 41 ];
+    %tmp.160 = getv ? :BLE_CHAR_ACTIVELOOK_RX;
+    %tmp.161 = dup %tmp.156;
+    %tmp.162 = aputv %tmp.161 %tmp.158 %tmp.160;
+    %tmp.163 = dup %tmp.155;
+    %tmp.164 = aputv %tmp.163 0 %tmp.162;
+    %tmp.165 = newd 2;
+    %tmp.167 = const :uuid;
+    symbol [ uuid %tmp.167 33 11 15 const ];
+    symbol [ BLE_CHAR_ACTIVELOOK_TX %tmp.169 33 19 41 ];
+    %tmp.169 = getv ? :BLE_CHAR_ACTIVELOOK_TX;
+    %tmp.170 = dup %tmp.165;
+    %tmp.171 = aputv %tmp.170 %tmp.167 %tmp.169;
+    %tmp.173 = const :descriptors;
+    symbol [ descriptors %tmp.173 33 44 55 const ];
+    %tmp.174 = newa 1;
+    symbol [ Toybox %tmp.176 33 60 66 ];
+    %tmp.176 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.177 33 67 85 ];
+    %tmp.177 = getv %tmp.176 :BluetoothLowEnergy;
+    symbol [ cccdUuid %tmp.178 33 86 94 ];
+    %tmp.178 = getv function %tmp.177 :cccdUuid;
+    %tmp.179 = invoke %tmp.177 %tmp.178();
+    %tmp.180 = dup %tmp.174;
+    %tmp.181 = aputv %tmp.180 0 %tmp.179;
+    %tmp.182 = dup %tmp.171;
+    %tmp.183 = aputv %tmp.182 %tmp.173 %tmp.181;
+    %tmp.184 = dup %tmp.164;
+    %tmp.185 = aputv %tmp.184 1 %tmp.183;
+    %tmp.186 = newd 2;
+    %tmp.188 = const :uuid;
+    symbol [ uuid %tmp.188 34 11 15 const ];
+    symbol [ BLE_CHAR_ACTIVELOOK_GESTURE_EVENT %tmp.190 34 19 52 ];
+    %tmp.190 = getv ? :BLE_CHAR_ACTIVELOOK_GESTURE_EVENT;
+    %tmp.191 = dup %tmp.186;
+    %tmp.192 = aputv %tmp.191 %tmp.188 %tmp.190;
+    %tmp.194 = const :descriptors;
+    symbol [ descriptors %tmp.194 34 55 66 const ];
+    %tmp.195 = newa 1;
+    symbol [ Toybox %tmp.197 34 71 77 ];
+    %tmp.197 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.198 34 78 96 ];
+    %tmp.198 = getv %tmp.197 :BluetoothLowEnergy;
+    symbol [ cccdUuid %tmp.199 34 97 105 ];
+    %tmp.199 = getv function %tmp.198 :cccdUuid;
+    %tmp.200 = invoke %tmp.198 %tmp.199();
+    %tmp.201 = dup %tmp.195;
+    %tmp.202 = aputv %tmp.201 0 %tmp.200;
+    %tmp.203 = dup %tmp.192;
+    %tmp.204 = aputv %tmp.203 %tmp.194 %tmp.202;
+    %tmp.205 = dup %tmp.185;
+    %tmp.206 = aputv %tmp.205 2 %tmp.204;
+    %tmp.207 = dup %tmp.152;
+    %tmp.208 = aputv %tmp.207 %tmp.154 %tmp.206;
+    %tmp.209 = as %tmp.208 ActiveLookBLE.ActiveLook.BleProfile;
+    symbol [ ActiveLookBLE %tmp.209 36 6 19 ];
+    symbol [ ActiveLook %tmp.209 36 20 30 ];
+    symbol [ BleProfile %tmp.209 36 31 41 ];
+    putv self :PROFILE_ACTIVE_LOOK %tmp.209;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 38 6 ]
-    %tmp.208 = newd 2;
-    %tmp.210 = const :uuid;
-    symbol [ uuid %tmp.210 39 5 9 const ];
-    symbol [ BLE_SERV_DEVICE_INFORMATION %tmp.212 39 13 40 ];
-    %tmp.212 = getv ? :BLE_SERV_DEVICE_INFORMATION;
-    %tmp.213 = dup %tmp.208;
-    %tmp.214 = aputv %tmp.213 %tmp.210 %tmp.212;
-    %tmp.216 = const :characteristics;
-    symbol [ characteristics %tmp.216 40 5 20 const ];
-    %tmp.217 = newa 6;
-    %tmp.218 = newd 1;
-    %tmp.220 = const :uuid;
-    symbol [ uuid %tmp.220 41 11 15 const ];
-    symbol [ BLE_CHAR_MANUFACTURER_NAME %tmp.222 41 19 45 ];
-    %tmp.222 = getv ? :BLE_CHAR_MANUFACTURER_NAME;
-    %tmp.223 = dup %tmp.218;
-    %tmp.224 = aputv %tmp.223 %tmp.220 %tmp.222;
-    %tmp.225 = dup %tmp.217;
-    %tmp.226 = aputv %tmp.225 0 %tmp.224;
-    %tmp.227 = newd 1;
-    %tmp.229 = const :uuid;
-    symbol [ uuid %tmp.229 42 11 15 const ];
-    symbol [ BLE_CHAR_MODEL_NUMBER %tmp.231 42 19 40 ];
-    %tmp.231 = getv ? :BLE_CHAR_MODEL_NUMBER;
-    %tmp.232 = dup %tmp.227;
-    %tmp.233 = aputv %tmp.232 %tmp.229 %tmp.231;
-    %tmp.234 = dup %tmp.226;
-    %tmp.235 = aputv %tmp.234 1 %tmp.233;
-    %tmp.236 = newd 1;
-    %tmp.238 = const :uuid;
-    symbol [ uuid %tmp.238 43 11 15 const ];
-    symbol [ BLE_CHAR_SERIAL_NUMBER %tmp.240 43 19 41 ];
-    %tmp.240 = getv ? :BLE_CHAR_SERIAL_NUMBER;
-    %tmp.241 = dup %tmp.236;
-    %tmp.242 = aputv %tmp.241 %tmp.238 %tmp.240;
-    %tmp.243 = dup %tmp.235;
-    %tmp.244 = aputv %tmp.243 2 %tmp.242;
-    %tmp.245 = newd 1;
-    %tmp.247 = const :uuid;
-    symbol [ uuid %tmp.247 44 11 15 const ];
-    symbol [ BLE_CHAR_HARDWARE_VERSION %tmp.249 44 19 44 ];
-    %tmp.249 = getv ? :BLE_CHAR_HARDWARE_VERSION;
-    %tmp.250 = dup %tmp.245;
-    %tmp.251 = aputv %tmp.250 %tmp.247 %tmp.249;
-    %tmp.252 = dup %tmp.244;
-    %tmp.253 = aputv %tmp.252 3 %tmp.251;
-    %tmp.254 = newd 1;
-    %tmp.256 = const :uuid;
-    symbol [ uuid %tmp.256 45 11 15 const ];
-    symbol [ BLE_CHAR_FIRMWARE_VERSION %tmp.258 45 19 44 ];
-    %tmp.258 = getv ? :BLE_CHAR_FIRMWARE_VERSION;
-    %tmp.259 = dup %tmp.254;
-    %tmp.260 = aputv %tmp.259 %tmp.256 %tmp.258;
-    %tmp.261 = dup %tmp.253;
-    %tmp.262 = aputv %tmp.261 4 %tmp.260;
-    %tmp.263 = newd 1;
-    %tmp.265 = const :uuid;
-    symbol [ uuid %tmp.265 46 11 15 const ];
-    symbol [ BLE_CHAR_SOFTWARE_VERSION %tmp.267 46 19 44 ];
-    %tmp.267 = getv ? :BLE_CHAR_SOFTWARE_VERSION;
-    %tmp.268 = dup %tmp.263;
-    %tmp.269 = aputv %tmp.268 %tmp.265 %tmp.267;
-    %tmp.270 = dup %tmp.262;
-    %tmp.271 = aputv %tmp.270 5 %tmp.269;
-    %tmp.272 = dup %tmp.214;
-    %tmp.273 = aputv %tmp.272 %tmp.216 %tmp.271;
-    %tmp.274 = as %tmp.273 ActiveLookBLE.ActiveLook.BleProfile;
-    symbol [ ActiveLookBLE %tmp.274 48 6 19 ];
-    symbol [ ActiveLook %tmp.274 48 20 30 ];
-    symbol [ BleProfile %tmp.274 48 31 41 ];
-    putv self :PROFILE_DEVICE_INFO %tmp.274;
+    %tmp.210 = newd 2;
+    %tmp.212 = const :uuid;
+    symbol [ uuid %tmp.212 39 5 9 const ];
+    symbol [ BLE_SERV_DEVICE_INFORMATION %tmp.214 39 13 40 ];
+    %tmp.214 = getv ? :BLE_SERV_DEVICE_INFORMATION;
+    %tmp.215 = dup %tmp.210;
+    %tmp.216 = aputv %tmp.215 %tmp.212 %tmp.214;
+    %tmp.218 = const :characteristics;
+    symbol [ characteristics %tmp.218 40 5 20 const ];
+    %tmp.219 = newa 6;
+    %tmp.220 = newd 1;
+    %tmp.222 = const :uuid;
+    symbol [ uuid %tmp.222 41 11 15 const ];
+    symbol [ BLE_CHAR_MANUFACTURER_NAME %tmp.224 41 19 45 ];
+    %tmp.224 = getv ? :BLE_CHAR_MANUFACTURER_NAME;
+    %tmp.225 = dup %tmp.220;
+    %tmp.226 = aputv %tmp.225 %tmp.222 %tmp.224;
+    %tmp.227 = dup %tmp.219;
+    %tmp.228 = aputv %tmp.227 0 %tmp.226;
+    %tmp.229 = newd 1;
+    %tmp.231 = const :uuid;
+    symbol [ uuid %tmp.231 42 11 15 const ];
+    symbol [ BLE_CHAR_MODEL_NUMBER %tmp.233 42 19 40 ];
+    %tmp.233 = getv ? :BLE_CHAR_MODEL_NUMBER;
+    %tmp.234 = dup %tmp.229;
+    %tmp.235 = aputv %tmp.234 %tmp.231 %tmp.233;
+    %tmp.236 = dup %tmp.228;
+    %tmp.237 = aputv %tmp.236 1 %tmp.235;
+    %tmp.238 = newd 1;
+    %tmp.240 = const :uuid;
+    symbol [ uuid %tmp.240 43 11 15 const ];
+    symbol [ BLE_CHAR_SERIAL_NUMBER %tmp.242 43 19 41 ];
+    %tmp.242 = getv ? :BLE_CHAR_SERIAL_NUMBER;
+    %tmp.243 = dup %tmp.238;
+    %tmp.244 = aputv %tmp.243 %tmp.240 %tmp.242;
+    %tmp.245 = dup %tmp.237;
+    %tmp.246 = aputv %tmp.245 2 %tmp.244;
+    %tmp.247 = newd 1;
+    %tmp.249 = const :uuid;
+    symbol [ uuid %tmp.249 44 11 15 const ];
+    symbol [ BLE_CHAR_HARDWARE_VERSION %tmp.251 44 19 44 ];
+    %tmp.251 = getv ? :BLE_CHAR_HARDWARE_VERSION;
+    %tmp.252 = dup %tmp.247;
+    %tmp.253 = aputv %tmp.252 %tmp.249 %tmp.251;
+    %tmp.254 = dup %tmp.246;
+    %tmp.255 = aputv %tmp.254 3 %tmp.253;
+    %tmp.256 = newd 1;
+    %tmp.258 = const :uuid;
+    symbol [ uuid %tmp.258 45 11 15 const ];
+    symbol [ BLE_CHAR_FIRMWARE_VERSION %tmp.260 45 19 44 ];
+    %tmp.260 = getv ? :BLE_CHAR_FIRMWARE_VERSION;
+    %tmp.261 = dup %tmp.256;
+    %tmp.262 = aputv %tmp.261 %tmp.258 %tmp.260;
+    %tmp.263 = dup %tmp.255;
+    %tmp.264 = aputv %tmp.263 4 %tmp.262;
+    %tmp.265 = newd 1;
+    %tmp.267 = const :uuid;
+    symbol [ uuid %tmp.267 46 11 15 const ];
+    symbol [ BLE_CHAR_SOFTWARE_VERSION %tmp.269 46 19 44 ];
+    %tmp.269 = getv ? :BLE_CHAR_SOFTWARE_VERSION;
+    %tmp.270 = dup %tmp.265;
+    %tmp.271 = aputv %tmp.270 %tmp.267 %tmp.269;
+    %tmp.272 = dup %tmp.264;
+    %tmp.273 = aputv %tmp.272 5 %tmp.271;
+    %tmp.274 = dup %tmp.216;
+    %tmp.275 = aputv %tmp.274 %tmp.218 %tmp.273;
+    %tmp.276 = as %tmp.275 ActiveLookBLE.ActiveLook.BleProfile;
+    symbol [ ActiveLookBLE %tmp.276 48 6 19 ];
+    symbol [ ActiveLook %tmp.276 48 20 30 ];
+    symbol [ BleProfile %tmp.276 48 31 41 ];
+    putv self :PROFILE_DEVICE_INFO %tmp.276;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 50 6 ]
-    %tmp.275 = newd 2;
-    %tmp.277 = const :uuid;
-    symbol [ uuid %tmp.277 51 5 9 const ];
-    symbol [ BLE_SERV_BATTERY %tmp.279 51 13 29 ];
-    %tmp.279 = getv ? :BLE_SERV_BATTERY;
-    %tmp.280 = dup %tmp.275;
-    %tmp.281 = aputv %tmp.280 %tmp.277 %tmp.279;
-    %tmp.283 = const :characteristics;
-    symbol [ characteristics %tmp.283 52 5 20 const ];
-    %tmp.284 = newa 1;
-    %tmp.285 = newd 2;
-    %tmp.287 = const :uuid;
-    symbol [ uuid %tmp.287 53 11 15 const ];
-    symbol [ BLE_CHAR_BATTERY_LEVEL %tmp.289 53 19 41 ];
-    %tmp.289 = getv ? :BLE_CHAR_BATTERY_LEVEL;
-    %tmp.290 = dup %tmp.285;
-    %tmp.291 = aputv %tmp.290 %tmp.287 %tmp.289;
-    %tmp.293 = const :descriptors;
-    symbol [ descriptors %tmp.293 53 44 55 const ];
-    %tmp.294 = newa 1;
-    symbol [ Toybox %tmp.296 53 60 66 ];
-    %tmp.296 = getv ? :Toybox;
-    symbol [ BluetoothLowEnergy %tmp.297 53 67 85 ];
-    %tmp.297 = getv %tmp.296 :BluetoothLowEnergy;
-    symbol [ cccdUuid %tmp.298 53 86 94 ];
-    %tmp.298 = getv function %tmp.297 :cccdUuid;
-    %tmp.299 = invoke %tmp.297 %tmp.298();
-    %tmp.300 = dup %tmp.294;
-    %tmp.301 = aputv %tmp.300 0 %tmp.299;
-    %tmp.302 = dup %tmp.291;
-    %tmp.303 = aputv %tmp.302 %tmp.293 %tmp.301;
-    %tmp.304 = dup %tmp.284;
-    %tmp.305 = aputv %tmp.304 0 %tmp.303;
-    %tmp.306 = dup %tmp.281;
-    %tmp.307 = aputv %tmp.306 %tmp.283 %tmp.305;
-    %tmp.308 = as %tmp.307 ActiveLookBLE.ActiveLook.BleProfile;
-    symbol [ ActiveLookBLE %tmp.308 55 6 19 ];
-    symbol [ ActiveLook %tmp.308 55 20 30 ];
-    symbol [ BleProfile %tmp.308 55 31 41 ];
-    putv self :PROFILE_BATTERY_INFO %tmp.308;
+    %tmp.277 = newd 2;
+    %tmp.279 = const :uuid;
+    symbol [ uuid %tmp.279 51 5 9 const ];
+    symbol [ BLE_SERV_BATTERY %tmp.281 51 13 29 ];
+    %tmp.281 = getv ? :BLE_SERV_BATTERY;
+    %tmp.282 = dup %tmp.277;
+    %tmp.283 = aputv %tmp.282 %tmp.279 %tmp.281;
+    %tmp.285 = const :characteristics;
+    symbol [ characteristics %tmp.285 52 5 20 const ];
+    %tmp.286 = newa 1;
+    %tmp.287 = newd 2;
+    %tmp.289 = const :uuid;
+    symbol [ uuid %tmp.289 53 11 15 const ];
+    symbol [ BLE_CHAR_BATTERY_LEVEL %tmp.291 53 19 41 ];
+    %tmp.291 = getv ? :BLE_CHAR_BATTERY_LEVEL;
+    %tmp.292 = dup %tmp.287;
+    %tmp.293 = aputv %tmp.292 %tmp.289 %tmp.291;
+    %tmp.295 = const :descriptors;
+    symbol [ descriptors %tmp.295 53 44 55 const ];
+    %tmp.296 = newa 1;
+    symbol [ Toybox %tmp.298 53 60 66 ];
+    %tmp.298 = getv ? :Toybox;
+    symbol [ BluetoothLowEnergy %tmp.299 53 67 85 ];
+    %tmp.299 = getv %tmp.298 :BluetoothLowEnergy;
+    symbol [ cccdUuid %tmp.300 53 86 94 ];
+    %tmp.300 = getv function %tmp.299 :cccdUuid;
+    %tmp.301 = invoke %tmp.299 %tmp.300();
+    %tmp.302 = dup %tmp.296;
+    %tmp.303 = aputv %tmp.302 0 %tmp.301;
+    %tmp.304 = dup %tmp.293;
+    %tmp.305 = aputv %tmp.304 %tmp.295 %tmp.303;
+    %tmp.306 = dup %tmp.286;
+    %tmp.307 = aputv %tmp.306 0 %tmp.305;
+    %tmp.308 = dup %tmp.283;
+    %tmp.309 = aputv %tmp.308 %tmp.285 %tmp.307;
+    %tmp.310 = as %tmp.309 ActiveLookBLE.ActiveLook.BleProfile;
+    symbol [ ActiveLookBLE %tmp.310 55 6 19 ];
+    symbol [ ActiveLook %tmp.310 55 20 30 ];
+    symbol [ BleProfile %tmp.310 55 31 41 ];
+    putv self :PROFILE_BATTERY_INFO %tmp.310;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLook.mc" 57 6 ]
-    %tmp.309 = newa 3;
-    %tmp.310 = newd 2;
-    %tmp.312 = const :profile;
-    symbol [ profile %tmp.312 57 31 38 const ];
-    symbol [ PROFILE_ACTIVE_LOOK %tmp.314 57 42 61 ];
-    %tmp.314 = getv ? :PROFILE_ACTIVE_LOOK;
-    %tmp.315 = dup %tmp.310;
-    %tmp.316 = aputv %tmp.315 %tmp.312 %tmp.314;
-    %tmp.318 = const :label;
-    symbol [ label %tmp.318 57 64 69 const ];
-    %tmp.319 = "Primary service";
-    %tmp.320 = dup %tmp.316;
-    %tmp.321 = aputv %tmp.320 %tmp.318 %tmp.319;
-    %tmp.322 = dup %tmp.309;
-    %tmp.323 = aputv %tmp.322 0 %tmp.321;
-    %tmp.324 = newd 2;
-    %tmp.326 = const :profile;
-    symbol [ profile %tmp.326 58 31 38 const ];
-    symbol [ PROFILE_DEVICE_INFO %tmp.328 58 42 61 ];
-    %tmp.328 = getv ? :PROFILE_DEVICE_INFO;
-    %tmp.329 = dup %tmp.324;
-    %tmp.330 = aputv %tmp.329 %tmp.326 %tmp.328;
-    %tmp.332 = const :label;
-    symbol [ label %tmp.332 58 64 69 const ];
-    %tmp.333 = "Device info service";
-    %tmp.334 = dup %tmp.330;
-    %tmp.335 = aputv %tmp.334 %tmp.332 %tmp.333;
-    %tmp.336 = dup %tmp.323;
-    %tmp.337 = aputv %tmp.336 1 %tmp.335;
-    %tmp.338 = newd 2;
-    %tmp.340 = const :profile;
-    symbol [ profile %tmp.340 59 31 38 const ];
-    symbol [ PROFILE_BATTERY_INFO %tmp.342 59 42 62 ];
-    %tmp.342 = getv ? :PROFILE_BATTERY_INFO;
-    %tmp.343 = dup %tmp.338;
-    %tmp.344 = aputv %tmp.343 %tmp.340 %tmp.342;
-    %tmp.346 = const :label;
-    symbol [ label %tmp.346 59 65 70 const ];
-    %tmp.347 = "Battery service";
-    %tmp.348 = dup %tmp.344;
-    %tmp.349 = aputv %tmp.348 %tmp.346 %tmp.347;
-    %tmp.350 = dup %tmp.337;
-    %tmp.351 = aputv %tmp.350 2 %tmp.349;
-    putv self :ACTIVELOOK_PROFILES %tmp.351;
+    %tmp.311 = newa 3;
+    %tmp.312 = newd 2;
+    %tmp.314 = const :profile;
+    symbol [ profile %tmp.314 57 31 38 const ];
+    symbol [ PROFILE_ACTIVE_LOOK %tmp.316 57 42 61 ];
+    %tmp.316 = getv ? :PROFILE_ACTIVE_LOOK;
+    %tmp.317 = dup %tmp.312;
+    %tmp.318 = aputv %tmp.317 %tmp.314 %tmp.316;
+    %tmp.320 = const :label;
+    symbol [ label %tmp.320 57 64 69 const ];
+    %tmp.321 = "Primary service";
+    %tmp.322 = dup %tmp.318;
+    %tmp.323 = aputv %tmp.322 %tmp.320 %tmp.321;
+    %tmp.324 = dup %tmp.311;
+    %tmp.325 = aputv %tmp.324 0 %tmp.323;
+    %tmp.326 = newd 2;
+    %tmp.328 = const :profile;
+    symbol [ profile %tmp.328 58 31 38 const ];
+    symbol [ PROFILE_DEVICE_INFO %tmp.330 58 42 61 ];
+    %tmp.330 = getv ? :PROFILE_DEVICE_INFO;
+    %tmp.331 = dup %tmp.326;
+    %tmp.332 = aputv %tmp.331 %tmp.328 %tmp.330;
+    %tmp.334 = const :label;
+    symbol [ label %tmp.334 58 64 69 const ];
+    %tmp.335 = "Device info service";
+    %tmp.336 = dup %tmp.332;
+    %tmp.337 = aputv %tmp.336 %tmp.334 %tmp.335;
+    %tmp.338 = dup %tmp.325;
+    %tmp.339 = aputv %tmp.338 1 %tmp.337;
+    %tmp.340 = newd 2;
+    %tmp.342 = const :profile;
+    symbol [ profile %tmp.342 59 31 38 const ];
+    symbol [ PROFILE_BATTERY_INFO %tmp.344 59 42 62 ];
+    %tmp.344 = getv ? :PROFILE_BATTERY_INFO;
+    %tmp.345 = dup %tmp.340;
+    %tmp.346 = aputv %tmp.345 %tmp.342 %tmp.344;
+    %tmp.348 = const :label;
+    symbol [ label %tmp.348 59 65 70 const ];
+    %tmp.349 = "Battery service";
+    %tmp.350 = dup %tmp.346;
+    %tmp.351 = aputv %tmp.350 %tmp.348 %tmp.349;
+    %tmp.352 = dup %tmp.339;
+    %tmp.353 = aputv %tmp.352 2 %tmp.351;
+    putv self :ACTIVELOOK_PROFILES %tmp.353;
 }

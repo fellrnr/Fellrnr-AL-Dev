@@ -56,7 +56,7 @@ module ActiveLook {
                 intervalNumber = Toybox.Math.floor((lapNumber-1)/$.lapsPerInterval) + 1;
             }
             //#!JFS!# preserve lap avg power for message
-            if(lapAveragePower != null && lapAveragePower != 0) {
+            if(lapAveragePower != null &&  lapAveragePower instanceof Toybox.Lang.Number && lapAveragePower != 0) {
                 lapAveragePowerPrevious = Toybox.Math.round(lapAveragePower);
             } else {
                 lapAveragePowerPrevious = -1;

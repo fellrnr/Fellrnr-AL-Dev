@@ -69,10 +69,10 @@ module ActiveLookBLE {
 
         //! Private logger enabled in debug and disabled in release mode
         //! Comment and uncomment as needed.
-        (:release) private static function _log(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {}
-        (:debug)   private static function _log(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {
-            if ($ has :log) { $.log(Toybox.Lang.format("[ActiveLookBLE::ActiveLook] $1$", [msg]), data); }
-        }
+        // (:release) private static function $.log(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {}
+        // (:debug)   private static function $.log(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {
+        //     if ($ has :log) { $.log(Toybox.Lang.format("[ActiveLookBLE::ActiveLook] $1$", [msg]), data); }
+        // }
 
         //! Interface for delegate
         typedef ActiveLookDelegate as interface {
@@ -87,7 +87,7 @@ module ActiveLookBLE {
             function onPassiveConnection(device as Toybox.BluetoothLowEnergy.Device) as Void;
             function profileRegistrationStart()as Void;
             function profileRegistrationComplete()as Void;
-            function onBleError(exception as Toybox.Lang.Exception) as Void;
+            function onBleError(msg, exception as Toybox.Lang.Exception) as Void;
         };
 
         //! Type for registering profile
@@ -106,7 +106,7 @@ module ActiveLookBLE {
         //! @param delegate The object that will be responsible for handling events.
         private function initialize(delegate as ActiveLookBLE.ActiveLook.ActiveLookDelegate) {
             Toybox.BluetoothLowEnergy.BleDelegate.initialize();
-            _log("initialize", []);
+            $.log("initialize", []);
             _delegate = delegate;
             Toybox.BluetoothLowEnergy.setDelegate(self);
         }
@@ -140,17 +140,17 @@ module ActiveLookBLE {
         //!
         //! @return         The Active Look object to use for handling Bluetooth operations.
         static function setUp(delegate as ActiveLookBLE.ActiveLook.ActiveLookDelegate) as ActiveLookBLE.ActiveLook {
-            _log("setUp", [_activeLook, delegate]);
+            $.log("setUp", [_activeLook, delegate]);
             var skipRegister = _activeLook != null ? true : false;
             _activeLook = new ActiveLook(delegate);
             if (skipRegister) { return _activeLook as ActiveLookBLE.ActiveLook; }
             // Check if there is a passive connection to the device exists
             // we do not want to register profiles/scan/connect to device
             var dev = BluetoothLowEnergy.getPairedDevices().next() as Toybox.BluetoothLowEnergy.Device;
-            
+
             if( dev != null) {
                 _device = dev;
-                _log("setUp", "Passive connection exist");
+                $.log("setUp", "Passive connection exist");
                 _registeredProfile.add(ACTIVELOOK_PROFILES[0][:profile][:uuid] as Toybox.BluetoothLowEnergy.Uuid);
                 _registeredProfile.add(ACTIVELOOK_PROFILES[1][:profile][:uuid] as Toybox.BluetoothLowEnergy.Uuid);
                 _registeredProfile.add(ACTIVELOOK_PROFILES[2][:profile][:uuid] as Toybox.BluetoothLowEnergy.Uuid);
@@ -163,7 +163,7 @@ module ActiveLookBLE {
             if(_profileIndexToRegister < ACTIVELOOK_PROFILES.size()) {
                 delegate.profileRegistrationStart();
                 Toybox.BluetoothLowEnergy.registerProfile(ACTIVELOOK_PROFILES[_profileIndexToRegister][:profile] as ActiveLookBLE.ActiveLook.BleProfile);
-                _log("setUp", [ACTIVELOOK_PROFILES[_profileIndexToRegister][:label] + " registered"]);
+                $.log("setUp", [ACTIVELOOK_PROFILES[_profileIndexToRegister][:label] + " registered"]);
                 _profileIndexToRegister++;
             }
             // No more profile as specified here:
@@ -184,7 +184,7 @@ module ActiveLookBLE {
         //!              <code>true</code> to enable scanning.
         (:typecheck(false))
         static function requestScanning(state as Toybox.Lang.Boolean) as Void {
-            _log("requestScanning", [state]);
+            $.log("requestScanning", [state]);
             if   (state == false) { _desiredScanState = Toybox.BluetoothLowEnergy.SCAN_STATE_OFF; }
             else                  { _desiredScanState = Toybox.BluetoothLowEnergy.SCAN_STATE_SCANNING; }
             _fixScanStateNbSwitch = 0;
@@ -210,7 +210,7 @@ module ActiveLookBLE {
         //!
         //! @return True if we tried to fix an error and false if there was no error to fix.
         static function fixScanState() as Toybox.Lang.Boolean {
-            _log("fixScanState", [_fixScanStateNbSwitch, _currentScanState, _desiredScanState]);
+            $.log("fixScanState", [_fixScanStateNbSwitch, _currentScanState, _desiredScanState]);
             if (_fixScanStateNbSwitch > 0) {
                 if (_currentScanState == Toybox.BluetoothLowEnergy.SCAN_STATE_SCANNING) {
                     Toybox.BluetoothLowEnergy.setScanState(Toybox.BluetoothLowEnergy.SCAN_STATE_OFF);
@@ -224,25 +224,25 @@ module ActiveLookBLE {
 
         //! Override Toybox.BluetoothLowEnergy.BleDelegate.onCharacteristicChanged
         function onCharacteristicChanged(characteristic as Toybox.BluetoothLowEnergy.Characteristic, value as Toybox.Lang.ByteArray) as Void {
-            _log("onCharacteristicChanged", [characteristic, value]);
+            $.log("onCharacteristicChanged", [characteristic, value]);
             _delegate.onCharacteristicChanged(characteristic, value);
         }
 
         //! Override Toybox.BluetoothLowEnergy.BleDelegate.onCharacteristicRead
         function onCharacteristicRead(characteristic as Toybox.BluetoothLowEnergy.Characteristic, status as Toybox.BluetoothLowEnergy.Status, value as Toybox.Lang.ByteArray) as Void {
-            _log("onCharacteristicRead", [characteristic, status, value]);
+            $.log("onCharacteristicRead", [characteristic, status, value]);
             _delegate.onCharacteristicRead(characteristic, status, value);
         }
 
         //! Override Toybox.BluetoothLowEnergy.BleDelegate.onCharacteristicWrite
         function onCharacteristicWrite(characteristic as Toybox.BluetoothLowEnergy.Characteristic, status as Toybox.BluetoothLowEnergy.Status) as Void {
-            //_log("onCharacteristicWrite", [characteristic.getUuid(), status]);
+            //$.log("onCharacteristicWrite", [characteristic.getUuid(), status]);
             _delegate.onCharacteristicWrite(characteristic, status);
         }
 
         //! Override Toybox.BluetoothLowEnergy.BleDelegate.onConnectedStateChanged
         function onConnectedStateChanged(device as Toybox.BluetoothLowEnergy.Device, state as Toybox.BluetoothLowEnergy.ConnectionState) as Void {
-            _log("onConnectedStateChanged", [device, state]);
+            $.log("onConnectedStateChanged", [device, state]);
             if (state == Toybox.BluetoothLowEnergy.CONNECTION_STATE_CONNECTED) {
                 _device = device;
             } else {
@@ -253,30 +253,30 @@ module ActiveLookBLE {
 
         //! Override Toybox.BluetoothLowEnergy.BleDelegate.onDescriptorRead
         function onDescriptorRead(descriptor as Toybox.BluetoothLowEnergy.Descriptor, status as Toybox.BluetoothLowEnergy.Status, value as Toybox.Lang.ByteArray) as Void {
-            _log("onDescriptorRead", [descriptor, status, value]);
+            $.log("onDescriptorRead", [descriptor, status, value]);
             _delegate.onDescriptorRead(descriptor, status, value);
         }
 
         //! Override Toybox.BluetoothLowEnergy.BleDelegate.onDescriptorWrite
         function onDescriptorWrite(descriptor as Toybox.BluetoothLowEnergy.Descriptor, status as Toybox.BluetoothLowEnergy.Status) as Void {
-            _log("onDescriptorWrite", [descriptor, status]);
+            $.log("onDescriptorWrite", [descriptor, status]);
             _delegate.onDescriptorWrite(descriptor, status);
         }
 
         //! Override Toybox.BluetoothLowEnergy.BleDelegate.onProfileRegister
         function onProfileRegister(uuid as Toybox.BluetoothLowEnergy.Uuid, status as Toybox.BluetoothLowEnergy.Status) as Void {
-            _log("onProfileRegister", [uuid, status, _registeredProfile.size()]);
+            $.log("onProfileRegister", [uuid, status, _registeredProfile.size()]);
             if (status == Toybox.BluetoothLowEnergy.STATUS_SUCCESS) {
                 if (_registeredProfile.indexOf(uuid) == -1) {
                     _registeredProfile.add(uuid);
-                    _log("onProfileRegister", ["+1", uuid, status, _registeredProfile.size()]);
+                    $.log("onProfileRegister", ["+1", uuid, status, _registeredProfile.size()]);
                 }
                 if(_profileIndexToRegister == ACTIVELOOK_PROFILES.size()) {
                      _delegate.profileRegistrationComplete();
                 }
                 if(_profileIndexToRegister < ACTIVELOOK_PROFILES.size()) {
                     Toybox.BluetoothLowEnergy.registerProfile(ACTIVELOOK_PROFILES[_profileIndexToRegister][:profile]  as ActiveLookBLE.ActiveLook.BleProfile);
-                    _log("onProfileRegister", [ACTIVELOOK_PROFILES[_profileIndexToRegister][:label] + " registered"]);
+                    $.log("onProfileRegister", [ACTIVELOOK_PROFILES[_profileIndexToRegister][:label] + " registered"]);
                     _profileIndexToRegister++;
                 }
             }
@@ -284,19 +284,19 @@ module ActiveLookBLE {
 
         //! Override Toybox.BluetoothLowEnergy.BleDelegate.onScanResults
         function onScanResults(scanResults as Toybox.BluetoothLowEnergy.Iterator) as Void {
-            _log("onScanResults", [scanResults]);
+            $.log("onScanResults", [scanResults]);
             if (_registeredProfile.size() < 3) {
-                _log("onScanResults", ["Profile not registered yet", _registeredProfile.size()]);
+                $.log("onScanResults", ["Profile not registered yet", _registeredProfile.size()]);
                 return;
             }
             for (var device = scanResults.next() as Toybox.BluetoothLowEnergy.ScanResult; device != null; device = scanResults.next()) {
-                _log("onScanResults", [
+                $.log("onScanResults", [
                     "rssi",         device.getRssi(),
                     "rawData",      arrayToHex(device.getRawData()),
                     "serviceUuids", device.getServiceUuids(),
                 ]);
                 if (!(device has :getDeviceName)) {
-                    _log("onScanResults", ["No getDeviceName", device]);
+                    $.log("onScanResults", ["No getDeviceName", device]);
                     continue;
                 }
                 var dataMicrooled = device.getManufacturerSpecificData(0x08F2);
@@ -307,14 +307,14 @@ module ActiveLookBLE {
                         var msdData = msd[:data] as Toybox.Lang.ByteArray;
                         var idx = msdData.size();
                         if (idx >= 2 && msdData.decodeNumber(Toybox.Lang.NUMBER_FORMAT_UINT16, { :offset => 0, :endianness => Toybox.Lang.ENDIAN_BIG }) == 0x08F2) {
-                            _log("onScanResults", ["Microoled partner", msd]);
+                            $.log("onScanResults", ["Microoled partner", msd]);
                             dataMicrooled = msdData;
                             break;
                         }
                     }
                     if (dataMicrooled == null) { continue; }
                 }
-                _log("onScanResults", ["Microoled", device]);
+                $.log("onScanResults", ["Microoled", device]);
                 _delegate.onScanResult(device);
                 // TODO: Disabled _log but might be good later to update with advertized services
                 /* var servs = device.getServiceUuids();
@@ -323,31 +323,31 @@ module ActiveLookBLE {
                     if (servData != null) {
                         servData = arrayToHex(servData);
                     }
-                    _log("getServiceUuids - iterate :", [serv, servData]);
+                    $.log("getServiceUuids - iterate :", [serv, servData]);
                 } */
             }
         }
 
         //! Override Toybox.BluetoothLowEnergy.BleDelegate.onScanStateChange
         function onScanStateChange(scanState as Toybox.BluetoothLowEnergy.ScanState, status as Toybox.BluetoothLowEnergy.Status) as Void {
-            //_log("onScanStateChange", [scanState, status]);
+            //$.log("onScanStateChange", [scanState, status]);
             _fixScanStateNbSwitch = 0;
             _currentScanState = scanState;
             var profileSize = _registeredProfile.size();
             if (_currentScanState != _desiredScanState) {
-                //_log("onScanStateChange", [scanState, status, "Could not set desired state", profileSize]);
+                //$.log("onScanStateChange", [scanState, status, "Could not set desired state", profileSize]);
                 if (status == Toybox.BluetoothLowEnergy.STATUS_SUCCESS) {
                     status = Toybox.BluetoothLowEnergy.STATUS_WRITE_FAIL;
                 }
                 _fixScanStateNbSwitch = 1;
             } else if (profileSize < 3) {
-                //_log("onScanStateChange", [scanState, "STATUS_NOT_ENOUGH_RESOURCES", profileSize]);
+                //$.log("onScanStateChange", [scanState, "STATUS_NOT_ENOUGH_RESOURCES", profileSize]);
                 status = Toybox.BluetoothLowEnergy.STATUS_NOT_ENOUGH_RESOURCES;
                 if (_currentScanState == Toybox.BluetoothLowEnergy.SCAN_STATE_SCANNING) {
                     _fixScanStateNbSwitch = 2;
                 }
             } else if (profileSize > 3) {
-                //_log("onScanStateChange", [scanState, status, "Profile registered more than expected", profileSize]);
+                //$.log("onScanStateChange", [scanState, status, "Profile registered more than expected", profileSize]);
             }
             _delegate.onScanStateChange(scanState, status);
         }
@@ -375,10 +375,14 @@ module ActiveLookBLE {
                 if (service == null) {
                     service = dev.getService(serviceUuid);
                 } else {
-                    var characteristic = service.getCharacteristic(characteristicUuid);
-                    if (characteristic != null) {
-                        //_log("tryGetServiceCharacteristic", [serviceUuid, characteristicUuid, nbRetry, i]);
-                        return characteristic;
+                    if(service has :getCharacteristic) {
+                        var characteristic = service.getCharacteristic(characteristicUuid);
+                        if (characteristic != null) {
+                            //$.log("tryGetServiceCharacteristic gotit", [serviceUuid, characteristicUuid, nbRetry, i]);
+                            return characteristic;
+                        }
+                    } else {
+                        $.log("tryGetServiceCharacteristic no getCharacteristic", [service, serviceUuid, characteristicUuid, nbRetry, i]);
                     }
                 }
             }
@@ -399,7 +403,7 @@ module ActiveLookBLE {
         //! @throws A <code>Toybox.Lang.InvalidValueException</code>
         //!         if the characteristic could not be retrieved after 5 attempts.
         function getBleCharacteristicActiveLookRx() as Toybox.BluetoothLowEnergy.Characteristic {
-            //_log("getBleCharacteristicActiveLookRx", []);
+            //$.log("getBleCharacteristicActiveLookRx", []);
             return tryGetServiceCharacteristic(BLE_SERV_ACTIVELOOK, BLE_CHAR_ACTIVELOOK_RX, 5);
         }
 
@@ -410,7 +414,7 @@ module ActiveLookBLE {
         //! @throws A <code>Toybox.Lang.InvalidValueException</code>
         //!         if the characteristic could not be retrieved after 5 attempts.
         function getBleCharacteristicActiveLookTx() as Toybox.BluetoothLowEnergy.Characteristic {
-            //_log("getBleCharacteristicActiveLookTx", []);
+            //$.log("getBleCharacteristicActiveLookTx", []);
             return tryGetServiceCharacteristic(BLE_SERV_ACTIVELOOK, BLE_CHAR_ACTIVELOOK_TX, 5);
         }
 
@@ -421,31 +425,31 @@ module ActiveLookBLE {
         //! @throws A <code>Toybox.Lang.InvalidValueException</code>
         //!         if the characteristic could not be retrieved after 5 attempts.
         function getBleCharacteristicActiveLookGesture() as Toybox.BluetoothLowEnergy.Characteristic {
-            //_log("getBleCharacteristicActiveLookGesture", []);
+            //$.log("getBleCharacteristicActiveLookGesture", []);
             return tryGetServiceCharacteristic(BLE_SERV_ACTIVELOOK, BLE_CHAR_ACTIVELOOK_GESTURE_EVENT, 5);
         }
 
         // TODO: Unused... Remove ?
         // function getBleCharacteristicManufacturerName() as Toybox.BluetoothLowEnergy.Characteristic {
-        //     _log("getBleCharacteristicManufacturerName", []);
+        //     $.log("getBleCharacteristicManufacturerName", []);
         //     return tryGetServiceCharacteristic(BLE_SERV_DEVICE_INFORMATION, BLE_CHAR_MANUFACTURER_NAME, 5);
         // }
 
         // TODO: Unused... Remove ?
         // function getBleCharacteristicModelNumber() as Toybox.BluetoothLowEnergy.Characteristic {
-        //     _log("getBleCharacteristicModelNumber", []);
+        //     $.log("getBleCharacteristicModelNumber", []);
         //     return tryGetServiceCharacteristic(BLE_SERV_DEVICE_INFORMATION, BLE_CHAR_MODEL_NUMBER, 5);
         // }
 
         // TODO: Unused... Remove ?
         // function getBleCharacteristicSerialNumber() as Toybox.BluetoothLowEnergy.Characteristic {
-        //     _log("getBleCharacteristicSerialNumber", []);
+        //     $.log("getBleCharacteristicSerialNumber", []);
         //     return tryGetServiceCharacteristic(BLE_SERV_DEVICE_INFORMATION, BLE_CHAR_SERIAL_NUMBER, 5);
         // }
 
         // TODO: Unused... Remove ?
         // function getBleCharacteristicHardwareVersion() as Toybox.BluetoothLowEnergy.Characteristic {
-        //     _log("getBleCharacteristicHardwareVersion", []);
+        //     $.log("getBleCharacteristicHardwareVersion", []);
         //     return tryGetServiceCharacteristic(BLE_SERV_DEVICE_INFORMATION, BLE_CHAR_HARDWARE_VERSION, 5);
         // }
 
@@ -456,13 +460,13 @@ module ActiveLookBLE {
         //! @throws A <code>Toybox.Lang.InvalidValueException</code>
         //!         if the characteristic could not be retrieved after 5 attempts.
         function getBleCharacteristicFirmwareVersion() as Toybox.BluetoothLowEnergy.Characteristic {
-            _log("getBleCharacteristicFirmwareVersion", []);
+            $.log("getBleCharacteristicFirmwareVersion", []);
             return tryGetServiceCharacteristic(BLE_SERV_DEVICE_INFORMATION, BLE_CHAR_FIRMWARE_VERSION, 5);
         }
 
         // TODO: Unused... Remove ?
         // function getBleCharacteristicSoftwareVersion() as Toybox.BluetoothLowEnergy.Characteristic {
-        //     _log("getBleCharacteristicSoftwareVersion", []);
+        //     $.log("getBleCharacteristicSoftwareVersion", []);
         //     return tryGetServiceCharacteristic(BLE_SERV_DEVICE_INFORMATION, BLE_CHAR_SOFTWARE_VERSION, 5);
         // }
 
@@ -473,7 +477,7 @@ module ActiveLookBLE {
         //! @throws A <code>Toybox.Lang.InvalidValueException</code>
         //!         if the characteristic could not be retrieved after 5 attempts.
         function getBleCharacteristicBatteryLevel() as Toybox.BluetoothLowEnergy.Characteristic {
-            _log("getBleCharacteristicBatteryLevel", []);
+            //$.log("getBleCharacteristicBatteryLevel", []);
             return tryGetServiceCharacteristic(BLE_SERV_BATTERY, BLE_CHAR_BATTERY_LEVEL, 5);
         }
 
@@ -482,7 +486,7 @@ module ActiveLookBLE {
         //!
         //! @return <code>false</code> if there was no device to unpaired, <code>true</code> otherwise.
         function disconnect() as Toybox.Lang.Boolean {
-            _log("disconnect", []);
+            $.log("disconnect", []);
             _autoDevice = null;
             var autoDevices = Toybox.BluetoothLowEnergy.getPairedDevices();
             var count = 0;
@@ -506,15 +510,15 @@ module ActiveLookBLE {
         //!
         //! @return           <code>true</code> if the operation was successful, <code>false</code> otherwise.
         function connect(scanResult as Toybox.BluetoothLowEnergy.ScanResult) as Toybox.Lang.Boolean {
-            _log("connect", [scanResult]);
+            $.log("connect", [scanResult]);
             requestScanning(false);
             disconnect();
             try {
                 _autoDevice = BluetoothLowEnergy.pairDevice(scanResult);
                 if (_autoDevice != null) { return true; }
-                _delegate.onBleError(new Toybox.System.PreviousOperationNotCompleteException("The device could not be paired."));
+                _delegate.onBleError("connect", new Toybox.System.PreviousOperationNotCompleteException("The device could not be paired."));
             } catch (e) {
-                _delegate.onBleError(e);
+                _delegate.onBleError("connect", e);
             }
             return false;
         }

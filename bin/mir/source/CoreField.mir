@@ -244,66 +244,78 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_56_37_76
         %tmp.46 = add %tmp.45 1;
         symbol [ searching ? 57 20 29 ];
         putv %tmp.41 :searching dup %tmp.46;
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 58 12 ]
+        symbol [ $ %tmp.47 58 12 13 ];
+        %tmp.47 = getm $;
+        symbol [ dmsg %tmp.48 58 14 18 ];
+        %tmp.48 = getv function %tmp.47 :dmsg;
+        %tmp.49 = "computeCore, searching ";
+        symbol [ mSensor %tmp.51 58 47 54 ];
+        %tmp.51 = getv ? :mSensor;
+        symbol [ searching %tmp.52 58 55 64 ];
+        %tmp.52 = getv %tmp.51 :searching;
+        %tmp.53 = add %tmp.49 %tmp.52;
+        invoke %tmp.47 %tmp.48(%tmp.53);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 60 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_12_75_12_if_stmt:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_16_60_92_begin:
-        symbol [ mSensor %tmp.48 60 17 24 ];
-        %tmp.48 = getv ? :mSensor;
-        symbol [ searching %tmp.49 60 25 34 ];
-        %tmp.49 = getv %tmp.48 :searching;
-        %tmp.50 = 29;
-        %tmp.51 = gt %tmp.49 %tmp.50;
-        bt %tmp.51 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_12_75_12_if_true;
+        symbol [ mSensor %tmp.55 60 17 24 ];
+        %tmp.55 = getv ? :mSensor;
+        symbol [ searching %tmp.56 60 25 34 ];
+        %tmp.56 = getv %tmp.55 :searching;
+        %tmp.57 = 29;
+        %tmp.58 = gt %tmp.56 %tmp.57;
+        bt %tmp.58 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_12_75_12_if_true;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_45_60_92_false:
-        symbol [ mSensor %tmp.53 60 46 53 ];
-        %tmp.53 = getv ? :mSensor;
-        symbol [ data %tmp.54 60 54 58 ];
-        %tmp.54 = getv %tmp.53 :data;
-        symbol [ isValidCoreTemp %tmp.55 60 59 74 ];
-        %tmp.55 = getv function %tmp.54 :isValidCoreTemp;
-        symbol [ coreTemperature %tmp.57 60 76 91 ];
-        %tmp.57 = getv ? :coreTemperature;
-        %tmp.58 = invoke %tmp.54 %tmp.55(%tmp.57);
-        %tmp.59 = not %tmp.58;
-        push %tmp.59;
+        symbol [ mSensor %tmp.60 60 46 53 ];
+        %tmp.60 = getv ? :mSensor;
+        symbol [ data %tmp.61 60 54 58 ];
+        %tmp.61 = getv %tmp.60 :data;
+        symbol [ isValidCoreTemp %tmp.62 60 59 74 ];
+        %tmp.62 = getv function %tmp.61 :isValidCoreTemp;
+        symbol [ coreTemperature %tmp.64 60 76 91 ];
+        %tmp.64 = getv ? :coreTemperature;
+        %tmp.65 = invoke %tmp.61 %tmp.62(%tmp.64);
+        %tmp.66 = not %tmp.65;
+        push %tmp.66;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_45_60_92_end:
-        %tmp.60 = phi [%tmp.51 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_16_60_92_begin] [%tmp.59 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_45_60_92_false] [%tmp.60 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_45_60_92_end];
-        bf %tmp.60 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_12_75_12_if_end;
+        %tmp.67 = phi [%tmp.58 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_16_60_92_begin] [%tmp.66 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_45_60_92_false] [%tmp.67 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_45_60_92_end];
+        bf %tmp.67 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_12_75_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_12_75_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_60_95_75_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 62 16 ]
-        symbol [ searchingFrozenCount %tmp.63 62 16 36 ];
-        %tmp.63 = getv ? :searchingFrozenCount;
-        %tmp.64 = add %tmp.63 1;
+        symbol [ searchingFrozenCount %tmp.70 62 16 36 ];
+        %tmp.70 = getv ? :searchingFrozenCount;
+        %tmp.71 = add %tmp.70 1;
         symbol [ searchingFrozenCount ? 62 16 36 ];
-        putv self :searchingFrozenCount dup %tmp.64;
+        putv self :searchingFrozenCount dup %tmp.71;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 64 16 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_64_16_74_16_if_stmt:
-        symbol [ searchingFrozenCount %tmp.66 64 21 41 ];
-        %tmp.66 = getv ? :searchingFrozenCount;
-        %tmp.67 = 73;
-        %tmp.68 = gt %tmp.66 %tmp.67;
-        bf %tmp.68 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_64_16_74_16_if_else_false;
+        symbol [ searchingFrozenCount %tmp.73 64 21 41 ];
+        %tmp.73 = getv ? :searchingFrozenCount;
+        %tmp.74 = 73;
+        %tmp.75 = gt %tmp.73 %tmp.74;
+        bf %tmp.75 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_64_16_74_16_if_else_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_64_16_74_16_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_64_49_72_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 66 20 ]
-        %tmp.69 = self;
-        symbol [ dataFieldReset %tmp.70 66 20 34 ];
-        %tmp.70 = getv function %tmp.69 :dataFieldReset;
-        %tmp.71 = false;
-        invoke %tmp.69 %tmp.70(%tmp.71);
+        %tmp.76 = self;
+        symbol [ dataFieldReset %tmp.77 66 20 34 ];
+        %tmp.77 = getv function %tmp.76 :dataFieldReset;
+        %tmp.78 = false;
+        invoke %tmp.76 %tmp.77(%tmp.78);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 68 20 ]
-        %tmp.72 = -2.0;
+        %tmp.79 = -2.0;
         symbol [ coreTemperature ? 68 20 35 ];
-        putv self :coreTemperature %tmp.72;
+        putv self :coreTemperature %tmp.79;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 69 20 ]
-        %tmp.73 = -2.0;
+        %tmp.80 = -2.0;
         symbol [ skinTemperature ? 69 20 35 ];
-        putv self :skinTemperature %tmp.73;
+        putv self :skinTemperature %tmp.80;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 70 20 ]
-        %tmp.74 = -2.0;
+        %tmp.81 = -2.0;
         symbol [ heatStrainIndex ? 70 20 35 ];
-        putv self :heatStrainIndex %tmp.74;
+        putv self :heatStrainIndex %tmp.81;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 71 20 ]
         ret ?;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_64_49_72_16_stop:
@@ -322,55 +334,56 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_56_37_76
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_56_8_78_8_if_else_false:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_76_15_78_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 77 12 ]
-        %tmp.75 = 0;
+        %tmp.82 = 0;
         symbol [ searchingFrozenCount ? 77 12 32 ];
-        putv self :searchingFrozenCount %tmp.75;
+        putv self :searchingFrozenCount %tmp.82;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_76_15_78_8_stop:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_56_8_78_8_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 80 8 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_80_8_88_8_if_stmt:
-        symbol [ mSensor %tmp.77 80 14 21 ];
-        %tmp.77 = getv ? :mSensor;
-        symbol [ data %tmp.78 80 22 26 ];
-        %tmp.78 = getv %tmp.77 :data;
-        symbol [ isValidCoreTemp %tmp.79 80 27 42 ];
-        %tmp.79 = getv function %tmp.78 :isValidCoreTemp;
-        symbol [ mSensor %tmp.81 80 44 51 ];
-        %tmp.81 = getv ? :mSensor;
-        symbol [ data %tmp.82 80 52 56 ];
-        %tmp.82 = getv %tmp.81 :data;
-        symbol [ CoreTemp %tmp.83 80 57 65 ];
-        %tmp.83 = getv %tmp.82 :CoreTemp;
-        %tmp.84 = invoke %tmp.78 %tmp.79(%tmp.83);
-        %tmp.85 = not %tmp.84;
-        bf %tmp.85 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_80_8_88_8_if_end;
+        symbol [ mSensor %tmp.84 80 14 21 ];
+        %tmp.84 = getv ? :mSensor;
+        symbol [ data %tmp.85 80 22 26 ];
+        %tmp.85 = getv %tmp.84 :data;
+        symbol [ isValidCoreTemp %tmp.86 80 27 42 ];
+        %tmp.86 = getv function %tmp.85 :isValidCoreTemp;
+        symbol [ mSensor %tmp.88 80 44 51 ];
+        %tmp.88 = getv ? :mSensor;
+        symbol [ data %tmp.89 80 52 56 ];
+        %tmp.89 = getv %tmp.88 :data;
+        symbol [ CoreTemp %tmp.90 80 57 65 ];
+        %tmp.90 = getv %tmp.89 :CoreTemp;
+        %tmp.91 = invoke %tmp.85 %tmp.86(%tmp.90);
+        %tmp.92 = not %tmp.91;
+        bf %tmp.92 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_80_8_88_8_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_80_8_88_8_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_80_69_88_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 83 3 ]
-        %tmp.86 = -3.0;
+        %tmp.93 = -3.0;
         symbol [ coreTemperature ? 83 3 18 ];
-        putv self :coreTemperature %tmp.86;
+        putv self :coreTemperature %tmp.93;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 84 12 ]
-        %tmp.87 = -3.0;
+        %tmp.94 = -3.0;
         symbol [ skinTemperature ? 84 12 27 ];
-        putv self :skinTemperature %tmp.87;
+        putv self :skinTemperature %tmp.94;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 85 12 ]
-        %tmp.88 = -3.0;
+        %tmp.95 = -3.0;
         symbol [ heatStrainIndex ? 85 12 27 ];
-        putv self :heatStrainIndex %tmp.88;
+        putv self :heatStrainIndex %tmp.95;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 86 12 ]
-        %tmp.89 = self;
-        symbol [ dmsg %tmp.90 86 12 16 ];
-        %tmp.90 = getv function %tmp.89 :dmsg;
-        %tmp.91 = "computeCore, invalid temp ";
-        symbol [ mSensor %tmp.93 86 48 55 ];
-        %tmp.93 = getv ? :mSensor;
-        symbol [ data %tmp.94 86 56 60 ];
-        %tmp.94 = getv %tmp.93 :data;
-        symbol [ CoreTemp %tmp.95 86 61 69 ];
-        %tmp.95 = getv %tmp.94 :CoreTemp;
-        %tmp.96 = add %tmp.91 %tmp.95;
-        invoke %tmp.89 %tmp.90(%tmp.96);
+        symbol [ $ %tmp.96 86 12 13 ];
+        %tmp.96 = getm $;
+        symbol [ dmsg %tmp.97 86 14 18 ];
+        %tmp.97 = getv function %tmp.96 :dmsg;
+        %tmp.98 = "computeCore, invalid temp ";
+        symbol [ mSensor %tmp.100 86 50 57 ];
+        %tmp.100 = getv ? :mSensor;
+        symbol [ data %tmp.101 86 58 62 ];
+        %tmp.101 = getv %tmp.100 :data;
+        symbol [ CoreTemp %tmp.102 86 63 71 ];
+        %tmp.102 = getv %tmp.101 :CoreTemp;
+        %tmp.103 = add %tmp.98 %tmp.102;
+        invoke %tmp.96 %tmp.97(%tmp.103);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 87 12 ]
         ret ?;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_80_69_88_8_stop:
@@ -378,92 +391,92 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_80_69_88
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_80_8_88_8_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 93 8 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_93_8_96_8_if_stmt:
-        %tmp.97 = self;
-        symbol [ isDatafieldFrozen %tmp.98 93 13 30 ];
-        %tmp.98 = getv function %tmp.97 :isDatafieldFrozen;
-        %tmp.99 = invoke %tmp.97 %tmp.98();
-        bf %tmp.99 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_93_8_96_8_if_end;
+        %tmp.104 = self;
+        symbol [ isDatafieldFrozen %tmp.105 93 13 30 ];
+        %tmp.105 = getv function %tmp.104 :isDatafieldFrozen;
+        %tmp.106 = invoke %tmp.104 %tmp.105();
+        bf %tmp.106 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_93_8_96_8_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_93_8_96_8_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_93_34_96_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 95 12 ]
-        %tmp.100 = self;
-        symbol [ dataFieldReset %tmp.101 95 12 26 ];
-        %tmp.101 = getv function %tmp.100 :dataFieldReset;
-        %tmp.102 = false;
-        invoke %tmp.100 %tmp.101(%tmp.102);
+        %tmp.107 = self;
+        symbol [ dataFieldReset %tmp.108 95 12 26 ];
+        %tmp.108 = getv function %tmp.107 :dataFieldReset;
+        %tmp.109 = false;
+        invoke %tmp.107 %tmp.108(%tmp.109);
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_93_34_96_8_stop:
         goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_93_8_96_8_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_93_8_96_8_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 97 8 ]
-        symbol [ mSensor %tmp.104 97 26 33 ];
-        %tmp.104 = getv ? :mSensor;
-        symbol [ data %tmp.105 97 34 38 ];
-        %tmp.105 = getv %tmp.104 :data;
-        symbol [ CoreTemp %tmp.106 97 39 47 ];
-        %tmp.106 = getv %tmp.105 :CoreTemp;
+        symbol [ mSensor %tmp.111 97 26 33 ];
+        %tmp.111 = getv ? :mSensor;
+        symbol [ data %tmp.112 97 34 38 ];
+        %tmp.112 = getv %tmp.111 :data;
+        symbol [ CoreTemp %tmp.113 97 39 47 ];
+        %tmp.113 = getv %tmp.112 :CoreTemp;
         symbol [ coreTemperature ? 97 8 23 ];
-        putv self :coreTemperature %tmp.106;
+        putv self :coreTemperature %tmp.113;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 98 8 ]
-        symbol [ mSensor %tmp.108 98 26 33 ];
-        %tmp.108 = getv ? :mSensor;
-        symbol [ data %tmp.109 98 34 38 ];
-        %tmp.109 = getv %tmp.108 :data;
-        symbol [ SkinTemp %tmp.110 98 39 47 ];
-        %tmp.110 = getv %tmp.109 :SkinTemp;
+        symbol [ mSensor %tmp.115 98 26 33 ];
+        %tmp.115 = getv ? :mSensor;
+        symbol [ data %tmp.116 98 34 38 ];
+        %tmp.116 = getv %tmp.115 :data;
+        symbol [ SkinTemp %tmp.117 98 39 47 ];
+        %tmp.117 = getv %tmp.116 :SkinTemp;
         symbol [ skinTemperature ? 98 8 23 ];
-        putv self :skinTemperature %tmp.110;
+        putv self :skinTemperature %tmp.117;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 99 8 ]
-        symbol [ mSensor %tmp.112 99 26 33 ];
-        %tmp.112 = getv ? :mSensor;
-        symbol [ data %tmp.113 99 34 38 ];
-        %tmp.113 = getv %tmp.112 :data;
-        symbol [ HeatStrainIndex %tmp.114 99 39 54 ];
-        %tmp.114 = getv %tmp.113 :HeatStrainIndex;
+        symbol [ mSensor %tmp.119 99 26 33 ];
+        %tmp.119 = getv ? :mSensor;
+        symbol [ data %tmp.120 99 34 38 ];
+        %tmp.120 = getv %tmp.119 :data;
+        symbol [ HeatStrainIndex %tmp.121 99 39 54 ];
+        %tmp.121 = getv %tmp.120 :HeatStrainIndex;
         symbol [ heatStrainIndex ? 99 8 23 ];
-        putv self :heatStrainIndex %tmp.114;
+        putv self :heatStrainIndex %tmp.121;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 101 8 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_101_8_105_8_if_stmt:
-        symbol [ heatStrainIndex %tmp.116 101 11 26 ];
-        %tmp.116 = getv ? :heatStrainIndex;
-        %tmp.117 = 0.1;
-        %tmp.118 = lt %tmp.116 %tmp.117;
-        bf %tmp.118 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_101_8_105_8_if_else_false;
+        symbol [ heatStrainIndex %tmp.123 101 11 26 ];
+        %tmp.123 = getv ? :heatStrainIndex;
+        %tmp.124 = 0.1;
+        %tmp.125 = lt %tmp.123 %tmp.124;
+        bf %tmp.125 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_101_8_105_8_if_else_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_101_8_105_8_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_101_34_103_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 102 12 ]
-        symbol [ coreTemperature %tmp.120 102 28 43 ];
-        %tmp.120 = getv ? :coreTemperature;
+        symbol [ coreTemperature %tmp.127 102 28 43 ];
+        %tmp.127 = getv ? :coreTemperature;
         symbol [ heatIndicator ? 102 12 25 ];
-        putv self :heatIndicator %tmp.120;
+        putv self :heatIndicator %tmp.127;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_101_34_103_8_stop:
         goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_101_8_105_8_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_101_8_105_8_if_else_false:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_103_15_105_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 104 12 ]
-        symbol [ heatStrainIndex %tmp.122 104 28 43 ];
-        %tmp.122 = getv ? :heatStrainIndex;
+        symbol [ heatStrainIndex %tmp.129 104 28 43 ];
+        %tmp.129 = getv ? :heatStrainIndex;
         symbol [ heatIndicator ? 104 12 25 ];
-        putv self :heatIndicator %tmp.122;
+        putv self :heatIndicator %tmp.129;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_103_15_105_8_stop:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_101_8_105_8_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 115 8 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_115_8_117_8_if_stmt:
-        symbol [ mFitContributor %tmp.124 115 13 28 ];
-        %tmp.124 = getv ? :mFitContributor;
-        %tmp.125 = null;
-        %tmp.126 = ne %tmp.124 %tmp.125;
-        bf %tmp.126 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_115_8_117_8_if_end;
+        symbol [ mFitContributor %tmp.131 115 13 28 ];
+        %tmp.131 = getv ? :mFitContributor;
+        %tmp.132 = null;
+        %tmp.133 = ne %tmp.131 %tmp.132;
+        bf %tmp.133 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_115_8_117_8_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_115_8_117_8_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_115_39_117_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 116 12 ]
-        symbol [ mFitContributor %tmp.128 116 12 27 ];
-        %tmp.128 = getv ? :mFitContributor;
-        %tmp.129 = as %tmp.128 { (!Null) };
-        symbol [ compute %tmp.130 116 28 35 ];
-        %tmp.130 = getv function %tmp.129 :compute;
-        symbol [ mSensor %tmp.132 116 36 43 ];
-        %tmp.132 = getv ? :mSensor;
-        invoke %tmp.129 %tmp.130(%tmp.132);
+        symbol [ mFitContributor %tmp.135 116 12 27 ];
+        %tmp.135 = getv ? :mFitContributor;
+        %tmp.136 = as %tmp.135 { (!Null) };
+        symbol [ compute %tmp.137 116 28 35 ];
+        %tmp.137 = getv function %tmp.136 :compute;
+        symbol [ mSensor %tmp.139 116 36 43 ];
+        %tmp.139 = getv ? :mSensor;
+        invoke %tmp.136 %tmp.137(%tmp.139);
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_115_39_117_8_stop:
         goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_115_8_117_8_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_115_8_117_8_if_end:
@@ -546,55 +559,41 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_124_33_1
     [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc"; @line = 139; @symbol_functiondef = [dataFieldReset,139,13,27]; @symbol_param<0> = [hardReset,139,29,38]; ]
     function dataFieldReset(hardReset) {
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_139_41_175_4_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 143 8 ]
-        %tmp.1 = self;
-        symbol [ emsg %tmp.2 143 8 12 ];
-        %tmp.2 = getv function %tmp.1 :emsg;
-        %tmp.3 = "core dataFieldReset hard:";
-        %tmp.4 = lgetv %hardReset;
-        symbol [ hardReset %tmp.4 143 43 52 ];
-        %tmp.5 = add %tmp.3 %tmp.4;
-        invoke %tmp.1 %tmp.2(%tmp.5);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 144 8 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_144_8_152_8_if_stmt:
-        symbol [ mSensor %tmp.7 144 13 20 ];
-        %tmp.7 = getv ? :mSensor;
-        %tmp.8 = null;
-        %tmp.9 = ne %tmp.7 %tmp.8;
-        bf %tmp.9 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_144_8_152_8_if_end;
+        symbol [ mSensor %tmp.2 144 13 20 ];
+        %tmp.2 = getv ? :mSensor;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_144_8_152_8_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_144_8_152_8_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_144_31_152_8_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 145 12 ]
-        %tmp.10 = self;
-        symbol [ emsg %tmp.11 145 12 16 ];
-        %tmp.11 = getv function %tmp.10 :emsg;
-        %tmp.12 = "core dataFieldReset close sensor";
-        invoke %tmp.10 %tmp.11(%tmp.12);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 146 12 ]
-        symbol [ mSensor %tmp.14 146 12 19 ];
-        %tmp.14 = getv ? :mSensor;
-        symbol [ close %tmp.15 146 20 25 ];
-        %tmp.15 = getv function %tmp.14 :close;
-        invoke %tmp.14 %tmp.15();
+        symbol [ mSensor %tmp.6 146 12 19 ];
+        %tmp.6 = getv ? :mSensor;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ close %tmp.8 146 20 25 ];
+        %tmp.8 = getv function %tmp.7 :close;
+        invoke %tmp.7 %tmp.8();
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 148 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_148_12_151_12_if_stmt:
-        %tmp.16 = lgetv %hardReset;
-        symbol [ hardReset %tmp.16 148 17 26 ];
-        %tmp.17 = true;
-        %tmp.18 = eq %tmp.16 %tmp.17;
-        bf %tmp.18 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_148_12_151_12_if_end;
+        %tmp.9 = lgetv %hardReset;
+        symbol [ hardReset %tmp.9 148 17 26 ];
+        %tmp.10 = true;
+        %tmp.11 = eq %tmp.9 %tmp.10;
+        bf %tmp.11 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_148_12_151_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_148_12_151_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_148_37_151_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 149 16 ]
-        symbol [ mSensor %tmp.20 149 16 23 ];
-        %tmp.20 = getv ? :mSensor;
-        symbol [ release %tmp.21 149 24 31 ];
-        %tmp.21 = getv function %tmp.20 :release;
-        invoke %tmp.20 %tmp.21();
+        symbol [ mSensor %tmp.13 149 16 23 ];
+        %tmp.13 = getv ? :mSensor;
+        symbol [ release %tmp.14 149 24 31 ];
+        %tmp.14 = getv function %tmp.13 :release;
+        invoke %tmp.13 %tmp.14();
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 150 16 ]
-        %tmp.22 = null;
+        %tmp.15 = null;
         symbol [ mSensor ? 150 16 23 ];
-        putv self :mSensor %tmp.22;
+        putv self :mSensor %tmp.15;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_148_37_151_12_stop:
         goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_148_12_151_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_148_12_151_12_if_end:
@@ -603,70 +602,64 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_144_31_1
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_144_8_152_8_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 154 8 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_154_8_164_8_if_stmt:
-        symbol [ mSensor %tmp.24 154 13 20 ];
-        %tmp.24 = getv ? :mSensor;
-        %tmp.25 = null;
-        %tmp.26 = eq %tmp.24 %tmp.25;
-        bf %tmp.26 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_154_8_164_8_if_end;
+        symbol [ mSensor %tmp.17 154 13 20 ];
+        %tmp.17 = getv ? :mSensor;
+        %tmp.18 = null;
+        %tmp.19 = eq %tmp.17 %tmp.18;
+        bf %tmp.19 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_154_8_164_8_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_154_8_164_8_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_154_31_164_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 155 12 ]
         try @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_beginTry @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_endTry @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_catch @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_finally;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_beginTry:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_16_159_12_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 157 16 ]
-        %tmp.27 = self;
-        symbol [ emsg %tmp.28 157 16 20 ];
-        %tmp.28 = getv function %tmp.27 :emsg;
-        %tmp.29 = "core dataFieldReset create sensor";
-        invoke %tmp.27 %tmp.28(%tmp.29);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 158 16 ]
-        symbol [ CoreSensor %tmp.33 158 30 40 ];
-        %tmp.33 = getv ? :CoreSensor;
-        %tmp.30 = newc %tmp.33 ();
+        symbol [ CoreSensor %tmp.23 158 30 40 ];
+        %tmp.23 = getv ? :CoreSensor;
+        %tmp.20 = newc %tmp.23 ();
         symbol [ mSensor ? 158 16 23 ];
-        putv self :mSensor %tmp.30;
+        putv self :mSensor %tmp.20;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_16_159_12_stop:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_endTry:
         jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_finally;
         goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_catch:
-        %tmp.34 = exception;
-        push %tmp.34;
+        %tmp.24 = exception;
+        push %tmp.24;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 159 14 ]
         [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_catch" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_159_14_163_12_end" ]
         %e.1 = local;
         symbol [ e %e.1 159 21 22 ];
-        %tmp.35 = dup %tmp.34;
-        lputv %e.1 %tmp.35;
+        %tmp.25 = dup %tmp.24;
+        lputv %e.1 %tmp.25;
         symbol [ e %e.1 159 21 22 ];
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_159_24_163_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 160 16 ]
-        symbol [ System %tmp.36 160 16 22 ];
-        %tmp.36 = getm $.Toybox.System;
-        symbol [ println %tmp.37 160 23 30 ];
-        %tmp.37 = getv function %tmp.36 :println;
-        %tmp.38 = lgetv %e.1;
-        symbol [ e %tmp.38 160 31 32 ];
-        symbol [ getErrorMessage %tmp.39 160 33 48 ];
-        %tmp.39 = getv function %tmp.38 :getErrorMessage;
-        %tmp.40 = invoke %tmp.38 %tmp.39();
-        invoke %tmp.36 %tmp.37(%tmp.40);
+        symbol [ System %tmp.26 160 16 22 ];
+        %tmp.26 = getm $.Toybox.System;
+        symbol [ println %tmp.27 160 23 30 ];
+        %tmp.27 = getv function %tmp.26 :println;
+        %tmp.28 = lgetv %e.1;
+        symbol [ e %tmp.28 160 31 32 ];
+        symbol [ getErrorMessage %tmp.29 160 33 48 ];
+        %tmp.29 = getv function %tmp.28 :getErrorMessage;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        invoke %tmp.26 %tmp.27(%tmp.30);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 161 16 ]
-        symbol [ System %tmp.41 161 16 22 ];
-        %tmp.41 = getm $.Toybox.System;
-        symbol [ println %tmp.42 161 23 30 ];
-        %tmp.42 = getv function %tmp.41 :println;
-        %tmp.43 = lgetv %e.1;
-        symbol [ e %tmp.43 161 31 32 ];
-        symbol [ printStackTrace %tmp.44 161 33 48 ];
-        %tmp.44 = getv function %tmp.43 :printStackTrace;
-        %tmp.45 = invoke %tmp.43 %tmp.44();
-        invoke %tmp.41 %tmp.42(%tmp.45);
+        symbol [ System %tmp.31 161 16 22 ];
+        %tmp.31 = getm $.Toybox.System;
+        symbol [ println %tmp.32 161 23 30 ];
+        %tmp.32 = getv function %tmp.31 :println;
+        %tmp.33 = lgetv %e.1;
+        symbol [ e %tmp.33 161 31 32 ];
+        symbol [ printStackTrace %tmp.34 161 33 48 ];
+        %tmp.34 = getv function %tmp.33 :printStackTrace;
+        %tmp.35 = invoke %tmp.33 %tmp.34();
+        invoke %tmp.31 %tmp.32(%tmp.35);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 162 16 ]
-        %tmp.46 = null;
+        %tmp.36 = null;
         symbol [ mSensor ? 162 16 23 ];
-        putv self :mSensor %tmp.46;
+        putv self :mSensor %tmp.36;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_159_24_163_12_stop:
         jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_finally;
         pop;
@@ -674,7 +667,7 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_159_24_1
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_159_14_163_12_end:
         try @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_catch @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_159_14_163_12_end @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_159_14_163_12_end @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_finally;
         jsr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_finally;
-        throw %tmp.34;
+        throw %tmp.24;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_finally:
         jsrret;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_155_12_163_12_end:
@@ -683,49 +676,44 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_154_31_1
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_154_8_164_8_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 166 8 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_166_8_174_8_if_stmt:
-        symbol [ mSensor %tmp.48 166 13 20 ];
-        %tmp.48 = getv ? :mSensor;
-        %tmp.49 = null;
-        %tmp.50 = ne %tmp.48 %tmp.49;
-        bf %tmp.50 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_166_8_174_8_if_end;
+        symbol [ mSensor %tmp.38 166 13 20 ];
+        %tmp.38 = getv ? :mSensor;
+        %tmp.39 = null;
+        %tmp.40 = ne %tmp.38 %tmp.39;
+        bf %tmp.40 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_166_8_174_8_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_166_8_174_8_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_166_31_174_8_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 168 12 ]
-        %tmp.51 = self;
-        symbol [ emsg %tmp.52 168 12 16 ];
-        %tmp.52 = getv function %tmp.51 :emsg;
-        %tmp.53 = "dataFieldReset init";
-        invoke %tmp.51 %tmp.52(%tmp.53);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 169 12 ]
-        symbol [ mSensor %tmp.55 169 12 19 ];
-        %tmp.55 = getv ? :mSensor;
-        symbol [ initialize %tmp.56 169 20 30 ];
-        %tmp.56 = getv function %tmp.55 :initialize;
-        invoke %tmp.55 %tmp.56();
+        symbol [ mSensor %tmp.42 169 12 19 ];
+        %tmp.42 = getv ? :mSensor;
+        %tmp.43 = as %tmp.42 { (!Null) };
+        symbol [ initialize %tmp.44 169 20 30 ];
+        %tmp.44 = getv function %tmp.43 :initialize;
+        invoke %tmp.43 %tmp.44();
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 170 12 ]
-        symbol [ mSensor %tmp.58 170 12 19 ];
-        %tmp.58 = getv ? :mSensor;
-        symbol [ open %tmp.59 170 20 24 ];
-        %tmp.59 = getv function %tmp.58 :open;
-        invoke %tmp.58 %tmp.59();
+        symbol [ mSensor %tmp.46 170 12 19 ];
+        %tmp.46 = getv ? :mSensor;
+        symbol [ open %tmp.47 170 20 24 ];
+        %tmp.47 = getv function %tmp.46 :open;
+        invoke %tmp.46 %tmp.47();
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 171 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_171_12_173_12_if_stmt:
-        symbol [ mFitContributor %tmp.61 171 15 30 ];
-        %tmp.61 = getv ? :mFitContributor;
-        %tmp.62 = null;
-        %tmp.63 = ne %tmp.61 %tmp.62;
-        bf %tmp.63 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_171_12_173_12_if_end;
+        symbol [ mFitContributor %tmp.49 171 15 30 ];
+        %tmp.49 = getv ? :mFitContributor;
+        %tmp.50 = null;
+        %tmp.51 = ne %tmp.49 %tmp.50;
+        bf %tmp.51 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_171_12_173_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_171_12_173_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_171_40_173_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreField.mc" 172 16 ]
-        symbol [ mFitContributor %tmp.65 172 16 31 ];
-        %tmp.65 = getv ? :mFitContributor;
-        %tmp.66 = as %tmp.65 { (!Null) };
-        symbol [ initialize %tmp.67 172 32 42 ];
-        %tmp.67 = getv function %tmp.66 :initialize;
-        symbol [ DataField %tmp.69 172 43 52 ];
-        %tmp.69 = getv ? :DataField;
-        invoke %tmp.66 %tmp.67(%tmp.69);
+        symbol [ mFitContributor %tmp.53 172 16 31 ];
+        %tmp.53 = getv ? :mFitContributor;
+        %tmp.54 = as %tmp.53 { (!Null) };
+        symbol [ initialize %tmp.55 172 32 42 ];
+        %tmp.55 = getv function %tmp.54 :initialize;
+        symbol [ DataField %tmp.57 172 43 52 ];
+        %tmp.57 = getv ? :DataField;
+        invoke %tmp.54 %tmp.55(%tmp.57);
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_171_40_173_12_stop:
         goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_171_12_173_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreField_mc_171_12_173_12_if_end:

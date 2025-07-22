@@ -32,7 +32,7 @@
   }, {
     "key" : "run",
     "valueType" : "string",
-    "defaultValue" : "(36,34,7,4,15,18)(38,34,7,4,15,18)(33,34,7,4,15,18)(52,27,7,4,15,18)",
+    "defaultValue" : "(36,34,7,4,15,18)(38,34,7,4,15,18)(33,34,7,4,15,18)(52,51,7,4,15,18)",
     "configTitle" : "settings_run",
     "configPrompt" : null,
     "configType" : "alphaNumeric",
@@ -227,7 +227,7 @@
   }, {
     "key" : "UseCore",
     "valueType" : "boolean",
-    "defaultValue" : false,
+    "defaultValue" : true,
     "configTitle" : "UseCore",
     "configPrompt" : null,
     "configType" : "boolean",

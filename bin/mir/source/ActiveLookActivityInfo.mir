@@ -440,54 +440,85 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInf
             symbol [ pwr %pwr.1 129 16 19 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 130 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_12_134_12_if_stmt:
-            symbol [ strydSensor %tmp.6 130 15 26 ];
-            %tmp.6 = getv ? :strydSensor;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_15_130_139_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_15_130_84_begin:
+            symbol [ antplusBikePower %tmp.6 130 15 31 ];
+            %tmp.6 = getv ? :antplusBikePower;
             %tmp.7 = null;
             %tmp.8 = ne %tmp.6 %tmp.7;
             bf %tmp.8 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_12_134_12_if_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_12_134_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_36_132_12_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 131 16 ]
-            symbol [ strydSensor %tmp.10 131 22 33 ];
-            %tmp.10 = getv ? :strydSensor;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_43_130_84_true:
+            symbol [ antplusBikePower %tmp.10 130 43 59 ];
+            %tmp.10 = getv ? :antplusBikePower;
             %tmp.11 = as %tmp.10 { (!Null) };
-            symbol [ currentPower %tmp.12 131 34 46 ];
-            %tmp.12 = getv %tmp.11 :currentPower;
-            lputv %pwr.1 %tmp.12;
+            symbol [ getCalculatedPower %tmp.12 130 60 78 ];
+            %tmp.12 = getv function %tmp.11 :getCalculatedPower;
+            %tmp.13 = invoke %tmp.11 %tmp.12();
+            %tmp.14 = null;
+            %tmp.15 = ne %tmp.13 %tmp.14;
+            push %tmp.15;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_43_130_84_end:
+            %tmp.16 = phi [%tmp.8 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_15_130_84_begin] [%tmp.15 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_43_130_84_true] [%tmp.16 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_43_130_84_end];
+            bf %tmp.16 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_12_134_12_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_92_130_139_true:
+            symbol [ antplusBikePower %tmp.18 130 92 108 ];
+            %tmp.18 = getv ? :antplusBikePower;
+            symbol [ getCalculatedPower %tmp.19 130 109 127 ];
+            %tmp.19 = getv function %tmp.18 :getCalculatedPower;
+            %tmp.20 = invoke %tmp.18 %tmp.19();
+            symbol [ power %tmp.21 130 130 135 ];
+            %tmp.21 = getv %tmp.20 :power;
+            %tmp.22 = null;
+            %tmp.23 = ne %tmp.21 %tmp.22;
+            push %tmp.23;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_92_130_139_end:
+            %tmp.24 = phi [%tmp.16 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_15_130_139_begin] [%tmp.23 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_92_130_139_true] [%tmp.24 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_92_130_139_end];
+            bf %tmp.24 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_12_134_12_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_12_134_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_145_132_12_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 131 16 ]
+            symbol [ antplusBikePower %tmp.26 131 22 38 ];
+            %tmp.26 = getv ? :antplusBikePower;
+            symbol [ getCalculatedPower %tmp.27 131 39 57 ];
+            %tmp.27 = getv function %tmp.26 :getCalculatedPower;
+            %tmp.28 = invoke %tmp.26 %tmp.27();
+            symbol [ power %tmp.29 131 60 65 ];
+            %tmp.29 = getv %tmp.28 :power;
+            lputv %pwr.1 %tmp.29;
             symbol [ pwr %pwr.1 131 16 19 ];
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_36_132_12_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_145_132_12_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_12_134_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_12_134_12_if_false:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 132 19 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_19_134_12_if_stmt:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_23_132_70_begin:
-            %tmp.13 = lgetv %info;
-            symbol [ info %tmp.13 132 23 27 ];
-            %tmp.15 = const :currentPower;
-            symbol [ currentPower %tmp.15 132 33 45 const ];
-            %tmp.16 = canhazplz %tmp.13 %tmp.15;
-            bf %tmp.16 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_19_134_12_if_end;
+            %tmp.30 = lgetv %info;
+            symbol [ info %tmp.30 132 23 27 ];
+            %tmp.32 = const :currentPower;
+            symbol [ currentPower %tmp.32 132 33 45 const ];
+            %tmp.33 = canhazplz %tmp.30 %tmp.32;
+            bf %tmp.33 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_19_134_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_49_132_70_true:
-            %tmp.17 = lgetv %info;
-            symbol [ info %tmp.17 132 49 53 ];
-            %tmp.18 = as %tmp.17 { (interface { var currentPower; }) };
-            symbol [ currentPower %tmp.19 132 54 66 ];
-            %tmp.19 = getv %tmp.18 :currentPower;
-            %tmp.20 = null;
-            %tmp.21 = ne %tmp.19 %tmp.20;
-            push %tmp.21;
+            %tmp.34 = lgetv %info;
+            symbol [ info %tmp.34 132 49 53 ];
+            %tmp.35 = as %tmp.34 { (interface { var currentPower; }) };
+            symbol [ currentPower %tmp.36 132 54 66 ];
+            %tmp.36 = getv %tmp.35 :currentPower;
+            %tmp.37 = null;
+            %tmp.38 = ne %tmp.36 %tmp.37;
+            push %tmp.38;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_49_132_70_end:
-            %tmp.22 = phi [%tmp.16 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_23_132_70_begin] [%tmp.21 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_49_132_70_true] [%tmp.22 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_49_132_70_end];
-            bf %tmp.22 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_19_134_12_if_end;
+            %tmp.39 = phi [%tmp.33 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_23_132_70_begin] [%tmp.38 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_49_132_70_true] [%tmp.39 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_49_132_70_end];
+            bf %tmp.39 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_19_134_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_19_134_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_76_134_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 133 16 ]
-            %tmp.23 = lgetv %info;
-            symbol [ info %tmp.23 133 22 26 ];
-            %tmp.24 = as %tmp.23 { (interface { var currentPower; }) };
-            symbol [ currentPower %tmp.25 133 27 39 ];
-            %tmp.25 = getv %tmp.24 :currentPower;
-            lputv %pwr.1 %tmp.25;
+            %tmp.40 = lgetv %info;
+            symbol [ info %tmp.40 133 22 26 ];
+            %tmp.41 = as %tmp.40 { (interface { var currentPower; }) };
+            symbol [ currentPower %tmp.42 133 27 39 ];
+            %tmp.42 = getv %tmp.41 :currentPower;
+            lputv %pwr.1 %tmp.42;
             symbol [ pwr %pwr.1 133 16 19 ];
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_76_134_12_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_132_19_134_12_if_end;
@@ -495,50 +526,50 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInf
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_130_12_134_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 135 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_135_12_146_12_if_stmt:
-            %tmp.26 = lgetv %pwr.1;
-            symbol [ pwr %tmp.26 135 15 18 ];
-            %tmp.27 = null;
-            %tmp.28 = ne %tmp.26 %tmp.27;
-            bf %tmp.28 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_135_12_146_12_if_end;
+            %tmp.43 = lgetv %pwr.1;
+            symbol [ pwr %tmp.43 135 15 18 ];
+            %tmp.44 = null;
+            %tmp.45 = ne %tmp.43 %tmp.44;
+            bf %tmp.45 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_135_12_146_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_135_12_146_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_135_28_146_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 136 16 ]
-            symbol [ __pSamples %tmp.30 136 16 26 ];
-            %tmp.30 = getv ? :__pSamples;
-            symbol [ add %tmp.31 136 27 30 ];
-            %tmp.31 = getv function %tmp.30 :add;
-            %tmp.32 = lgetv %pwr.1;
-            symbol [ pwr %tmp.32 136 31 34 ];
-            %tmp.33 = as %tmp.32 { (!Null) };
-            invoke %tmp.30 %tmp.31(%tmp.33);
+            symbol [ __pSamples %tmp.47 136 16 26 ];
+            %tmp.47 = getv ? :__pSamples;
+            symbol [ add %tmp.48 136 27 30 ];
+            %tmp.48 = getv function %tmp.47 :add;
+            %tmp.49 = lgetv %pwr.1;
+            symbol [ pwr %tmp.49 136 31 34 ];
+            %tmp.50 = as %tmp.49 { (!Null) };
+            invoke %tmp.47 %tmp.48(%tmp.50);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 137 16 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_137_16_145_16_if_stmt:
-            symbol [ __pSamples %tmp.35 137 20 30 ];
-            %tmp.35 = getv ? :__pSamples;
-            symbol [ size %tmp.36 137 31 35 ];
-            %tmp.36 = getv function %tmp.35 :size;
-            %tmp.37 = invoke %tmp.35 %tmp.36();
-            %tmp.38 = 30;
-            %tmp.39 = gte %tmp.37 %tmp.38;
-            bf %tmp.39 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_137_16_145_16_if_end;
+            symbol [ __pSamples %tmp.52 137 20 30 ];
+            %tmp.52 = getv ? :__pSamples;
+            symbol [ size %tmp.53 137 31 35 ];
+            %tmp.53 = getv function %tmp.52 :size;
+            %tmp.54 = invoke %tmp.52 %tmp.53();
+            %tmp.55 = 30;
+            %tmp.56 = gte %tmp.54 %tmp.55;
+            bf %tmp.56 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_137_16_145_16_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_137_16_145_16_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_137_45_145_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 138 20 ]
-            symbol [ __pSamples %tmp.41 138 33 43 ];
-            %tmp.41 = getv ? :__pSamples;
-            symbol [ slice %tmp.42 138 44 49 ];
-            %tmp.42 = getv function %tmp.41 :slice;
-            %tmp.43 = -30;
-            %tmp.44 = null;
-            %tmp.45 = invoke %tmp.41 %tmp.42(%tmp.43, %tmp.44);
+            symbol [ __pSamples %tmp.58 138 33 43 ];
+            %tmp.58 = getv ? :__pSamples;
+            symbol [ slice %tmp.59 138 44 49 ];
+            %tmp.59 = getv function %tmp.58 :slice;
+            %tmp.60 = -30;
+            %tmp.61 = null;
+            %tmp.62 = invoke %tmp.58 %tmp.59(%tmp.60, %tmp.61);
             symbol [ __pSamples ? 138 20 30 ];
-            putv self :__pSamples %tmp.45;
+            putv self :__pSamples %tmp.62;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 139 20 ]
             [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_137_45_145_16_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_137_45_145_16_stop" ]
             %tmp.2 = local;
             symbol [ tmp %tmp.2 139 24 27 ];
-            %tmp.46 = 0;
-            lputv %tmp.2 %tmp.46;
+            %tmp.63 = 0;
+            lputv %tmp.2 %tmp.63;
             symbol [ tmp %tmp.2 139 24 27 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 140 20 ]
             for @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_20_142_20_for_test @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_20_142_20_for_incr @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_20_142_20_for_end;
@@ -546,60 +577,60 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInf
             [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_20_142_20_for_begin" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_20_142_20_for_end" ]
             %i.3 = local;
             symbol [ i %i.3 140 28 29 ];
-            %tmp.47 = 0;
-            lputv %i.3 %tmp.47;
+            %tmp.64 = 0;
+            lputv %i.3 %tmp.64;
             symbol [ i %i.3 140 28 29 ];
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_20_142_20_for_test:
-            %tmp.48 = lgetv %i.3;
-            symbol [ i %tmp.48 140 35 36 ];
-            %tmp.49 = 30;
-            %tmp.50 = lt %tmp.48 %tmp.49;
-            bf %tmp.50 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_20_142_20_for_end;
+            %tmp.65 = lgetv %i.3;
+            symbol [ i %tmp.65 140 35 36 ];
+            %tmp.66 = 30;
+            %tmp.67 = lt %tmp.65 %tmp.66;
+            bf %tmp.67 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_20_142_20_for_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_20_142_20_for_begin:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_48_142_20_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 141 24 ]
-            %tmp.51 = lgetv %tmp.2;
-            symbol [ tmp %tmp.51 141 24 27 ];
-            symbol [ __pSamples %tmp.53 141 31 41 ];
-            %tmp.53 = getv ? :__pSamples;
-            %tmp.54 = lgetv %i.3;
-            symbol [ i %tmp.54 141 42 43 ];
-            %tmp.55 = agetv %tmp.53 %tmp.54;
-            %tmp.56 = add %tmp.51 %tmp.55;
-            lputv %tmp.2 %tmp.56;
+            %tmp.68 = lgetv %tmp.2;
+            symbol [ tmp %tmp.68 141 24 27 ];
+            symbol [ __pSamples %tmp.70 141 31 41 ];
+            %tmp.70 = getv ? :__pSamples;
+            %tmp.71 = lgetv %i.3;
+            symbol [ i %tmp.71 141 42 43 ];
+            %tmp.72 = agetv %tmp.70 %tmp.71;
+            %tmp.73 = add %tmp.68 %tmp.72;
+            lputv %tmp.2 %tmp.73;
             symbol [ tmp %tmp.2 141 24 27 ];
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_48_142_20_stop:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_20_142_20_for_incr:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 140 ]
-            %tmp.59 = lgetv %i.3;
-            symbol [ i %tmp.59 140 43 44 ];
-            %tmp.60 = add %tmp.59 1;
-            lputv %i.3 %tmp.60;
+            %tmp.76 = lgetv %i.3;
+            symbol [ i %tmp.76 140 43 44 ];
+            %tmp.77 = add %tmp.76 1;
+            lputv %i.3 %tmp.77;
             symbol [ i %i.3 140 43 44 ];
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_20_142_20_for_test;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_140_20_142_20_for_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 143 20 ]
-            symbol [ __pAccu %tmp.61 143 20 27 ];
-            %tmp.61 = getv self :__pAccu;
-            symbol [ Math %tmp.62 143 31 35 ];
-            %tmp.62 = getm $.Toybox.Math;
-            symbol [ pow %tmp.63 143 36 39 ];
-            %tmp.63 = getv function %tmp.62 :pow;
-            %tmp.64 = lgetv %tmp.2;
-            symbol [ tmp %tmp.64 143 40 43 ];
-            %tmp.65 = 30.0;
-            %tmp.66 = div %tmp.64 %tmp.65;
-            %tmp.67 = 4;
-            %tmp.68 = invoke %tmp.62 %tmp.63(%tmp.66, %tmp.67);
-            %tmp.69 = add %tmp.61 %tmp.68;
+            symbol [ __pAccu %tmp.78 143 20 27 ];
+            %tmp.78 = getv self :__pAccu;
+            symbol [ Math %tmp.79 143 31 35 ];
+            %tmp.79 = getm $.Toybox.Math;
+            symbol [ pow %tmp.80 143 36 39 ];
+            %tmp.80 = getv function %tmp.79 :pow;
+            %tmp.81 = lgetv %tmp.2;
+            symbol [ tmp %tmp.81 143 40 43 ];
+            %tmp.82 = 30.0;
+            %tmp.83 = div %tmp.81 %tmp.82;
+            %tmp.84 = 4;
+            %tmp.85 = invoke %tmp.79 %tmp.80(%tmp.83, %tmp.84);
+            %tmp.86 = add %tmp.78 %tmp.85;
             symbol [ __pAccu ? 143 20 27 ];
-            putv self :__pAccu dup %tmp.69;
+            putv self :__pAccu dup %tmp.86;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 144 20 ]
-            symbol [ __pAccuNb %tmp.72 144 20 29 ];
-            %tmp.72 = getv ? :__pAccuNb;
-            %tmp.73 = add %tmp.72 1;
+            symbol [ __pAccuNb %tmp.89 144 20 29 ];
+            %tmp.89 = getv ? :__pAccuNb;
+            %tmp.90 = add %tmp.89 1;
             symbol [ __pAccuNb ? 144 20 29 ];
-            putv self :__pAccuNb dup %tmp.73;
+            putv self :__pAccuNb dup %tmp.90;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_137_45_145_16_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_137_16_145_16_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_137_16_145_16_if_end:
@@ -609,59 +640,59 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInf
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 148 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_12_153_12_if_stmt:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_16_148_61_begin:
-            %tmp.74 = lgetv %info;
-            symbol [ info %tmp.74 148 16 20 ];
-            %tmp.76 = const :totalAscent;
-            symbol [ totalAscent %tmp.76 148 26 37 const ];
-            %tmp.77 = canhazplz %tmp.74 %tmp.76;
-            bf %tmp.77 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_12_153_12_if_end;
+            %tmp.91 = lgetv %info;
+            symbol [ info %tmp.91 148 16 20 ];
+            %tmp.93 = const :totalAscent;
+            symbol [ totalAscent %tmp.93 148 26 37 const ];
+            %tmp.94 = canhazplz %tmp.91 %tmp.93;
+            bf %tmp.94 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_12_153_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_41_148_61_true:
-            %tmp.78 = lgetv %info;
-            symbol [ info %tmp.78 148 41 45 ];
-            %tmp.79 = as %tmp.78 { (interface { var totalAscent; }) };
-            symbol [ totalAscent %tmp.80 148 46 57 ];
-            %tmp.80 = getv %tmp.79 :totalAscent;
-            %tmp.81 = null;
-            %tmp.82 = ne %tmp.80 %tmp.81;
-            push %tmp.82;
+            %tmp.95 = lgetv %info;
+            symbol [ info %tmp.95 148 41 45 ];
+            %tmp.96 = as %tmp.95 { (interface { var totalAscent; }) };
+            symbol [ totalAscent %tmp.97 148 46 57 ];
+            %tmp.97 = getv %tmp.96 :totalAscent;
+            %tmp.98 = null;
+            %tmp.99 = ne %tmp.97 %tmp.98;
+            push %tmp.99;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_41_148_61_end:
-            %tmp.83 = phi [%tmp.77 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_16_148_61_begin] [%tmp.82 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_41_148_61_true] [%tmp.83 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_41_148_61_end];
-            bf %tmp.83 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_12_153_12_if_end;
+            %tmp.100 = phi [%tmp.94 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_16_148_61_begin] [%tmp.99 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_41_148_61_true] [%tmp.100 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_41_148_61_end];
+            bf %tmp.100 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_12_153_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_12_153_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_148_67_153_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 149 16 ]
-            symbol [ __asSamples %tmp.85 149 16 27 ];
-            %tmp.85 = getv ? :__asSamples;
-            symbol [ add %tmp.86 149 28 31 ];
-            %tmp.86 = getv function %tmp.85 :add;
-            %tmp.87 = lgetv %info;
-            symbol [ info %tmp.87 149 32 36 ];
-            %tmp.88 = as %tmp.87 { (interface { var totalAscent; }) };
-            symbol [ totalAscent %tmp.89 149 37 48 ];
-            %tmp.89 = getv %tmp.88 :totalAscent;
-            invoke %tmp.85 %tmp.86(%tmp.89);
+            symbol [ __asSamples %tmp.102 149 16 27 ];
+            %tmp.102 = getv ? :__asSamples;
+            symbol [ add %tmp.103 149 28 31 ];
+            %tmp.103 = getv function %tmp.102 :add;
+            %tmp.104 = lgetv %info;
+            symbol [ info %tmp.104 149 32 36 ];
+            %tmp.105 = as %tmp.104 { (interface { var totalAscent; }) };
+            symbol [ totalAscent %tmp.106 149 37 48 ];
+            %tmp.106 = getv %tmp.105 :totalAscent;
+            invoke %tmp.102 %tmp.103(%tmp.106);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 150 16 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_150_16_152_16_if_stmt:
-            symbol [ __asSamples %tmp.91 150 20 31 ];
-            %tmp.91 = getv ? :__asSamples;
-            symbol [ size %tmp.92 150 32 36 ];
-            %tmp.92 = getv function %tmp.91 :size;
-            %tmp.93 = invoke %tmp.91 %tmp.92();
-            %tmp.94 = 20;
-            %tmp.95 = gt %tmp.93 %tmp.94;
-            bf %tmp.95 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_150_16_152_16_if_end;
+            symbol [ __asSamples %tmp.108 150 20 31 ];
+            %tmp.108 = getv ? :__asSamples;
+            symbol [ size %tmp.109 150 32 36 ];
+            %tmp.109 = getv function %tmp.108 :size;
+            %tmp.110 = invoke %tmp.108 %tmp.109();
+            %tmp.111 = 20;
+            %tmp.112 = gt %tmp.110 %tmp.111;
+            bf %tmp.112 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_150_16_152_16_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_150_16_152_16_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_150_45_152_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 151 20 ]
-            symbol [ __asSamples %tmp.97 151 34 45 ];
-            %tmp.97 = getv ? :__asSamples;
-            symbol [ slice %tmp.98 151 46 51 ];
-            %tmp.98 = getv function %tmp.97 :slice;
-            %tmp.99 = -20;
-            %tmp.100 = null;
-            %tmp.101 = invoke %tmp.97 %tmp.98(%tmp.99, %tmp.100);
+            symbol [ __asSamples %tmp.114 151 34 45 ];
+            %tmp.114 = getv ? :__asSamples;
+            symbol [ slice %tmp.115 151 46 51 ];
+            %tmp.115 = getv function %tmp.114 :slice;
+            %tmp.116 = -20;
+            %tmp.117 = null;
+            %tmp.118 = invoke %tmp.114 %tmp.115(%tmp.116, %tmp.117);
             symbol [ __asSamples ? 151 20 31 ];
-            putv self :__asSamples %tmp.101;
+            putv self :__asSamples %tmp.118;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_150_45_152_16_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_150_16_152_16_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_150_16_152_16_if_end:
@@ -1301,277 +1332,308 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInf
             symbol [ pwr %pwr.5 238 16 19 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 239 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_12_250_12_if_stmt:
-            symbol [ strydSensor %tmp.184 239 15 26 ];
-            %tmp.184 = getv ? :strydSensor;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_15_239_139_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_15_239_84_begin:
+            symbol [ antplusBikePower %tmp.184 239 15 31 ];
+            %tmp.184 = getv ? :antplusBikePower;
             %tmp.185 = null;
             %tmp.186 = ne %tmp.184 %tmp.185;
             bf %tmp.186 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_12_250_12_if_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_12_250_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_36_248_12_start:
-[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 240 16 ]
-            symbol [ strydSensor %tmp.188 240 22 33 ];
-            %tmp.188 = getv ? :strydSensor;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_43_239_84_true:
+            symbol [ antplusBikePower %tmp.188 239 43 59 ];
+            %tmp.188 = getv ? :antplusBikePower;
             %tmp.189 = as %tmp.188 { (!Null) };
-            symbol [ currentPower %tmp.190 240 34 46 ];
-            %tmp.190 = getv %tmp.189 :currentPower;
-            lputv %pwr.5 %tmp.190;
+            symbol [ getCalculatedPower %tmp.190 239 60 78 ];
+            %tmp.190 = getv function %tmp.189 :getCalculatedPower;
+            %tmp.191 = invoke %tmp.189 %tmp.190();
+            %tmp.192 = null;
+            %tmp.193 = ne %tmp.191 %tmp.192;
+            push %tmp.193;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_43_239_84_end:
+            %tmp.194 = phi [%tmp.186 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_15_239_84_begin] [%tmp.193 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_43_239_84_true] [%tmp.194 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_43_239_84_end];
+            bf %tmp.194 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_12_250_12_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_92_239_139_true:
+            symbol [ antplusBikePower %tmp.196 239 92 108 ];
+            %tmp.196 = getv ? :antplusBikePower;
+            symbol [ getCalculatedPower %tmp.197 239 109 127 ];
+            %tmp.197 = getv function %tmp.196 :getCalculatedPower;
+            %tmp.198 = invoke %tmp.196 %tmp.197();
+            symbol [ power %tmp.199 239 130 135 ];
+            %tmp.199 = getv %tmp.198 :power;
+            %tmp.200 = null;
+            %tmp.201 = ne %tmp.199 %tmp.200;
+            push %tmp.201;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_92_239_139_end:
+            %tmp.202 = phi [%tmp.194 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_15_239_139_begin] [%tmp.201 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_92_239_139_true] [%tmp.202 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_92_239_139_end];
+            bf %tmp.202 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_12_250_12_if_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_12_250_12_if_true:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_145_248_12_start:
+[ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 240 16 ]
+            symbol [ antplusBikePower %tmp.204 240 22 38 ];
+            %tmp.204 = getv ? :antplusBikePower;
+            symbol [ getCalculatedPower %tmp.205 240 39 57 ];
+            %tmp.205 = getv function %tmp.204 :getCalculatedPower;
+            %tmp.206 = invoke %tmp.204 %tmp.205();
+            symbol [ power %tmp.207 240 60 65 ];
+            %tmp.207 = getv %tmp.206 :power;
+            lputv %pwr.5 %tmp.207;
             symbol [ pwr %pwr.5 240 16 19 ];
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_36_248_12_stop:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_145_248_12_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_12_250_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_12_250_12_if_false:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 248 19 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_19_250_12_if_stmt:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_23_248_70_begin:
-            %tmp.191 = lgetv %info;
-            symbol [ info %tmp.191 248 23 27 ];
-            %tmp.193 = const :currentPower;
-            symbol [ currentPower %tmp.193 248 33 45 const ];
-            %tmp.194 = canhazplz %tmp.191 %tmp.193;
-            bf %tmp.194 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_19_250_12_if_end;
+            %tmp.208 = lgetv %info;
+            symbol [ info %tmp.208 248 23 27 ];
+            %tmp.210 = const :currentPower;
+            symbol [ currentPower %tmp.210 248 33 45 const ];
+            %tmp.211 = canhazplz %tmp.208 %tmp.210;
+            bf %tmp.211 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_19_250_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_49_248_70_true:
-            %tmp.195 = lgetv %info;
-            symbol [ info %tmp.195 248 49 53 ];
-            %tmp.196 = as %tmp.195 { (interface { var currentPower; }) };
-            symbol [ currentPower %tmp.197 248 54 66 ];
-            %tmp.197 = getv %tmp.196 :currentPower;
-            %tmp.198 = null;
-            %tmp.199 = ne %tmp.197 %tmp.198;
-            push %tmp.199;
+            %tmp.212 = lgetv %info;
+            symbol [ info %tmp.212 248 49 53 ];
+            %tmp.213 = as %tmp.212 { (interface { var currentPower; }) };
+            symbol [ currentPower %tmp.214 248 54 66 ];
+            %tmp.214 = getv %tmp.213 :currentPower;
+            %tmp.215 = null;
+            %tmp.216 = ne %tmp.214 %tmp.215;
+            push %tmp.216;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_49_248_70_end:
-            %tmp.200 = phi [%tmp.194 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_23_248_70_begin] [%tmp.199 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_49_248_70_true] [%tmp.200 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_49_248_70_end];
-            bf %tmp.200 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_19_250_12_if_end;
+            %tmp.217 = phi [%tmp.211 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_23_248_70_begin] [%tmp.216 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_49_248_70_true] [%tmp.217 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_49_248_70_end];
+            bf %tmp.217 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_19_250_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_19_250_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_76_250_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 249 16 ]
-            %tmp.201 = lgetv %info;
-            symbol [ info %tmp.201 249 22 26 ];
-            %tmp.202 = as %tmp.201 { (interface { var currentPower; }) };
-            symbol [ currentPower %tmp.203 249 27 39 ];
-            %tmp.203 = getv %tmp.202 :currentPower;
-            lputv %pwr.5 %tmp.203;
+            %tmp.218 = lgetv %info;
+            symbol [ info %tmp.218 249 22 26 ];
+            %tmp.219 = as %tmp.218 { (interface { var currentPower; }) };
+            symbol [ currentPower %tmp.220 249 27 39 ];
+            %tmp.220 = getv %tmp.219 :currentPower;
+            lputv %pwr.5 %tmp.220;
             symbol [ pwr %pwr.5 249 16 19 ];
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_76_250_12_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_19_250_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_248_19_250_12_if_end:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_239_12_250_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 251 12 ]
-            %tmp.204 = lgetv %pwr.5;
-            symbol [ pwr %tmp.204 251 21 24 ];
+            %tmp.221 = lgetv %pwr.5;
+            symbol [ pwr %tmp.221 251 21 24 ];
             symbol [ ourPwr ? 251 12 18 ];
-            putv self :ourPwr %tmp.204;
+            putv self :ourPwr %tmp.221;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 252 12 ]
             [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_193_57_310_8_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_193_57_310_8_stop" ]
             %pwrValid.6 = local;
             symbol [ pwrValid %pwrValid.6 252 16 24 ];
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_27_252_64_begin:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_27_252_49_begin:
-            %tmp.205 = lgetv %pwr.5;
-            symbol [ pwr %tmp.205 252 27 30 ];
-            %tmp.206 = null;
-            %tmp.207 = ne %tmp.205 %tmp.206;
-            %tmp.208 = dup %tmp.207;
-            bf %tmp.208 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_42_252_49_end;
+            %tmp.222 = lgetv %pwr.5;
+            symbol [ pwr %tmp.222 252 27 30 ];
+            %tmp.223 = null;
+            %tmp.224 = ne %tmp.222 %tmp.223;
+            %tmp.225 = dup %tmp.224;
+            bf %tmp.225 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_42_252_49_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_42_252_49_true:
-            %tmp.209 = lgetv %pwr.5;
-            symbol [ pwr %tmp.209 252 42 45 ];
-            %tmp.210 = as %tmp.209 { (!Null) };
-            %tmp.211 = false;
-            %tmp.212 = ne %tmp.210 %tmp.211;
-            %tmp.213 = and %tmp.207 %tmp.212;
-            push %tmp.213;
+            %tmp.226 = lgetv %pwr.5;
+            symbol [ pwr %tmp.226 252 42 45 ];
+            %tmp.227 = as %tmp.226 { (!Null) };
+            %tmp.228 = false;
+            %tmp.229 = ne %tmp.227 %tmp.228;
+            %tmp.230 = and %tmp.224 %tmp.229;
+            push %tmp.230;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_42_252_49_end:
-            %tmp.214 = phi [%tmp.208 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_27_252_49_begin] [%tmp.213 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_42_252_49_true] [%tmp.214 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_42_252_49_end];
-            %tmp.215 = dup %tmp.214;
-            bf %tmp.215 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_58_252_64_end;
+            %tmp.231 = phi [%tmp.225 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_27_252_49_begin] [%tmp.230 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_42_252_49_true] [%tmp.231 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_42_252_49_end];
+            %tmp.232 = dup %tmp.231;
+            bf %tmp.232 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_58_252_64_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_58_252_64_true:
-            %tmp.216 = lgetv %pwr.5;
-            symbol [ pwr %tmp.216 252 58 61 ];
-            %tmp.217 = as %tmp.216 { (!Null) };
-            %tmp.218 = 0.0;
-            %tmp.219 = gt %tmp.217 %tmp.218;
-            %tmp.220 = and %tmp.214 %tmp.219;
-            push %tmp.220;
+            %tmp.233 = lgetv %pwr.5;
+            symbol [ pwr %tmp.233 252 58 61 ];
+            %tmp.234 = as %tmp.233 { (!Null) };
+            %tmp.235 = 0.0;
+            %tmp.236 = gt %tmp.234 %tmp.235;
+            %tmp.237 = and %tmp.231 %tmp.236;
+            push %tmp.237;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_58_252_64_end:
-            %tmp.221 = phi [%tmp.215 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_27_252_64_begin] [%tmp.220 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_58_252_64_true] [%tmp.221 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_58_252_64_end];
-            lputv %pwrValid.6 %tmp.221;
+            %tmp.238 = phi [%tmp.232 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_27_252_64_begin] [%tmp.237 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_58_252_64_true] [%tmp.238 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_252_58_252_64_end];
+            lputv %pwrValid.6 %tmp.238;
             symbol [ pwrValid %pwrValid.6 252 16 24 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 253 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_253_12_255_12_if_stmt:
-            %tmp.222 = lgetv %pwrValid.6;
-            symbol [ pwrValid %tmp.222 253 15 23 ];
-            bf %tmp.222 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_253_12_255_12_if_end;
+            %tmp.239 = lgetv %pwrValid.6;
+            symbol [ pwrValid %tmp.239 253 15 23 ];
+            bf %tmp.239 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_253_12_255_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_253_12_255_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_253_24_255_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 254 17 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_begin:
-            symbol [ maxPower %tmp.224 254 28 36 ];
-            %tmp.224 = getv ? :maxPower;
-            %tmp.225 = null;
-            %tmp.226 = eq %tmp.224 %tmp.225;
-            bf %tmp.226 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_false;
+            symbol [ maxPower %tmp.241 254 28 36 ];
+            %tmp.241 = getv ? :maxPower;
+            %tmp.242 = null;
+            %tmp.243 = eq %tmp.241 %tmp.242;
+            bf %tmp.243 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_true:
-            %tmp.227 = lgetv %pwr.5;
-            symbol [ pwr %tmp.227 254 47 50 ];
-            push %tmp.227;
+            %tmp.244 = lgetv %pwr.5;
+            symbol [ pwr %tmp.244 254 47 50 ];
+            push %tmp.244;
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_false:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_begin:
-            %tmp.228 = lgetv %pwr.5;
-            symbol [ pwr %tmp.228 254 53 56 ];
-            symbol [ maxPower %tmp.230 254 59 67 ];
-            %tmp.230 = getv ? :maxPower;
-            %tmp.231 = as %tmp.230 { (!Null) };
-            %tmp.232 = gt %tmp.228 %tmp.231;
-            bf %tmp.232 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_false;
+            %tmp.245 = lgetv %pwr.5;
+            symbol [ pwr %tmp.245 254 53 56 ];
+            symbol [ maxPower %tmp.247 254 59 67 ];
+            %tmp.247 = getv ? :maxPower;
+            %tmp.248 = as %tmp.247 { (!Null) };
+            %tmp.249 = gt %tmp.245 %tmp.248;
+            bf %tmp.249 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_true:
-            %tmp.233 = lgetv %pwr.5;
-            symbol [ pwr %tmp.233 254 70 73 ];
-            push %tmp.233;
+            %tmp.250 = lgetv %pwr.5;
+            symbol [ pwr %tmp.250 254 70 73 ];
+            push %tmp.250;
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_false:
-            symbol [ maxPower %tmp.235 254 76 84 ];
-            %tmp.235 = getv ? :maxPower;
-            %tmp.236 = as %tmp.235 { (!Null) };
-            push %tmp.236;
+            symbol [ maxPower %tmp.252 254 76 84 ];
+            %tmp.252 = getv ? :maxPower;
+            %tmp.253 = as %tmp.252 { (!Null) };
+            push %tmp.253;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_end:
-            %tmp.237 = phi [%tmp.232 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_begin] [%tmp.233 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_true] [%tmp.236 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_false] [%tmp.237 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_end];
-            push %tmp.237;
+            %tmp.254 = phi [%tmp.249 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_begin] [%tmp.250 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_true] [%tmp.253 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_false] [%tmp.254 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_53_254_76_end];
+            push %tmp.254;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_end:
-            %tmp.238 = phi [%tmp.226 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_begin] [%tmp.227 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_true] [%tmp.237 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_false] [%tmp.238 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_end];
+            %tmp.255 = phi [%tmp.243 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_begin] [%tmp.244 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_true] [%tmp.254 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_false] [%tmp.255 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_254_28_254_76_end];
             symbol [ maxPower ? 254 17 25 ];
-            putv self :maxPower %tmp.238;
+            putv self :maxPower %tmp.255;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_253_24_255_12_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_253_12_255_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_253_12_255_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 257 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_12_274_12_if_stmt:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_16_257_42_begin:
-            symbol [ __ai %tmp.240 257 16 20 ];
-            %tmp.240 = getv ? :__ai;
-            %tmp.241 = null;
-            %tmp.242 = ne %tmp.240 %tmp.241;
-            bf %tmp.242 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_12_274_12_if_end;
+            symbol [ __ai %tmp.257 257 16 20 ];
+            %tmp.257 = getv ? :__ai;
+            %tmp.258 = null;
+            %tmp.259 = ne %tmp.257 %tmp.258;
+            bf %tmp.259 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_12_274_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_32_257_42_true:
-            symbol [ __ai %tmp.244 257 32 36 ];
-            %tmp.244 = getv ? :__ai;
-            %tmp.245 = as %tmp.244 { (!Null) };
-            %tmp.247 = const :averagePower;
-            symbol [ averagePower %tmp.247 257 42 54 const ];
-            %tmp.248 = canhazplz %tmp.245 %tmp.247;
-            push %tmp.248;
+            symbol [ __ai %tmp.261 257 32 36 ];
+            %tmp.261 = getv ? :__ai;
+            %tmp.262 = as %tmp.261 { (!Null) };
+            %tmp.264 = const :averagePower;
+            symbol [ averagePower %tmp.264 257 42 54 const ];
+            %tmp.265 = canhazplz %tmp.262 %tmp.264;
+            push %tmp.265;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_32_257_42_end:
-            %tmp.249 = phi [%tmp.242 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_16_257_42_begin] [%tmp.248 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_32_257_42_true] [%tmp.249 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_32_257_42_end];
-            bf %tmp.249 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_12_274_12_if_end;
+            %tmp.266 = phi [%tmp.259 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_16_257_42_begin] [%tmp.265 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_32_257_42_true] [%tmp.266 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_32_257_42_end];
+            bf %tmp.266 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_12_274_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_12_274_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_56_274_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 258 16 ]
-            symbol [ __ai %tmp.251 258 22 26 ];
-            %tmp.251 = getv ? :__ai;
-            %tmp.252 = as %tmp.251 { (interface { var averagePower; }) && (!Null) };
-            symbol [ averagePower %tmp.253 258 27 39 ];
-            %tmp.253 = getv %tmp.252 :averagePower;
-            lputv %tmp.1 %tmp.253;
+            symbol [ __ai %tmp.268 258 22 26 ];
+            %tmp.268 = getv ? :__ai;
+            %tmp.269 = as %tmp.268 { (interface { var averagePower; }) && (!Null) };
+            symbol [ averagePower %tmp.270 258 27 39 ];
+            %tmp.270 = getv %tmp.269 :averagePower;
+            lputv %tmp.1 %tmp.270;
             symbol [ tmp %tmp.1 258 16 19 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 259 16 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_27_259_64_begin:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_27_259_49_begin:
-            %tmp.254 = lgetv %tmp.1;
-            symbol [ tmp %tmp.254 259 27 30 ];
-            %tmp.255 = null;
-            %tmp.256 = ne %tmp.254 %tmp.255;
-            %tmp.257 = dup %tmp.256;
-            bf %tmp.257 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_42_259_49_end;
+            %tmp.271 = lgetv %tmp.1;
+            symbol [ tmp %tmp.271 259 27 30 ];
+            %tmp.272 = null;
+            %tmp.273 = ne %tmp.271 %tmp.272;
+            %tmp.274 = dup %tmp.273;
+            bf %tmp.274 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_42_259_49_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_42_259_49_true:
-            %tmp.258 = lgetv %tmp.1;
-            symbol [ tmp %tmp.258 259 42 45 ];
-            %tmp.259 = as %tmp.258 { (!Null) };
-            %tmp.260 = false;
-            %tmp.261 = ne %tmp.259 %tmp.260;
-            %tmp.262 = and %tmp.256 %tmp.261;
-            push %tmp.262;
+            %tmp.275 = lgetv %tmp.1;
+            symbol [ tmp %tmp.275 259 42 45 ];
+            %tmp.276 = as %tmp.275 { (!Null) };
+            %tmp.277 = false;
+            %tmp.278 = ne %tmp.276 %tmp.277;
+            %tmp.279 = and %tmp.273 %tmp.278;
+            push %tmp.279;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_42_259_49_end:
-            %tmp.263 = phi [%tmp.257 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_27_259_49_begin] [%tmp.262 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_42_259_49_true] [%tmp.263 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_42_259_49_end];
-            %tmp.264 = dup %tmp.263;
-            bf %tmp.264 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_58_259_64_end;
+            %tmp.280 = phi [%tmp.274 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_27_259_49_begin] [%tmp.279 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_42_259_49_true] [%tmp.280 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_42_259_49_end];
+            %tmp.281 = dup %tmp.280;
+            bf %tmp.281 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_58_259_64_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_58_259_64_true:
-            %tmp.265 = lgetv %tmp.1;
-            symbol [ tmp %tmp.265 259 58 61 ];
-            %tmp.266 = as %tmp.265 { (!Null) };
-            %tmp.267 = 0.0;
-            %tmp.268 = gt %tmp.266 %tmp.267;
-            %tmp.269 = and %tmp.263 %tmp.268;
-            push %tmp.269;
+            %tmp.282 = lgetv %tmp.1;
+            symbol [ tmp %tmp.282 259 58 61 ];
+            %tmp.283 = as %tmp.282 { (!Null) };
+            %tmp.284 = 0.0;
+            %tmp.285 = gt %tmp.283 %tmp.284;
+            %tmp.286 = and %tmp.280 %tmp.285;
+            push %tmp.286;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_58_259_64_end:
-            %tmp.270 = phi [%tmp.264 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_27_259_64_begin] [%tmp.269 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_58_259_64_true] [%tmp.270 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_58_259_64_end];
-            lputv %tmpValid.2 %tmp.270;
+            %tmp.287 = phi [%tmp.281 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_27_259_64_begin] [%tmp.286 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_58_259_64_true] [%tmp.287 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_259_58_259_64_end];
+            lputv %tmpValid.2 %tmp.287;
             symbol [ tmpValid %tmpValid.2 259 16 24 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 260 16 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_260_16_273_16_if_stmt:
-            %tmp.271 = lgetv %tmpValid.2;
-            symbol [ tmpValid %tmp.271 260 19 27 ];
-            bf %tmp.271 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_260_16_273_16_if_else_false;
+            %tmp.288 = lgetv %tmpValid.2;
+            symbol [ tmpValid %tmp.288 260 19 27 ];
+            bf %tmp.288 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_260_16_273_16_if_else_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_260_16_273_16_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_260_28_262_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 261 20 ]
-            %tmp.272 = lgetv %tmp.1;
-            symbol [ tmp %tmp.272 261 35 38 ];
+            %tmp.289 = lgetv %tmp.1;
+            symbol [ tmp %tmp.289 261 35 38 ];
             symbol [ averagePower ? 261 20 32 ];
-            putv self :averagePower %tmp.272;
+            putv self :averagePower %tmp.289;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_260_28_262_16_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_260_16_273_16_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_260_16_273_16_if_else_false:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_262_21_273_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 265 20 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_265_20_272_20_if_stmt:
-            %tmp.273 = lgetv %pwrValid.6;
-            symbol [ pwrValid %tmp.273 265 23 31 ];
-            bf %tmp.273 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_265_20_272_20_if_end;
+            %tmp.290 = lgetv %pwrValid.6;
+            symbol [ pwrValid %tmp.290 265 23 31 ];
+            bf %tmp.290 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_265_20_272_20_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_265_20_272_20_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_265_32_272_20_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 266 24 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_266_24_270_24_if_stmt:
-            symbol [ averagePower %tmp.275 266 27 39 ];
-            %tmp.275 = getv ? :averagePower;
-            %tmp.276 = null;
-            %tmp.277 = ne %tmp.275 %tmp.276;
-            bf %tmp.277 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_266_24_270_24_if_else_false;
+            symbol [ averagePower %tmp.292 266 27 39 ];
+            %tmp.292 = getv ? :averagePower;
+            %tmp.293 = null;
+            %tmp.294 = ne %tmp.292 %tmp.293;
+            bf %tmp.294 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_266_24_270_24_if_else_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_266_24_270_24_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_266_48_268_24_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 267 28 ]
-            symbol [ averagePower %tmp.279 267 45 57 ];
-            %tmp.279 = getv ? :averagePower;
-            %tmp.280 = as %tmp.279 { (!Null) };
-            symbol [ __pavgAccuNb %tmp.282 267 60 72 ];
-            %tmp.282 = getv ? :__pavgAccuNb;
-            %tmp.283 = mul %tmp.280 %tmp.282;
-            %tmp.284 = lgetv %pwr.5;
-            symbol [ pwr %tmp.284 267 76 79 ];
-            %tmp.285 = add %tmp.283 %tmp.284;
-            symbol [ __pavgAccuNb %tmp.287 267 84 96 ];
-            %tmp.287 = getv ? :__pavgAccuNb;
-            %tmp.288 = 1;
-            %tmp.289 = add %tmp.287 %tmp.288;
-            %tmp.290 = div %tmp.285 %tmp.289;
+            symbol [ averagePower %tmp.296 267 45 57 ];
+            %tmp.296 = getv ? :averagePower;
+            %tmp.297 = as %tmp.296 { (!Null) };
+            symbol [ __pavgAccuNb %tmp.299 267 60 72 ];
+            %tmp.299 = getv ? :__pavgAccuNb;
+            %tmp.300 = mul %tmp.297 %tmp.299;
+            %tmp.301 = lgetv %pwr.5;
+            symbol [ pwr %tmp.301 267 76 79 ];
+            %tmp.302 = add %tmp.300 %tmp.301;
+            symbol [ __pavgAccuNb %tmp.304 267 84 96 ];
+            %tmp.304 = getv ? :__pavgAccuNb;
+            %tmp.305 = 1;
+            %tmp.306 = add %tmp.304 %tmp.305;
+            %tmp.307 = div %tmp.302 %tmp.306;
             symbol [ averagePower ? 267 28 40 ];
-            putv self :averagePower %tmp.290;
+            putv self :averagePower %tmp.307;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_266_48_268_24_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_266_24_270_24_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_266_24_270_24_if_else_false:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_268_30_270_24_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 269 28 ]
-            %tmp.291 = lgetv %pwr.5;
-            symbol [ pwr %tmp.291 269 43 46 ];
+            %tmp.308 = lgetv %pwr.5;
+            symbol [ pwr %tmp.308 269 43 46 ];
             symbol [ averagePower ? 269 28 40 ];
-            putv self :averagePower %tmp.291;
+            putv self :averagePower %tmp.308;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_268_30_270_24_stop:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_266_24_270_24_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 271 24 ]
-            symbol [ __pavgAccuNb %tmp.292 271 24 36 ];
-            %tmp.292 = getv self :__pavgAccuNb;
-            %tmp.293 = 1;
-            %tmp.294 = add %tmp.292 %tmp.293;
+            symbol [ __pavgAccuNb %tmp.309 271 24 36 ];
+            %tmp.309 = getv self :__pavgAccuNb;
+            %tmp.310 = 1;
+            %tmp.311 = add %tmp.309 %tmp.310;
             symbol [ __pavgAccuNb ? 271 24 36 ];
-            putv self :__pavgAccuNb dup %tmp.294;
+            putv self :__pavgAccuNb dup %tmp.311;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_265_32_272_20_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_265_20_272_20_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_265_20_272_20_if_end:
@@ -1581,70 +1643,70 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInf
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_12_274_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_257_12_274_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 277 12 ]
-            symbol [ __asSamples %tmp.296 277 23 34 ];
-            %tmp.296 = getv ? :__asSamples;
-            symbol [ size %tmp.297 277 35 39 ];
-            %tmp.297 = getv function %tmp.296 :size;
-            %tmp.298 = invoke %tmp.296 %tmp.297();
-            lputv %tmpValid.2 %tmp.298;
+            symbol [ __asSamples %tmp.313 277 23 34 ];
+            %tmp.313 = getv ? :__asSamples;
+            symbol [ size %tmp.314 277 35 39 ];
+            %tmp.314 = getv function %tmp.313 :size;
+            %tmp.315 = invoke %tmp.313 %tmp.314();
+            lputv %tmpValid.2 %tmp.315;
             symbol [ tmpValid %tmpValid.2 277 12 20 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 278 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_278_12_283_12_if_stmt:
-            %tmp.299 = lgetv %tmpValid.2;
-            symbol [ tmpValid %tmp.299 278 16 24 ];
-            %tmp.300 = 1;
-            %tmp.301 = gt %tmp.299 %tmp.300;
-            bf %tmp.301 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_278_12_283_12_if_false;
+            %tmp.316 = lgetv %tmpValid.2;
+            symbol [ tmpValid %tmp.316 278 16 24 ];
+            %tmp.317 = 1;
+            %tmp.318 = gt %tmp.316 %tmp.317;
+            bf %tmp.318 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_278_12_283_12_if_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_278_12_283_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_278_30_281_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 279 16 ]
-            %tmp.302 = lgetv %tmpValid.2;
-            symbol [ tmpValid %tmp.302 279 22 30 ];
-            %tmp.303 = 1;
-            %tmp.304 = sub %tmp.302 %tmp.303;
-            lputv %tmp.1 %tmp.304;
+            %tmp.319 = lgetv %tmpValid.2;
+            symbol [ tmpValid %tmp.319 279 22 30 ];
+            %tmp.320 = 1;
+            %tmp.321 = sub %tmp.319 %tmp.320;
+            lputv %tmp.1 %tmp.321;
             symbol [ tmp %tmp.1 279 16 19 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 280 16 ]
-            symbol [ __asSamples %tmp.306 280 38 49 ];
-            %tmp.306 = getv ? :__asSamples;
-            %tmp.307 = lgetv %tmp.1;
-            symbol [ tmp %tmp.307 280 50 53 ];
-            %tmp.308 = agetv %tmp.306 %tmp.307;
-            symbol [ __asSamples %tmp.310 280 57 68 ];
-            %tmp.310 = getv ? :__asSamples;
-            %tmp.311 = 0;
-            %tmp.312 = agetv %tmp.310 %tmp.311;
-            %tmp.313 = sub %tmp.308 %tmp.312;
-            symbol [ toFloat %tmp.314 280 73 80 ];
-            %tmp.314 = getv function %tmp.313 :toFloat;
-            %tmp.315 = invoke %tmp.313 %tmp.314();
-            %tmp.316 = lgetv %tmp.1;
-            symbol [ tmp %tmp.316 280 85 88 ];
-            %tmp.317 = div %tmp.315 %tmp.316;
+            symbol [ __asSamples %tmp.323 280 38 49 ];
+            %tmp.323 = getv ? :__asSamples;
+            %tmp.324 = lgetv %tmp.1;
+            symbol [ tmp %tmp.324 280 50 53 ];
+            %tmp.325 = agetv %tmp.323 %tmp.324;
+            symbol [ __asSamples %tmp.327 280 57 68 ];
+            %tmp.327 = getv ? :__asSamples;
+            %tmp.328 = 0;
+            %tmp.329 = agetv %tmp.327 %tmp.328;
+            %tmp.330 = sub %tmp.325 %tmp.329;
+            symbol [ toFloat %tmp.331 280 73 80 ];
+            %tmp.331 = getv function %tmp.330 :toFloat;
+            %tmp.332 = invoke %tmp.330 %tmp.331();
+            %tmp.333 = lgetv %tmp.1;
+            symbol [ tmp %tmp.333 280 85 88 ];
+            %tmp.334 = div %tmp.332 %tmp.333;
             symbol [ averageAscentSpeed ? 280 16 34 ];
-            putv self :averageAscentSpeed %tmp.317;
+            putv self :averageAscentSpeed %tmp.334;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_278_30_281_12_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_278_12_283_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_278_12_283_12_if_false:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 281 19 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_281_19_283_12_if_stmt:
-            %tmp.318 = lgetv %tmpValid.2;
-            symbol [ tmpValid %tmp.318 281 23 31 ];
-            %tmp.319 = 1;
-            %tmp.320 = eq %tmp.318 %tmp.319;
-            bf %tmp.320 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_281_19_283_12_if_end;
+            %tmp.335 = lgetv %tmpValid.2;
+            symbol [ tmpValid %tmp.335 281 23 31 ];
+            %tmp.336 = 1;
+            %tmp.337 = eq %tmp.335 %tmp.336;
+            bf %tmp.337 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_281_19_283_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_281_19_283_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_281_38_283_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 282 16 ]
-            symbol [ __asSamples %tmp.322 282 37 48 ];
-            %tmp.322 = getv ? :__asSamples;
-            %tmp.323 = 0;
-            %tmp.324 = agetv %tmp.322 %tmp.323;
-            symbol [ toFloat %tmp.325 282 52 59 ];
-            %tmp.325 = getv function %tmp.324 :toFloat;
-            %tmp.326 = invoke %tmp.324 %tmp.325();
+            symbol [ __asSamples %tmp.339 282 37 48 ];
+            %tmp.339 = getv ? :__asSamples;
+            %tmp.340 = 0;
+            %tmp.341 = agetv %tmp.339 %tmp.340;
+            symbol [ toFloat %tmp.342 282 52 59 ];
+            %tmp.342 = getv function %tmp.341 :toFloat;
+            %tmp.343 = invoke %tmp.341 %tmp.342();
             symbol [ averageAscentSpeed ? 282 16 34 ];
-            putv self :averageAscentSpeed %tmp.326;
+            putv self :averageAscentSpeed %tmp.343;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_281_38_283_12_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_281_19_283_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_281_19_283_12_if_end:
@@ -1654,72 +1716,72 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInf
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_15_287_125_begin:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_15_287_96_begin:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_15_287_70_begin:
-            %tmp.327 = lgetv %info;
-            symbol [ info %tmp.327 287 15 19 ];
-            symbol [ currentCadence %tmp.328 287 20 34 ];
-            %tmp.328 = getv %tmp.327 :currentCadence;
-            %tmp.329 = null;
-            %tmp.330 = eq %tmp.328 %tmp.329;
-            bt %tmp.330 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_12_291_12_if_true;
+            %tmp.344 = lgetv %info;
+            symbol [ info %tmp.344 287 15 19 ];
+            symbol [ currentCadence %tmp.345 287 20 34 ];
+            %tmp.345 = getv %tmp.344 :currentCadence;
+            %tmp.346 = null;
+            %tmp.347 = eq %tmp.345 %tmp.346;
+            bt %tmp.347 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_12_291_12_if_true;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_46_287_70_false:
-            %tmp.331 = lgetv %info;
-            symbol [ info %tmp.331 287 46 50 ];
-            symbol [ currentCadence %tmp.332 287 51 65 ];
-            %tmp.332 = getv %tmp.331 :currentCadence;
-            %tmp.333 = 0;
-            %tmp.334 = eq %tmp.332 %tmp.333;
-            push %tmp.334;
+            %tmp.348 = lgetv %info;
+            symbol [ info %tmp.348 287 46 50 ];
+            symbol [ currentCadence %tmp.349 287 51 65 ];
+            %tmp.349 = getv %tmp.348 :currentCadence;
+            %tmp.350 = 0;
+            %tmp.351 = eq %tmp.349 %tmp.350;
+            push %tmp.351;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_46_287_70_end:
-            %tmp.335 = phi [%tmp.330 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_15_287_70_begin] [%tmp.334 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_46_287_70_false] [%tmp.335 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_46_287_70_end];
-            bt %tmp.335 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_12_291_12_if_true;
+            %tmp.352 = phi [%tmp.347 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_15_287_70_begin] [%tmp.351 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_46_287_70_false] [%tmp.352 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_46_287_70_end];
+            bt %tmp.352 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_12_291_12_if_true;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_75_287_96_false:
-            %tmp.336 = lgetv %info;
-            symbol [ info %tmp.336 287 75 79 ];
-            symbol [ currentSpeed %tmp.337 287 80 92 ];
-            %tmp.337 = getv %tmp.336 :currentSpeed;
-            %tmp.338 = null;
-            %tmp.339 = eq %tmp.337 %tmp.338;
-            push %tmp.339;
+            %tmp.353 = lgetv %info;
+            symbol [ info %tmp.353 287 75 79 ];
+            symbol [ currentSpeed %tmp.354 287 80 92 ];
+            %tmp.354 = getv %tmp.353 :currentSpeed;
+            %tmp.355 = null;
+            %tmp.356 = eq %tmp.354 %tmp.355;
+            push %tmp.356;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_75_287_96_end:
-            %tmp.340 = phi [%tmp.335 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_15_287_96_begin] [%tmp.339 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_75_287_96_false] [%tmp.340 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_75_287_96_end];
-            bt %tmp.340 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_12_291_12_if_true;
+            %tmp.357 = phi [%tmp.352 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_15_287_96_begin] [%tmp.356 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_75_287_96_false] [%tmp.357 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_75_287_96_end];
+            bt %tmp.357 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_12_291_12_if_true;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_104_287_125_false:
-            %tmp.341 = lgetv %info;
-            symbol [ info %tmp.341 287 104 108 ];
-            symbol [ currentSpeed %tmp.342 287 109 121 ];
-            %tmp.342 = getv %tmp.341 :currentSpeed;
-            %tmp.343 = 0;
-            %tmp.344 = eq %tmp.342 %tmp.343;
-            push %tmp.344;
+            %tmp.358 = lgetv %info;
+            symbol [ info %tmp.358 287 104 108 ];
+            symbol [ currentSpeed %tmp.359 287 109 121 ];
+            %tmp.359 = getv %tmp.358 :currentSpeed;
+            %tmp.360 = 0;
+            %tmp.361 = eq %tmp.359 %tmp.360;
+            push %tmp.361;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_104_287_125_end:
-            %tmp.345 = phi [%tmp.340 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_15_287_125_begin] [%tmp.344 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_104_287_125_false] [%tmp.345 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_104_287_125_end];
-            bf %tmp.345 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_12_291_12_if_else_false;
+            %tmp.362 = phi [%tmp.357 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_15_287_125_begin] [%tmp.361 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_104_287_125_false] [%tmp.362 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_104_287_125_end];
+            bf %tmp.362 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_12_291_12_if_else_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_12_291_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_128_289_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 288 16 ]
-            %tmp.346 = null;
+            %tmp.363 = null;
             symbol [ strideLength ? 288 16 28 ];
-            putv self :strideLength %tmp.346;
+            putv self :strideLength %tmp.363;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_128_289_12_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_12_291_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_12_291_12_if_else_false:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_289_19_291_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 290 16 ]
-            %tmp.347 = lgetv %info;
-            symbol [ info %tmp.347 290 32 36 ];
-            symbol [ currentSpeed %tmp.348 290 37 49 ];
-            %tmp.348 = getv %tmp.347 :currentSpeed;
-            %tmp.349 = 60;
-            %tmp.350 = mul %tmp.348 %tmp.349;
-            %tmp.351 = lgetv %info;
-            symbol [ info %tmp.351 290 58 62 ];
-            symbol [ currentCadence %tmp.352 290 63 77 ];
-            %tmp.352 = getv %tmp.351 :currentCadence;
-            %tmp.353 = div %tmp.350 %tmp.352;
-            %tmp.354 = 1000;
-            %tmp.355 = mul %tmp.353 %tmp.354;
+            %tmp.364 = lgetv %info;
+            symbol [ info %tmp.364 290 32 36 ];
+            symbol [ currentSpeed %tmp.365 290 37 49 ];
+            %tmp.365 = getv %tmp.364 :currentSpeed;
+            %tmp.366 = 60;
+            %tmp.367 = mul %tmp.365 %tmp.366;
+            %tmp.368 = lgetv %info;
+            symbol [ info %tmp.368 290 58 62 ];
+            symbol [ currentCadence %tmp.369 290 63 77 ];
+            %tmp.369 = getv %tmp.368 :currentCadence;
+            %tmp.370 = div %tmp.367 %tmp.369;
+            %tmp.371 = 1000;
+            %tmp.372 = mul %tmp.370 %tmp.371;
             symbol [ strideLength ? 290 16 28 ];
-            putv self :strideLength %tmp.355;
+            putv self :strideLength %tmp.372;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_289_19_291_12_stop:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_287_12_291_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 296 12 ]
@@ -1727,149 +1789,149 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInf
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_15_296_105_begin:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_15_296_73_begin:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_15_296_43_begin:
-            symbol [ ourPwr %tmp.357 296 15 21 ];
-            %tmp.357 = getv ? :ourPwr;
-            %tmp.358 = null;
-            %tmp.359 = ne %tmp.357 %tmp.358;
-            bf %tmp.359 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_12_308_12_if_else_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_33_296_43_true:
-            symbol [ ourPwr %tmp.361 296 33 39 ];
-            %tmp.361 = getv ? :ourPwr;
-            %tmp.362 = as %tmp.361 { (!Null) };
-            %tmp.363 = 0;
-            %tmp.364 = ne %tmp.362 %tmp.363;
-            push %tmp.364;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_33_296_43_end:
-            %tmp.365 = phi [%tmp.359 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_15_296_43_begin] [%tmp.364 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_33_296_43_true] [%tmp.365 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_33_296_43_end];
-            bf %tmp.365 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_12_308_12_if_else_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_48_296_73_true:
-            %tmp.366 = lgetv %info;
-            symbol [ info %tmp.366 296 48 52 ];
-            symbol [ currentHeartRate %tmp.367 296 53 69 ];
-            %tmp.367 = getv %tmp.366 :currentHeartRate;
-            %tmp.368 = null;
-            %tmp.369 = ne %tmp.367 %tmp.368;
-            push %tmp.369;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_48_296_73_end:
-            %tmp.370 = phi [%tmp.365 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_15_296_73_begin] [%tmp.369 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_48_296_73_true] [%tmp.370 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_48_296_73_end];
-            bf %tmp.370 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_12_308_12_if_else_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_81_296_105_true:
-            %tmp.371 = lgetv %info;
-            symbol [ info %tmp.371 296 81 85 ];
-            symbol [ currentHeartRate %tmp.372 296 86 102 ];
-            %tmp.372 = getv %tmp.371 :currentHeartRate;
-            symbol [ ZeroPowerHR %tmp.374 296 105 116 ];
-            %tmp.374 = getv ? :ZeroPowerHR;
-            %tmp.375 = gt %tmp.372 %tmp.374;
-            push %tmp.375;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_81_296_105_end:
-            %tmp.376 = phi [%tmp.370 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_15_296_105_begin] [%tmp.375 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_81_296_105_true] [%tmp.376 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_81_296_105_end];
+            symbol [ ourPwr %tmp.374 296 15 21 ];
+            %tmp.374 = getv ? :ourPwr;
+            %tmp.375 = null;
+            %tmp.376 = ne %tmp.374 %tmp.375;
             bf %tmp.376 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_12_308_12_if_else_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_33_296_43_true:
+            symbol [ ourPwr %tmp.378 296 33 39 ];
+            %tmp.378 = getv ? :ourPwr;
+            %tmp.379 = as %tmp.378 { (!Null) };
+            %tmp.380 = 0;
+            %tmp.381 = ne %tmp.379 %tmp.380;
+            push %tmp.381;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_33_296_43_end:
+            %tmp.382 = phi [%tmp.376 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_15_296_43_begin] [%tmp.381 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_33_296_43_true] [%tmp.382 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_33_296_43_end];
+            bf %tmp.382 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_12_308_12_if_else_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_48_296_73_true:
+            %tmp.383 = lgetv %info;
+            symbol [ info %tmp.383 296 48 52 ];
+            symbol [ currentHeartRate %tmp.384 296 53 69 ];
+            %tmp.384 = getv %tmp.383 :currentHeartRate;
+            %tmp.385 = null;
+            %tmp.386 = ne %tmp.384 %tmp.385;
+            push %tmp.386;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_48_296_73_end:
+            %tmp.387 = phi [%tmp.382 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_15_296_73_begin] [%tmp.386 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_48_296_73_true] [%tmp.387 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_48_296_73_end];
+            bf %tmp.387 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_12_308_12_if_else_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_81_296_105_true:
+            %tmp.388 = lgetv %info;
+            symbol [ info %tmp.388 296 81 85 ];
+            symbol [ currentHeartRate %tmp.389 296 86 102 ];
+            %tmp.389 = getv %tmp.388 :currentHeartRate;
+            symbol [ ZeroPowerHR %tmp.391 296 105 116 ];
+            %tmp.391 = getv ? :ZeroPowerHR;
+            %tmp.392 = gt %tmp.389 %tmp.391;
+            push %tmp.392;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_81_296_105_end:
+            %tmp.393 = phi [%tmp.387 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_15_296_105_begin] [%tmp.392 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_81_296_105_true] [%tmp.393 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_81_296_105_end];
+            bf %tmp.393 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_12_308_12_if_else_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_12_308_12_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_118_306_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 297 16 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_297_16_299_16_if_stmt:
-            symbol [ smoothHrPwrCounter %tmp.378 297 19 37 ];
-            %tmp.378 = getv ? :smoothHrPwrCounter;
-            symbol [ HrPwrSmoothing %tmp.380 297 40 54 ];
-            %tmp.380 = getv ? :HrPwrSmoothing;
-            %tmp.381 = lt %tmp.378 %tmp.380;
-            bf %tmp.381 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_297_16_299_16_if_end;
+            symbol [ smoothHrPwrCounter %tmp.395 297 19 37 ];
+            %tmp.395 = getv ? :smoothHrPwrCounter;
+            symbol [ HrPwrSmoothing %tmp.397 297 40 54 ];
+            %tmp.397 = getv ? :HrPwrSmoothing;
+            %tmp.398 = lt %tmp.395 %tmp.397;
+            bf %tmp.398 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_297_16_299_16_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_297_16_299_16_if_true:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_297_56_299_16_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 298 20 ]
-            symbol [ smoothHrPwrCounter %tmp.384 298 20 38 ];
-            %tmp.384 = getv ? :smoothHrPwrCounter;
-            %tmp.385 = add %tmp.384 1;
+            symbol [ smoothHrPwrCounter %tmp.401 298 20 38 ];
+            %tmp.401 = getv ? :smoothHrPwrCounter;
+            %tmp.402 = add %tmp.401 1;
             symbol [ smoothHrPwrCounter ? 298 20 38 ];
-            putv self :smoothHrPwrCounter dup %tmp.385;
+            putv self :smoothHrPwrCounter dup %tmp.402;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_297_56_299_16_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_297_16_299_16_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_297_16_299_16_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 301 16 ]
-            symbol [ smoothhr %tmp.387 301 28 36 ];
-            %tmp.387 = getv ? :smoothhr;
-            symbol [ smoothHrPwrCounter %tmp.389 301 38 56 ];
-            %tmp.389 = getv ? :smoothHrPwrCounter;
-            %tmp.390 = 1.0;
-            %tmp.391 = sub %tmp.389 %tmp.390;
-            %tmp.392 = mul %tmp.387 %tmp.391;
-            symbol [ smoothHrPwrCounter %tmp.394 301 62 80 ];
-            %tmp.394 = getv ? :smoothHrPwrCounter;
-            %tmp.395 = div %tmp.392 %tmp.394;
-            %tmp.396 = lgetv %info;
-            symbol [ info %tmp.396 301 84 88 ];
-            symbol [ currentHeartRate %tmp.397 301 89 105 ];
-            %tmp.397 = getv %tmp.396 :currentHeartRate;
-            symbol [ toFloat %tmp.398 301 106 113 ];
-            %tmp.398 = getv function %tmp.397 :toFloat;
-            %tmp.399 = invoke %tmp.397 %tmp.398();
-            symbol [ smoothHrPwrCounter %tmp.401 301 116 134 ];
-            %tmp.401 = getv ? :smoothHrPwrCounter;
-            %tmp.402 = div %tmp.399 %tmp.401;
-            %tmp.403 = add %tmp.395 %tmp.402;
+            symbol [ smoothhr %tmp.404 301 28 36 ];
+            %tmp.404 = getv ? :smoothhr;
+            symbol [ smoothHrPwrCounter %tmp.406 301 38 56 ];
+            %tmp.406 = getv ? :smoothHrPwrCounter;
+            %tmp.407 = 1.0;
+            %tmp.408 = sub %tmp.406 %tmp.407;
+            %tmp.409 = mul %tmp.404 %tmp.408;
+            symbol [ smoothHrPwrCounter %tmp.411 301 62 80 ];
+            %tmp.411 = getv ? :smoothHrPwrCounter;
+            %tmp.412 = div %tmp.409 %tmp.411;
+            %tmp.413 = lgetv %info;
+            symbol [ info %tmp.413 301 84 88 ];
+            symbol [ currentHeartRate %tmp.414 301 89 105 ];
+            %tmp.414 = getv %tmp.413 :currentHeartRate;
+            symbol [ toFloat %tmp.415 301 106 113 ];
+            %tmp.415 = getv function %tmp.414 :toFloat;
+            %tmp.416 = invoke %tmp.414 %tmp.415();
+            symbol [ smoothHrPwrCounter %tmp.418 301 116 134 ];
+            %tmp.418 = getv ? :smoothHrPwrCounter;
+            %tmp.419 = div %tmp.416 %tmp.418;
+            %tmp.420 = add %tmp.412 %tmp.419;
             symbol [ smoothhr ? 301 16 24 ];
-            putv self :smoothhr %tmp.403;
+            putv self :smoothhr %tmp.420;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 302 16 ]
-            symbol [ smoothpwr %tmp.405 302 29 38 ];
-            %tmp.405 = getv ? :smoothpwr;
-            symbol [ smoothHrPwrCounter %tmp.407 302 40 58 ];
-            %tmp.407 = getv ? :smoothHrPwrCounter;
-            %tmp.408 = 1.0;
-            %tmp.409 = sub %tmp.407 %tmp.408;
-            %tmp.410 = mul %tmp.405 %tmp.409;
-            symbol [ smoothHrPwrCounter %tmp.412 302 64 82 ];
-            %tmp.412 = getv ? :smoothHrPwrCounter;
-            %tmp.413 = div %tmp.410 %tmp.412;
-            symbol [ ourPwr %tmp.415 302 86 92 ];
-            %tmp.415 = getv ? :ourPwr;
-            symbol [ smoothHrPwrCounter %tmp.417 302 93 111 ];
-            %tmp.417 = getv ? :smoothHrPwrCounter;
-            %tmp.418 = div %tmp.415 %tmp.417;
-            %tmp.419 = add %tmp.413 %tmp.418;
+            symbol [ smoothpwr %tmp.422 302 29 38 ];
+            %tmp.422 = getv ? :smoothpwr;
+            symbol [ smoothHrPwrCounter %tmp.424 302 40 58 ];
+            %tmp.424 = getv ? :smoothHrPwrCounter;
+            %tmp.425 = 1.0;
+            %tmp.426 = sub %tmp.424 %tmp.425;
+            %tmp.427 = mul %tmp.422 %tmp.426;
+            symbol [ smoothHrPwrCounter %tmp.429 302 64 82 ];
+            %tmp.429 = getv ? :smoothHrPwrCounter;
+            %tmp.430 = div %tmp.427 %tmp.429;
+            symbol [ ourPwr %tmp.432 302 86 92 ];
+            %tmp.432 = getv ? :ourPwr;
+            symbol [ smoothHrPwrCounter %tmp.434 302 93 111 ];
+            %tmp.434 = getv ? :smoothHrPwrCounter;
+            %tmp.435 = div %tmp.432 %tmp.434;
+            %tmp.436 = add %tmp.430 %tmp.435;
             symbol [ smoothpwr ? 302 16 25 ];
-            putv self :smoothpwr %tmp.419;
+            putv self :smoothpwr %tmp.436;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 304 16 ]
             [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_118_306_12_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_118_306_12_stop" ]
             %hrpwraw.7 = local;
             symbol [ hrpwraw %hrpwraw.7 304 20 27 ];
-            symbol [ smoothpwr %tmp.421 304 32 41 ];
-            %tmp.421 = getv ? :smoothpwr;
-            %tmp.422 = 1000.0;
-            %tmp.423 = mul %tmp.421 %tmp.422;
-            symbol [ weight %tmp.425 304 54 60 ];
-            %tmp.425 = getv ? :weight;
-            %tmp.426 = div %tmp.423 %tmp.425;
-            symbol [ smoothhr %tmp.428 304 65 73 ];
-            %tmp.428 = getv ? :smoothhr;
-            symbol [ ZeroPowerHR %tmp.430 304 76 87 ];
-            %tmp.430 = getv ? :ZeroPowerHR;
-            %tmp.431 = sub %tmp.428 %tmp.430;
-            %tmp.432 = div %tmp.426 %tmp.431;
-            lputv %hrpwraw.7 %tmp.432;
+            symbol [ smoothpwr %tmp.438 304 32 41 ];
+            %tmp.438 = getv ? :smoothpwr;
+            %tmp.439 = 1000.0;
+            %tmp.440 = mul %tmp.438 %tmp.439;
+            symbol [ weight %tmp.442 304 54 60 ];
+            %tmp.442 = getv ? :weight;
+            %tmp.443 = div %tmp.440 %tmp.442;
+            symbol [ smoothhr %tmp.445 304 65 73 ];
+            %tmp.445 = getv ? :smoothhr;
+            symbol [ ZeroPowerHR %tmp.447 304 76 87 ];
+            %tmp.447 = getv ? :ZeroPowerHR;
+            %tmp.448 = sub %tmp.445 %tmp.447;
+            %tmp.449 = div %tmp.443 %tmp.448;
+            lputv %hrpwraw.7 %tmp.449;
             symbol [ hrpwraw %hrpwraw.7 304 20 27 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 305 16 ]
-            symbol [ Math %tmp.433 305 24 28 ];
-            %tmp.433 = getm $.Toybox.Math;
-            symbol [ round %tmp.434 305 29 34 ];
-            %tmp.434 = getv function %tmp.433 :round;
-            %tmp.435 = lgetv %hrpwraw.7;
-            symbol [ hrpwraw %tmp.435 305 35 42 ];
-            %tmp.436 = 10;
-            %tmp.437 = mul %tmp.435 %tmp.436;
-            %tmp.438 = invoke %tmp.433 %tmp.434(%tmp.437);
-            %tmp.439 = 10.0;
-            %tmp.440 = div %tmp.438 %tmp.439;
+            symbol [ Math %tmp.450 305 24 28 ];
+            %tmp.450 = getm $.Toybox.Math;
+            symbol [ round %tmp.451 305 29 34 ];
+            %tmp.451 = getv function %tmp.450 :round;
+            %tmp.452 = lgetv %hrpwraw.7;
+            symbol [ hrpwraw %tmp.452 305 35 42 ];
+            %tmp.453 = 10;
+            %tmp.454 = mul %tmp.452 %tmp.453;
+            %tmp.455 = invoke %tmp.450 %tmp.451(%tmp.454);
+            %tmp.456 = 10.0;
+            %tmp.457 = div %tmp.455 %tmp.456;
             symbol [ hrPwr ? 305 16 21 ];
-            putv self :hrPwr %tmp.440;
+            putv self :hrPwr %tmp.457;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_118_306_12_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_12_308_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_12_308_12_if_else_false:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_306_19_308_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 307 16 ]
-            %tmp.441 = 1.23;
+            %tmp.458 = 1.23;
             symbol [ hrPwr ? 307 16 21 ];
-            putv self :hrPwr %tmp.441;
+            putv self :hrPwr %tmp.458;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_306_19_308_12_stop:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_296_12_308_12_if_end:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInfo_mc_193_57_310_8_stop:
@@ -1880,482 +1942,482 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_ActiveLookActivityInf
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc"; @line = 314; ]
         <init> {
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 319 14 ]
-            %tmp.442 = newa 12;
-            %tmp.443 = newa 0;
-            %tmp.444 = dup %tmp.442;
-            %tmp.445 = aputv %tmp.444 0 %tmp.443;
-            %tmp.446 = newa 3;
-            %tmp.448 = const :chrono;
-            symbol [ chrono %tmp.448 321 22 28 const ];
-            %tmp.449 = dup %tmp.446;
-            %tmp.450 = aputv %tmp.449 0 %tmp.448;
-            %tmp.452 = const :currentSpeed;
-            symbol [ currentSpeed %tmp.452 321 35 47 const ];
-            %tmp.453 = dup %tmp.450;
-            %tmp.454 = aputv %tmp.453 1 %tmp.452;
-            %tmp.456 = const :elapsedDistance;
-            symbol [ elapsedDistance %tmp.456 321 50 65 const ];
-            %tmp.457 = dup %tmp.454;
-            %tmp.458 = aputv %tmp.457 2 %tmp.456;
-            %tmp.459 = dup %tmp.445;
-            %tmp.460 = aputv %tmp.459 1 %tmp.458;
-            %tmp.461 = newa 3;
-            %tmp.463 = const :currentPace;
-            symbol [ currentPace %tmp.463 322 17 28 const ];
-            %tmp.464 = dup %tmp.461;
-            %tmp.465 = aputv %tmp.464 0 %tmp.463;
-            %tmp.467 = const :currentHeartRate;
-            symbol [ currentHeartRate %tmp.467 322 31 47 const ];
-            %tmp.468 = dup %tmp.465;
-            %tmp.469 = aputv %tmp.468 1 %tmp.467;
-            %tmp.471 = const :elapsedDistance;
-            symbol [ elapsedDistance %tmp.471 322 50 65 const ];
-            %tmp.472 = dup %tmp.469;
-            %tmp.473 = aputv %tmp.472 2 %tmp.471;
-            %tmp.474 = dup %tmp.460;
+            %tmp.459 = newa 12;
+            %tmp.460 = newa 0;
+            %tmp.461 = dup %tmp.459;
+            %tmp.462 = aputv %tmp.461 0 %tmp.460;
+            %tmp.463 = newa 3;
+            %tmp.465 = const :chrono;
+            symbol [ chrono %tmp.465 321 22 28 const ];
+            %tmp.466 = dup %tmp.463;
+            %tmp.467 = aputv %tmp.466 0 %tmp.465;
+            %tmp.469 = const :currentSpeed;
+            symbol [ currentSpeed %tmp.469 321 35 47 const ];
+            %tmp.470 = dup %tmp.467;
+            %tmp.471 = aputv %tmp.470 1 %tmp.469;
+            %tmp.473 = const :elapsedDistance;
+            symbol [ elapsedDistance %tmp.473 321 50 65 const ];
+            %tmp.474 = dup %tmp.471;
             %tmp.475 = aputv %tmp.474 2 %tmp.473;
-            %tmp.476 = newa 3;
-            %tmp.478 = const :threeSecPower;
-            symbol [ threeSecPower %tmp.478 323 15 28 const ];
-            %tmp.479 = dup %tmp.476;
-            %tmp.480 = aputv %tmp.479 0 %tmp.478;
-            %tmp.482 = const :currentCadence;
-            symbol [ currentCadence %tmp.482 323 33 47 const ];
-            %tmp.483 = dup %tmp.480;
-            %tmp.484 = aputv %tmp.483 1 %tmp.482;
-            %tmp.486 = const :totalAscent;
-            symbol [ totalAscent %tmp.486 323 54 65 const ];
-            %tmp.487 = dup %tmp.484;
-            %tmp.488 = aputv %tmp.487 2 %tmp.486;
-            %tmp.489 = dup %tmp.475;
-            %tmp.490 = aputv %tmp.489 3 %tmp.488;
-            %tmp.491 = newa 3;
-            %tmp.493 = const :chrono;
-            symbol [ chrono %tmp.493 324 22 28 const ];
-            %tmp.494 = dup %tmp.491;
-            %tmp.495 = aputv %tmp.494 0 %tmp.493;
-            %tmp.497 = const :threeSecPower;
-            symbol [ threeSecPower %tmp.497 324 34 47 const ];
-            %tmp.498 = dup %tmp.495;
-            %tmp.499 = aputv %tmp.498 1 %tmp.497;
-            %tmp.501 = const :averagePower;
-            symbol [ averagePower %tmp.501 324 53 65 const ];
-            %tmp.502 = dup %tmp.499;
-            %tmp.503 = aputv %tmp.502 2 %tmp.501;
-            %tmp.504 = dup %tmp.490;
-            %tmp.505 = aputv %tmp.504 4 %tmp.503;
-            %tmp.506 = newa 3;
-            %tmp.508 = const :chrono;
-            symbol [ chrono %tmp.508 325 22 28 const ];
-            %tmp.509 = dup %tmp.506;
-            %tmp.510 = aputv %tmp.509 0 %tmp.508;
-            %tmp.512 = const :elapsedDistance;
-            symbol [ elapsedDistance %tmp.512 325 32 47 const ];
-            %tmp.513 = dup %tmp.510;
-            %tmp.514 = aputv %tmp.513 1 %tmp.512;
-            %tmp.516 = const :averageSpeed;
-            symbol [ averageSpeed %tmp.516 325 53 65 const ];
-            %tmp.517 = dup %tmp.514;
-            %tmp.518 = aputv %tmp.517 2 %tmp.516;
-            %tmp.519 = dup %tmp.505;
-            %tmp.520 = aputv %tmp.519 5 %tmp.518;
-            %tmp.521 = newa 2;
-            %tmp.523 = const :currentPace;
-            symbol [ currentPace %tmp.523 326 17 28 const ];
-            %tmp.524 = dup %tmp.521;
-            %tmp.525 = aputv %tmp.524 0 %tmp.523;
-            %tmp.527 = const :averagePace;
-            symbol [ averagePace %tmp.527 326 36 47 const ];
-            %tmp.528 = dup %tmp.525;
-            %tmp.529 = aputv %tmp.528 1 %tmp.527;
-            %tmp.530 = dup %tmp.520;
-            %tmp.531 = aputv %tmp.530 6 %tmp.529;
-            %tmp.532 = newa 2;
-            %tmp.534 = const :threeSecPower;
-            symbol [ threeSecPower %tmp.534 327 15 28 const ];
-            %tmp.535 = dup %tmp.532;
-            %tmp.536 = aputv %tmp.535 0 %tmp.534;
-            %tmp.538 = const :normalizedPower;
-            symbol [ normalizedPower %tmp.538 327 32 47 const ];
-            %tmp.539 = dup %tmp.536;
-            %tmp.540 = aputv %tmp.539 1 %tmp.538;
-            %tmp.541 = dup %tmp.531;
-            %tmp.542 = aputv %tmp.541 7 %tmp.540;
-            %tmp.543 = newa 2;
-            %tmp.545 = const :totalAscent;
-            symbol [ totalAscent %tmp.545 328 17 28 const ];
-            %tmp.546 = dup %tmp.543;
-            %tmp.547 = aputv %tmp.546 0 %tmp.545;
-            %tmp.549 = const :altitude;
-            symbol [ altitude %tmp.549 328 39 47 const ];
-            %tmp.550 = dup %tmp.547;
-            %tmp.551 = aputv %tmp.550 1 %tmp.549;
-            %tmp.552 = dup %tmp.542;
-            %tmp.553 = aputv %tmp.552 8 %tmp.551;
-            %tmp.554 = newa 3;
-            %tmp.556 = const :averagePace;
-            symbol [ averagePace %tmp.556 329 17 28 const ];
-            %tmp.557 = dup %tmp.554;
-            %tmp.558 = aputv %tmp.557 0 %tmp.556;
-            %tmp.560 = const :averageHeartRate;
-            symbol [ averageHeartRate %tmp.560 329 31 47 const ];
-            %tmp.561 = dup %tmp.558;
-            %tmp.562 = aputv %tmp.561 1 %tmp.560;
-            %tmp.564 = const :averageCadence;
-            symbol [ averageCadence %tmp.564 329 51 65 const ];
-            %tmp.565 = dup %tmp.562;
-            %tmp.566 = aputv %tmp.565 2 %tmp.564;
-            %tmp.567 = dup %tmp.553;
-            %tmp.568 = aputv %tmp.567 9 %tmp.566;
-            %tmp.569 = newa 6;
-            %tmp.571 = const :threeSecPower;
-            symbol [ threeSecPower %tmp.571 330 15 28 const ];
-            %tmp.572 = dup %tmp.569;
-            %tmp.573 = aputv %tmp.572 0 %tmp.571;
-            %tmp.575 = const :normalizedPower;
-            symbol [ normalizedPower %tmp.575 330 32 47 const ];
-            %tmp.576 = dup %tmp.573;
-            %tmp.577 = aputv %tmp.576 1 %tmp.575;
-            %tmp.579 = const :currentCadence;
-            symbol [ currentCadence %tmp.579 330 51 65 const ];
-            %tmp.580 = dup %tmp.577;
-            %tmp.581 = aputv %tmp.580 2 %tmp.579;
-            %tmp.583 = const :currentHeartRate;
-            symbol [ currentHeartRate %tmp.583 330 68 84 const ];
-            %tmp.584 = dup %tmp.581;
-            %tmp.585 = aputv %tmp.584 3 %tmp.583;
-            %tmp.587 = const :chrono;
-            symbol [ chrono %tmp.587 330 89 95 const ];
-            %tmp.588 = dup %tmp.585;
-            %tmp.589 = aputv %tmp.588 4 %tmp.587;
-            %tmp.591 = const :currentSpeed;
-            symbol [ currentSpeed %tmp.591 330 98 110 const ];
-            %tmp.592 = dup %tmp.589;
-            %tmp.593 = aputv %tmp.592 5 %tmp.591;
-            %tmp.594 = dup %tmp.568;
-            %tmp.595 = aputv %tmp.594 10 %tmp.593;
-            %tmp.596 = newa 5;
-            %tmp.598 = const :chrono;
-            symbol [ chrono %tmp.598 331 22 28 const ];
-            %tmp.599 = dup %tmp.596;
-            %tmp.600 = aputv %tmp.599 0 %tmp.598;
-            %tmp.602 = const :elapsedDistance;
-            symbol [ elapsedDistance %tmp.602 331 32 47 const ];
-            %tmp.603 = dup %tmp.600;
-            %tmp.604 = aputv %tmp.603 1 %tmp.602;
-            %tmp.606 = const :currentPace;
-            symbol [ currentPace %tmp.606 331 54 65 const ];
-            %tmp.607 = dup %tmp.604;
-            %tmp.608 = aputv %tmp.607 2 %tmp.606;
-            %tmp.610 = const :totalAscent;
-            symbol [ totalAscent %tmp.610 331 73 84 const ];
-            %tmp.611 = dup %tmp.608;
-            %tmp.612 = aputv %tmp.611 3 %tmp.610;
-            %tmp.614 = const :altitude;
-            symbol [ altitude %tmp.614 331 87 95 const ];
-            %tmp.615 = dup %tmp.612;
-            %tmp.616 = aputv %tmp.615 4 %tmp.614;
-            %tmp.617 = dup %tmp.595;
-            %tmp.618 = aputv %tmp.617 11 %tmp.616;
-            putv self :PAGES %tmp.618;
+            %tmp.476 = dup %tmp.462;
+            %tmp.477 = aputv %tmp.476 1 %tmp.475;
+            %tmp.478 = newa 3;
+            %tmp.480 = const :currentPace;
+            symbol [ currentPace %tmp.480 322 17 28 const ];
+            %tmp.481 = dup %tmp.478;
+            %tmp.482 = aputv %tmp.481 0 %tmp.480;
+            %tmp.484 = const :currentHeartRate;
+            symbol [ currentHeartRate %tmp.484 322 31 47 const ];
+            %tmp.485 = dup %tmp.482;
+            %tmp.486 = aputv %tmp.485 1 %tmp.484;
+            %tmp.488 = const :elapsedDistance;
+            symbol [ elapsedDistance %tmp.488 322 50 65 const ];
+            %tmp.489 = dup %tmp.486;
+            %tmp.490 = aputv %tmp.489 2 %tmp.488;
+            %tmp.491 = dup %tmp.477;
+            %tmp.492 = aputv %tmp.491 2 %tmp.490;
+            %tmp.493 = newa 3;
+            %tmp.495 = const :threeSecPower;
+            symbol [ threeSecPower %tmp.495 323 15 28 const ];
+            %tmp.496 = dup %tmp.493;
+            %tmp.497 = aputv %tmp.496 0 %tmp.495;
+            %tmp.499 = const :currentCadence;
+            symbol [ currentCadence %tmp.499 323 33 47 const ];
+            %tmp.500 = dup %tmp.497;
+            %tmp.501 = aputv %tmp.500 1 %tmp.499;
+            %tmp.503 = const :totalAscent;
+            symbol [ totalAscent %tmp.503 323 54 65 const ];
+            %tmp.504 = dup %tmp.501;
+            %tmp.505 = aputv %tmp.504 2 %tmp.503;
+            %tmp.506 = dup %tmp.492;
+            %tmp.507 = aputv %tmp.506 3 %tmp.505;
+            %tmp.508 = newa 3;
+            %tmp.510 = const :chrono;
+            symbol [ chrono %tmp.510 324 22 28 const ];
+            %tmp.511 = dup %tmp.508;
+            %tmp.512 = aputv %tmp.511 0 %tmp.510;
+            %tmp.514 = const :threeSecPower;
+            symbol [ threeSecPower %tmp.514 324 34 47 const ];
+            %tmp.515 = dup %tmp.512;
+            %tmp.516 = aputv %tmp.515 1 %tmp.514;
+            %tmp.518 = const :averagePower;
+            symbol [ averagePower %tmp.518 324 53 65 const ];
+            %tmp.519 = dup %tmp.516;
+            %tmp.520 = aputv %tmp.519 2 %tmp.518;
+            %tmp.521 = dup %tmp.507;
+            %tmp.522 = aputv %tmp.521 4 %tmp.520;
+            %tmp.523 = newa 3;
+            %tmp.525 = const :chrono;
+            symbol [ chrono %tmp.525 325 22 28 const ];
+            %tmp.526 = dup %tmp.523;
+            %tmp.527 = aputv %tmp.526 0 %tmp.525;
+            %tmp.529 = const :elapsedDistance;
+            symbol [ elapsedDistance %tmp.529 325 32 47 const ];
+            %tmp.530 = dup %tmp.527;
+            %tmp.531 = aputv %tmp.530 1 %tmp.529;
+            %tmp.533 = const :averageSpeed;
+            symbol [ averageSpeed %tmp.533 325 53 65 const ];
+            %tmp.534 = dup %tmp.531;
+            %tmp.535 = aputv %tmp.534 2 %tmp.533;
+            %tmp.536 = dup %tmp.522;
+            %tmp.537 = aputv %tmp.536 5 %tmp.535;
+            %tmp.538 = newa 2;
+            %tmp.540 = const :currentPace;
+            symbol [ currentPace %tmp.540 326 17 28 const ];
+            %tmp.541 = dup %tmp.538;
+            %tmp.542 = aputv %tmp.541 0 %tmp.540;
+            %tmp.544 = const :averagePace;
+            symbol [ averagePace %tmp.544 326 36 47 const ];
+            %tmp.545 = dup %tmp.542;
+            %tmp.546 = aputv %tmp.545 1 %tmp.544;
+            %tmp.547 = dup %tmp.537;
+            %tmp.548 = aputv %tmp.547 6 %tmp.546;
+            %tmp.549 = newa 2;
+            %tmp.551 = const :threeSecPower;
+            symbol [ threeSecPower %tmp.551 327 15 28 const ];
+            %tmp.552 = dup %tmp.549;
+            %tmp.553 = aputv %tmp.552 0 %tmp.551;
+            %tmp.555 = const :normalizedPower;
+            symbol [ normalizedPower %tmp.555 327 32 47 const ];
+            %tmp.556 = dup %tmp.553;
+            %tmp.557 = aputv %tmp.556 1 %tmp.555;
+            %tmp.558 = dup %tmp.548;
+            %tmp.559 = aputv %tmp.558 7 %tmp.557;
+            %tmp.560 = newa 2;
+            %tmp.562 = const :totalAscent;
+            symbol [ totalAscent %tmp.562 328 17 28 const ];
+            %tmp.563 = dup %tmp.560;
+            %tmp.564 = aputv %tmp.563 0 %tmp.562;
+            %tmp.566 = const :altitude;
+            symbol [ altitude %tmp.566 328 39 47 const ];
+            %tmp.567 = dup %tmp.564;
+            %tmp.568 = aputv %tmp.567 1 %tmp.566;
+            %tmp.569 = dup %tmp.559;
+            %tmp.570 = aputv %tmp.569 8 %tmp.568;
+            %tmp.571 = newa 3;
+            %tmp.573 = const :averagePace;
+            symbol [ averagePace %tmp.573 329 17 28 const ];
+            %tmp.574 = dup %tmp.571;
+            %tmp.575 = aputv %tmp.574 0 %tmp.573;
+            %tmp.577 = const :averageHeartRate;
+            symbol [ averageHeartRate %tmp.577 329 31 47 const ];
+            %tmp.578 = dup %tmp.575;
+            %tmp.579 = aputv %tmp.578 1 %tmp.577;
+            %tmp.581 = const :averageCadence;
+            symbol [ averageCadence %tmp.581 329 51 65 const ];
+            %tmp.582 = dup %tmp.579;
+            %tmp.583 = aputv %tmp.582 2 %tmp.581;
+            %tmp.584 = dup %tmp.570;
+            %tmp.585 = aputv %tmp.584 9 %tmp.583;
+            %tmp.586 = newa 6;
+            %tmp.588 = const :threeSecPower;
+            symbol [ threeSecPower %tmp.588 330 15 28 const ];
+            %tmp.589 = dup %tmp.586;
+            %tmp.590 = aputv %tmp.589 0 %tmp.588;
+            %tmp.592 = const :normalizedPower;
+            symbol [ normalizedPower %tmp.592 330 32 47 const ];
+            %tmp.593 = dup %tmp.590;
+            %tmp.594 = aputv %tmp.593 1 %tmp.592;
+            %tmp.596 = const :currentCadence;
+            symbol [ currentCadence %tmp.596 330 51 65 const ];
+            %tmp.597 = dup %tmp.594;
+            %tmp.598 = aputv %tmp.597 2 %tmp.596;
+            %tmp.600 = const :currentHeartRate;
+            symbol [ currentHeartRate %tmp.600 330 68 84 const ];
+            %tmp.601 = dup %tmp.598;
+            %tmp.602 = aputv %tmp.601 3 %tmp.600;
+            %tmp.604 = const :chrono;
+            symbol [ chrono %tmp.604 330 89 95 const ];
+            %tmp.605 = dup %tmp.602;
+            %tmp.606 = aputv %tmp.605 4 %tmp.604;
+            %tmp.608 = const :currentSpeed;
+            symbol [ currentSpeed %tmp.608 330 98 110 const ];
+            %tmp.609 = dup %tmp.606;
+            %tmp.610 = aputv %tmp.609 5 %tmp.608;
+            %tmp.611 = dup %tmp.585;
+            %tmp.612 = aputv %tmp.611 10 %tmp.610;
+            %tmp.613 = newa 5;
+            %tmp.615 = const :chrono;
+            symbol [ chrono %tmp.615 331 22 28 const ];
+            %tmp.616 = dup %tmp.613;
+            %tmp.617 = aputv %tmp.616 0 %tmp.615;
+            %tmp.619 = const :elapsedDistance;
+            symbol [ elapsedDistance %tmp.619 331 32 47 const ];
+            %tmp.620 = dup %tmp.617;
+            %tmp.621 = aputv %tmp.620 1 %tmp.619;
+            %tmp.623 = const :currentPace;
+            symbol [ currentPace %tmp.623 331 54 65 const ];
+            %tmp.624 = dup %tmp.621;
+            %tmp.625 = aputv %tmp.624 2 %tmp.623;
+            %tmp.627 = const :totalAscent;
+            symbol [ totalAscent %tmp.627 331 73 84 const ];
+            %tmp.628 = dup %tmp.625;
+            %tmp.629 = aputv %tmp.628 3 %tmp.627;
+            %tmp.631 = const :altitude;
+            symbol [ altitude %tmp.631 331 87 95 const ];
+            %tmp.632 = dup %tmp.629;
+            %tmp.633 = aputv %tmp.632 4 %tmp.631;
+            %tmp.634 = dup %tmp.612;
+            %tmp.635 = aputv %tmp.634 11 %tmp.633;
+            putv self :PAGES %tmp.635;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 336 14 ]
-            %tmp.619 = newa 52;
-            %tmp.621 = const :chrono;
-            symbol [ chrono %tmp.621 337 13 19 const ];
-            %tmp.622 = dup %tmp.619;
-            %tmp.623 = aputv %tmp.622 0 %tmp.621;
-            %tmp.625 = const :elapsedDistance;
-            symbol [ elapsedDistance %tmp.625 337 32 47 const ];
-            %tmp.626 = dup %tmp.623;
-            %tmp.627 = aputv %tmp.626 1 %tmp.625;
-            %tmp.629 = const :distanceToDestination;
-            symbol [ distanceToDestination %tmp.629 337 52 73 const ];
-            %tmp.630 = dup %tmp.627;
-            %tmp.631 = aputv %tmp.630 2 %tmp.629;
-            %tmp.633 = const :currentHeartRate;
-            symbol [ currentHeartRate %tmp.633 338 13 29 const ];
-            %tmp.634 = dup %tmp.631;
-            %tmp.635 = aputv %tmp.634 3 %tmp.633;
-            %tmp.637 = const :maxHeartRate;
-            symbol [ maxHeartRate %tmp.637 338 32 44 const ];
-            %tmp.638 = dup %tmp.635;
-            %tmp.639 = aputv %tmp.638 4 %tmp.637;
-            %tmp.641 = const :averageHeartRate;
-            symbol [ averageHeartRate %tmp.641 338 52 68 const ];
-            %tmp.642 = dup %tmp.639;
-            %tmp.643 = aputv %tmp.642 5 %tmp.641;
-            %tmp.645 = const :ourPwr;
-            symbol [ ourPwr %tmp.645 339 13 19 const ];
-            %tmp.646 = dup %tmp.643;
-            %tmp.647 = aputv %tmp.646 6 %tmp.645;
-            %tmp.649 = const :maxPower;
-            symbol [ maxPower %tmp.649 339 32 40 const ];
-            %tmp.650 = dup %tmp.647;
-            %tmp.651 = aputv %tmp.650 7 %tmp.649;
-            %tmp.653 = const :averagePower;
-            symbol [ averagePower %tmp.653 339 52 64 const ];
-            %tmp.654 = dup %tmp.651;
-            %tmp.655 = aputv %tmp.654 8 %tmp.653;
-            %tmp.657 = const :threeSecPower;
-            symbol [ threeSecPower %tmp.657 339 76 89 const ];
-            %tmp.658 = dup %tmp.655;
-            %tmp.659 = aputv %tmp.658 9 %tmp.657;
-            %tmp.661 = const :normalizedPower;
-            symbol [ normalizedPower %tmp.661 339 92 107 const ];
-            %tmp.662 = dup %tmp.659;
-            %tmp.663 = aputv %tmp.662 10 %tmp.661;
-            %tmp.665 = const :currentSpeed;
-            symbol [ currentSpeed %tmp.665 340 13 25 const ];
-            %tmp.666 = dup %tmp.663;
-            %tmp.667 = aputv %tmp.666 11 %tmp.665;
-            %tmp.669 = const :maxSpeed;
-            symbol [ maxSpeed %tmp.669 340 32 40 const ];
-            %tmp.670 = dup %tmp.667;
-            %tmp.671 = aputv %tmp.670 12 %tmp.669;
-            %tmp.673 = const :averageSpeed;
-            symbol [ averageSpeed %tmp.673 340 52 64 const ];
-            %tmp.674 = dup %tmp.671;
-            %tmp.675 = aputv %tmp.674 13 %tmp.673;
-            %tmp.677 = const :currentPace;
-            symbol [ currentPace %tmp.677 341 13 24 const ];
-            %tmp.678 = dup %tmp.675;
-            %tmp.679 = aputv %tmp.678 14 %tmp.677;
-            %tmp.681 = const :fastestPace;
-            symbol [ fastestPace %tmp.681 341 32 43 const ];
-            %tmp.682 = dup %tmp.679;
-            %tmp.683 = aputv %tmp.682 15 %tmp.681;
-            %tmp.685 = const :averagePace;
-            symbol [ averagePace %tmp.685 341 52 63 const ];
-            %tmp.686 = dup %tmp.683;
-            %tmp.687 = aputv %tmp.686 16 %tmp.685;
-            %tmp.689 = const :currentCadence;
-            symbol [ currentCadence %tmp.689 342 13 27 const ];
-            %tmp.690 = dup %tmp.687;
-            %tmp.691 = aputv %tmp.690 17 %tmp.689;
-            %tmp.693 = const :maxCadence;
-            symbol [ maxCadence %tmp.693 342 32 42 const ];
-            %tmp.694 = dup %tmp.691;
-            %tmp.695 = aputv %tmp.694 18 %tmp.693;
-            %tmp.697 = const :averageCadence;
-            symbol [ averageCadence %tmp.697 342 52 66 const ];
-            %tmp.698 = dup %tmp.695;
-            %tmp.699 = aputv %tmp.698 19 %tmp.697;
-            %tmp.701 = const :altitude;
-            symbol [ altitude %tmp.701 343 13 21 const ];
-            %tmp.702 = dup %tmp.699;
-            %tmp.703 = aputv %tmp.702 20 %tmp.701;
-            %tmp.705 = const :totalAscent;
-            symbol [ totalAscent %tmp.705 343 32 43 const ];
-            %tmp.706 = dup %tmp.703;
-            %tmp.707 = aputv %tmp.706 21 %tmp.705;
-            %tmp.709 = const :totalDescent;
-            symbol [ totalDescent %tmp.709 343 52 64 const ];
-            %tmp.710 = dup %tmp.707;
-            %tmp.711 = aputv %tmp.710 22 %tmp.709;
-            %tmp.713 = const :averageAscentSpeed;
-            symbol [ averageAscentSpeed %tmp.713 343 76 94 const ];
-            %tmp.714 = dup %tmp.711;
-            %tmp.715 = aputv %tmp.714 23 %tmp.713;
-            %tmp.717 = const :calories;
-            symbol [ calories %tmp.717 344 13 21 const ];
-            %tmp.718 = dup %tmp.715;
-            %tmp.719 = aputv %tmp.718 24 %tmp.717;
-            %tmp.721 = const :energyExpenditure;
-            symbol [ energyExpenditure %tmp.721 344 32 49 const ];
-            %tmp.722 = dup %tmp.719;
-            %tmp.723 = aputv %tmp.722 25 %tmp.721;
-            %tmp.725 = const :groundContactTime;
-            symbol [ groundContactTime %tmp.725 345 13 30 const ];
-            %tmp.726 = dup %tmp.723;
-            %tmp.727 = aputv %tmp.726 26 %tmp.725;
-            %tmp.729 = const :averageGroundContactTime;
-            symbol [ averageGroundContactTime %tmp.729 345 52 76 const ];
-            %tmp.730 = dup %tmp.727;
-            %tmp.731 = aputv %tmp.730 27 %tmp.729;
-            %tmp.733 = const :verticalOscillation;
-            symbol [ verticalOscillation %tmp.733 346 13 32 const ];
-            %tmp.734 = dup %tmp.731;
-            %tmp.735 = aputv %tmp.734 28 %tmp.733;
-            %tmp.737 = const :averageVerticalOscillation;
-            symbol [ averageVerticalOscillation %tmp.737 346 52 78 const ];
-            %tmp.738 = dup %tmp.735;
-            %tmp.739 = aputv %tmp.738 29 %tmp.737;
-            %tmp.741 = const :stepLength;
-            symbol [ stepLength %tmp.741 347 13 23 const ];
-            %tmp.742 = dup %tmp.739;
-            %tmp.743 = aputv %tmp.742 30 %tmp.741;
-            %tmp.745 = const :averageStepLength;
-            symbol [ averageStepLength %tmp.745 347 52 69 const ];
-            %tmp.746 = dup %tmp.743;
-            %tmp.747 = aputv %tmp.746 31 %tmp.745;
-            %tmp.749 = const :lapChrono;
-            symbol [ lapChrono %tmp.749 348 13 22 const ];
-            %tmp.750 = dup %tmp.747;
-            %tmp.751 = aputv %tmp.750 32 %tmp.749;
-            %tmp.753 = const :lapElapsedDistance;
-            symbol [ lapElapsedDistance %tmp.753 348 32 50 const ];
-            %tmp.754 = dup %tmp.751;
-            %tmp.755 = aputv %tmp.754 33 %tmp.753;
-            %tmp.757 = const :lapAverageHeartRate;
-            symbol [ lapAverageHeartRate %tmp.757 349 13 32 const ];
-            %tmp.758 = dup %tmp.755;
-            %tmp.759 = aputv %tmp.758 34 %tmp.757;
-            %tmp.761 = const :lapAveragePower;
-            symbol [ lapAveragePower %tmp.761 349 35 50 const ];
-            %tmp.762 = dup %tmp.759;
-            %tmp.763 = aputv %tmp.762 35 %tmp.761;
-            %tmp.765 = const :lapAverageSpeed;
-            symbol [ lapAverageSpeed %tmp.765 350 13 28 const ];
-            %tmp.766 = dup %tmp.763;
-            %tmp.767 = aputv %tmp.766 36 %tmp.765;
-            %tmp.769 = const :lapAveragePace;
-            symbol [ lapAveragePace %tmp.769 350 35 49 const ];
-            %tmp.770 = dup %tmp.767;
-            %tmp.771 = aputv %tmp.770 37 %tmp.769;
-            %tmp.773 = const :lapAverageCadence;
-            symbol [ lapAverageCadence %tmp.773 351 13 30 const ];
-            %tmp.774 = dup %tmp.771;
-            %tmp.775 = aputv %tmp.774 38 %tmp.773;
-            %tmp.777 = const :lapTotalAscent;
-            symbol [ lapTotalAscent %tmp.777 352 13 27 const ];
-            %tmp.778 = dup %tmp.775;
-            %tmp.779 = aputv %tmp.778 39 %tmp.777;
-            %tmp.781 = const :lapTotalDescent;
-            symbol [ lapTotalDescent %tmp.781 352 30 45 const ];
-            %tmp.782 = dup %tmp.779;
-            %tmp.783 = aputv %tmp.782 40 %tmp.781;
-            %tmp.785 = const :lapAverageAscentSpeed;
-            symbol [ lapAverageAscentSpeed %tmp.785 352 48 69 const ];
-            %tmp.786 = dup %tmp.783;
-            %tmp.787 = aputv %tmp.786 41 %tmp.785;
-            %tmp.789 = const :lapCalories;
-            symbol [ lapCalories %tmp.789 353 13 24 const ];
-            %tmp.790 = dup %tmp.787;
-            %tmp.791 = aputv %tmp.790 42 %tmp.789;
-            %tmp.793 = const :lapAverageGroundContactTime;
-            symbol [ lapAverageGroundContactTime %tmp.793 354 13 40 const ];
-            %tmp.794 = dup %tmp.791;
-            %tmp.795 = aputv %tmp.794 43 %tmp.793;
-            %tmp.797 = const :lapAverageVerticalOscillation;
-            symbol [ lapAverageVerticalOscillation %tmp.797 354 43 72 const ];
-            %tmp.798 = dup %tmp.795;
-            %tmp.799 = aputv %tmp.798 44 %tmp.797;
-            %tmp.801 = const :lapAverageStepLength;
-            symbol [ lapAverageStepLength %tmp.801 354 75 95 const ];
-            %tmp.802 = dup %tmp.799;
-            %tmp.803 = aputv %tmp.802 45 %tmp.801;
-            %tmp.805 = const :strideLength;
-            symbol [ strideLength %tmp.805 355 13 25 const ];
-            %tmp.806 = dup %tmp.803;
-            %tmp.807 = aputv %tmp.806 46 %tmp.805;
-            %tmp.809 = const :coreTemperature;
-            symbol [ coreTemperature %tmp.809 356 13 28 const ];
-            %tmp.810 = dup %tmp.807;
-            %tmp.811 = aputv %tmp.810 47 %tmp.809;
-            %tmp.813 = const :skinTemperature;
-            symbol [ skinTemperature %tmp.813 357 13 28 const ];
-            %tmp.814 = dup %tmp.811;
-            %tmp.815 = aputv %tmp.814 48 %tmp.813;
-            %tmp.817 = const :heatStrainIndex;
-            symbol [ heatStrainIndex %tmp.817 358 13 28 const ];
-            %tmp.818 = dup %tmp.815;
-            %tmp.819 = aputv %tmp.818 49 %tmp.817;
-            %tmp.821 = const :heatIndicator;
-            symbol [ heatIndicator %tmp.821 359 13 26 const ];
-            %tmp.822 = dup %tmp.819;
-            %tmp.823 = aputv %tmp.822 50 %tmp.821;
-            %tmp.825 = const :hrPwr;
-            symbol [ hrPwr %tmp.825 360 13 18 const ];
-            %tmp.826 = dup %tmp.823;
-            %tmp.827 = aputv %tmp.826 51 %tmp.825;
-            putv self :LAYOUTS %tmp.827;
+            %tmp.636 = newa 52;
+            %tmp.638 = const :chrono;
+            symbol [ chrono %tmp.638 337 13 19 const ];
+            %tmp.639 = dup %tmp.636;
+            %tmp.640 = aputv %tmp.639 0 %tmp.638;
+            %tmp.642 = const :elapsedDistance;
+            symbol [ elapsedDistance %tmp.642 337 32 47 const ];
+            %tmp.643 = dup %tmp.640;
+            %tmp.644 = aputv %tmp.643 1 %tmp.642;
+            %tmp.646 = const :distanceToDestination;
+            symbol [ distanceToDestination %tmp.646 337 52 73 const ];
+            %tmp.647 = dup %tmp.644;
+            %tmp.648 = aputv %tmp.647 2 %tmp.646;
+            %tmp.650 = const :currentHeartRate;
+            symbol [ currentHeartRate %tmp.650 338 13 29 const ];
+            %tmp.651 = dup %tmp.648;
+            %tmp.652 = aputv %tmp.651 3 %tmp.650;
+            %tmp.654 = const :maxHeartRate;
+            symbol [ maxHeartRate %tmp.654 338 32 44 const ];
+            %tmp.655 = dup %tmp.652;
+            %tmp.656 = aputv %tmp.655 4 %tmp.654;
+            %tmp.658 = const :averageHeartRate;
+            symbol [ averageHeartRate %tmp.658 338 52 68 const ];
+            %tmp.659 = dup %tmp.656;
+            %tmp.660 = aputv %tmp.659 5 %tmp.658;
+            %tmp.662 = const :ourPwr;
+            symbol [ ourPwr %tmp.662 339 13 19 const ];
+            %tmp.663 = dup %tmp.660;
+            %tmp.664 = aputv %tmp.663 6 %tmp.662;
+            %tmp.666 = const :maxPower;
+            symbol [ maxPower %tmp.666 339 32 40 const ];
+            %tmp.667 = dup %tmp.664;
+            %tmp.668 = aputv %tmp.667 7 %tmp.666;
+            %tmp.670 = const :averagePower;
+            symbol [ averagePower %tmp.670 339 52 64 const ];
+            %tmp.671 = dup %tmp.668;
+            %tmp.672 = aputv %tmp.671 8 %tmp.670;
+            %tmp.674 = const :threeSecPower;
+            symbol [ threeSecPower %tmp.674 339 76 89 const ];
+            %tmp.675 = dup %tmp.672;
+            %tmp.676 = aputv %tmp.675 9 %tmp.674;
+            %tmp.678 = const :normalizedPower;
+            symbol [ normalizedPower %tmp.678 339 92 107 const ];
+            %tmp.679 = dup %tmp.676;
+            %tmp.680 = aputv %tmp.679 10 %tmp.678;
+            %tmp.682 = const :currentSpeed;
+            symbol [ currentSpeed %tmp.682 340 13 25 const ];
+            %tmp.683 = dup %tmp.680;
+            %tmp.684 = aputv %tmp.683 11 %tmp.682;
+            %tmp.686 = const :maxSpeed;
+            symbol [ maxSpeed %tmp.686 340 32 40 const ];
+            %tmp.687 = dup %tmp.684;
+            %tmp.688 = aputv %tmp.687 12 %tmp.686;
+            %tmp.690 = const :averageSpeed;
+            symbol [ averageSpeed %tmp.690 340 52 64 const ];
+            %tmp.691 = dup %tmp.688;
+            %tmp.692 = aputv %tmp.691 13 %tmp.690;
+            %tmp.694 = const :currentPace;
+            symbol [ currentPace %tmp.694 341 13 24 const ];
+            %tmp.695 = dup %tmp.692;
+            %tmp.696 = aputv %tmp.695 14 %tmp.694;
+            %tmp.698 = const :fastestPace;
+            symbol [ fastestPace %tmp.698 341 32 43 const ];
+            %tmp.699 = dup %tmp.696;
+            %tmp.700 = aputv %tmp.699 15 %tmp.698;
+            %tmp.702 = const :averagePace;
+            symbol [ averagePace %tmp.702 341 52 63 const ];
+            %tmp.703 = dup %tmp.700;
+            %tmp.704 = aputv %tmp.703 16 %tmp.702;
+            %tmp.706 = const :currentCadence;
+            symbol [ currentCadence %tmp.706 342 13 27 const ];
+            %tmp.707 = dup %tmp.704;
+            %tmp.708 = aputv %tmp.707 17 %tmp.706;
+            %tmp.710 = const :maxCadence;
+            symbol [ maxCadence %tmp.710 342 32 42 const ];
+            %tmp.711 = dup %tmp.708;
+            %tmp.712 = aputv %tmp.711 18 %tmp.710;
+            %tmp.714 = const :averageCadence;
+            symbol [ averageCadence %tmp.714 342 52 66 const ];
+            %tmp.715 = dup %tmp.712;
+            %tmp.716 = aputv %tmp.715 19 %tmp.714;
+            %tmp.718 = const :altitude;
+            symbol [ altitude %tmp.718 343 13 21 const ];
+            %tmp.719 = dup %tmp.716;
+            %tmp.720 = aputv %tmp.719 20 %tmp.718;
+            %tmp.722 = const :totalAscent;
+            symbol [ totalAscent %tmp.722 343 32 43 const ];
+            %tmp.723 = dup %tmp.720;
+            %tmp.724 = aputv %tmp.723 21 %tmp.722;
+            %tmp.726 = const :totalDescent;
+            symbol [ totalDescent %tmp.726 343 52 64 const ];
+            %tmp.727 = dup %tmp.724;
+            %tmp.728 = aputv %tmp.727 22 %tmp.726;
+            %tmp.730 = const :averageAscentSpeed;
+            symbol [ averageAscentSpeed %tmp.730 343 76 94 const ];
+            %tmp.731 = dup %tmp.728;
+            %tmp.732 = aputv %tmp.731 23 %tmp.730;
+            %tmp.734 = const :calories;
+            symbol [ calories %tmp.734 344 13 21 const ];
+            %tmp.735 = dup %tmp.732;
+            %tmp.736 = aputv %tmp.735 24 %tmp.734;
+            %tmp.738 = const :energyExpenditure;
+            symbol [ energyExpenditure %tmp.738 344 32 49 const ];
+            %tmp.739 = dup %tmp.736;
+            %tmp.740 = aputv %tmp.739 25 %tmp.738;
+            %tmp.742 = const :groundContactTime;
+            symbol [ groundContactTime %tmp.742 345 13 30 const ];
+            %tmp.743 = dup %tmp.740;
+            %tmp.744 = aputv %tmp.743 26 %tmp.742;
+            %tmp.746 = const :averageGroundContactTime;
+            symbol [ averageGroundContactTime %tmp.746 345 52 76 const ];
+            %tmp.747 = dup %tmp.744;
+            %tmp.748 = aputv %tmp.747 27 %tmp.746;
+            %tmp.750 = const :verticalOscillation;
+            symbol [ verticalOscillation %tmp.750 346 13 32 const ];
+            %tmp.751 = dup %tmp.748;
+            %tmp.752 = aputv %tmp.751 28 %tmp.750;
+            %tmp.754 = const :averageVerticalOscillation;
+            symbol [ averageVerticalOscillation %tmp.754 346 52 78 const ];
+            %tmp.755 = dup %tmp.752;
+            %tmp.756 = aputv %tmp.755 29 %tmp.754;
+            %tmp.758 = const :stepLength;
+            symbol [ stepLength %tmp.758 347 13 23 const ];
+            %tmp.759 = dup %tmp.756;
+            %tmp.760 = aputv %tmp.759 30 %tmp.758;
+            %tmp.762 = const :averageStepLength;
+            symbol [ averageStepLength %tmp.762 347 52 69 const ];
+            %tmp.763 = dup %tmp.760;
+            %tmp.764 = aputv %tmp.763 31 %tmp.762;
+            %tmp.766 = const :lapChrono;
+            symbol [ lapChrono %tmp.766 348 13 22 const ];
+            %tmp.767 = dup %tmp.764;
+            %tmp.768 = aputv %tmp.767 32 %tmp.766;
+            %tmp.770 = const :lapElapsedDistance;
+            symbol [ lapElapsedDistance %tmp.770 348 32 50 const ];
+            %tmp.771 = dup %tmp.768;
+            %tmp.772 = aputv %tmp.771 33 %tmp.770;
+            %tmp.774 = const :lapAverageHeartRate;
+            symbol [ lapAverageHeartRate %tmp.774 349 13 32 const ];
+            %tmp.775 = dup %tmp.772;
+            %tmp.776 = aputv %tmp.775 34 %tmp.774;
+            %tmp.778 = const :lapAveragePower;
+            symbol [ lapAveragePower %tmp.778 349 35 50 const ];
+            %tmp.779 = dup %tmp.776;
+            %tmp.780 = aputv %tmp.779 35 %tmp.778;
+            %tmp.782 = const :lapAverageSpeed;
+            symbol [ lapAverageSpeed %tmp.782 350 13 28 const ];
+            %tmp.783 = dup %tmp.780;
+            %tmp.784 = aputv %tmp.783 36 %tmp.782;
+            %tmp.786 = const :lapAveragePace;
+            symbol [ lapAveragePace %tmp.786 350 35 49 const ];
+            %tmp.787 = dup %tmp.784;
+            %tmp.788 = aputv %tmp.787 37 %tmp.786;
+            %tmp.790 = const :lapAverageCadence;
+            symbol [ lapAverageCadence %tmp.790 351 13 30 const ];
+            %tmp.791 = dup %tmp.788;
+            %tmp.792 = aputv %tmp.791 38 %tmp.790;
+            %tmp.794 = const :lapTotalAscent;
+            symbol [ lapTotalAscent %tmp.794 352 13 27 const ];
+            %tmp.795 = dup %tmp.792;
+            %tmp.796 = aputv %tmp.795 39 %tmp.794;
+            %tmp.798 = const :lapTotalDescent;
+            symbol [ lapTotalDescent %tmp.798 352 30 45 const ];
+            %tmp.799 = dup %tmp.796;
+            %tmp.800 = aputv %tmp.799 40 %tmp.798;
+            %tmp.802 = const :lapAverageAscentSpeed;
+            symbol [ lapAverageAscentSpeed %tmp.802 352 48 69 const ];
+            %tmp.803 = dup %tmp.800;
+            %tmp.804 = aputv %tmp.803 41 %tmp.802;
+            %tmp.806 = const :lapCalories;
+            symbol [ lapCalories %tmp.806 353 13 24 const ];
+            %tmp.807 = dup %tmp.804;
+            %tmp.808 = aputv %tmp.807 42 %tmp.806;
+            %tmp.810 = const :lapAverageGroundContactTime;
+            symbol [ lapAverageGroundContactTime %tmp.810 354 13 40 const ];
+            %tmp.811 = dup %tmp.808;
+            %tmp.812 = aputv %tmp.811 43 %tmp.810;
+            %tmp.814 = const :lapAverageVerticalOscillation;
+            symbol [ lapAverageVerticalOscillation %tmp.814 354 43 72 const ];
+            %tmp.815 = dup %tmp.812;
+            %tmp.816 = aputv %tmp.815 44 %tmp.814;
+            %tmp.818 = const :lapAverageStepLength;
+            symbol [ lapAverageStepLength %tmp.818 354 75 95 const ];
+            %tmp.819 = dup %tmp.816;
+            %tmp.820 = aputv %tmp.819 45 %tmp.818;
+            %tmp.822 = const :strideLength;
+            symbol [ strideLength %tmp.822 355 13 25 const ];
+            %tmp.823 = dup %tmp.820;
+            %tmp.824 = aputv %tmp.823 46 %tmp.822;
+            %tmp.826 = const :coreTemperature;
+            symbol [ coreTemperature %tmp.826 356 13 28 const ];
+            %tmp.827 = dup %tmp.824;
+            %tmp.828 = aputv %tmp.827 47 %tmp.826;
+            %tmp.830 = const :skinTemperature;
+            symbol [ skinTemperature %tmp.830 357 13 28 const ];
+            %tmp.831 = dup %tmp.828;
+            %tmp.832 = aputv %tmp.831 48 %tmp.830;
+            %tmp.834 = const :heatStrainIndex;
+            symbol [ heatStrainIndex %tmp.834 358 13 28 const ];
+            %tmp.835 = dup %tmp.832;
+            %tmp.836 = aputv %tmp.835 49 %tmp.834;
+            %tmp.838 = const :heatIndicator;
+            symbol [ heatIndicator %tmp.838 359 13 26 const ];
+            %tmp.839 = dup %tmp.836;
+            %tmp.840 = aputv %tmp.839 50 %tmp.838;
+            %tmp.842 = const :hrPwr;
+            symbol [ hrPwr %tmp.842 360 13 18 const ];
+            %tmp.843 = dup %tmp.840;
+            %tmp.844 = aputv %tmp.843 51 %tmp.842;
+            putv self :LAYOUTS %tmp.844;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc" 364 14 ]
-            %tmp.828 = newa 7;
-            %tmp.829 = newa 0;
-            %tmp.830 = dup %tmp.828;
-            %tmp.831 = aputv %tmp.830 0 %tmp.829;
-            %tmp.832 = newa 1;
-            %tmp.833 = 0x00001E59;
-            %tmp.834 = dup %tmp.832;
-            %tmp.835 = aputv %tmp.834 0 %tmp.833;
-            %tmp.836 = dup %tmp.831;
-            %tmp.837 = aputv %tmp.836 1 %tmp.835;
-            %tmp.838 = newa 2;
-            %tmp.839 = 0x00001E77;
-            %tmp.840 = dup %tmp.838;
-            %tmp.841 = aputv %tmp.840 0 %tmp.839;
-            %tmp.842 = 0x00001E23;
-            %tmp.843 = dup %tmp.841;
-            %tmp.844 = aputv %tmp.843 1 %tmp.842;
-            %tmp.845 = dup %tmp.837;
-            %tmp.846 = aputv %tmp.845 2 %tmp.844;
-            %tmp.847 = newa 3;
-            %tmp.848 = 0x00001E99;
-            %tmp.849 = dup %tmp.847;
-            %tmp.850 = aputv %tmp.849 0 %tmp.848;
-            %tmp.851 = 0x00001E59;
-            %tmp.852 = dup %tmp.850;
-            %tmp.853 = aputv %tmp.852 1 %tmp.851;
-            %tmp.854 = 0x00001E19;
-            %tmp.855 = dup %tmp.853;
-            %tmp.856 = aputv %tmp.855 2 %tmp.854;
-            %tmp.857 = dup %tmp.846;
-            %tmp.858 = aputv %tmp.857 3 %tmp.856;
-            %tmp.859 = newa 4;
-            %tmp.860 = 0x00001E99;
-            %tmp.861 = dup %tmp.859;
-            %tmp.862 = aputv %tmp.861 0 %tmp.860;
-            %tmp.863 = 0x00001E59;
-            %tmp.864 = dup %tmp.862;
-            %tmp.865 = aputv %tmp.864 1 %tmp.863;
-            %tmp.866 = 0x00019A22;
-            %tmp.867 = dup %tmp.865;
-            %tmp.868 = aputv %tmp.867 2 %tmp.866;
-            %tmp.869 = 0x00011E22;
-            %tmp.870 = dup %tmp.868;
-            %tmp.871 = aputv %tmp.870 3 %tmp.869;
-            %tmp.872 = dup %tmp.858;
-            %tmp.873 = aputv %tmp.872 4 %tmp.871;
-            %tmp.874 = newa 5;
-            %tmp.875 = 0x00001E99;
-            %tmp.876 = dup %tmp.874;
-            %tmp.877 = aputv %tmp.876 0 %tmp.875;
-            %tmp.878 = 0x00019D5F;
-            %tmp.879 = dup %tmp.877;
-            %tmp.880 = aputv %tmp.879 1 %tmp.878;
-            %tmp.881 = 0x00011E5F;
-            %tmp.882 = dup %tmp.880;
-            %tmp.883 = aputv %tmp.882 2 %tmp.881;
-            %tmp.884 = 0x00019A22;
-            %tmp.885 = dup %tmp.883;
-            %tmp.886 = aputv %tmp.885 3 %tmp.884;
-            %tmp.887 = 0x00011E22;
-            %tmp.888 = dup %tmp.886;
-            %tmp.889 = aputv %tmp.888 4 %tmp.887;
-            %tmp.890 = dup %tmp.873;
-            %tmp.891 = aputv %tmp.890 5 %tmp.889;
-            %tmp.892 = newa 6;
-            %tmp.893 = 0x00019D9D;
-            %tmp.894 = dup %tmp.892;
-            %tmp.895 = aputv %tmp.894 0 %tmp.893;
-            %tmp.896 = 0x00011E9D;
-            %tmp.897 = dup %tmp.895;
-            %tmp.898 = aputv %tmp.897 1 %tmp.896;
-            %tmp.899 = 0x00019D5F;
-            %tmp.900 = dup %tmp.898;
-            %tmp.901 = aputv %tmp.900 2 %tmp.899;
-            %tmp.902 = 0x00011E5F;
-            %tmp.903 = dup %tmp.901;
-            %tmp.904 = aputv %tmp.903 3 %tmp.902;
-            %tmp.905 = 0x00019A22;
-            %tmp.906 = dup %tmp.904;
-            %tmp.907 = aputv %tmp.906 4 %tmp.905;
-            %tmp.908 = 0x00011E22;
-            %tmp.909 = dup %tmp.907;
-            %tmp.910 = aputv %tmp.909 5 %tmp.908;
-            %tmp.911 = dup %tmp.891;
-            %tmp.912 = aputv %tmp.911 6 %tmp.910;
-            putv self :POSITIONS %tmp.912;
+            %tmp.845 = newa 7;
+            %tmp.846 = newa 0;
+            %tmp.847 = dup %tmp.845;
+            %tmp.848 = aputv %tmp.847 0 %tmp.846;
+            %tmp.849 = newa 1;
+            %tmp.850 = 0x00001E59;
+            %tmp.851 = dup %tmp.849;
+            %tmp.852 = aputv %tmp.851 0 %tmp.850;
+            %tmp.853 = dup %tmp.848;
+            %tmp.854 = aputv %tmp.853 1 %tmp.852;
+            %tmp.855 = newa 2;
+            %tmp.856 = 0x00001E77;
+            %tmp.857 = dup %tmp.855;
+            %tmp.858 = aputv %tmp.857 0 %tmp.856;
+            %tmp.859 = 0x00001E23;
+            %tmp.860 = dup %tmp.858;
+            %tmp.861 = aputv %tmp.860 1 %tmp.859;
+            %tmp.862 = dup %tmp.854;
+            %tmp.863 = aputv %tmp.862 2 %tmp.861;
+            %tmp.864 = newa 3;
+            %tmp.865 = 0x00001E99;
+            %tmp.866 = dup %tmp.864;
+            %tmp.867 = aputv %tmp.866 0 %tmp.865;
+            %tmp.868 = 0x00001E59;
+            %tmp.869 = dup %tmp.867;
+            %tmp.870 = aputv %tmp.869 1 %tmp.868;
+            %tmp.871 = 0x00001E19;
+            %tmp.872 = dup %tmp.870;
+            %tmp.873 = aputv %tmp.872 2 %tmp.871;
+            %tmp.874 = dup %tmp.863;
+            %tmp.875 = aputv %tmp.874 3 %tmp.873;
+            %tmp.876 = newa 4;
+            %tmp.877 = 0x00001E99;
+            %tmp.878 = dup %tmp.876;
+            %tmp.879 = aputv %tmp.878 0 %tmp.877;
+            %tmp.880 = 0x00001E59;
+            %tmp.881 = dup %tmp.879;
+            %tmp.882 = aputv %tmp.881 1 %tmp.880;
+            %tmp.883 = 0x00019A22;
+            %tmp.884 = dup %tmp.882;
+            %tmp.885 = aputv %tmp.884 2 %tmp.883;
+            %tmp.886 = 0x00011E22;
+            %tmp.887 = dup %tmp.885;
+            %tmp.888 = aputv %tmp.887 3 %tmp.886;
+            %tmp.889 = dup %tmp.875;
+            %tmp.890 = aputv %tmp.889 4 %tmp.888;
+            %tmp.891 = newa 5;
+            %tmp.892 = 0x00001E99;
+            %tmp.893 = dup %tmp.891;
+            %tmp.894 = aputv %tmp.893 0 %tmp.892;
+            %tmp.895 = 0x00019D5F;
+            %tmp.896 = dup %tmp.894;
+            %tmp.897 = aputv %tmp.896 1 %tmp.895;
+            %tmp.898 = 0x00011E5F;
+            %tmp.899 = dup %tmp.897;
+            %tmp.900 = aputv %tmp.899 2 %tmp.898;
+            %tmp.901 = 0x00019A22;
+            %tmp.902 = dup %tmp.900;
+            %tmp.903 = aputv %tmp.902 3 %tmp.901;
+            %tmp.904 = 0x00011E22;
+            %tmp.905 = dup %tmp.903;
+            %tmp.906 = aputv %tmp.905 4 %tmp.904;
+            %tmp.907 = dup %tmp.890;
+            %tmp.908 = aputv %tmp.907 5 %tmp.906;
+            %tmp.909 = newa 6;
+            %tmp.910 = 0x00019D9D;
+            %tmp.911 = dup %tmp.909;
+            %tmp.912 = aputv %tmp.911 0 %tmp.910;
+            %tmp.913 = 0x00011E9D;
+            %tmp.914 = dup %tmp.912;
+            %tmp.915 = aputv %tmp.914 1 %tmp.913;
+            %tmp.916 = 0x00019D5F;
+            %tmp.917 = dup %tmp.915;
+            %tmp.918 = aputv %tmp.917 2 %tmp.916;
+            %tmp.919 = 0x00011E5F;
+            %tmp.920 = dup %tmp.918;
+            %tmp.921 = aputv %tmp.920 3 %tmp.919;
+            %tmp.922 = 0x00019A22;
+            %tmp.923 = dup %tmp.921;
+            %tmp.924 = aputv %tmp.923 4 %tmp.922;
+            %tmp.925 = 0x00011E22;
+            %tmp.926 = dup %tmp.924;
+            %tmp.927 = aputv %tmp.926 5 %tmp.925;
+            %tmp.928 = dup %tmp.908;
+            %tmp.929 = aputv %tmp.928 6 %tmp.927;
+            putv self :POSITIONS %tmp.929;
         }
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\ActiveLookActivityInfo.mc"; @line = 316; @symbol_typedef = [PageSpec,316,16,24]; @symbol_type<0> = [Lang,316,28,32]; @symbol_type<1> = [Array,316,33,38]; @symbol_type<2> = [Lang,316,39,43]; @symbol_type<3> = [Symbol,316,44,50]; ]
         type PageSpec as Lang.Array<Lang.Symbol>;

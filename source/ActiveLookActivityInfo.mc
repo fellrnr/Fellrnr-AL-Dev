@@ -127,8 +127,8 @@ module ActiveLook {
 
             // Three seconds power & Normalized power
             var pwr = null;
-            if(strydSensor != null) {
-                pwr = strydSensor.currentPower;
+            if(antplusBikePower != null && antplusBikePower.getCalculatedPower() != null && antplusBikePower.getCalculatedPower().power != null) {
+                pwr = antplusBikePower.getCalculatedPower().power;
             } else if (info has :currentPower && info.currentPower != null) {
                 pwr = info.currentPower;
             }
@@ -236,8 +236,8 @@ module ActiveLook {
             // Max power
             //tmp = get(:currentPower);
             var pwr = null;
-            if(strydSensor != null) {
-                pwr = strydSensor.currentPower;
+            if(antplusBikePower != null && antplusBikePower.getCalculatedPower() != null && antplusBikePower.getCalculatedPower().power != null) {
+                pwr = antplusBikePower.getCalculatedPower().power;
 
                 // var myTime = System.getClockTime(); // ClockTime object
                 // System.println(
@@ -248,7 +248,7 @@ module ActiveLook {
             } else if (info has :currentPower && info.currentPower != null) {
                 pwr = info.currentPower;
             }
-            ourPwr = pwr; 
+            ourPwr = pwr;
             var pwrValid = pwr != null && pwr != false && pwr > 0.0;
             if(pwrValid){
                  maxPower = maxPower == null ? pwr : pwr > maxPower ? pwr : maxPower;
@@ -272,7 +272,7 @@ module ActiveLook {
                     }
                 }
             }
-        
+
             // Average ascent speed
             tmpValid = __asSamples.size();
             if (tmpValid > 1) {
@@ -289,7 +289,7 @@ module ActiveLook {
             } else {
                 strideLength = (info.currentSpeed * 60) / info.currentCadence * 1000; //this DF code expects it in mm
             }
-            
+
 
             //#!JFS!# calculate HrPwr
             //use ourPwr from above
@@ -297,10 +297,10 @@ module ActiveLook {
                 if(smoothHrPwrCounter < HrPwrSmoothing) {
                     smoothHrPwrCounter++;
                 }
-                
+
                 smoothhr = (smoothhr*(smoothHrPwrCounter-1.0)/smoothHrPwrCounter) + info.currentHeartRate.toFloat()/smoothHrPwrCounter;
                 smoothpwr = (smoothpwr*(smoothHrPwrCounter-1.0)/smoothHrPwrCounter) + ourPwr/smoothHrPwrCounter;
-                
+
                 var hrpwraw = ((smoothpwr * 1000.0) / weight) / (smoothhr - ZeroPowerHR);
                 hrPwr = Math.round(hrpwraw*10)/10.0;
             } else {
@@ -474,9 +474,9 @@ module ActiveLook {
          * ---------------------------------|------------------------|-----------|--------|---------|------------------------------------------
          *  Core Data                       | Symbol                 | U Garmin  | Metric | Statute | python converter: a = ""
          * ---------------------------------|------------------------|-----------|--------|---------|------------------------------------------
-         *  Skin Temp                       | :skinTemperature       |           |                  | 
-         *  Core Temp                       | :coreTemperature       |           |                  | 
-         *  Heat Strain Index               | :heatStrainIndex       |           |                  | 
+         *  Skin Temp                       | :skinTemperature       |           |                  |
+         *  Core Temp                       | :coreTemperature       |           |                  |
+         *  Heat Strain Index               | :heatStrainIndex       |           |                  |
          * ---------------------------------|------------------------|-----------|--------|---------|------------------------------------------
          */
          //https://github.com/ActiveLook/Activelook-API-Documentation
@@ -574,7 +574,7 @@ module ActiveLook {
          * ---------------------------------|------------------------|-----------|--------|---------|------------------------------------------
          *  Lap Average Vertical Oscillation | :lapAverageVerticalOscillation | mm |  cm  |   in    | a += "%0.2X%0.2X%0.2X%0.2X\n" % (200, 201, 202, 202)
          *  Lap Average Step Length         | :lapAverageStepLength  |      mm   |   m    |   ft    | a += "%0.2X%0.2X%0.2X%0.2X\n" % (194, 195, 196, 196)
-        //#!JFS!# Add stride length to comment 
+        //#!JFS!# Add stride length to comment
          * ---------------------------------|------------------------|-----------|--------|---------|------------------------------------------
          *  Stride Length (calculated)      | :strideLength          |      mm   |   m    |   ft    | a += "%0.2X%0.2X%0.2X%0.2X\n" % (194, 195, 196, 196)
          */
@@ -594,7 +594,7 @@ module ActiveLook {
             :verticalOscillation        => { :id => 0xC8C9CACA, :statuteSwitch => :heightUnits, :toMetric => 0.1,   :toStatute => 0.0393701  },
             :averageVerticalOscillation => { :id => 0xC8C9CACA, :statuteSwitch => :heightUnits, :toMetric => 0.1,   :toStatute => 0.0393701  },
             :stepLength                 => { :id => 0xC2C3C4C4, :statuteSwitch => :heightUnits, :toMetric => 0.001, :toStatute => 0.00328084 },
-            :averageStepLength          => { :id => 0xC2C3C4C4, :statuteSwitch => :heightUnits, :toMetric => 0.001, :toStatute => 0.00328084 }, 
+            :averageStepLength          => { :id => 0xC2C3C4C4, :statuteSwitch => :heightUnits, :toMetric => 0.001, :toStatute => 0.00328084 },
             :lapElapsedDistance    => { :id => 0x0C232E2E, :statuteSwitch => :distanceUnits,  :toMetric => 0.001,  :toStatute => 0.000621371 },
             :lapAverageSpeed       => { :id => 0x0E222D2D, :statuteSwitch => :paceUnits,      :toMetric => 3.6,    :toStatute => 2.236936    },
             :lapAveragePace        => { :id => 0x42434444, :statuteSwitch => :paceUnits,      :toMetric => 1000.0, :toStatute => 1609.344    },
@@ -603,10 +603,10 @@ module ActiveLook {
             :lapAverageAscentSpeed => { :id => 0x14283B3B, :statuteSwitch => :paceUnits,      :toMetric => 3600.0, :toStatute => 11811.024   },
             :lapAverageVerticalOscillation => { :id => 0xC8C9CACA, :statuteSwitch => :heightUnits, :toMetric => 0.1,   :toStatute => 0.0393701  },
             :lapAverageStepLength          => { :id => 0xC2C3C4C4, :statuteSwitch => :heightUnits, :toMetric => 0.001, :toStatute => 0.00328084 },
-            :strideLength                 => { :id => 0xC2C3C4C4, :statuteSwitch => :heightUnits, :toMetric => 0.001, :toStatute => 0.00328084 }, //#!JFS!# hopefully the id will be okay. 
+            :strideLength                 => { :id => 0xC2C3C4C4, :statuteSwitch => :heightUnits, :toMetric => 0.001, :toStatute => 0.00328084 }, //#!JFS!# hopefully the id will be okay.
         };
 
-        //Full width and half width? 
+        //Full width and half width?
         const CUSTOM_TO_STR as Lang.Dictionary<Lang.Symbol, {
             :full as Method(value as Lang.Numeric or Lang.Array<Lang.Numeric> or Null) as Lang.String,
             :half as Method(value as Lang.Numeric or Lang.Array<Lang.Numeric> or Null) as Lang.String
@@ -677,14 +677,14 @@ module ActiveLook {
                 return Lang.format("$1$:$2$", [ (value / 60).format("%02d"), ((value % 60) / 6).format("%1d") ]);
             }
         }
-        
+
         function averagePowerFullFormat(value as Lang.Number or Lang.Float or Null) as Lang.String {
             if (value == null) {
                 return toFullStr("-");
             }
             return toFullStr(Math.round(value).format("%.0f"));
         }
-        
+
         function averagePowerHalfFormat(value as Lang.Number or Lang.Float or Null) as Lang.String {
             if (value == null) {
                 return toHalfStr("-");

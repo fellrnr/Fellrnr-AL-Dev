@@ -154,306 +154,322 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_55_38_57_12_s
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_55_12_57_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 59 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_12_63_12_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_15_59_61_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_15_59_111_begin:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_15_59_82_begin:
             symbol [ lapAveragePower %tmp.23 59 15 30 ];
             %tmp.23 = getv ? :lapAveragePower;
             %tmp.24 = null;
             %tmp.25 = ne %tmp.23 %tmp.24;
             bf %tmp.25 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_12_63_12_if_else_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_42_59_61_true:
-            symbol [ lapAveragePower %tmp.27 59 42 57 ];
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_43_59_82_true:
+            symbol [ lapAveragePower %tmp.27 59 43 58 ];
             %tmp.27 = getv ? :lapAveragePower;
             %tmp.28 = as %tmp.27 { (!Null) };
-            %tmp.29 = 0;
-            %tmp.30 = ne %tmp.28 %tmp.29;
-            push %tmp.30;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_42_59_61_end:
-            %tmp.31 = phi [%tmp.25 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_15_59_61_begin] [%tmp.30 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_42_59_61_true] [%tmp.31 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_42_59_61_end];
-            bf %tmp.31 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_12_63_12_if_else_false;
+            symbol [ Toybox %tmp.30 59 70 76 ];
+            %tmp.30 = getv ? :Toybox;
+            symbol [ Lang %tmp.31 59 77 81 ];
+            %tmp.31 = getv %tmp.30 :Lang;
+            symbol [ Number %tmp.32 59 82 88 ];
+            %tmp.32 = getv %tmp.31 :Number;
+            %tmp.33 = isa %tmp.28 %tmp.32;
+            push %tmp.33;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_43_59_82_end:
+            %tmp.34 = phi [%tmp.25 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_15_59_82_begin] [%tmp.33 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_43_59_82_true] [%tmp.34 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_43_59_82_end];
+            bf %tmp.34 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_12_63_12_if_else_false;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_92_59_111_true:
+            symbol [ lapAveragePower %tmp.36 59 92 107 ];
+            %tmp.36 = getv ? :lapAveragePower;
+            %tmp.37 = as %tmp.36 { (Toybox.Lang.Number) && (!Null) };
+            %tmp.38 = 0;
+            %tmp.39 = ne %tmp.37 %tmp.38;
+            push %tmp.39;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_92_59_111_end:
+            %tmp.40 = phi [%tmp.34 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_15_59_111_begin] [%tmp.39 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_92_59_111_true] [%tmp.40 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_92_59_111_end];
+            bf %tmp.40 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_12_63_12_if_else_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_12_63_12_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_64_61_12_start:
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_114_61_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 60 16 ]
-            symbol [ Toybox %tmp.33 60 42 48 ];
-            %tmp.33 = getv ? :Toybox;
-            symbol [ Math %tmp.34 60 49 53 ];
-            %tmp.34 = getv %tmp.33 :Math;
-            symbol [ round %tmp.35 60 54 59 ];
-            %tmp.35 = getv function %tmp.34 :round;
-            symbol [ lapAveragePower %tmp.37 60 60 75 ];
-            %tmp.37 = getv ? :lapAveragePower;
-            %tmp.38 = as %tmp.37 { (!Null) };
-            %tmp.39 = invoke %tmp.34 %tmp.35(%tmp.38);
+            symbol [ Toybox %tmp.42 60 42 48 ];
+            %tmp.42 = getv ? :Toybox;
+            symbol [ Math %tmp.43 60 49 53 ];
+            %tmp.43 = getv %tmp.42 :Math;
+            symbol [ round %tmp.44 60 54 59 ];
+            %tmp.44 = getv function %tmp.43 :round;
+            symbol [ lapAveragePower %tmp.46 60 60 75 ];
+            %tmp.46 = getv ? :lapAveragePower;
+            %tmp.47 = as %tmp.46 { (Toybox.Lang.Number) && (!Null) };
+            %tmp.48 = invoke %tmp.43 %tmp.44(%tmp.47);
             symbol [ lapAveragePowerPrevious ? 60 16 39 ];
-            putv self :lapAveragePowerPrevious %tmp.39;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_64_61_12_stop:
+            putv self :lapAveragePowerPrevious %tmp.48;
+C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_114_61_12_stop:
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_12_63_12_if_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_12_63_12_if_else_false:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_61_19_63_12_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 62 16 ]
-            %tmp.40 = -1;
+            %tmp.49 = -1;
             symbol [ lapAveragePowerPrevious ? 62 16 39 ];
-            putv self :lapAveragePowerPrevious %tmp.40;
+            putv self :lapAveragePowerPrevious %tmp.49;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_61_19_63_12_stop:
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_59_12_63_12_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 65 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_begin:
-            %tmp.41 = self;
-            symbol [ hasValue %tmp.42 65 32 40 ];
-            %tmp.42 = getv function %tmp.41 :hasValue;
-            %tmp.43 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.43 65 41 53 ];
-            %tmp.45 = const :timerTime;
-            symbol [ timerTime %tmp.45 65 56 65 const ];
-            %tmp.46 = invoke %tmp.41 %tmp.42(%tmp.43, %tmp.45);
-            bf %tmp.46 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_false;
+            %tmp.50 = self;
+            symbol [ hasValue %tmp.51 65 32 40 ];
+            %tmp.51 = getv function %tmp.50 :hasValue;
+            %tmp.52 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.52 65 41 53 ];
+            %tmp.54 = const :timerTime;
+            symbol [ timerTime %tmp.54 65 56 65 const ];
+            %tmp.55 = invoke %tmp.50 %tmp.51(%tmp.52, %tmp.54);
+            bf %tmp.55 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_true:
-            %tmp.47 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.47 65 69 81 ];
-            symbol [ timerTime %tmp.48 65 82 91 ];
-            %tmp.48 = getv %tmp.47 :timerTime;
-            push %tmp.48;
+            %tmp.56 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.56 65 69 81 ];
+            symbol [ timerTime %tmp.57 65 82 91 ];
+            %tmp.57 = getv %tmp.56 :timerTime;
+            push %tmp.57;
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_false:
-            %tmp.49 = 0;
-            push %tmp.49;
+            %tmp.58 = 0;
+            push %tmp.58;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_end:
-            %tmp.50 = phi [%tmp.46 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_begin] [%tmp.48 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_true] [%tmp.49 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_false] [%tmp.50 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_end];
+            %tmp.59 = phi [%tmp.55 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_begin] [%tmp.57 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_true] [%tmp.58 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_false] [%tmp.59 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_65_32_65_94_end];
             symbol [ lapStartTimerTime ? 65 12 29 ];
-            putv self :lapStartTimerTime %tmp.50;
+            putv self :lapStartTimerTime %tmp.59;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 66 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_begin:
-            %tmp.51 = self;
-            symbol [ hasValue %tmp.52 66 38 46 ];
-            %tmp.52 = getv function %tmp.51 :hasValue;
-            %tmp.53 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.53 66 47 59 ];
-            %tmp.55 = const :elapsedDistance;
-            symbol [ elapsedDistance %tmp.55 66 62 77 const ];
-            %tmp.56 = invoke %tmp.51 %tmp.52(%tmp.53, %tmp.55);
-            bf %tmp.56 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_false;
+            %tmp.60 = self;
+            symbol [ hasValue %tmp.61 66 38 46 ];
+            %tmp.61 = getv function %tmp.60 :hasValue;
+            %tmp.62 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.62 66 47 59 ];
+            %tmp.64 = const :elapsedDistance;
+            symbol [ elapsedDistance %tmp.64 66 62 77 const ];
+            %tmp.65 = invoke %tmp.60 %tmp.61(%tmp.62, %tmp.64);
+            bf %tmp.65 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_true:
-            %tmp.57 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.57 66 81 93 ];
-            symbol [ elapsedDistance %tmp.58 66 94 109 ];
-            %tmp.58 = getv %tmp.57 :elapsedDistance;
-            push %tmp.58;
+            %tmp.66 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.66 66 81 93 ];
+            symbol [ elapsedDistance %tmp.67 66 94 109 ];
+            %tmp.67 = getv %tmp.66 :elapsedDistance;
+            push %tmp.67;
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_false:
-            %tmp.59 = 0.0;
-            push %tmp.59;
+            %tmp.68 = 0.0;
+            push %tmp.68;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_end:
-            %tmp.60 = phi [%tmp.56 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_begin] [%tmp.58 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_true] [%tmp.59 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_false] [%tmp.60 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_end];
+            %tmp.69 = phi [%tmp.65 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_begin] [%tmp.67 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_true] [%tmp.68 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_false] [%tmp.69 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_66_38_66_112_end];
             symbol [ lapStartElapsedDistance ? 66 12 35 ];
-            putv self :lapStartElapsedDistance %tmp.60;
+            putv self :lapStartElapsedDistance %tmp.69;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 67 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_begin:
-            %tmp.61 = self;
-            symbol [ hasValue %tmp.62 67 34 42 ];
-            %tmp.62 = getv function %tmp.61 :hasValue;
-            %tmp.63 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.63 67 43 55 ];
-            %tmp.65 = const :totalAscent;
-            symbol [ totalAscent %tmp.65 67 58 69 const ];
-            %tmp.66 = invoke %tmp.61 %tmp.62(%tmp.63, %tmp.65);
-            bf %tmp.66 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_false;
+            %tmp.70 = self;
+            symbol [ hasValue %tmp.71 67 34 42 ];
+            %tmp.71 = getv function %tmp.70 :hasValue;
+            %tmp.72 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.72 67 43 55 ];
+            %tmp.74 = const :totalAscent;
+            symbol [ totalAscent %tmp.74 67 58 69 const ];
+            %tmp.75 = invoke %tmp.70 %tmp.71(%tmp.72, %tmp.74);
+            bf %tmp.75 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_true:
-            %tmp.67 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.67 67 73 85 ];
-            symbol [ totalAscent %tmp.68 67 86 97 ];
-            %tmp.68 = getv %tmp.67 :totalAscent;
-            push %tmp.68;
+            %tmp.76 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.76 67 73 85 ];
+            symbol [ totalAscent %tmp.77 67 86 97 ];
+            %tmp.77 = getv %tmp.76 :totalAscent;
+            push %tmp.77;
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_false:
-            %tmp.69 = 0;
-            push %tmp.69;
+            %tmp.78 = 0;
+            push %tmp.78;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_end:
-            %tmp.70 = phi [%tmp.66 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_begin] [%tmp.68 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_true] [%tmp.69 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_false] [%tmp.70 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_end];
+            %tmp.79 = phi [%tmp.75 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_begin] [%tmp.77 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_true] [%tmp.78 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_false] [%tmp.79 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_67_34_67_100_end];
             symbol [ lapStartTotalAscent ? 67 12 31 ];
-            putv self :lapStartTotalAscent %tmp.70;
+            putv self :lapStartTotalAscent %tmp.79;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 68 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_begin:
-            %tmp.71 = self;
-            symbol [ hasValue %tmp.72 68 35 43 ];
-            %tmp.72 = getv function %tmp.71 :hasValue;
-            %tmp.73 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.73 68 44 56 ];
-            %tmp.75 = const :totalDescent;
-            symbol [ totalDescent %tmp.75 68 59 71 const ];
-            %tmp.76 = invoke %tmp.71 %tmp.72(%tmp.73, %tmp.75);
-            bf %tmp.76 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_false;
+            %tmp.80 = self;
+            symbol [ hasValue %tmp.81 68 35 43 ];
+            %tmp.81 = getv function %tmp.80 :hasValue;
+            %tmp.82 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.82 68 44 56 ];
+            %tmp.84 = const :totalDescent;
+            symbol [ totalDescent %tmp.84 68 59 71 const ];
+            %tmp.85 = invoke %tmp.80 %tmp.81(%tmp.82, %tmp.84);
+            bf %tmp.85 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_true:
-            %tmp.77 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.77 68 75 87 ];
-            symbol [ totalDescent %tmp.78 68 88 100 ];
-            %tmp.78 = getv %tmp.77 :totalDescent;
-            push %tmp.78;
+            %tmp.86 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.86 68 75 87 ];
+            symbol [ totalDescent %tmp.87 68 88 100 ];
+            %tmp.87 = getv %tmp.86 :totalDescent;
+            push %tmp.87;
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_false:
-            %tmp.79 = 0;
-            push %tmp.79;
+            %tmp.88 = 0;
+            push %tmp.88;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_end:
-            %tmp.80 = phi [%tmp.76 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_begin] [%tmp.78 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_true] [%tmp.79 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_false] [%tmp.80 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_end];
+            %tmp.89 = phi [%tmp.85 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_begin] [%tmp.87 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_true] [%tmp.88 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_false] [%tmp.89 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_68_35_68_103_end];
             symbol [ lapStartTotalDescent ? 68 12 32 ];
-            putv self :lapStartTotalDescent %tmp.80;
+            putv self :lapStartTotalDescent %tmp.89;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 69 12 ]
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_begin:
-            %tmp.81 = self;
-            symbol [ hasValue %tmp.82 69 31 39 ];
-            %tmp.82 = getv function %tmp.81 :hasValue;
-            %tmp.83 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.83 69 40 52 ];
-            %tmp.85 = const :calories;
-            symbol [ calories %tmp.85 69 55 63 const ];
-            %tmp.86 = invoke %tmp.81 %tmp.82(%tmp.83, %tmp.85);
-            bf %tmp.86 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_false;
+            %tmp.90 = self;
+            symbol [ hasValue %tmp.91 69 31 39 ];
+            %tmp.91 = getv function %tmp.90 :hasValue;
+            %tmp.92 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.92 69 40 52 ];
+            %tmp.94 = const :calories;
+            symbol [ calories %tmp.94 69 55 63 const ];
+            %tmp.95 = invoke %tmp.90 %tmp.91(%tmp.92, %tmp.94);
+            bf %tmp.95 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_true:
-            %tmp.87 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.87 69 67 79 ];
-            symbol [ calories %tmp.88 69 80 88 ];
-            %tmp.88 = getv %tmp.87 :calories;
-            push %tmp.88;
+            %tmp.96 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.96 69 67 79 ];
+            symbol [ calories %tmp.97 69 80 88 ];
+            %tmp.97 = getv %tmp.96 :calories;
+            push %tmp.97;
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_false:
-            %tmp.89 = 0;
-            push %tmp.89;
+            %tmp.98 = 0;
+            push %tmp.98;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_end:
-            %tmp.90 = phi [%tmp.86 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_begin] [%tmp.88 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_true] [%tmp.89 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_false] [%tmp.90 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_end];
+            %tmp.99 = phi [%tmp.95 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_begin] [%tmp.97 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_true] [%tmp.98 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_false] [%tmp.99 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_69_31_69_91_end];
             symbol [ lapStartCalories ? 69 12 28 ];
-            putv self :lapStartCalories %tmp.90;
+            putv self :lapStartCalories %tmp.99;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 70 12 ]
-            symbol [ lapStartTimerTime %tmp.92 70 37 54 ];
-            %tmp.92 = getv ? :lapStartTimerTime;
+            symbol [ lapStartTimerTime %tmp.101 70 37 54 ];
+            %tmp.101 = getv ? :lapStartTimerTime;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_begin:
-            %tmp.93 = self;
-            symbol [ hasValue %tmp.94 70 58 66 ];
-            %tmp.94 = getv function %tmp.93 :hasValue;
-            %tmp.95 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.95 70 67 79 ];
-            %tmp.97 = const :averageHeartRate;
-            symbol [ averageHeartRate %tmp.97 70 82 98 const ];
-            %tmp.98 = invoke %tmp.93 %tmp.94(%tmp.95, %tmp.97);
-            bf %tmp.98 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_false;
+            %tmp.102 = self;
+            symbol [ hasValue %tmp.103 70 58 66 ];
+            %tmp.103 = getv function %tmp.102 :hasValue;
+            %tmp.104 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.104 70 67 79 ];
+            %tmp.106 = const :averageHeartRate;
+            symbol [ averageHeartRate %tmp.106 70 82 98 const ];
+            %tmp.107 = invoke %tmp.102 %tmp.103(%tmp.104, %tmp.106);
+            bf %tmp.107 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_true:
-            %tmp.99 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.99 70 102 114 ];
-            symbol [ averageHeartRate %tmp.100 70 115 131 ];
-            %tmp.100 = getv %tmp.99 :averageHeartRate;
-            push %tmp.100;
+            %tmp.108 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.108 70 102 114 ];
+            symbol [ averageHeartRate %tmp.109 70 115 131 ];
+            %tmp.109 = getv %tmp.108 :averageHeartRate;
+            push %tmp.109;
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_false:
-            %tmp.101 = 0;
-            push %tmp.101;
+            %tmp.110 = 0;
+            push %tmp.110;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_end:
-            %tmp.102 = phi [%tmp.98 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_begin] [%tmp.100 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_true] [%tmp.101 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_false] [%tmp.102 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_end];
-            %tmp.103 = mul %tmp.92 %tmp.102;
+            %tmp.111 = phi [%tmp.107 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_begin] [%tmp.109 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_true] [%tmp.110 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_false] [%tmp.111 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_70_58_70_134_end];
+            %tmp.112 = mul %tmp.101 %tmp.111;
             symbol [ lapStartTotalHeartRate ? 70 12 34 ];
-            putv self :lapStartTotalHeartRate %tmp.103;
+            putv self :lapStartTotalHeartRate %tmp.112;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 71 12 ]
-            symbol [ lapStartTimerTime %tmp.105 71 33 50 ];
-            %tmp.105 = getv ? :lapStartTimerTime;
+            symbol [ lapStartTimerTime %tmp.114 71 33 50 ];
+            %tmp.114 = getv ? :lapStartTimerTime;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_begin:
-            symbol [ AugmentedActivityInfo %tmp.107 71 55 76 ];
-            %tmp.107 = getv ? :AugmentedActivityInfo;
-            symbol [ averagePower %tmp.108 71 77 89 ];
-            %tmp.108 = getv %tmp.107 :averagePower;
-            %tmp.109 = null;
-            %tmp.110 = ne %tmp.108 %tmp.109;
-            bf %tmp.110 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_false;
+            symbol [ AugmentedActivityInfo %tmp.116 71 55 76 ];
+            %tmp.116 = getv ? :AugmentedActivityInfo;
+            symbol [ averagePower %tmp.117 71 77 89 ];
+            %tmp.117 = getv %tmp.116 :averagePower;
+            %tmp.118 = null;
+            %tmp.119 = ne %tmp.117 %tmp.118;
+            bf %tmp.119 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_true:
-            symbol [ AugmentedActivityInfo %tmp.112 71 101 122 ];
-            %tmp.112 = getv ? :AugmentedActivityInfo;
-            symbol [ averagePower %tmp.113 71 123 135 ];
-            %tmp.113 = getv %tmp.112 :averagePower;
-            push %tmp.113;
+            symbol [ AugmentedActivityInfo %tmp.121 71 101 122 ];
+            %tmp.121 = getv ? :AugmentedActivityInfo;
+            symbol [ averagePower %tmp.122 71 123 135 ];
+            %tmp.122 = getv %tmp.121 :averagePower;
+            push %tmp.122;
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_false:
-            %tmp.114 = 0;
-            push %tmp.114;
+            %tmp.123 = 0;
+            push %tmp.123;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_end:
-            %tmp.115 = phi [%tmp.110 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_begin] [%tmp.113 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_true] [%tmp.114 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_false] [%tmp.115 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_end];
-            %tmp.116 = mul %tmp.105 %tmp.115;
+            %tmp.124 = phi [%tmp.119 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_begin] [%tmp.122 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_true] [%tmp.123 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_false] [%tmp.124 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_71_55_71_138_end];
+            %tmp.125 = mul %tmp.114 %tmp.124;
             symbol [ lapStartTotalPower ? 71 12 30 ];
-            putv self :lapStartTotalPower %tmp.116;
+            putv self :lapStartTotalPower %tmp.125;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 72 12 ]
-            symbol [ lapStartTimerTime %tmp.118 72 33 50 ];
-            %tmp.118 = getv ? :lapStartTimerTime;
+            symbol [ lapStartTimerTime %tmp.127 72 33 50 ];
+            %tmp.127 = getv ? :lapStartTimerTime;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_begin:
-            %tmp.119 = self;
-            symbol [ hasValue %tmp.120 72 54 62 ];
-            %tmp.120 = getv function %tmp.119 :hasValue;
-            %tmp.121 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.121 72 63 75 ];
-            %tmp.123 = const :averageSpeed;
-            symbol [ averageSpeed %tmp.123 72 78 90 const ];
-            %tmp.124 = invoke %tmp.119 %tmp.120(%tmp.121, %tmp.123);
-            bf %tmp.124 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_false;
+            %tmp.128 = self;
+            symbol [ hasValue %tmp.129 72 54 62 ];
+            %tmp.129 = getv function %tmp.128 :hasValue;
+            %tmp.130 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.130 72 63 75 ];
+            %tmp.132 = const :averageSpeed;
+            symbol [ averageSpeed %tmp.132 72 78 90 const ];
+            %tmp.133 = invoke %tmp.128 %tmp.129(%tmp.130, %tmp.132);
+            bf %tmp.133 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_true:
-            %tmp.125 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.125 72 94 106 ];
-            symbol [ averageSpeed %tmp.126 72 107 119 ];
-            %tmp.126 = getv %tmp.125 :averageSpeed;
-            push %tmp.126;
+            %tmp.134 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.134 72 94 106 ];
+            symbol [ averageSpeed %tmp.135 72 107 119 ];
+            %tmp.135 = getv %tmp.134 :averageSpeed;
+            push %tmp.135;
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_false:
-            %tmp.127 = 0.0;
-            push %tmp.127;
+            %tmp.136 = 0.0;
+            push %tmp.136;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_end:
-            %tmp.128 = phi [%tmp.124 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_begin] [%tmp.126 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_true] [%tmp.127 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_false] [%tmp.128 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_end];
-            %tmp.129 = mul %tmp.118 %tmp.128;
+            %tmp.137 = phi [%tmp.133 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_begin] [%tmp.135 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_true] [%tmp.136 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_false] [%tmp.137 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_72_54_72_122_end];
+            %tmp.138 = mul %tmp.127 %tmp.137;
             symbol [ lapStartTotalSpeed ? 72 12 30 ];
-            putv self :lapStartTotalSpeed %tmp.129;
+            putv self :lapStartTotalSpeed %tmp.138;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 73 12 ]
-            symbol [ lapStartTimerTime %tmp.131 73 35 52 ];
-            %tmp.131 = getv ? :lapStartTimerTime;
+            symbol [ lapStartTimerTime %tmp.140 73 35 52 ];
+            %tmp.140 = getv ? :lapStartTimerTime;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_begin:
-            %tmp.132 = self;
-            symbol [ hasValue %tmp.133 73 56 64 ];
-            %tmp.133 = getv function %tmp.132 :hasValue;
-            %tmp.134 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.134 73 65 77 ];
-            %tmp.136 = const :averageCadence;
-            symbol [ averageCadence %tmp.136 73 80 94 const ];
-            %tmp.137 = invoke %tmp.132 %tmp.133(%tmp.134, %tmp.136);
-            bf %tmp.137 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_false;
+            %tmp.141 = self;
+            symbol [ hasValue %tmp.142 73 56 64 ];
+            %tmp.142 = getv function %tmp.141 :hasValue;
+            %tmp.143 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.143 73 65 77 ];
+            %tmp.145 = const :averageCadence;
+            symbol [ averageCadence %tmp.145 73 80 94 const ];
+            %tmp.146 = invoke %tmp.141 %tmp.142(%tmp.143, %tmp.145);
+            bf %tmp.146 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_false;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_true:
-            %tmp.138 = lgetv %activityInfo;
-            symbol [ activityInfo %tmp.138 73 98 110 ];
-            symbol [ averageCadence %tmp.139 73 111 125 ];
-            %tmp.139 = getv %tmp.138 :averageCadence;
-            push %tmp.139;
+            %tmp.147 = lgetv %activityInfo;
+            symbol [ activityInfo %tmp.147 73 98 110 ];
+            symbol [ averageCadence %tmp.148 73 111 125 ];
+            %tmp.148 = getv %tmp.147 :averageCadence;
+            push %tmp.148;
             goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_end;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_false:
-            %tmp.140 = 0;
-            push %tmp.140;
+            %tmp.149 = 0;
+            push %tmp.149;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_end:
-            %tmp.141 = phi [%tmp.137 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_begin] [%tmp.139 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_true] [%tmp.140 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_false] [%tmp.141 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_end];
-            %tmp.142 = mul %tmp.131 %tmp.141;
+            %tmp.150 = phi [%tmp.146 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_begin] [%tmp.148 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_true] [%tmp.149 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_false] [%tmp.150 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_73_56_73_128_end];
+            %tmp.151 = mul %tmp.140 %tmp.150;
             symbol [ lapStartTotalCadence ? 73 12 32 ];
-            putv self :lapStartTotalCadence %tmp.142;
+            putv self :lapStartTotalCadence %tmp.151;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 74 12 ]
-            %tmp.143 = 0;
+            %tmp.152 = 0;
             symbol [ __nbGroundContactTime ? 74 12 33 ];
-            putv self :__nbGroundContactTime %tmp.143;
+            putv self :__nbGroundContactTime %tmp.152;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 75 12 ]
-            %tmp.144 = 0;
+            %tmp.153 = 0;
             symbol [ __totalGroundContactTime ? 75 12 36 ];
-            putv self :__totalGroundContactTime %tmp.144;
+            putv self :__totalGroundContactTime %tmp.153;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 76 12 ]
-            %tmp.145 = 0;
+            %tmp.154 = 0;
             symbol [ __nbVerticalOscillation ? 76 12 35 ];
-            putv self :__nbVerticalOscillation %tmp.145;
+            putv self :__nbVerticalOscillation %tmp.154;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 77 12 ]
-            %tmp.146 = 0.0;
+            %tmp.155 = 0.0;
             symbol [ __totalVerticalOscillation ? 77 12 38 ];
-            putv self :__totalVerticalOscillation %tmp.146;
+            putv self :__totalVerticalOscillation %tmp.155;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 78 12 ]
-            %tmp.147 = 0;
+            %tmp.156 = 0;
             symbol [ __nbStepLength ? 78 12 26 ];
-            putv self :__nbStepLength %tmp.147;
+            putv self :__nbStepLength %tmp.156;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc" 79 12 ]
-            %tmp.148 = 0;
+            %tmp.157 = 0;
             symbol [ __totalStepLength ? 79 12 29 ];
-            putv self :__totalStepLength %tmp.148;
+            putv self :__totalStepLength %tmp.157;
 C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_Laps_mc_52_63_80_8_stop:
         }
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\Laps.mc"; @line = 82; @symbol_functiondef = [onSessionStart,82,17,31]; ]

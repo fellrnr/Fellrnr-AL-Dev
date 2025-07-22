@@ -4,6 +4,8 @@ using Toybox.System;
 
 using ActiveLookBLE;
 
+
+
 (:typecheck(false))
 module ActiveLookSDK {
 
@@ -20,9 +22,10 @@ module ActiveLookSDK {
     System.println(
         myTime.hour.format("%02d") + ":" +
         myTime.min.format("%02d") + ":" +
-        myTime.sec.format("%02d") + "- " + 
+        myTime.sec.format("%02d") + "- " +
         Toybox.Lang.format("[D]$1$ $2$", [msg, data]));
 }
+
 
 
     //! Interface for listener
@@ -33,7 +36,7 @@ module ActiveLookSDK {
         function onBatteryEvent(batteryLevel as Toybox.Lang.Number) as Void;
         function onDeviceReady() as Void;
         function onDeviceDisconnected() as Void;
-        function onBleError(exception as Toybox.Lang.Exception) as Void;
+        function onBleError(msg , exception as Toybox.Lang.Exception) as Void;
     };
 
     //! The status of the Active Look SDK is represented by a lot of flags.
@@ -123,9 +126,9 @@ module ActiveLookSDK {
     var cmdStacking = null;
     var ble = null;     var listener = null;
     var lapMessageError = "Start";
-    var forceTimeLapRefresh = true;
 
     var _cbCharacteristicWrite   = null;
+    var _cbWritePending   = false; //are we waiting for a write to finish?
 
     var layouts = [];
     var buffers = [];   var values = [];
@@ -133,10 +136,10 @@ module ActiveLookSDK {
 
     class ALSDK {
 
-        (:release) private static function _log(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {}
-        (:debug)   private static function _log(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {
-            if ($ has :log) { $.log(Toybox.Lang.format("[ActiveLookSDK::ALSDK] $1$", [msg]), data); }
-        }
+        // (:release) private static function _log(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {}
+        // (:debug)   private static function _log(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {
+        //     if ($ has :log) { $.log(Toybox.Lang.format("[ActiveLookSDK::ALSDK] $1$", [msg]), data); }
+        // }
 
         function initialize(obj) {
             listener = obj != null ? obj : self;
@@ -144,7 +147,7 @@ module ActiveLookSDK {
         }
 
         function startGlassesScan() {
-            _log("startGlassesScan", []);
+            $.log("startGlassesScan", []);
             if (!isReconnecting && isIdled()) {
                 if (!ActiveLookBLE.ActiveLook.fixScanState()) {
                     ActiveLookBLE.ActiveLook.requestScanning(true);
@@ -152,20 +155,20 @@ module ActiveLookSDK {
             }
         }
         function stopGlassesScan() {
-            _log("stopGlassesScan", []);
+            $.log("stopGlassesScan", []);
             if (!ActiveLookBLE.ActiveLook.fixScanState()) {
                 ActiveLookBLE.ActiveLook.requestScanning(false);
             }
         }
         function connect(device) {
-            _log("connect", [device]);
+            $.log("connect", [device]);
             if (ble.connect(device)) {
                 isPairing = true;
                 isReconnecting = true;
             }
         }
         function disconnect() {
-            _log("disconnect", []);
+            $.log("disconnect", []);
             if (isReady()) {
                 self.clearScreen(true); //#!JFS!# default to refreshing the top line
             }
@@ -174,9 +177,10 @@ module ActiveLookSDK {
             ble.disconnect();
         }
         function resyncGlasses() {
-            //_log("resyncGlasses", []);
-            if (cmdStacking != null)  { self.sendRawCmd([]b); }
+            //$.log("resyncGlasses", []);
+            if (cmdStacking != null)  { self.sendRawCmd("resyncGlasses", []b); }
             if (clearError == true) {
+                //possible infinte recursion as clearScreen will call resyncGlasses
                 self.clearScreen(true); //#!JFS!# default to refreshing the top line
             }
             if (clearError != true) {
@@ -190,7 +194,7 @@ module ActiveLookSDK {
                 }
             }
         }
-        
+
         function profileRegistrationStart() {
             isRegisteringProfile = true;
         }
@@ -258,7 +262,7 @@ module ActiveLookSDK {
 			buffer.addAll([0xFF, id, 0x00, 0x05 + data.size()]b);
 			buffer.addAll(data);
 			buffer.add(0xAA);
-            _log("buffer",[buffer]);
+            //$.log("buffer",[buffer]);
 			return buffer;
 		}
 
@@ -267,19 +271,19 @@ module ActiveLookSDK {
         //////////////
         function setBattery(arg) {
             batteryError = null;
-            System.println("in setBattery " + arg);
+            $.log("in setBattery ", arg);
             if (arg != battery) {
                 try {
                     var data = [0x07]b;
                     var paddingChar = arg < 10 ? "$" :  "";
                     data.addAll(self.stringToPadByteArray(paddingChar + arg.toString(), 3, true));
-                    System.println(Lang.format("setBattery $1$", [data]));
-                    self.sendRawCmd(self.commandBuffer(0x62, data));
+                    $.log(Lang.format("setBattery $1$", [data]));
+                    self.sendRawCmd("set battery", self.commandBuffer(0x62, data));
                     battery = arg;
                 } catch (e) {
-                    System.println("setBattery error " + e.getErrorMessage());
+                    $.log("setBattery error " + e.getErrorMessage(), null);
                     batteryError = arg;
-                    onBleError(e);
+                    onBleError("setBattery", e);
                 }
             }
         }
@@ -287,64 +291,53 @@ module ActiveLookSDK {
         function cfgRead() {
             try {
                 var data = [0x41, 0x4C, 0x6F, 0x6F, 0x4B]b; // ALooK
-                self.sendRawCmd(self.commandBuffer(0xD1, data));
+                self.sendRawCmd("cfgread", self.commandBuffer(0xD1, data));
             } catch (e) {
                 isReadingCfgVersion = false;
                 cfgVersion = null;
-                onBleError(e);
+                onBleError("cfgRead", e);
             }
-        }    
-                
+        }
+
 
         //#!JFS!# setLap method
         function setLap(msg) {
             lapMessageError = null;
-            //forceTimeLapRefresh = true; //hack - always update lap
-            //if (msg != lapMessageCache || forceTimeLapRefresh) {
-            if (forceTimeLapRefresh) { //don't update as soon as the lap changes, but wait for the screen to clear after the pause for the lap message
-                try {
-                    /*
-                    //command 0x62 is layoutDisplay, with 0x0A as the layout id
-                    //0x0A is "time", 
-                    //https://github.com/ActiveLook/Activelook-Visual-Assets
-                    //https://github.com/ActiveLook/Activelook-API-Documentation/blob/main/ActiveLook_API.md 
-                    System.println("setLap " + msg);
-                    var value = msg;
-                    var data = [0x0A]b;
-                    data.addAll(self.stringToPadByteArray(value, null, null));
-                    ble.getBleCharacteristicActiveLookRx()
-                        .requestWrite(self.commandBuffer(0x62, data), {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
-                        */
+            try {
+                /*
+                //command 0x62 is layoutDisplay, with 0x0A as the layout id
+                //0x0A is "time",
+                //https://github.com/ActiveLook/Activelook-Visual-Assets
+                //https://github.com/ActiveLook/Activelook-API-Documentation/blob/main/ActiveLook_API.md
+                System.println("setLap " + msg);
+                var value = msg;
+                var data = [0x0A]b;
+                data.addAll(self.stringToPadByteArray(value, null, null));
+                ble.getBleCharacteristicActiveLookRx()
+                    .requestWrite(self.commandBuffer(0x62, data), {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
+                    */
 
-                    var data = []b;
-                    //font 1=24px, 2=38, 3=64, 4=75, 5=82
-                    //screen size is 304; 256
+                var data = []b;
+                //font 1=24px, 2=38, 3=64, 4=75, 5=82
+                //screen size is 304; 256
 
-                    //Override time and battery area
-                    data.addAll($.sdk.numberToFixedSizeByteArray(290, 2)); //x 
-                    data.addAll($.sdk.numberToFixedSizeByteArray(230, 2)); //y (210 too low, overwrites fields, 256 less font 1 is 24 px, so set to 230? )
-                    data.addAll([4, 1, 15]b); //rotation (4=norma), font size, color?
-                    data.addAll($.sdk.stringToPadByteArray(msg, null, null));
-                    var fullBuffer = $.sdk.commandBuffer(0x37, data); // Text lap number
-                    $.sdk.sendRawCmd(fullBuffer);
-
-                    //trying to do the refresh every time
-                    //forceTimeLapRefresh = false;
-                    //System.println("setLap success " + msg);
-                } catch (e) {
-                    forceTimeLapRefresh = true;
-                    lapMessageError = msg;
-                    System.println("setLap Error " + e.getErrorMessage());
-                    onBleError(e);
-                }
-            } else {
-                System.println("setLap, no change");
+                //Override time and battery area
+                data.addAll($.sdk.numberToFixedSizeByteArray(290, 2)); //x
+                data.addAll($.sdk.numberToFixedSizeByteArray(230, 2)); //y (210 too low, overwrites fields, 256 less font 1 is 24 px, so set to 230? )
+                data.addAll([4, 1, 15]b); //rotation (4=norma), font size, color?
+                data.addAll($.sdk.stringToPadByteArray(msg.substring(null, 25), null, null));
+                var fullBuffer = $.sdk.commandBuffer(0x37, data); // Text lap number
+                $.log("send lap", [arrayToHex(fullBuffer)]);
+                $.sdk.sendRawCmd("lap top", fullBuffer);
+            } catch (e) {
+                lapMessageError = msg; //resync glasses will try until good
+                onBleError("setLap", e);
             }
         }
 
 
         function setTime(hour, minute) {
-            if (time != minute || forceTimeLapRefresh) {
+            if (time != minute) {
             timeHError = null;
             timeMError = null;
                 try {
@@ -352,41 +345,39 @@ module ActiveLookSDK {
                     var value = hour.format("%02d") + ":" + minute.format("%02d");
                     var data = [0x0A]b;
                     data.addAll(self.stringToPadByteArray(value, null, null));
-                    System.println("setTime " + data);
-                    self.sendRawCmd(self.commandBuffer(0x62, data));
-                    forceTimeLapRefresh = false;
+                    $.log("setTime " + data, []);
+                    self.sendRawCmd("time", self.commandBuffer(0x62, data));
                 } catch (e) {
-                    System.println("setTime Error " + e.getErrorMessage());
                     time = null;
                     timeHError = hour;
                     timeMError = minute;
-                    onBleError(e);
+                    onBleError("setTime", e);
                 }
             } else {
-                System.println("setTime, no change"); //#!JFS!#
+                $.log("setTime, no change", null); //#!JFS!#
             }
         }
 
         function clearScreen(refresh) {
             clearError = null;
+            $.lastLapMessage = ""; //refresh top line
             try {
-                //log(Lang.format("clearScreen $1$", [1]));
-                self.sendRawCmd(self.commandBuffer(0x01, []b));
+                $.log("clearScreen", [refresh]);
+                self.sendRawCmd("clear:" + refresh, self.commandBuffer(0x01, []b));
                 // ble.getBleCharacteristicActiveLookRx()
                 //     .requestWrite([0xFF, 0x01, 0x00, 0x05, 0xAA]b, {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
                 if(refresh) {
                     time = null;
-                    forceTimeLapRefresh = true; //#!JFS!#
                     if (batteryError == null) {
                         batteryError = battery;
                     }
                     battery = null;
                 }
                 self.resetLayouts([]);
-                self.resyncGlasses(); 
+                self.resyncGlasses();
             } catch (e) {
                 clearError = true;
-                onBleError(e);
+                onBleError("clearScreen", e);
             }
         }
 
@@ -396,69 +387,87 @@ module ActiveLookSDK {
 			data.addAll(self.numberToFixedSizeByteArray(y, 2));
 			data.addAll([rotation, size, color]b);
 			data.addAll(self.stringToPadByteArray(text, null, null));
-            self.sendRawCmd(self.commandBuffer(0x37, data));
+            self.sendRawCmd("text", self.commandBuffer(0x37, data));
 		}
 
         function holdGraphicEngine(){
-            _log("holdGraphicEngine", []);
+            //$.log("holdGraphicEngine", []);
             self.holdAndFlush(0);
         }
-        
+
         function flushGraphicEngine(){
-            _log("flushGraphicEngine", []);
+            //$.log("flushGraphicEngine", []);
             self.holdAndFlush(1);
         }
 
         function resetGraphicEngine(){
-            _log("resetGraphicEngine", []);
+            $.log("resetGraphicEngine", []);
             self.holdAndFlush(0xFF);
         }
 
         function holdAndFlush(value) {
-            self.sendRawCmd(self.commandBuffer(0x39, [value]b));
+            self.sendRawCmd("holdflush:" + value, self.commandBuffer(0x39, [value]b));
 		}
 
         function __onWrite_finishPayload(c, s) {
+            $.log("in __onWrite_finishPayload", []);
             _cbCharacteristicWrite = null;
+            _cbWritePending = false;
             if (s == 0) {
-                self.sendRawCmd([]b);
+                if(cmdStacking != null) {
+                    self.sendRawCmd("async", []b);
+                }
             } else {
                 //this crashes the data field, which doesn't help much. //#!JFS!#
                 //throw new Toybox.Lang.InvalidValueException("(E) Could write on: " + c);
-                _log("Failure in __onWrite_finishPayload", []);
+                $.log("Failure in __onWrite_finishPayload", []);
             }
+            $.log("__onWrite_finishPayload done", []);
         }
 
-        function sendRawCmd(buffer) {
+        function sendRawCmd(why, buffer) {
             var bufferToSend = []b;
             if (cmdStacking != null) {
                 bufferToSend.addAll(cmdStacking);
                 cmdStacking = null;
             }
             bufferToSend.addAll(buffer);
-            _log("sendRawCmd, BufferSize", [bufferToSend.size()]);
+            var option;
+            //$.log("sendRawCmd: buffer " + buffer.size() + ", total size " + bufferToSend.size(), [arrayToHex(bufferToSend)]);
+            $.log("sendRawCmd: " + why + ", buffer " + buffer.size() + ", total size " + bufferToSend.size() + " pending " + _cbWritePending, []);
             try {
-                if (bufferToSend.size() > 20) {
+                if(_cbWritePending == true) { //there's a write in progress
+                    cmdStacking = bufferToSend;
+                    //$.log("cmdSended, write pending, left " + cmdStacking.size(),[arrayToHex(cmdStacking)]);
+                } else if (bufferToSend.size() > 20) {
                     var sendNow = bufferToSend.slice(0, 20);
                     cmdStacking = bufferToSend.slice(20, null);
                     _cbCharacteristicWrite = self.method(:__onWrite_finishPayload);
+                    _cbWritePending = true;
+                    option = "partial";
+                    //$.log("cmdSended, start partial " + bufferToSend.size(),[arrayToHex(sendNow)]);
                     ble.getBleCharacteristicActiveLookRx()
                         .requestWrite(sendNow, {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
-                    _log("cmdSended, partial",[arrayToHex(sendNow)]);
+                    //$.log("cmdSended, partial done " + bufferToSend.size(),[arrayToHex(sendNow)]);
                 } else if (bufferToSend.size() > 0) {
+                    _cbCharacteristicWrite = self.method(:__onWrite_finishPayload);
+                    option = "full";
+                    //$.log("cmdSended, start full",[arrayToHex(bufferToSend)]);
+                    _cbWritePending = true;
                     ble.getBleCharacteristicActiveLookRx()
                         .requestWrite(bufferToSend, {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
-                    _log("cmdSended, full",[arrayToHex(bufferToSend)]);
+                    //$.log("cmdSended, full done",[arrayToHex(bufferToSend)]);
                 }
             } catch (e) {
                 cmdStacking = bufferToSend;
-                onBleError(e);
+                onBleError("sendRawCmd " + option, e);
             }
+            //$.log("sendRawCmd done", [bufferToSend.size()]);
 		}
 
         function indexIncompleteCmd(){
             if(cmdStacking){
-                _log("indexIncompleteCmd",[arrayToHex(cmdStacking)]);
+                $.log("indexIncompleteCmd",[arrayToHex(cmdStacking)]);
                 for(var i = 0; i < cmdStacking.size(); i++) {
                     if(cmdStacking[i] == 0xAA){
                         if(cmdStacking.size() > i + 1){
@@ -473,17 +482,17 @@ module ActiveLookSDK {
         }
 
         function flushCmdStacking(){
-            _log("flushCmdStacking",[cmdStacking == null ? 0 : cmdStacking.size()]);
+            $.log("flushCmdStacking",[cmdStacking == null ? 0 : cmdStacking.size()]);
             var indexIncompleteCmd = indexIncompleteCmd() as Toybox.Lang.Number;
             cmdStacking = indexIncompleteCmd != 0 ? cmdStacking.slice(null, indexIncompleteCmd) : null ;
             self.resetGraphicEngine();
-            _log("flushCmdStacking",[cmdStacking == null ? 0 : arrayToHex(cmdStacking)]);
+            $.log("flushCmdStacking",[cmdStacking == null ? 0 : arrayToHex(cmdStacking)]);
         }
 
         function flushCmdStackingIfSup(value as Toybox.Lang.Number){
             if(cmdStacking != null){
-                if(cmdStacking.size() > 200){
-                    _log("flushCmdStackingIfSup",[value,cmdStacking == null ? 0 : cmdStacking.size()]);
+                if(cmdStacking.size() > value){ //was hard coded 200
+                    $.log("flushCmdStackingIfSup",[value,cmdStacking == null ? 0 : cmdStacking.size()]);
                     flushCmdStacking();
                 }
             }
@@ -533,34 +542,36 @@ module ActiveLookSDK {
             try {
             	//only 5Kb space in the log file
                 //System.println(Lang.format("__updateLayoutValueBuffer $1$", [data]));
-                self.sendRawCmd(self.commandBuffer(layoutCmdId, data));
+                self.sendRawCmd("layout buffer", self.commandBuffer(layoutCmdId, data));
                 rotate = (rotate + 1) % buffers.size();
             } catch (e) {
                 buffers[pos] = data;
                 _cbCharacteristicWrite = self.method(:__onWrite_finishpUdateLayoutValueBuffer);
-                onBleError(e);
+                onBleError("__updateLayoutValueBuffer", e);
             }
         }
 
         function __onWrite_finishpUdateLayoutValueBuffer(c, s) {
+            $.log("in __onWrite_finishpUdateLayoutValueBuffer", []);
             _cbCharacteristicWrite = null;
             if (s == 0) {
                 self.resyncGlasses();
             } else {
-                _log("repair connection", []);
+                $.log("repair connection", []);
                 isReconnecting = false;
                 tearDownDevice();
                 ble.disconnect();
                 ActiveLookSDK.device = null;
                 listener.onDeviceDisconnected();
             }
+            $.log("done __onWrite_finishpUdateLayoutValueBuffer", []);
         }
 
         function setUpNewDevice(device as Toybox.BluetoothLowEnergy.Device) as Toybox.Lang.Boolean {
-            _log("setUpNewDevice", [ActiveLookSDK.device, device]);
+            $.log("setUpNewDevice", [ActiveLookSDK.device, device]);
             if (ActiveLookSDK.device != null) {
                 if (ActiveLookSDK.device != device) {
-                    onBleError(new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Device differs $1$ $2$.", [ActiveLookSDK.device, device])));
+                    onBleError("setUpNewDevice 1", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Device differs $1$ $2$.", [ActiveLookSDK.device, device])));
                     return false;
                 }
             } else { ActiveLookSDK.device = device; }
@@ -568,51 +579,51 @@ module ActiveLookSDK {
         }
 
         function setUpDevice() as Toybox.Lang.Boolean {
-            _log("setUpDevice", [ActiveLookSDK.device]);
-            if (!isIdled()) { _log("setUpDevice", [ActiveLookSDK.device, "Not idle"]);
+            $.log("setUpDevice", [ActiveLookSDK.device]);
+            if (!isIdled()) { $.log("setUpDevice", [ActiveLookSDK.device, "Not idle"]);
                 return false;
             }
-            if (!isConnected()) { _log("setUpDevice", [ActiveLookSDK.device, "Not connected"]);
+            if (!isConnected()) { $.log("setUpDevice", [ActiveLookSDK.device, "Not connected"]);
                 return false;
             }
-            if (!isFirmwareVersionRead()) { _log("setUpDevice", [ActiveLookSDK.device, "Not isFirmwareVersionRead"]);
-                if (!isReadingFirmwareVersion) { _log("setUpDevice", [ActiveLookSDK.device, "Not isReadingFirmwareVersion"]);
+            if (!isFirmwareVersionRead()) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isFirmwareVersionRead"]);
+                if (!isReadingFirmwareVersion) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isReadingFirmwareVersion"]);
                     try {
                         ble.getBleCharacteristicFirmwareVersion().requestRead();
                         isReadingFirmwareVersion = true;
-                    } catch (e) { onBleError(e); }
+                    } catch (e) { onBleError("setUpDevice firmware version", e); }
                 }
                 return false;
             }
-            if (!isBatteryRead()) { _log("setUpDevice", [ActiveLookSDK.device, "Not isBatteryRead"]);
-                if (!isReadingBattery) { _log("setUpDevice", [ActiveLookSDK.device, "Not isReadingBattery"]);
+            if (!isBatteryRead()) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isBatteryRead"]);
+                if (!isReadingBattery) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isReadingBattery"]);
                     try {
                         ble.getBleCharacteristicBatteryLevel().requestRead();
                         isReadingBattery = true;
-                    } catch (e) { onBleError(e); }
+                    } catch (e) { onBleError("setUpDevice read battery", e); }
                 }
                 return false;
             }
-            if (!isBatteryNotifActivated) { _log("setUpDevice", [ActiveLookSDK.device, "Not isBatteryNotifActivated"]);
-                if (!isActivatingBatteryNotif) { _log("setUpDevice", [ActiveLookSDK.device, "Not isActivatingBatteryNotif"]);
+            if (!isBatteryNotifActivated) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isBatteryNotifActivated"]);
+                if (!isActivatingBatteryNotif) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isActivatingBatteryNotif"]);
                     try {
                         ble.getBleCharacteristicBatteryLevel().getDescriptor(BluetoothLowEnergy.cccdUuid()).requestWrite([0x01, 0x00]b);
                         isActivatingBatteryNotif = true;
-                    } catch (e) { onBleError(e); }
+                    } catch (e) { onBleError("setUpDevice vattery not activated", e); }
                 }
                 return false;
             }
-            if (!isALookTxNotifActivated) { _log("setUpDevice", [ActiveLookSDK.device, "Not isALookTxNotifActivated"]);
-                if (!isActivatingALookTxNotif) { _log("setUpDevice", [ActiveLookSDK.device, "Not isActivatingALookTxNotif"]);
+            if (!isALookTxNotifActivated) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isALookTxNotifActivated"]);
+                if (!isActivatingALookTxNotif) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isActivatingALookTxNotif"]);
                     try {
                         ble.getBleCharacteristicActiveLookTx().getDescriptor(BluetoothLowEnergy.cccdUuid()).requestWrite([0x01, 0x00]b);
                         isActivatingALookTxNotif = true;
-                    } catch (e) { onBleError(e); }
+                    } catch (e) { onBleError("setUpDevice tx not activated", e); }
                 }
                 return false;
             }
-            if (!isBleParamsUpdated) { _log("setUpDevice", [ActiveLookSDK.device, "Not isBleParamsUpdated"]);
-                if (!isUpdatingBleParams) { _log("setUpDevice", [ActiveLookSDK.device, "Not isUpdatingBleParams"]);
+            if (!isBleParamsUpdated) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isBleParamsUpdated"]);
+                if (!isUpdatingBleParams) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isUpdatingBleParams"]);
                     try {
                         // Command id : 0xA4
                         // u16 intervalMin: 30ms => 24 (interval are in 1.25 ms)
@@ -623,53 +634,53 @@ module ActiveLookSDK {
                         ble.getBleCharacteristicActiveLookRx()
                             .requestWrite(self.commandBuffer(0xA4, data), {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
                         isUpdatingBleParams = true;
-                    } catch (e) { onBleError(e); }
+                    } catch (e) { onBleError("setUpDevice ble param", e); }
                 }
                 return false;
             }
-            if (!isALSSensorUpdated) { _log("setUpDevice", [ActiveLookSDK.device, "Not isALSSensorUpdated"]);
-                if (!isUpdatingALSSensor) { _log("setUpDevice", [ActiveLookSDK.device, "Not isUpdatingALSSensor"]);
-                    try {    
+            if (!isALSSensorUpdated) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isALSSensorUpdated"]);
+                if (!isUpdatingALSSensor) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isUpdatingALSSensor"]);
+                    try {
                         var is_als_enable = Toybox.Application.Properties.getValue("is_als_enable") as Toybox.Lang.Boolean;
-                        _log("is_als_enable",[is_als_enable]);
+                        $.log("is_als_enable",[is_als_enable]);
                         var data = []b;
                         if(is_als_enable){data = [0x01]b;}else{data = [0x00]b;}
                         ble.getBleCharacteristicActiveLookRx()
                             .requestWrite(self.commandBuffer(0x22, data), {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
                         isUpdatingALSSensor = true;
-                    } catch (e) { onBleError(e); }
+                    } catch (e) { onBleError("setUpDevice als sensor", e); }
                 }
                 return false;
             }
-            if (!isCfgVersionRead()) { _log("setUpDevice", [ActiveLookSDK.device, "Not isCfgVersionRead"]);
-                if (!isReadingCfgVersion) { _log("setUpDevice", [ActiveLookSDK.device, "Not isReadingCfgVersion"]);
+            if (!isCfgVersionRead()) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isCfgVersionRead"]);
+                if (!isReadingCfgVersion) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isReadingCfgVersion"]);
                     try {
                         self.cfgRead();
                         isReadingCfgVersion = true;
-                    } catch (e) { onBleError(e); }
+                    } catch (e) { onBleError("setUpDevice cfg read", e); }
                 }
                 return false;
             }
-            if (!isGestureSensorUpdated) { _log("setUpDevice", [ActiveLookSDK.device, "Not isGestureSensorUpdated"]);
-                if (!isUpdatingGestureSensor) { _log("setUpDevice", [ActiveLookSDK.device, "Not isUpdatingGestureSensor"]);
-                    try {        
+            if (!isGestureSensorUpdated) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isGestureSensorUpdated"]);
+                if (!isUpdatingGestureSensor) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isUpdatingGestureSensor"]);
+                    try {
                         var is_gesture_enable = Toybox.Application.Properties.getValue("is_gesture_enable") as Toybox.Lang.Boolean;
-                        _log("is_gesture_enable",[is_gesture_enable]);
+                        $.log("is_gesture_enable",[is_gesture_enable]);
                         var data = []b;
                         if(is_gesture_enable){data = [0x01]b;}else{data = [0x00]b;}
                         ble.getBleCharacteristicActiveLookRx()
                             .requestWrite(self.commandBuffer(0x21, data), {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
                         isUpdatingGestureSensor = true;
-                    } catch (e) { onBleError(e); }
+                    } catch (e) { onBleError("setUpDevice gesture update", e); }
                 }
                 return false;
             }
-            if (!isGestureNotifActivated) { _log("setUpDevice", [ActiveLookSDK.device, "Not isGestureNotifActivated"]);
-                if (!isActivatingGestureNotif) { _log("setUpDevice", [ActiveLookSDK.device, "Not isActivatingGestureNotif"]);
+            if (!isGestureNotifActivated) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isGestureNotifActivated"]);
+                if (!isActivatingGestureNotif) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isActivatingGestureNotif"]);
                     try {
                         ble.getBleCharacteristicActiveLookGesture().getDescriptor(BluetoothLowEnergy.cccdUuid()).requestWrite([0x01, 0x00]b);
                         isActivatingGestureNotif = true;
-                    } catch (e) { onBleError(e); }
+                    } catch (e) { onBleError("setUpDevice gesture activated", e); }
                 }
                 return false;
             }
@@ -678,7 +689,7 @@ module ActiveLookSDK {
         }
 
         function tearDownDevice() as Void {
-            _log("tearDownDevice", [ActiveLookSDK.device]);
+            $.log("tearDownDevice", [ActiveLookSDK.device]);
             time = null;
             cmdStacking = null;
             var newBuffers = [];
@@ -711,9 +722,9 @@ module ActiveLookSDK {
 
         //! Override ActiveLookBLE.ActiveLook.ActiveLookDelegate.onCharacteristicChanged
         function onCharacteristicChanged(characteristic as Toybox.BluetoothLowEnergy.Characteristic, value as Toybox.Lang.ByteArray) as Void {
-            _log("onCharacteristicChanged", [characteristic, value]);
+            $.log("onCharacteristicChanged", [characteristic, value]);
             if (value == null) {
-                onBleError(new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Characteristic change error $1$ $2$.", [characteristic, value])));
+                onBleError("onCharacteristicChanged", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Characteristic change error $1$ $2$.", [characteristic, value])));
                 return;
             }
             switch (characteristic.getUuid()) {
@@ -724,7 +735,7 @@ module ActiveLookSDK {
                 }
                 case ble.getBleCharacteristicActiveLookGesture().getUuid(): {
                     if (value[0] != 0x01) {
-                        _log("onCharacteristicChanged", ["Expecting gesture value 0x01", value]);
+                        $.log("onCharacteristicChanged", ["Expecting gesture value 0x01", value]);
                     }
                     self.flushCmdStacking();
                     listener.onGestureEvent();
@@ -736,7 +747,7 @@ module ActiveLookSDK {
                             case 0xD1 :{ // cfgRead
                             	cfgVersion = value[7];
                                 isReadingCfgVersion = false;
-                                _log("onCharacteristicChanged", ["cfgVersion", cfgVersion]);
+                                $.log("onCharacteristicChanged", ["cfgVersion", cfgVersion]);
                                 listener.onCfgVersionEvent(cfgVersion);
                                 setUpDevice();
                                 break;
@@ -748,21 +759,21 @@ module ActiveLookSDK {
                             //     break;
                             // }
                             default: {
-                                System.println("__characteristicUpdate("+ characteristic.getUuid().toString() + ", " + value.toString()+")");
+                                $.log("__characteristicUpdate("+ characteristic.getUuid().toString() + ", " + value.toString()+")", null);
                             }
                         }
                         break;
                     }
                 }
                 default: {
-                    onBleError(new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Unknown characteristic $1$.", [characteristic])));
+                    onBleError("onCharacteristicChanged unknown", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Unknown characteristic $1$.", [characteristic])));
                     return;
                 }
             }
         }
         //! Override ActiveLookBLE.ActiveLook.ActiveLookDelegate.onCharacteristicRead
         function onCharacteristicRead(characteristic as Toybox.BluetoothLowEnergy.Characteristic, status as Toybox.BluetoothLowEnergy.Status, value as Toybox.Lang.ByteArray) as Void {
-            _log("onCharacteristicRead", [characteristic, status, value]);
+            $.log("onCharacteristicRead", [characteristic, status, value]);
             switch (characteristic.getUuid()) {
                 case ble.getBleCharacteristicBatteryLevel().getUuid(): {
                     isReadingBattery = false;
@@ -799,7 +810,7 @@ module ActiveLookSDK {
                                 patch = subStr.toNumber();
                             }
                         }
-                        
+
                         if(major > 4 || (major == 4  && minor >= 5)){
                             layoutCmdId = 0x6A;
                         }else{
@@ -815,15 +826,15 @@ module ActiveLookSDK {
                 default: {
                     isReadingBattery = false;
                     isReadingFirmwareVersion = false;
-                    onBleError(new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Unknown characteristic $1$.", [characteristic])));
+                    onBleError("onCharacteristicRead", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Unknown characteristic $1$.", [characteristic])));
                     return;
                 }
             }
-            onBleError(new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Characteristic read error $1$ $2$ $3$.", [characteristic, status, value])));
+            onBleError("onCharacteristicRead", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Characteristic read error $1$ $2$ $3$.", [characteristic, status, value])));
         }
         //! Override ActiveLookBLE.ActiveLook.ActiveLookDelegate.onCharacteristicWrite
         function onCharacteristicWrite(characteristic as Toybox.BluetoothLowEnergy.Characteristic, status as Toybox.BluetoothLowEnergy.Status) as Void {
-            //_log("onCharacteristicWrite", [characteristic.getUuid(), status]);
+            //$.log("onCharacteristicWrite", [characteristic.getUuid(), status]);
             if (isUpdatingBleParams && !isBleParamsUpdated) {
                 isUpdatingBleParams = false;
                 if (status == Toybox.BluetoothLowEnergy.STATUS_SUCCESS) {
@@ -849,14 +860,14 @@ module ActiveLookSDK {
         }
         //! Override ActiveLookBLE.ActiveLook.ActiveLookDelegate.onConnectedStateChanged
         function onConnectedStateChanged(device as Toybox.BluetoothLowEnergy.Device, state as Toybox.BluetoothLowEnergy.ConnectionState) as Void {
-            _log("onConnectedStateChanged", [device, state]);
+            $.log("onConnectedStateChanged", [device, state]);
             if (state == Toybox.BluetoothLowEnergy.CONNECTION_STATE_CONNECTED) {
                 isPairing = false;
                 setUpNewDevice(device);
             } else if (ActiveLookSDK.device == null) {
-                onBleError(new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Device was alread disconnected $1$ $2$.", [ActiveLookSDK.device, device])));
+                onBleError("onConnectedStateChanged", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Device was alread disconnected $1$ $2$.", [ActiveLookSDK.device, device])));
             } else if (ActiveLookSDK.device != device) {
-                onBleError(new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Device differs $1$ $2$.", [ActiveLookSDK.device, device])));
+                onBleError("onConnectedStateChanged", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Device differs $1$ $2$.", [ActiveLookSDK.device, device])));
             } else {
                 ActiveLookSDK.device = null;
                 tearDownDevice();
@@ -865,11 +876,11 @@ module ActiveLookSDK {
         }
         //! Override ActiveLookBLE.ActiveLook.ActiveLookDelegate.onDescriptorRead
         function onDescriptorRead(descriptor as Toybox.BluetoothLowEnergy.Descriptor, status as Toybox.BluetoothLowEnergy.Status, value as Toybox.Lang.ByteArray) as Void {
-            _log("onDescriptorRead", [descriptor, status, value]);
+            $.log("onDescriptorRead", [descriptor, status, value]);
         }
         //! Override ActiveLookBLE.ActiveLook.ActiveLookDelegate.onDescriptorWrite
         function onDescriptorWrite(descriptor as Toybox.BluetoothLowEnergy.Descriptor, status as Toybox.BluetoothLowEnergy.Status) as Void {
-            _log("onDescriptorWrite", [descriptor, status]);
+            $.log("onDescriptorWrite", [descriptor, status]);
             var isActivated = status == Toybox.BluetoothLowEnergy.STATUS_SUCCESS;
             switch (descriptor.getCharacteristic().getUuid()) {
                 case ble.getBleCharacteristicBatteryLevel().getUuid(): {
@@ -891,24 +902,24 @@ module ActiveLookSDK {
                     isActivatingALookTxNotif = false;
                     isActivatingBatteryNotif = false;
                     isActivatingGestureNotif = false;
-                    onBleError(new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Unknown descriptor $1$ $2$.", [descriptor.getCharacteristic(), descriptor, status])));
+                    onBleError("onDescriptorWrite", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Unknown descriptor $1$ $2$.", [descriptor.getCharacteristic(), descriptor, status])));
                     return;
                 }
             }
             if (!isActivated) {
-                onBleError(new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Descriptor write error $1$ $2$.", [descriptor.getCharacteristic(), descriptor, status])));
+                onBleError("onDescriptorWrite", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Descriptor write error $1$ $2$.", [descriptor.getCharacteristic(), descriptor, status])));
                 return;
             }
             setUpDevice();
         }
         //! Override ActiveLookBLE.ActiveLook.ActiveLookDelegate.onScanResult
         function onScanResult(scanResult as Toybox.BluetoothLowEnergy.ScanResult) as Void {
-            _log("onScanResult", [scanResult]);
+            $.log("onScanResult", [scanResult]);
             listener.onScanResult(scanResult);
         }
         //! Override ActiveLookBLE.ActiveLook.ActiveLookDelegate.onScanStateChange
         function onScanStateChange(scanState as Toybox.BluetoothLowEnergy.ScanState, status as Toybox.BluetoothLowEnergy.Status) as Void {
-            _log("onScanStateChange", [scanState, status]);
+            $.log("onScanStateChange", [scanState, status]);
             if (scanState == Toybox.BluetoothLowEnergy.SCAN_STATE_SCANNING) {
                 if (status <= Toybox.BluetoothLowEnergy.STATUS_SUCCESS) {
                     isScanning = true;
@@ -925,9 +936,11 @@ module ActiveLookSDK {
 
 
         //! Override ActiveLookBLE.ActiveLook.ActiveLookDelegate.onBleError
-        function onBleError(exception as Toybox.Lang.Exception) as Void {
-            _log("onBleError", [exception.getErrorMessage()]);
-            listener.onBleError(exception);
+        function onBleError(msg, exception as Toybox.Lang.Exception) as Void {
+            $.log("onBleError [" + msg + "]", [exception.getErrorMessage()]);
+            exception.printStackTrace();
+
+            listener.onBleError("onBleError", exception);
         }
 
     }
