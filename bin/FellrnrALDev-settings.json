@@ -77,7 +77,7 @@
   }, {
     "key" : "is_gesture_enable",
     "valueType" : "boolean",
-    "defaultValue" : true,
+    "defaultValue" : false,
     "configTitle" : "settings_is_gesture_enable",
     "configPrompt" : null,
     "configType" : "boolean",
@@ -122,7 +122,7 @@
   }, {
     "key" : "is_als_enable",
     "valueType" : "boolean",
-    "defaultValue" : true,
+    "defaultValue" : false,
     "configTitle" : "settings_is_als_enable",
     "configPrompt" : null,
     "configType" : "boolean",

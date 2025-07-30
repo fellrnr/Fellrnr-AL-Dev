@@ -32,6 +32,7 @@ const PROFILE_ACTIVE_LOOK = ({
         { :uuid => BLE_CHAR_ACTIVELOOK_RX },
         { :uuid => BLE_CHAR_ACTIVELOOK_TX, :descriptors => [Toybox.BluetoothLowEnergy.cccdUuid()] },
         { :uuid => BLE_CHAR_ACTIVELOOK_GESTURE_EVENT, :descriptors => [Toybox.BluetoothLowEnergy.cccdUuid()] },
+        { :uuid => BLE_CHAR_ACTIVELOOK_TOUCH_EVENT, :descriptors => [Toybox.BluetoothLowEnergy.cccdUuid()] },
     ]
 }) as ActiveLookBLE.ActiveLook.BleProfile;
 
@@ -427,6 +428,17 @@ module ActiveLookBLE {
         function getBleCharacteristicActiveLookGesture() as Toybox.BluetoothLowEnergy.Characteristic {
             //$.log("getBleCharacteristicActiveLookGesture", []);
             return tryGetServiceCharacteristic(BLE_SERV_ACTIVELOOK, BLE_CHAR_ACTIVELOOK_GESTURE_EVENT, 5);
+        }
+
+        //! Try 5 times to get the <code>BLE_CHAR_ACTIVELOOK_TOUCH_EVENT</code> characteristic
+        //! from the <code>BLE_SERV_ACTIVELOOK</code> service.
+        //!
+        //! @return The Bluetooth characteristic.
+        //! @throws A <code>Toybox.Lang.InvalidValueException</code>
+        //!         if the characteristic could not be retrieved after 5 attempts.
+        function getBleCharacteristicActiveLookTouch() as Toybox.BluetoothLowEnergy.Characteristic {
+            //$.log("getBleCharacteristicActiveLookGesture", []);
+            return tryGetServiceCharacteristic(BLE_SERV_ACTIVELOOK, BLE_CHAR_ACTIVELOOK_TOUCH_EVENT, 5);
         }
 
         // TODO: Unused... Remove ?

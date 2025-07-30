@@ -151,6 +151,7 @@ function updateFields() as Void {
             $.sdk.sendRawCmd("clear-off", fullBuffer);
             $.sdk.resetLayouts([]);
         }
+        $.log("updateFields, tempo_off", []);
         return;
     }
     if ($.tempo_pause > 0) {
@@ -162,6 +163,7 @@ function updateFields() as Void {
             $.sdk.sendRawCmd("clear-pause", fullBuffer);
             $.sdk.resetLayouts([]);
         }
+        $.log("updateFields, tempo_pause", []);
         return;
     }
     if ($.tempo_congrats > 0) {
@@ -173,10 +175,11 @@ function updateFields() as Void {
             $.sdk.sendRawCmd("clear-done", fullBuffer);
             $.sdk.resetLayouts([]);
         }
+        $.log("updateFields, tempo_congrats", []);
         return;
     }
     if ($.tempo_congrats == 0) {
-        //$.amsg("updateFields, $.tempo_congrats ==0: " + $.tempo_congrats);
+        $.log("updateFields, $.tempo_congrats ==0: " + $.tempo_congrats, []);
         return;
     }
     //#!JFS!# change the pause then clear logic to use a variable freeze time
@@ -371,7 +374,7 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
     var __starttimer as Lang.Number;
     var __endtimer as Lang.Number = 0;
     function compute(info) {
-        log("Enter Compute", []);
+        //log("Enter Compute", []);
 
         __starttimer = System.getTimer();
 
@@ -436,7 +439,7 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
 //            log("compute::updateFields  ", [self.__heart_count]);//#!JFS!#
             if(self.__is_auto_loop){
                 if(self.__loop_timer.equals(0)){
-                    log("onLoopEvent", []);
+                    log("onLoopEvent, fake swipe", []);
                     $.swipe = true;
                     self.__loop_timer = Toybox.Application.Properties.getValue("loop_timer");
                 }else{
@@ -444,7 +447,7 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
                 }
             }            $.updateFields();
             if($.replaceTimeWithLap) {
-                log("compute-check lap", [self.__heart_count]);
+                //log("compute-check lap", [self.__heart_count]);
                 //need to update lap message (takes up a lot of bluetooth bandwidth)
                 if($.lastLapMessage.compareTo($.lapMessage) != 0) {
                     $.lastLapMessage = $.lapMessage;
@@ -779,10 +782,17 @@ class ActiveLookDataFieldView extends WatchUi.DataField {
         }
     }
     function onGestureEvent() as Void {
-        $.log("onGestureEvent", []);
+        $.log("onGestureEvent (swipe)", []);
         $.swipe = true;
         if(self.__is_auto_loop){self.__loop_timer = Toybox.Application.Properties.getValue("loop_timer");}
     }
+
+    function onTouchEvent() as Void {
+        $.log("onTouchEvent (swipe)", []);
+        $.swipe = true;
+        if(self.__is_auto_loop){self.__loop_timer = Toybox.Application.Properties.getValue("loop_timer");}
+    }
+
     function onBatteryEvent(batteryLevel as Toybox.Lang.Number) as Void {
         //$.log("onBatteryEvent", [batteryLevel]);
         $.battery = batteryLevel;

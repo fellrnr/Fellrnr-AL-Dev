@@ -33,6 +33,7 @@ module ActiveLookSDK {
         function onFirmwareEvent(major as Toybox.Lang.Number, minor as Toybox.Lang.Number, patch as Toybox.Lang.Number) as Void;
         function onCfgVersionEvent(cfgVersion as Toybox.Lang.Number) as Void;
         function onGestureEvent() as Void;
+        function onTouchEvent() as Void;
         function onBatteryEvent(batteryLevel as Toybox.Lang.Number) as Void;
         function onDeviceReady() as Void;
         function onDeviceDisconnected() as Void;
@@ -54,6 +55,9 @@ module ActiveLookSDK {
 
     var isActivatingGestureNotif                     as Toybox.Lang.Boolean                      = false;
     var isGestureNotifActivated                      as Toybox.Lang.Boolean                      = false;
+
+    var isActivatingTouchNotif                     as Toybox.Lang.Boolean                      = false;
+    var isTouchNotifActivated                      as Toybox.Lang.Boolean                      = false;
 
     var isActivatingBatteryNotif                     as Toybox.Lang.Boolean                      = false;
     var isBatteryNotifActivated                      as Toybox.Lang.Boolean                      = false;
@@ -115,6 +119,7 @@ module ActiveLookSDK {
         if (!isCfgVersionRead())      { return false; }
         if (!isGestureSensorUpdated)  { return false; }
         if (!isGestureNotifActivated) { return false; }
+        if (!isTouchNotifActivated) { return false; }
         if (!isBatteryNotifActivated) { return false; }
         if (!isALookTxNotifActivated) { return false; }
         return true;
@@ -178,7 +183,8 @@ module ActiveLookSDK {
         }
         function resyncGlasses() {
             //$.log("resyncGlasses", []);
-            if (cmdStacking != null)  { self.sendRawCmd("resyncGlasses", []b); }
+            //we no longer need to call sendRawCmd as the write complete callback will send the next chunk
+            //if (cmdStacking != null)  { self.sendRawCmd("resyncGlasses", []b); }
             if (clearError == true) {
                 //possible infinte recursion as clearScreen will call resyncGlasses
                 self.clearScreen(true); //#!JFS!# default to refreshing the top line
@@ -410,7 +416,7 @@ module ActiveLookSDK {
 		}
 
         function __onWrite_finishPayload(c, s) {
-            $.log("in __onWrite_finishPayload", []);
+            //$.log("in __onWrite_finishPayload", []);
             _cbCharacteristicWrite = null;
             _cbWritePending = false;
             if (s == 0) {
@@ -422,7 +428,7 @@ module ActiveLookSDK {
                 //throw new Toybox.Lang.InvalidValueException("(E) Could write on: " + c);
                 $.log("Failure in __onWrite_finishPayload", []);
             }
-            $.log("__onWrite_finishPayload done", []);
+            //$.log("__onWrite_finishPayload done", []);
         }
 
         function sendRawCmd(why, buffer) {
@@ -684,6 +690,15 @@ module ActiveLookSDK {
                 }
                 return false;
             }
+            if (!isTouchNotifActivated) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isTouchNotifActivated"]);
+                if (!isActivatingTouchNotif) { $.log("setUpDevice", [ActiveLookSDK.device, "Not isActivatingTouchNotif"]);
+                    try {
+                        ble.getBleCharacteristicActiveLookTouch().getDescriptor(BluetoothLowEnergy.cccdUuid()).requestWrite([0x01, 0x00]b);
+                        isActivatingTouchNotif = true;
+                    } catch (e) { onBleError("setUpDevice Touch activated", e); }
+                }
+                return false;
+            }
             listener.onDeviceReady();
             return true;
         }
@@ -722,7 +737,7 @@ module ActiveLookSDK {
 
         //! Override ActiveLookBLE.ActiveLook.ActiveLookDelegate.onCharacteristicChanged
         function onCharacteristicChanged(characteristic as Toybox.BluetoothLowEnergy.Characteristic, value as Toybox.Lang.ByteArray) as Void {
-            $.log("onCharacteristicChanged", [characteristic, value]);
+            $.log("onCharacteristicChanged", [characteristic.getUuid(), value]);
             if (value == null) {
                 onBleError("onCharacteristicChanged", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Characteristic change error $1$ $2$.", [characteristic, value])));
                 return;
@@ -739,6 +754,12 @@ module ActiveLookSDK {
                     }
                     self.flushCmdStacking();
                     listener.onGestureEvent();
+                    break;
+                }
+                case ble.getBleCharacteristicActiveLookTouch().getUuid(): {
+                    $.log("onCharacteristicChanged", ["Got touch value", value]);
+                    self.flushCmdStacking();
+                    listener.onTouchEvent();
                     break;
                 }
                 case ble.getBleCharacteristicActiveLookTx().getUuid(): {
@@ -898,16 +919,22 @@ module ActiveLookSDK {
                     if (isActivated) { isGestureNotifActivated = true; }
                     break;
                 }
+                case ble.getBleCharacteristicActiveLookTouch().getUuid(): {
+                    isActivatingTouchNotif = false;
+                    if (isActivated) { isTouchNotifActivated = true; }
+                    break;
+                }
                 default: {
                     isActivatingALookTxNotif = false;
                     isActivatingBatteryNotif = false;
                     isActivatingGestureNotif = false;
-                    onBleError("onDescriptorWrite", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Unknown descriptor $1$ $2$.", [descriptor.getCharacteristic(), descriptor, status])));
+                    isActivatingTouchNotif = false;
+                    onBleError("onDescriptorWrite", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Unknown descriptor $1$ $2$.", [descriptor.getCharacteristic().getUuid(), descriptor, status])));
                     return;
                 }
             }
             if (!isActivated) {
-                onBleError("onDescriptorWrite", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Descriptor write error $1$ $2$.", [descriptor.getCharacteristic(), descriptor, status])));
+                onBleError("onDescriptorWrite", new Toybox.Lang.InvalidValueException(Toybox.Lang.format("(E) Descriptor write error $1$ $2$.", [descriptor.getCharacteristic().getUuid(), descriptor, status])));
                 return;
             }
             setUpDevice();
