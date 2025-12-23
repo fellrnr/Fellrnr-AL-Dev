@@ -15,7 +15,9 @@ module ActiveLookSDK {
         if ($ has :log) { $.log(Toybox.Lang.format("[ActiveLookSDK] $1$", [msg]), data); }
     }
 
-(:debug)   function log(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {
+(:debug)   function log(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void { }
+
+(:debug)   function logX(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {
     if (data instanceof Toybox.Lang.ByteArray) { data = arrayToHex(data); }
     if (data instanceof Toybox.Lang.Exception) { data.printStackTrace() ; data = data.getErrorMessage(); }
     var myTime = System.getClockTime(); // ClockTime object
@@ -134,10 +136,11 @@ module ActiveLookSDK {
 
     var _cbCharacteristicWrite   = null;
     var _cbWritePending   = false; //are we waiting for a write to finish?
-
+    var __lastWriteTime as Lang.Number = -1;
     var layouts = [];
-    var buffers = [];   var values = [];
-    var rotate = 0;
+    var buffers = [];
+    var values = [];
+    //var rotate = 0; //no longer used?
 
     class ALSDK {
 
@@ -182,6 +185,8 @@ module ActiveLookSDK {
             ble.disconnect();
         }
         function resyncGlasses() {
+            $.encodedLog += "rg";
+
             //$.log("resyncGlasses", []);
             //we no longer need to call sendRawCmd as the write complete callback will send the next chunk
             //if (cmdStacking != null)  { self.sendRawCmd("resyncGlasses", []b); }
@@ -196,6 +201,7 @@ module ActiveLookSDK {
                     //var pos = (i + rotate) % buffers.size();
                     if (buffers[i] != null) {
                         self.__updateLayoutValueBuffer(i);
+                        $.encodedLog += "bn{" + buffers[i] + "}";
                     }
                 }
             }
@@ -278,13 +284,14 @@ module ActiveLookSDK {
         function setBattery(arg) {
             batteryError = null;
             $.log("in setBattery ", arg);
+            $.encodedLog += "sb";
             if (arg != battery) {
                 try {
                     var data = [0x07]b;
                     var paddingChar = arg < 10 ? "$" :  "";
                     data.addAll(self.stringToPadByteArray(paddingChar + arg.toString(), 3, true));
                     $.log(Lang.format("setBattery $1$", [data]));
-                    self.sendRawCmd("set battery", self.commandBuffer(0x62, data));
+                    self.sendRawCmd("z1", "set battery", self.commandBuffer(0x62, data));
                     battery = arg;
                 } catch (e) {
                     $.log("setBattery error " + e.getErrorMessage(), null);
@@ -297,7 +304,8 @@ module ActiveLookSDK {
         function cfgRead() {
             try {
                 var data = [0x41, 0x4C, 0x6F, 0x6F, 0x4B]b; // ALooK
-                self.sendRawCmd("cfgread", self.commandBuffer(0xD1, data));
+                self.sendRawCmd("z2", "cfgread", self.commandBuffer(0xD1, data));
+                $.sdk.encodedLog += "cr";
             } catch (e) {
                 isReadingCfgVersion = false;
                 cfgVersion = null;
@@ -334,7 +342,9 @@ module ActiveLookSDK {
                 data.addAll($.sdk.stringToPadByteArray(msg.substring(null, 25), null, null));
                 var fullBuffer = $.sdk.commandBuffer(0x37, data); // Text lap number
                 $.log("send lap", [arrayToHex(fullBuffer)]);
-                $.sdk.sendRawCmd("lap top", fullBuffer);
+                $.sdk.sendRawCmd("z3", "lap top", fullBuffer);
+                $.encodedLog += "lt";
+
             } catch (e) {
                 lapMessageError = msg; //resync glasses will try until good
                 onBleError("setLap", e);
@@ -344,6 +354,7 @@ module ActiveLookSDK {
 
         function setTime(hour, minute) {
             if (time != minute) {
+            $.encodedLog += "tt";
             timeHError = null;
             timeMError = null;
                 try {
@@ -352,7 +363,7 @@ module ActiveLookSDK {
                     var data = [0x0A]b;
                     data.addAll(self.stringToPadByteArray(value, null, null));
                     $.log("setTime " + data, []);
-                    self.sendRawCmd("time", self.commandBuffer(0x62, data));
+                    self.sendRawCmd("z4", "time", self.commandBuffer(0x62, data));
                 } catch (e) {
                     time = null;
                     timeHError = hour;
@@ -369,16 +380,20 @@ module ActiveLookSDK {
             $.lastLapMessage = ""; //refresh top line
             try {
                 $.log("clearScreen", [refresh]);
-                self.sendRawCmd("clear:" + refresh, self.commandBuffer(0x01, []b));
+                self.sendRawCmd("z5", "clear~" + refresh, self.commandBuffer(0x01, []b));
                 // ble.getBleCharacteristicActiveLookRx()
                 //     .requestWrite([0xFF, 0x01, 0x00, 0x05, 0xAA]b, {:writeType => BluetoothLowEnergy.WRITE_TYPE_WITH_RESPONSE});
                 if(refresh) {
+                    $.encodedLog += "c1";
                     time = null;
                     if (batteryError == null) {
                         batteryError = battery;
                     }
                     battery = null;
+                } else  {
+                    $.encodedLog += "c0";
                 }
+
                 self.resetLayouts([]);
                 self.resyncGlasses();
             } catch (e) {
@@ -393,7 +408,8 @@ module ActiveLookSDK {
 			data.addAll(self.numberToFixedSizeByteArray(y, 2));
 			data.addAll([rotation, size, color]b);
 			data.addAll(self.stringToPadByteArray(text, null, null));
-            self.sendRawCmd("text", self.commandBuffer(0x37, data));
+            self.sendRawCmd("z6", "text", self.commandBuffer(0x37, data));
+            $.encodedLog += "tx";
 		}
 
         function holdGraphicEngine(){
@@ -412,7 +428,7 @@ module ActiveLookSDK {
         }
 
         function holdAndFlush(value) {
-            self.sendRawCmd("holdflush:" + value, self.commandBuffer(0x39, [value]b));
+            self.sendRawCmd("z7", "holdflush:" + value, self.commandBuffer(0x39, [value]b));
 		}
 
         function __onWrite_finishPayload(c, s) {
@@ -421,7 +437,9 @@ module ActiveLookSDK {
             _cbWritePending = false;
             if (s == 0) {
                 if(cmdStacking != null) {
-                    self.sendRawCmd("async", []b);
+                    self.sendRawCmd("z8", "async", []b);
+                    //timeIt();
+                    $.encodedLog += "ax";
                 }
             } else {
                 //this crashes the data field, which doesn't help much. //#!JFS!#
@@ -431,16 +449,27 @@ module ActiveLookSDK {
             //$.log("__onWrite_finishPayload done", []);
         }
 
-        function sendRawCmd(why, buffer) {
+        function sendRawCmd(code, why, buffer) {
+
             var bufferToSend = []b;
+            var cmdStackingSize = 0;
             if (cmdStacking != null) {
+                cmdStackingSize = cmdStacking.size();
                 bufferToSend.addAll(cmdStacking);
                 cmdStacking = null;
             }
             bufferToSend.addAll(buffer);
+
+
+            var endtimer = System.getTimer();
+            var total = endtimer - __lastWriteTime;
+            __lastWriteTime = System.getTimer();
+            $.encodedLog += code + "~" + buffer.size().format("%02d") + "{" + cmdStackingSize + "}{" + total + "}";
+
+
             var option;
             //$.log("sendRawCmd: buffer " + buffer.size() + ", total size " + bufferToSend.size(), [arrayToHex(bufferToSend)]);
-            $.log("sendRawCmd: " + why + ", buffer " + buffer.size() + ", total size " + bufferToSend.size() + " pending " + _cbWritePending, []);
+            //$.log("sendRawCmd: " + why + ", buffer " + buffer.size() + ", total size " + bufferToSend.size() + " pending " + _cbWritePending, []);
             try {
                 if(_cbWritePending == true) { //there's a write in progress
                     cmdStacking = bufferToSend;
@@ -473,7 +502,7 @@ module ActiveLookSDK {
 
         function indexIncompleteCmd(){
             if(cmdStacking){
-                $.log("indexIncompleteCmd",[arrayToHex(cmdStacking)]);
+                //$.log("indexIncompleteCmd",[arrayToHex(cmdStacking)]);
                 for(var i = 0; i < cmdStacking.size(); i++) {
                     if(cmdStacking[i] == 0xAA){
                         if(cmdStacking.size() > i + 1){
@@ -488,25 +517,41 @@ module ActiveLookSDK {
         }
 
         function flushCmdStacking(){
-            $.log("flushCmdStacking",[cmdStacking == null ? 0 : cmdStacking.size()]);
+            //$.log("flushCmdStacking",[cmdStacking == null ? 0 : cmdStacking.size()]);
             var indexIncompleteCmd = indexIncompleteCmd() as Toybox.Lang.Number;
+            var prior = cmdStacking != null ? cmdStacking.size() : -1;
             cmdStacking = indexIncompleteCmd != 0 ? cmdStacking.slice(null, indexIncompleteCmd) : null ;
             self.resetGraphicEngine();
-            $.log("flushCmdStacking",[cmdStacking == null ? 0 : arrayToHex(cmdStacking)]);
+            //$.log("flushCmdStacking",[cmdStacking == null ? 0 : arrayToHex(cmdStacking)]);
+            var cmdStackingSize = cmdStacking != null ? cmdStacking.size() : 0;
+
+            $.encodedLog += "fC{" + cmdStackingSize + "|" + prior + "|" + indexIncompleteCmd + "}";
         }
 
         function flushCmdStackingIfSup(value as Toybox.Lang.Number){
             if(cmdStacking != null){
                 if(cmdStacking.size() > value){ //was hard coded 200
-                    $.log("flushCmdStackingIfSup",[value,cmdStacking == null ? 0 : cmdStacking.size()]);
+                    //$.log("flushCmdStackingIfSup",[value,cmdStacking == null ? 0 : cmdStacking.size()]);
                     flushCmdStacking();
                 }
             }
         }
 
-        function resetLayouts(args) {
+        function cmdStackingLength() as Toybox.Lang.Number {
+            if(cmdStacking != null){
+                return cmdStacking.size();
+            }
+            return 0;
+        }
+
+
+        function resetLayouts(args) {  //always passed an empty array
+            $.encodedLog += "rl";
             var newBuffers = [];
             var newValues = [];
+
+            //redundent code as the args is always empty
+            /*
             for (var i = 0; i < args.size(); i ++) {
                 var pos = layouts.indexOf(args[i]);
                 if (pos < 0) {
@@ -517,6 +562,7 @@ module ActiveLookSDK {
                     newValues.add(values[pos]);
                 }
             }
+            */
             layouts = args;
             buffers = newBuffers;
             values = newValues;
@@ -532,24 +578,30 @@ module ActiveLookSDK {
                     layouts.add(layout);
                     buffers.add(null);
                     values.add("");
+                    $.encodedLog += "p0";
+                }
+                if(values[pos].equals(value)) {
+                    $.encodedLog += "nc";
                 }
                 if (pos >= 0 && !values[pos].equals(value) && value != null) {
                     values[pos] = value;
                     buffers[pos] = [((layout >> 24) & 0xFF),((layout >> 16) & 0xFF),((layout >> 8) & 0xFF),(layout & 0xFF)]b;
                     buffers[pos].addAll(value);
-                    self.__updateLayoutValueBuffer(pos);
+                    self.__updateLayoutValueBuffer(pos); //sends the raw buffer[pos]
                 }
+            } else {
+                $.encodedLog += "nr";
             }
+
         }
 
         function __updateLayoutValueBuffer(pos) {
             var data = buffers[pos];
             buffers[pos] = null;
             try {
-            	//only 5Kb space in the log file
-                //System.println(Lang.format("__updateLayoutValueBuffer $1$", [data]));
-                self.sendRawCmd("layout buffer", self.commandBuffer(layoutCmdId, data));
-                rotate = (rotate + 1) % buffers.size();
+                $.encodedLog += "lb";
+                self.sendRawCmd("z9", "layout buffer", self.commandBuffer(layoutCmdId, data));
+                //rotate = (rotate + 1) % buffers.size();
             } catch (e) {
                 buffers[pos] = data;
                 _cbCharacteristicWrite = self.method(:__onWrite_finishpUdateLayoutValueBuffer);
@@ -968,6 +1020,7 @@ module ActiveLookSDK {
             exception.printStackTrace();
 
             listener.onBleError("onBleError", exception);
+            $.encodedLog += "BE";
         }
 
     }

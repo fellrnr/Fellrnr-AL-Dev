@@ -15,9 +15,9 @@ class CoreSettings {
     [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc"; @line = 26; @symbol_functiondef = [getCoreProperty,26,20,35]; @symbol_param<0> = [key,26,36,39]; @symbol_param<1> = [defaultValue,26,40,52]; ]
     static
     function getCoreProperty(key, defaultValue) {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54_41_4_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54_41_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc" 29 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54_41_4_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54_41_4_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54_41_4_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54_41_4_stop" ]
         %result.1 = local;
         symbol [ result %result.1 29 6 12 ];
         %tmp.1 = lgetv %defaultValue;
@@ -25,7 +25,7 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54
         lputv %result.1 %tmp.1;
         symbol [ result %result.1 29 6 12 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc" 30 8 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54_41_4_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54_41_4_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54_41_4_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54_41_4_stop" ]
         %app.2 = local;
         symbol [ app %app.2 30 12 15 ];
         symbol [ Application %tmp.2 30 18 29 ];
@@ -36,24 +36,24 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54
         lputv %app.2 %tmp.4;
         symbol [ app %app.2 30 12 15 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc" 32 8 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_8_38_8_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_12_32_41_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_8_38_8_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_12_32_41_begin:
         %tmp.5 = lgetv %app.2;
         symbol [ app %tmp.5 32 13 16 ];
         %tmp.6 = null;
         %tmp.7 = ne %tmp.5 %tmp.6;
-        bf %tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_8_38_8_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_29_32_41_true:
+        bf %tmp.7 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_8_38_8_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_29_32_41_true:
         %tmp.8 = lgetv %key;
         symbol [ key %tmp.8 32 30 33 ];
         %tmp.9 = null;
         %tmp.10 = ne %tmp.8 %tmp.9;
         push %tmp.10;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_29_32_41_end:
-        %tmp.11 = phi [%tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_12_32_41_begin] [%tmp.10 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_29_32_41_true] [%tmp.11 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_29_32_41_end];
-        bf %tmp.11 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_8_38_8_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_8_38_8_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_44_38_8_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_29_32_41_end:
+        %tmp.11 = phi [%tmp.7 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_12_32_41_begin] [%tmp.10 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_29_32_41_true] [%tmp.11 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_29_32_41_end];
+        bf %tmp.11 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_8_38_8_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_8_38_8_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_44_38_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc" 33 9 ]
         %tmp.12 = lgetv %app.2;
         symbol [ app %tmp.12 33 18 21 ];
@@ -67,37 +67,37 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_44
         lputv %result.1 %tmp.17;
         symbol [ result %result.1 33 9 15 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc" 35 9 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_9_37_9_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_9_37_9_if_stmt:
         %tmp.18 = lgetv %result.1;
         symbol [ result %tmp.18 35 12 18 ];
         %tmp.19 = null;
         %tmp.20 = eq %tmp.18 %tmp.19;
-        bf %tmp.20 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_9_37_9_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_9_37_9_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_28_37_9_start:
+        bf %tmp.20 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_9_37_9_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_9_37_9_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_28_37_9_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc" 36 13 ]
         %tmp.21 = lgetv %defaultValue;
         symbol [ defaultValue %tmp.21 36 22 34 ];
         lputv %result.1 %tmp.21;
         symbol [ result %result.1 36 13 19 ];
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_28_37_9_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_9_37_9_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_9_37_9_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_44_38_8_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_8_38_8_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_8_38_8_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_28_37_9_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_9_37_9_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_35_9_37_9_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_44_38_8_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_8_38_8_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_32_8_38_8_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc" 40 8 ]
         %tmp.22 = lgetv %result.1;
         symbol [ result %tmp.22 40 15 21 ];
         ret %tmp.22;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54_41_4_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_26_54_41_4_stop:
     }
     [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc"; @line = 44; @symbol_functiondef = [setCoreProperty,44,20,35]; @symbol_param<0> = [key,44,36,39]; @symbol_param<1> = [value,44,40,45]; ]
     static
     function setCoreProperty(key, value) {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_44_47_52_4_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_44_47_52_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc" 47 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_44_47_52_4_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_44_47_52_4_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_44_47_52_4_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_44_47_52_4_stop" ]
         %app.1 = local;
         symbol [ app %app.1 47 6 9 ];
         symbol [ Application %tmp.1 47 12 23 ];
@@ -108,24 +108,24 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_44_47
         lputv %app.1 %tmp.3;
         symbol [ app %app.1 47 6 9 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc" 49 6 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_6_51_8_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_10_49_39_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_6_51_8_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_10_49_39_begin:
         %tmp.4 = lgetv %app.1;
         symbol [ app %tmp.4 49 11 14 ];
         %tmp.5 = null;
         %tmp.6 = ne %tmp.4 %tmp.5;
-        bf %tmp.6 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_6_51_8_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_27_49_39_true:
+        bf %tmp.6 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_6_51_8_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_27_49_39_true:
         %tmp.7 = lgetv %key;
         symbol [ key %tmp.7 49 28 31 ];
         %tmp.8 = null;
         %tmp.9 = ne %tmp.7 %tmp.8;
         push %tmp.9;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_27_49_39_end:
-        %tmp.10 = phi [%tmp.6 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_10_49_39_begin] [%tmp.9 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_27_49_39_true] [%tmp.10 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_27_49_39_end];
-        bf %tmp.10 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_6_51_8_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_6_51_8_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_42_51_8_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_27_49_39_end:
+        %tmp.10 = phi [%tmp.6 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_10_49_39_begin] [%tmp.9 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_27_49_39_true] [%tmp.10 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_27_49_39_end];
+        bf %tmp.10 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_6_51_8_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_6_51_8_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_42_51_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc" 50 9 ]
         %tmp.11 = lgetv %app.1;
         symbol [ app %tmp.11 50 9 12 ];
@@ -138,15 +138,15 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_42
         %tmp.16 = lgetv %value;
         symbol [ value %tmp.16 50 31 36 ];
         invoke %tmp.12 %tmp.13(%tmp.15, %tmp.16);
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_42_51_8_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_6_51_8_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_6_51_8_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_44_47_52_4_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_42_51_8_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_6_51_8_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_49_6_51_8_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_44_47_52_4_stop:
     }
     [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc"; @line = 58; @symbol_functiondef = [getCoreAntId,58,20,32]; ]
     static
     function getCoreAntId() {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_58_35_60_4_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_58_35_60_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc" 59 2 ]
         %tmp.1 = self;
         symbol [ getCoreProperty %tmp.2 59 9 24 ];
@@ -156,12 +156,12 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_58_35
         %tmp.5 = 0;
         %tmp.6 = invoke %tmp.1 %tmp.2(%tmp.4, %tmp.5);
         ret %tmp.6;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_58_35_60_4_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_58_35_60_4_stop:
     }
     [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc"; @line = 62; @symbol_functiondef = [setCoreAntId,62,20,32]; @symbol_param<0> = [value,62,33,38]; ]
     static
     function setCoreAntId(value) {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_62_40_64_4_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_62_40_64_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc" 63 8 ]
         %tmp.1 = self;
         symbol [ setCoreProperty %tmp.2 63 8 23 ];
@@ -171,7 +171,7 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_62_40
         %tmp.5 = lgetv %value;
         symbol [ value %tmp.5 63 36 41 ];
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.5);
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_62_40_64_4_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreSettings_mc_62_40_64_4_stop:
     }
 }
 [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreSettings.mc"; @line = 19; ]

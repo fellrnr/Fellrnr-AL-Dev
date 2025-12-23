@@ -5,8 +5,9 @@ using Toybox.System;
 import Toybox.Lang;
 
 
-(:release) function dmsg(msg as Toybox.Lang.String, data as Toybox.Lang.Object or Null) as Void {} //#!JFS!#
-(:debug) function dmsg(msg as Toybox.Lang.String) as Void {
+(:release) function dmsg(msg as Toybox.Lang.String) as Void {} //#!JFS!#
+(:debug) function dmsg(msg as Toybox.Lang.String) as Void {} //#!JFS!#
+(:debug) function dmsgX(msg as Toybox.Lang.String) as Void {
     var myTime = System.getClockTime(); // ClockTime object
     System.println(
         myTime.hour.format("%02d") + ":" +

@@ -358,6 +358,7 @@ module ActiveLook {
             :heatStrainIndex, //50
             :heatIndicator, //51
             :hrPwr, //52
+            :groundContactBalance  //53
         ];
 
         //ToDo : A modifier avec les bonnes positions
@@ -510,7 +511,7 @@ module ActiveLook {
             :heatStrainIndex    => 0x1B1B3A3A,
             :heatIndicator      => 0x1B1B3A3A,
             :hrPwr              => 0x45454646, //normalized power icon
-
+            :groundContactBalance => 0xBDBDBEBE,
         };
 
         /*
@@ -637,7 +638,9 @@ module ActiveLook {
             if(value[0] >= 1) {
                 return Lang.format("$1$:$2$", [ value[0].format("%02d"), value[1].format("%02d") ]);
             }
-            return Lang.format("$1$:$2$", [ value[1].format("%02d"), value[2].format("%02d") ]);
+            //return Lang.format("$1$:$2$", [ value[1].format("%02d"), value[2].format("%02d") ]);
+            //JFS: Hack partial seconds
+            return Lang.format("$1$:$2$.$3$", [ value[1].format("%d"), value[2].format("%02d"), value[3].format("%1d") ]);
         }
 		function currentPaceFullFormat(value as Lang.Number or Lang.Float or Null) as Lang.String {
             // if (value != null) {
@@ -800,6 +803,20 @@ module ActiveLook {
             tmp.add(0x00);
             return tmp;
         }
+
+        function getAsStr(args as GeneratorArguments) as Lang.String {
+            var tmp = ActiveLook.Laps has args[:sym] ? ActiveLook.Laps[args[:sym]] : AugmentedActivityInfo.get(args[:sym]);
+            if (tmp != null && tmp != false) {
+                if (args.hasKey(:converter)) {
+                    tmp = tmp * args[:converter];
+                }
+            } else {
+                tmp = null;
+            }
+            tmp = args[:toStr].invoke(tmp);
+            return tmp;
+        }
+
 
         function pageToGenerator(page as PageSettings.PageSpec) as Lang.Array<GeneratorArguments> {
             var result = [];

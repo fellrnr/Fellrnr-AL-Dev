@@ -78,41 +78,41 @@ class CoreFitContributor {
         var graphField = null;
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc"; @line = 64; @symbol_functiondef = [writeValue,64,14,24]; @symbol_param<0> = [fitValue,64,26,34]; @symbol_param<1> = [TimerRunning,64,36,48]; @symbol_param<2> = [allowZeroValue,64,50,64]; ]
         function writeValue(fitValue, TimerRunning, allowZeroValue) {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_64_67_95_5_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_64_67_95_5_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 68 6 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_6_70_6_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_10_68_53_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_6_70_6_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_10_68_53_begin:
             %tmp.1 = lgetv %fitValue;
             symbol [ fitValue %tmp.1 68 11 19 ];
             %tmp.2 = 0;
             %tmp.3 = eq %tmp.1 %tmp.2;
-            bf %tmp.3 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_6_70_6_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_29_68_53_true:
+            bf %tmp.3 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_6_70_6_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_29_68_53_true:
             %tmp.4 = lgetv %allowZeroValue;
             symbol [ allowZeroValue %tmp.4 68 30 44 ];
             %tmp.5 = false;
             %tmp.6 = eq %tmp.4 %tmp.5;
             push %tmp.6;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_29_68_53_end:
-            %tmp.7 = phi [%tmp.3 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_10_68_53_begin] [%tmp.6 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_29_68_53_true] [%tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_29_68_53_end];
-            bf %tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_6_70_6_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_6_70_6_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_56_70_6_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_29_68_53_end:
+            %tmp.7 = phi [%tmp.3 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_10_68_53_begin] [%tmp.6 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_29_68_53_true] [%tmp.7 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_29_68_53_end];
+            bf %tmp.7 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_6_70_6_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_6_70_6_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_56_70_6_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 69 7 ]
             %tmp.8 = false;
             ret %tmp.8;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_56_70_6_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_6_70_6_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_6_70_6_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_56_70_6_stop:
+            goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_6_70_6_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_68_6_70_6_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 72 12 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_12_92_6_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_12_92_6_if_stmt:
             %tmp.9 = lgetv %TimerRunning;
             symbol [ TimerRunning %tmp.9 72 16 28 ];
             %tmp.10 = true;
             %tmp.11 = eq %tmp.9 %tmp.10;
-            bf %tmp.11 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_12_92_6_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_12_92_6_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_39_92_6_start:
+            bf %tmp.11 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_12_92_6_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_12_92_6_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_39_92_6_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 74 13 ]
             symbol [ lapRecordCount %tmp.14 74 13 27 ];
             %tmp.14 = getv ? :lapRecordCount;
@@ -128,51 +128,51 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
             symbol [ lapAvgValue ? 75 13 24 ];
             putv self :lapAvgValue dup %tmp.18;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 76 13 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_13_78_4_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_17_76_63_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_13_78_4_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_17_76_63_begin:
             symbol [ lapMinValue %tmp.20 76 18 29 ];
             %tmp.20 = getv ? :lapMinValue;
             %tmp.21 = 0;
             %tmp.22 = eq %tmp.20 %tmp.21;
-            bt %tmp.22 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_13_78_4_if_true;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_39_76_63_false:
+            bt %tmp.22 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_13_78_4_if_true;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_39_76_63_false:
             %tmp.23 = lgetv %fitValue;
             symbol [ fitValue %tmp.23 76 40 48 ];
             symbol [ lapMinValue %tmp.25 76 51 62 ];
             %tmp.25 = getv ? :lapMinValue;
             %tmp.26 = lt %tmp.23 %tmp.25;
             push %tmp.26;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_39_76_63_end:
-            %tmp.27 = phi [%tmp.22 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_17_76_63_begin] [%tmp.26 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_39_76_63_false] [%tmp.27 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_39_76_63_end];
-            bf %tmp.27 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_13_78_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_13_78_4_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_66_78_4_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_39_76_63_end:
+            %tmp.27 = phi [%tmp.22 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_17_76_63_begin] [%tmp.26 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_39_76_63_false] [%tmp.27 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_39_76_63_end];
+            bf %tmp.27 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_13_78_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_13_78_4_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_66_78_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 77 5 ]
             %tmp.28 = lgetv %fitValue;
             symbol [ fitValue %tmp.28 77 19 27 ];
             symbol [ lapMinValue ? 77 5 16 ];
             putv self :lapMinValue %tmp.28;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_66_78_4_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_13_78_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_13_78_4_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_66_78_4_stop:
+            goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_13_78_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_76_13_78_4_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 79 13 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_13_81_4_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_13_81_4_if_stmt:
             %tmp.29 = lgetv %fitValue;
             symbol [ fitValue %tmp.29 79 18 26 ];
             symbol [ lapMaxValue %tmp.31 79 29 40 ];
             %tmp.31 = getv ? :lapMaxValue;
             %tmp.32 = gt %tmp.29 %tmp.31;
-            bf %tmp.32 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_13_81_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_13_81_4_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_43_81_4_start:
+            bf %tmp.32 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_13_81_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_13_81_4_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_43_81_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 80 5 ]
             %tmp.33 = lgetv %fitValue;
             symbol [ fitValue %tmp.33 80 19 27 ];
             symbol [ lapMaxValue ? 80 5 16 ];
             putv self :lapMaxValue %tmp.33;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_43_81_4_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_13_81_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_13_81_4_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_43_81_4_stop:
+            goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_13_81_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_79_13_81_4_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 84 13 ]
             symbol [ sessionRecordCount %tmp.36 84 13 31 ];
             %tmp.36 = getv ? :sessionRecordCount;
@@ -188,62 +188,62 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
             symbol [ sessionAvgValue ? 85 13 28 ];
             putv self :sessionAvgValue dup %tmp.40;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 86 13 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_13_88_4_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_17_86_71_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_13_88_4_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_17_86_71_begin:
             symbol [ sessionMinValue %tmp.42 86 18 33 ];
             %tmp.42 = getv ? :sessionMinValue;
             %tmp.43 = 0;
             %tmp.44 = eq %tmp.42 %tmp.43;
-            bt %tmp.44 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_13_88_4_if_true;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_43_86_71_false:
+            bt %tmp.44 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_13_88_4_if_true;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_43_86_71_false:
             %tmp.45 = lgetv %fitValue;
             symbol [ fitValue %tmp.45 86 44 52 ];
             symbol [ sessionMinValue %tmp.47 86 55 70 ];
             %tmp.47 = getv ? :sessionMinValue;
             %tmp.48 = lt %tmp.45 %tmp.47;
             push %tmp.48;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_43_86_71_end:
-            %tmp.49 = phi [%tmp.44 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_17_86_71_begin] [%tmp.48 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_43_86_71_false] [%tmp.49 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_43_86_71_end];
-            bf %tmp.49 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_13_88_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_13_88_4_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_74_88_4_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_43_86_71_end:
+            %tmp.49 = phi [%tmp.44 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_17_86_71_begin] [%tmp.48 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_43_86_71_false] [%tmp.49 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_43_86_71_end];
+            bf %tmp.49 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_13_88_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_13_88_4_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_74_88_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 87 5 ]
             %tmp.50 = lgetv %fitValue;
             symbol [ fitValue %tmp.50 87 23 31 ];
             symbol [ sessionMinValue ? 87 5 20 ];
             putv self :sessionMinValue %tmp.50;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_74_88_4_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_13_88_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_13_88_4_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_74_88_4_stop:
+            goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_13_88_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_86_13_88_4_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 89 13 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_13_91_4_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_13_91_4_if_stmt:
             %tmp.51 = lgetv %fitValue;
             symbol [ fitValue %tmp.51 89 18 26 ];
             symbol [ sessionMaxValue %tmp.53 89 29 44 ];
             %tmp.53 = getv ? :sessionMaxValue;
             %tmp.54 = gt %tmp.51 %tmp.53;
-            bf %tmp.54 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_13_91_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_13_91_4_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_47_91_4_start:
+            bf %tmp.54 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_13_91_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_13_91_4_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_47_91_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 90 5 ]
             %tmp.55 = lgetv %fitValue;
             symbol [ fitValue %tmp.55 90 23 31 ];
             symbol [ sessionMaxValue ? 90 5 20 ];
             putv self :sessionMaxValue %tmp.55;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_47_91_4_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_13_91_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_13_91_4_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_39_92_6_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_12_92_6_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_12_92_6_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_47_91_4_stop:
+            goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_13_91_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_89_13_91_4_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_39_92_6_stop:
+            goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_12_92_6_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_72_12_92_6_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 94 6 ]
             %tmp.56 = true;
             ret %tmp.56;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_64_67_95_5_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_64_67_95_5_stop:
         }
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc"; @line = 98; @symbol_functiondef = [resetLapValue,98,14,27]; ]
         function resetLapValue() {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_98_31_103_5_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_98_31_103_5_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 99 9 ]
             %tmp.1 = 0.0;
             symbol [ lapAvgValue ? 99 9 20 ];
@@ -260,11 +260,11 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
             %tmp.4 = 0.0;
             symbol [ lapRecordCount ? 102 9 23 ];
             putv self :lapRecordCount %tmp.4;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_98_31_103_5_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_98_31_103_5_stop:
         }
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc"; @line = 106; @symbol_functiondef = [resetSessionValue,106,14,31]; ]
         function resetSessionValue() {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_106_35_111_5_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_106_35_111_5_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 107 9 ]
             %tmp.1 = 0.0;
             symbol [ sessionAvgValue ? 107 9 24 ];
@@ -281,20 +281,20 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
             %tmp.4 = 0.0;
             symbol [ sessionRecordCount ? 110 9 27 ];
             putv self :sessionRecordCount %tmp.4;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_106_35_111_5_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_106_35_111_5_stop:
         }
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc"; @line = 114; @symbol_functiondef = [writeLapSessionValues,114,11,32]; ]
         function writeLapSessionValues() {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_114_36_128_2_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_114_36_128_2_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 116 9 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_9_120_9_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_9_120_9_if_stmt:
             symbol [ lapRecordCount %tmp.2 116 14 28 ];
             %tmp.2 = getv ? :lapRecordCount;
             %tmp.3 = 0;
             %tmp.4 = gt %tmp.2 %tmp.3;
-            bf %tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_9_120_9_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_9_120_9_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_35_120_9_start:
+            bf %tmp.4 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_9_120_9_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_9_120_9_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_35_120_9_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 117 10 ]
             symbol [ lapAvgField %tmp.6 117 10 21 ];
             %tmp.6 = getv ? :lapAvgField;
@@ -334,18 +334,18 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
             %tmp.29 = getv function %tmp.28 :toFloat;
             %tmp.30 = invoke %tmp.28 %tmp.29();
             invoke %tmp.25 %tmp.26(%tmp.30);
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_35_120_9_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_9_120_9_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_9_120_9_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_35_120_9_stop:
+            goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_9_120_9_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_116_9_120_9_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 123 9 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_9_127_9_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_9_127_9_if_stmt:
             symbol [ sessionRecordCount %tmp.32 123 14 32 ];
             %tmp.32 = getv ? :sessionRecordCount;
             %tmp.33 = 0;
             %tmp.34 = gt %tmp.32 %tmp.33;
-            bf %tmp.34 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_9_127_9_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_9_127_9_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_39_127_9_start:
+            bf %tmp.34 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_9_127_9_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_9_127_9_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_39_127_9_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 124 10 ]
             symbol [ sessionAvgField %tmp.36 124 10 25 ];
             %tmp.36 = getv ? :sessionAvgField;
@@ -385,10 +385,10 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
             %tmp.59 = getv function %tmp.58 :toFloat;
             %tmp.60 = invoke %tmp.58 %tmp.59();
             invoke %tmp.55 %tmp.56(%tmp.60);
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_39_127_9_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_9_127_9_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_9_127_9_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_114_36_128_2_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_39_127_9_stop:
+            goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_9_127_9_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_123_9_127_9_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_114_36_128_2_stop:
         }
     }
     [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc"; @line = 133; @symbol_classdef = [coreFitFieldSimple,133,10,28]; ]
@@ -408,244 +408,244 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         var graphField = null;
         [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc"; @line = 139; @symbol_functiondef = [writeValue,139,14,24]; @symbol_param<0> = [fitValue,139,26,34]; @symbol_param<1> = [TimerRunning,139,36,48]; @symbol_param<2> = [allowZeroValue,139,50,64]; ]
         function writeValue(fitValue, TimerRunning, allowZeroValue) {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_139_67_147_5_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_139_67_147_5_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 142 3 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_3_144_6_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_7_142_79_begin:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_8_142_51_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_3_144_6_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_7_142_79_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_8_142_51_begin:
             %tmp.1 = lgetv %fitValue;
             symbol [ fitValue %tmp.1 142 9 17 ];
             %tmp.2 = 0;
             %tmp.3 = eq %tmp.1 %tmp.2;
-            bf %tmp.3 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_57_142_79_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_27_142_51_true:
+            bf %tmp.3 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_57_142_79_false;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_27_142_51_true:
             %tmp.4 = lgetv %allowZeroValue;
             symbol [ allowZeroValue %tmp.4 142 28 42 ];
             %tmp.5 = false;
             %tmp.6 = eq %tmp.4 %tmp.5;
             push %tmp.6;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_27_142_51_end:
-            %tmp.7 = phi [%tmp.3 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_8_142_51_begin] [%tmp.6 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_27_142_51_true] [%tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_27_142_51_end];
-            bt %tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_3_144_6_if_true;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_57_142_79_false:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_27_142_51_end:
+            %tmp.7 = phi [%tmp.3 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_8_142_51_begin] [%tmp.6 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_27_142_51_true] [%tmp.7 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_27_142_51_end];
+            bt %tmp.7 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_3_144_6_if_true;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_57_142_79_false:
             %tmp.8 = lgetv %TimerRunning;
             symbol [ TimerRunning %tmp.8 142 58 70 ];
             %tmp.9 = false;
             %tmp.10 = eq %tmp.8 %tmp.9;
             push %tmp.10;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_57_142_79_end:
-            %tmp.11 = phi [%tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_7_142_79_begin] [%tmp.10 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_57_142_79_false] [%tmp.11 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_57_142_79_end];
-            bf %tmp.11 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_3_144_6_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_3_144_6_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_82_144_6_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_57_142_79_end:
+            %tmp.11 = phi [%tmp.7 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_7_142_79_begin] [%tmp.10 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_57_142_79_false] [%tmp.11 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_57_142_79_end];
+            bf %tmp.11 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_3_144_6_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_3_144_6_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_82_144_6_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 143 7 ]
             %tmp.12 = false;
             ret %tmp.12;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_82_144_6_stop:
-            goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_3_144_6_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_3_144_6_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_82_144_6_stop:
+            goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_3_144_6_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_142_3_144_6_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 146 6 ]
             %tmp.13 = true;
             ret %tmp.13;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_139_67_147_5_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_139_67_147_5_stop:
         }
     }
     [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc"; @line = 152; @symbol_functiondef = [initialize,152,13,23]; @symbol_param<0> = [dataField,152,24,33]; ]
     function initialize(dataField) as Void {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 154 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_HEADING_CIQ_INFO.1 = local;
         symbol [ FIT_HEADING_CIQ_INFO %FIT_HEADING_CIQ_INFO.1 154 6 26 ];
         %tmp.1 = "CIQ_device_info";
         lputv %FIT_HEADING_CIQ_INFO.1 %tmp.1;
         symbol [ FIT_HEADING_CIQ_INFO %FIT_HEADING_CIQ_INFO.1 154 6 26 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 155 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_HEADING_CORETEMP.2 = local;
         symbol [ FIT_HEADING_CORETEMP %FIT_HEADING_CORETEMP.2 155 6 26 ];
         %tmp.2 = "core_temperature";
         lputv %FIT_HEADING_CORETEMP.2 %tmp.2;
         symbol [ FIT_HEADING_CORETEMP %FIT_HEADING_CORETEMP.2 155 6 26 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 156 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_HEADING_AVG_CORETEMP.3 = local;
         symbol [ FIT_HEADING_AVG_CORETEMP %FIT_HEADING_AVG_CORETEMP.3 156 6 30 ];
         %tmp.3 = "avg_core_temperature";
         lputv %FIT_HEADING_AVG_CORETEMP.3 %tmp.3;
         symbol [ FIT_HEADING_AVG_CORETEMP %FIT_HEADING_AVG_CORETEMP.3 156 6 30 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 157 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_HEADING_MAX_CORETEMP.4 = local;
         symbol [ FIT_HEADING_MAX_CORETEMP %FIT_HEADING_MAX_CORETEMP.4 157 6 30 ];
         %tmp.4 = "max_core_temperature";
         lputv %FIT_HEADING_MAX_CORETEMP.4 %tmp.4;
         symbol [ FIT_HEADING_MAX_CORETEMP %FIT_HEADING_MAX_CORETEMP.4 157 6 30 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 158 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_HEADING_MIN_CORETEMP.5 = local;
         symbol [ FIT_HEADING_MIN_CORETEMP %FIT_HEADING_MIN_CORETEMP.5 158 6 30 ];
         %tmp.5 = "min_core_temperature";
         lputv %FIT_HEADING_MIN_CORETEMP.5 %tmp.5;
         symbol [ FIT_HEADING_MIN_CORETEMP %FIT_HEADING_MIN_CORETEMP.5 158 6 30 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 159 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_C_TEMP_UNITS.6 = local;
         symbol [ FIT_C_TEMP_UNITS %FIT_C_TEMP_UNITS.6 159 6 22 ];
         %tmp.6 = "°C";
         lputv %FIT_C_TEMP_UNITS.6 %tmp.6;
         symbol [ FIT_C_TEMP_UNITS %FIT_C_TEMP_UNITS.6 159 6 22 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 160 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_HEADING_COREQUAL.7 = local;
         symbol [ FIT_HEADING_COREQUAL %FIT_HEADING_COREQUAL.7 160 6 26 ];
         %tmp.7 = "core_data_quality";
         lputv %FIT_HEADING_COREQUAL.7 %tmp.7;
         symbol [ FIT_HEADING_COREQUAL %FIT_HEADING_COREQUAL.7 160 6 26 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 161 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_COREQUAL_UNITS.8 = local;
         symbol [ FIT_COREQUAL_UNITS %FIT_COREQUAL_UNITS.8 161 6 24 ];
         %tmp.8 = "Q";
         lputv %FIT_COREQUAL_UNITS.8 %tmp.8;
         symbol [ FIT_COREQUAL_UNITS %FIT_COREQUAL_UNITS.8 161 6 24 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 162 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_HEADING_SKINTEMP.9 = local;
         symbol [ FIT_HEADING_SKINTEMP %FIT_HEADING_SKINTEMP.9 162 6 26 ];
         %tmp.9 = "skin_temperature";
         lputv %FIT_HEADING_SKINTEMP.9 %tmp.9;
         symbol [ FIT_HEADING_SKINTEMP %FIT_HEADING_SKINTEMP.9 162 6 26 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 163 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_HEADING_RESERVED.10 = local;
         symbol [ FIT_HEADING_RESERVED %FIT_HEADING_RESERVED.10 163 6 26 ];
         %tmp.10 = "core_reserved";
         lputv %FIT_HEADING_RESERVED.10 %tmp.10;
         symbol [ FIT_HEADING_RESERVED %FIT_HEADING_RESERVED.10 163 6 26 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 164 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_RESERVED_UNITS.11 = local;
         symbol [ FIT_RESERVED_UNITS %FIT_RESERVED_UNITS.11 164 6 24 ];
         %tmp.11 = "kcal";
         lputv %FIT_RESERVED_UNITS.11 %tmp.11;
         symbol [ FIT_RESERVED_UNITS %FIT_RESERVED_UNITS.11 164 6 24 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 165 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_HSI_UNITS.12 = local;
         symbol [ FIT_HSI_UNITS %FIT_HSI_UNITS.12 165 6 19 ];
         %tmp.12 = "HSI";
         lputv %FIT_HSI_UNITS.12 %tmp.12;
         symbol [ FIT_HSI_UNITS %FIT_HSI_UNITS.12 165 6 19 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 166 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_HSI.13 = local;
         symbol [ FIT_HSI %FIT_HSI.13 166 6 13 ];
         %tmp.13 = "Heat Strain Index";
         lputv %FIT_HSI.13 %tmp.13;
         symbol [ FIT_HSI %FIT_HSI.13 166 6 13 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 168 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %CURR_CORE_TEMP_FIELD_ID.14 = local;
         symbol [ CURR_CORE_TEMP_FIELD_ID %CURR_CORE_TEMP_FIELD_ID.14 168 6 29 ];
         %tmp.14 = 0;
         lputv %CURR_CORE_TEMP_FIELD_ID.14 %tmp.14;
         symbol [ CURR_CORE_TEMP_FIELD_ID %CURR_CORE_TEMP_FIELD_ID.14 168 6 29 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 169 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %LAP_AVG_CORE_TEMP_FIELD_ID.15 = local;
         symbol [ LAP_AVG_CORE_TEMP_FIELD_ID %LAP_AVG_CORE_TEMP_FIELD_ID.15 169 6 32 ];
         %tmp.15 = 1;
         lputv %LAP_AVG_CORE_TEMP_FIELD_ID.15 %tmp.15;
         symbol [ LAP_AVG_CORE_TEMP_FIELD_ID %LAP_AVG_CORE_TEMP_FIELD_ID.15 169 6 32 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 170 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %LAP_MAX_CORE_TEMP_FIELD_ID.16 = local;
         symbol [ LAP_MAX_CORE_TEMP_FIELD_ID %LAP_MAX_CORE_TEMP_FIELD_ID.16 170 6 32 ];
         %tmp.16 = 2;
         lputv %LAP_MAX_CORE_TEMP_FIELD_ID.16 %tmp.16;
         symbol [ LAP_MAX_CORE_TEMP_FIELD_ID %LAP_MAX_CORE_TEMP_FIELD_ID.16 170 6 32 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 171 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %LAP_MIN_CORE_TEMP_FIELD_ID.17 = local;
         symbol [ LAP_MIN_CORE_TEMP_FIELD_ID %LAP_MIN_CORE_TEMP_FIELD_ID.17 171 6 32 ];
         %tmp.17 = 3;
         lputv %LAP_MIN_CORE_TEMP_FIELD_ID.17 %tmp.17;
         symbol [ LAP_MIN_CORE_TEMP_FIELD_ID %LAP_MIN_CORE_TEMP_FIELD_ID.17 171 6 32 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 172 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %AVG_CORE_TEMP_FIELD_ID.18 = local;
         symbol [ AVG_CORE_TEMP_FIELD_ID %AVG_CORE_TEMP_FIELD_ID.18 172 6 28 ];
         %tmp.18 = 5;
         lputv %AVG_CORE_TEMP_FIELD_ID.18 %tmp.18;
         symbol [ AVG_CORE_TEMP_FIELD_ID %AVG_CORE_TEMP_FIELD_ID.18 172 6 28 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 173 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %MAX_CORE_TEMP_FIELD_ID.19 = local;
         symbol [ MAX_CORE_TEMP_FIELD_ID %MAX_CORE_TEMP_FIELD_ID.19 173 6 28 ];
         %tmp.19 = 6;
         lputv %MAX_CORE_TEMP_FIELD_ID.19 %tmp.19;
         symbol [ MAX_CORE_TEMP_FIELD_ID %MAX_CORE_TEMP_FIELD_ID.19 173 6 28 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 174 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %MIN_CORE_TEMP_FIELD_ID.20 = local;
         symbol [ MIN_CORE_TEMP_FIELD_ID %MIN_CORE_TEMP_FIELD_ID.20 174 6 28 ];
         %tmp.20 = 7;
         lputv %MIN_CORE_TEMP_FIELD_ID.20 %tmp.20;
         symbol [ MIN_CORE_TEMP_FIELD_ID %MIN_CORE_TEMP_FIELD_ID.20 174 6 28 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 175 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %CURR_SKIN_TEMP_FIELD_ID.21 = local;
         symbol [ CURR_SKIN_TEMP_FIELD_ID %CURR_SKIN_TEMP_FIELD_ID.21 175 6 29 ];
         %tmp.21 = 10;
         lputv %CURR_SKIN_TEMP_FIELD_ID.21 %tmp.21;
         symbol [ CURR_SKIN_TEMP_FIELD_ID %CURR_SKIN_TEMP_FIELD_ID.21 175 6 29 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 176 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %CURR_COREQUAL_FIELD_ID.22 = local;
         symbol [ CURR_COREQUAL_FIELD_ID %CURR_COREQUAL_FIELD_ID.22 176 6 28 ];
         %tmp.22 = 19;
         lputv %CURR_COREQUAL_FIELD_ID.22 %tmp.22;
         symbol [ CURR_COREQUAL_FIELD_ID %CURR_COREQUAL_FIELD_ID.22 176 6 28 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 177 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %CURR_RESERVED_FIELD_ID.23 = local;
         symbol [ CURR_RESERVED_FIELD_ID %CURR_RESERVED_FIELD_ID.23 177 6 28 ];
         %tmp.23 = 20;
         lputv %CURR_RESERVED_FIELD_ID.23 %tmp.23;
         symbol [ CURR_RESERVED_FIELD_ID %CURR_RESERVED_FIELD_ID.23 177 6 28 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 178 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_CONNECTIQ_INFO_ID.24 = local;
         symbol [ FIT_CONNECTIQ_INFO_ID %FIT_CONNECTIQ_INFO_ID.24 178 6 27 ];
         %tmp.24 = 26;
         lputv %FIT_CONNECTIQ_INFO_ID.24 %tmp.24;
         symbol [ FIT_CONNECTIQ_INFO_ID %FIT_CONNECTIQ_INFO_ID.24 178 6 27 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 179 2 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop" ]
         %FIT_HSI_FIELD_ID.25 = local;
         symbol [ FIT_HSI_FIELD_ID %FIT_HSI_FIELD_ID.25 179 6 22 ];
         %tmp.25 = 11;
         lputv %FIT_HSI_FIELD_ID.25 %tmp.25;
         symbol [ FIT_HSI_FIELD_ID %FIT_HSI_FIELD_ID.25 179 6 22 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 185 2 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_2_236_5_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_2_236_5_if_stmt:
         %tmp.26 = lgetv %dataField;
         symbol [ dataField %tmp.26 185 7 16 ];
         %tmp.27 = null;
         %tmp.28 = ne %tmp.26 %tmp.27;
-        bf %tmp.28 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_2_236_5_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_2_236_5_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_27_236_5_start:
+        bf %tmp.28 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_2_236_5_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_2_236_5_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_27_236_5_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 187 3 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_3_202_3_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_3_202_3_if_stmt:
         symbol [ mCoreTemp %tmp.30 187 8 17 ];
         %tmp.30 = getv ? :mCoreTemp;
         %tmp.31 = null;
         %tmp.32 = eq %tmp.30 %tmp.31;
-        bf %tmp.32 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_3_202_3_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_3_202_3_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_28_202_3_start:
+        bf %tmp.32 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_3_202_3_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_3_202_3_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_28_202_3_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 188 4 ]
         symbol [ coreFitFieldFull %tmp.36 188 20 36 ];
         %tmp.36 = getv ? :coreFitFieldFull;
@@ -653,14 +653,14 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         symbol [ mCoreTemp ? 188 4 13 ];
         putv self :mCoreTemp %tmp.33;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 189 4 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_4_201_4_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_4_201_4_if_stmt:
         symbol [ mCoreTemp %tmp.38 189 9 18 ];
         %tmp.38 = getv ? :mCoreTemp;
         %tmp.39 = null;
         %tmp.40 = ne %tmp.38 %tmp.39;
-        bf %tmp.40 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_4_201_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_4_201_4_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_29_201_4_start:
+        bf %tmp.40 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_4_201_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_4_201_4_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_29_201_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 190 5 ]
         symbol [ mCoreTemp %tmp.41 190 5 14 ];
         %tmp.41 = getv self :mCoreTemp;
@@ -966,21 +966,21 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.243 = invoke %tmp.225 %tmp.226(%tmp.227, %tmp.228, %tmp.230, %tmp.242);
         symbol [ mConnectIQinfoField ? 200 11 30 ];
         putv self :mConnectIQinfoField %tmp.243;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_29_201_4_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_4_201_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_4_201_4_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_28_202_3_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_3_202_3_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_3_202_3_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_29_201_4_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_4_201_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_189_4_201_4_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_28_202_3_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_3_202_3_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_187_3_202_3_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 204 3 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_3_210_3_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_3_210_3_if_stmt:
         symbol [ mSkinTemp %tmp.245 204 8 17 ];
         %tmp.245 = getv ? :mSkinTemp;
         %tmp.246 = null;
         %tmp.247 = eq %tmp.245 %tmp.246;
-        bf %tmp.247 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_3_210_3_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_3_210_3_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_28_210_3_start:
+        bf %tmp.247 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_3_210_3_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_3_210_3_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_28_210_3_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 206 4 ]
         symbol [ coreFitFieldSimple %tmp.251 206 20 38 ];
         %tmp.251 = getv ? :coreFitFieldSimple;
@@ -988,14 +988,14 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         symbol [ mSkinTemp ? 206 4 13 ];
         putv self :mSkinTemp %tmp.248;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 207 4 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_4_209_7_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_4_209_7_if_stmt:
         symbol [ mSkinTemp %tmp.253 207 9 18 ];
         %tmp.253 = getv ? :mSkinTemp;
         %tmp.254 = null;
         %tmp.255 = ne %tmp.253 %tmp.254;
-        bf %tmp.255 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_4_209_7_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_4_209_7_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_29_209_7_start:
+        bf %tmp.255 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_4_209_7_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_4_209_7_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_29_209_7_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 208 11 ]
         symbol [ mSkinTemp %tmp.256 208 11 20 ];
         %tmp.256 = getv self :mSkinTemp;
@@ -1031,21 +1031,21 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.277 = invoke %tmp.259 %tmp.260(%tmp.261, %tmp.262, %tmp.264, %tmp.276);
         symbol [ currField ? 208 21 30 ];
         putv %tmp.257 :currField %tmp.277;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_29_209_7_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_4_209_7_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_4_209_7_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_28_210_3_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_3_210_3_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_3_210_3_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_29_209_7_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_4_209_7_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_207_4_209_7_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_28_210_3_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_3_210_3_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_204_3_210_3_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 212 3 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_3_218_3_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_3_218_3_if_stmt:
         symbol [ mCoreQual %tmp.279 212 8 17 ];
         %tmp.279 = getv ? :mCoreQual;
         %tmp.280 = null;
         %tmp.281 = eq %tmp.279 %tmp.280;
-        bf %tmp.281 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_3_218_3_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_3_218_3_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_28_218_3_start:
+        bf %tmp.281 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_3_218_3_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_3_218_3_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_28_218_3_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 214 4 ]
         symbol [ coreFitFieldSimple %tmp.285 214 20 38 ];
         %tmp.285 = getv ? :coreFitFieldSimple;
@@ -1053,14 +1053,14 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         symbol [ mCoreQual ? 214 4 13 ];
         putv self :mCoreQual %tmp.282;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 215 4 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_4_217_4_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_4_217_4_if_stmt:
         symbol [ mCoreQual %tmp.287 215 9 18 ];
         %tmp.287 = getv ? :mCoreQual;
         %tmp.288 = null;
         %tmp.289 = ne %tmp.287 %tmp.288;
-        bf %tmp.289 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_4_217_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_4_217_4_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_29_217_4_start:
+        bf %tmp.289 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_4_217_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_4_217_4_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_29_217_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 216 8 ]
         symbol [ mCoreQual %tmp.290 216 8 17 ];
         %tmp.290 = getv self :mCoreQual;
@@ -1096,21 +1096,21 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.311 = invoke %tmp.293 %tmp.294(%tmp.295, %tmp.296, %tmp.298, %tmp.310);
         symbol [ currField ? 216 18 27 ];
         putv %tmp.291 :currField %tmp.311;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_29_217_4_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_4_217_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_4_217_4_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_28_218_3_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_3_218_3_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_3_218_3_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_29_217_4_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_4_217_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_215_4_217_4_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_28_218_3_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_3_218_3_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_212_3_218_3_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 220 3 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_3_226_3_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_3_226_3_if_stmt:
         symbol [ mCoreResv %tmp.313 220 8 17 ];
         %tmp.313 = getv ? :mCoreResv;
         %tmp.314 = null;
         %tmp.315 = eq %tmp.313 %tmp.314;
-        bf %tmp.315 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_3_226_3_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_3_226_3_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_28_226_3_start:
+        bf %tmp.315 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_3_226_3_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_3_226_3_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_28_226_3_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 222 4 ]
         symbol [ coreFitFieldSimple %tmp.319 222 20 38 ];
         %tmp.319 = getv ? :coreFitFieldSimple;
@@ -1118,14 +1118,14 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         symbol [ mCoreResv ? 222 4 13 ];
         putv self :mCoreResv %tmp.316;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 223 4 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_4_225_4_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_4_225_4_if_stmt:
         symbol [ mCoreResv %tmp.321 223 9 18 ];
         %tmp.321 = getv ? :mCoreResv;
         %tmp.322 = null;
         %tmp.323 = ne %tmp.321 %tmp.322;
-        bf %tmp.323 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_4_225_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_4_225_4_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_29_225_4_start:
+        bf %tmp.323 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_4_225_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_4_225_4_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_29_225_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 224 11 ]
         symbol [ mCoreResv %tmp.324 224 11 20 ];
         %tmp.324 = getv self :mCoreResv;
@@ -1161,21 +1161,21 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.345 = invoke %tmp.327 %tmp.328(%tmp.329, %tmp.330, %tmp.332, %tmp.344);
         symbol [ currField ? 224 21 30 ];
         putv %tmp.325 :currField %tmp.345;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_29_225_4_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_4_225_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_4_225_4_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_28_226_3_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_3_226_3_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_3_226_3_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_29_225_4_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_4_225_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_223_4_225_4_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_28_226_3_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_3_226_3_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_220_3_226_3_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 228 3 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_3_234_3_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_3_234_3_if_stmt:
         symbol [ mCoreHSI %tmp.347 228 8 16 ];
         %tmp.347 = getv ? :mCoreHSI;
         %tmp.348 = null;
         %tmp.349 = eq %tmp.347 %tmp.348;
-        bf %tmp.349 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_3_234_3_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_3_234_3_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_27_234_3_start:
+        bf %tmp.349 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_3_234_3_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_3_234_3_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_27_234_3_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 230 4 ]
         symbol [ coreFitFieldSimple %tmp.353 230 19 37 ];
         %tmp.353 = getv ? :coreFitFieldSimple;
@@ -1183,14 +1183,14 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         symbol [ mCoreHSI ? 230 4 12 ];
         putv self :mCoreHSI %tmp.350;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 231 4 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_4_233_4_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_4_233_4_if_stmt:
         symbol [ mCoreHSI %tmp.355 231 9 17 ];
         %tmp.355 = getv ? :mCoreHSI;
         %tmp.356 = null;
         %tmp.357 = ne %tmp.355 %tmp.356;
-        bf %tmp.357 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_4_233_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_4_233_4_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_28_233_4_start:
+        bf %tmp.357 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_4_233_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_4_233_4_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_28_233_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 232 11 ]
         symbol [ mCoreHSI %tmp.358 232 11 19 ];
         %tmp.358 = getv self :mCoreHSI;
@@ -1226,31 +1226,31 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.379 = invoke %tmp.361 %tmp.362(%tmp.363, %tmp.364, %tmp.366, %tmp.378);
         symbol [ currField ? 232 20 29 ];
         putv %tmp.359 :currField %tmp.379;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_28_233_4_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_4_233_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_4_233_4_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_27_234_3_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_3_234_3_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_3_234_3_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_27_236_5_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_2_236_5_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_2_236_5_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_28_233_4_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_4_233_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_231_4_233_4_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_27_234_3_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_3_234_3_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_228_3_234_3_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_27_236_5_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_2_236_5_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_185_2_236_5_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_152_35_237_1_stop:
     }
     [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc"; @line = 240; @symbol_functiondef = [compute,240,13,20]; @symbol_param<0> = [sensor,240,22,28]; ]
     function compute(sensor) {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_240_31_295_4_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_240_31_295_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 241 8 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_8_294_8_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_8_294_8_if_stmt:
         %tmp.1 = lgetv %sensor;
         symbol [ sensor %tmp.1 241 12 18 ];
         %tmp.2 = null;
         %tmp.3 = ne %tmp.1 %tmp.2;
-        bf %tmp.3 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_8_294_8_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_8_294_8_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_29_294_8_start:
+        bf %tmp.3 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_8_294_8_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_8_294_8_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_29_294_8_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 242 9 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_9_293_9_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_9_293_9_if_stmt:
         symbol [ mLastEvenCount %tmp.5 242 13 27 ];
         %tmp.5 = getv ? :mLastEvenCount;
         %tmp.6 = lgetv %sensor;
@@ -1261,9 +1261,9 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         symbol [ eventCount %tmp.9 242 43 53 ];
         %tmp.9 = getv %tmp.8 :eventCount;
         %tmp.10 = ne %tmp.5 %tmp.9;
-        bf %tmp.10 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_9_293_9_if_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_9_293_9_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_start:
+        bf %tmp.10 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_9_293_9_if_false;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_9_293_9_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 243 10 ]
         %tmp.11 = lgetv %sensor;
         symbol [ sensor %tmp.11 243 27 33 ];
@@ -1275,7 +1275,7 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         symbol [ mLastEvenCount ? 243 10 24 ];
         putv self :mLastEvenCount %tmp.14;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 247 13 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_stop" ]
         %CoreTemp.1 = local;
         symbol [ CoreTemp %CoreTemp.1 247 17 25 ];
         %tmp.15 = lgetv %sensor;
@@ -1288,8 +1288,8 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         lputv %CoreTemp.1 %tmp.18;
         symbol [ CoreTemp %CoreTemp.1 247 17 25 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 249 4 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_4_260_13_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_8_249_70_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_4_260_13_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_8_249_70_begin:
         %tmp.19 = lgetv %sensor;
         symbol [ sensor %tmp.19 249 9 15 ];
         %tmp.20 = as %tmp.19 { (!Null) };
@@ -1300,20 +1300,20 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.23 = lgetv %CoreTemp.1;
         symbol [ CoreTemp %tmp.23 249 37 45 ];
         %tmp.24 = invoke %tmp.21 %tmp.22(%tmp.23);
-        bf %tmp.24 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_4_260_13_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_51_249_70_true:
+        bf %tmp.24 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_4_260_13_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_51_249_70_true:
         symbol [ mCoreTemp %tmp.26 249 52 61 ];
         %tmp.26 = getv ? :mCoreTemp;
         %tmp.27 = null;
         %tmp.28 = ne %tmp.26 %tmp.27;
         push %tmp.28;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_51_249_70_end:
-        %tmp.29 = phi [%tmp.24 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_8_249_70_begin] [%tmp.28 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_51_249_70_true] [%tmp.29 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_51_249_70_end];
-        bf %tmp.29 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_4_260_13_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_4_260_13_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_73_260_13_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_51_249_70_end:
+        %tmp.29 = phi [%tmp.24 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_8_249_70_begin] [%tmp.28 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_51_249_70_true] [%tmp.29 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_51_249_70_end];
+        bf %tmp.29 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_4_260_13_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_4_260_13_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_73_260_13_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 252 5 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_5_259_5_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_5_259_5_if_stmt:
         symbol [ mCoreTemp %tmp.31 252 10 19 ];
         %tmp.31 = getv ? :mCoreTemp;
         %tmp.32 = as %tmp.31 { (!Null) };
@@ -1325,9 +1325,9 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.36 = getv ? :mTimerRunning;
         %tmp.37 = false;
         %tmp.38 = invoke %tmp.32 %tmp.33(%tmp.34, %tmp.36, %tmp.37);
-        bf %tmp.38 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_5_259_5_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_5_259_5_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_66_259_5_start:
+        bf %tmp.38 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_5_259_5_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_5_259_5_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_66_259_5_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 253 15 ]
         symbol [ mCoreTemp %tmp.40 253 15 24 ];
         %tmp.40 = getv ? :mCoreTemp;
@@ -1342,29 +1342,29 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.45 = invoke %tmp.43 %tmp.44();
         invoke %tmp.41 %tmp.42(%tmp.45);
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 255 15 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_15_258_6_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_15_258_6_if_stmt:
         symbol [ mTimerRunning %tmp.47 255 19 32 ];
         %tmp.47 = getv ? :mTimerRunning;
-        bf %tmp.47 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_15_258_6_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_15_258_6_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_35_258_6_start:
+        bf %tmp.47 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_15_258_6_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_15_258_6_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_35_258_6_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 257 16 ]
         symbol [ mCoreTemp %tmp.49 257 16 25 ];
         %tmp.49 = getv ? :mCoreTemp;
         symbol [ writeLapSessionValues %tmp.50 257 26 47 ];
         %tmp.50 = getv function %tmp.49 :writeLapSessionValues;
         invoke %tmp.49 %tmp.50();
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_35_258_6_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_15_258_6_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_15_258_6_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_66_259_5_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_5_259_5_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_5_259_5_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_73_260_13_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_4_260_13_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_4_260_13_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_35_258_6_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_15_258_6_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_255_15_258_6_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_66_259_5_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_5_259_5_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_252_5_259_5_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_73_260_13_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_4_260_13_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_249_4_260_13_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 264 13 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_stop" ]
         %SkinTemp.2 = local;
         symbol [ SkinTemp %SkinTemp.2 264 17 25 ];
         %tmp.51 = lgetv %sensor;
@@ -1377,14 +1377,14 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         lputv %SkinTemp.2 %tmp.54;
         symbol [ SkinTemp %SkinTemp.2 264 17 25 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 266 13 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_13_268_13_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_17_266_95_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_13_268_13_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_17_266_95_begin:
         symbol [ mSkinTemp %tmp.56 266 18 27 ];
         %tmp.56 = getv ? :mSkinTemp;
         %tmp.57 = null;
         %tmp.58 = ne %tmp.56 %tmp.57;
-        bf %tmp.58 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_13_268_13_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_40_266_95_true:
+        bf %tmp.58 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_13_268_13_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_40_266_95_true:
         symbol [ mSkinTemp %tmp.60 266 41 50 ];
         %tmp.60 = getv ? :mSkinTemp;
         %tmp.61 = as %tmp.60 { (!Null) };
@@ -1397,11 +1397,11 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.66 = false;
         %tmp.67 = invoke %tmp.61 %tmp.62(%tmp.63, %tmp.65, %tmp.66);
         push %tmp.67;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_40_266_95_end:
-        %tmp.68 = phi [%tmp.58 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_17_266_95_begin] [%tmp.67 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_40_266_95_true] [%tmp.68 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_40_266_95_end];
-        bf %tmp.68 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_13_268_13_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_13_268_13_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_98_268_13_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_40_266_95_end:
+        %tmp.68 = phi [%tmp.58 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_17_266_95_begin] [%tmp.67 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_40_266_95_true] [%tmp.68 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_40_266_95_end];
+        bf %tmp.68 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_13_268_13_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_13_268_13_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_98_268_13_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 267 11 ]
         symbol [ mSkinTemp %tmp.70 267 11 20 ];
         %tmp.70 = getv ? :mSkinTemp;
@@ -1415,14 +1415,14 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.74 = getv function %tmp.73 :toFloat;
         %tmp.75 = invoke %tmp.73 %tmp.74();
         invoke %tmp.71 %tmp.72(%tmp.75);
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_98_268_13_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_13_268_13_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_13_268_13_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_98_268_13_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_13_268_13_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_266_13_268_13_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 272 4 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_stop" ]
         %coreSportAlgorithm.3 = local;
         symbol [ coreSportAlgorithm %coreSportAlgorithm.3 272 8 26 ];
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_begin:
         %tmp.76 = lgetv %sensor;
         symbol [ sensor %tmp.76 272 29 35 ];
         %tmp.77 = as %tmp.76 { (!Null) };
@@ -1430,20 +1430,20 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.78 = getv %tmp.77 :data;
         symbol [ usingHeartRate %tmp.79 272 41 55 ];
         %tmp.79 = getv %tmp.78 :usingHeartRate;
-        bf %tmp.79 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_false;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_true:
+        bf %tmp.79 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_else_false;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_true:
         %tmp.80 = 0x10;
         push %tmp.80;
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_false:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_else_false:
         %tmp.81 = 0;
         push %tmp.81;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_end:
-        %tmp.82 = phi [%tmp.79 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_begin] [%tmp.80 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_true] [%tmp.81 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_false] [%tmp.82 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_end];
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_end:
+        %tmp.82 = phi [%tmp.79 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_begin] [%tmp.80 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_true] [%tmp.81 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_else_false] [%tmp.82 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_272_29_272_65_end];
         lputv %coreSportAlgorithm.3 %tmp.82;
         symbol [ coreSportAlgorithm %coreSportAlgorithm.3 272 8 26 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 273 13 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_stop" ]
         %coreQual.4 = local;
         symbol [ coreQual %coreQual.4 273 17 25 ];
         %tmp.83 = lgetv %sensor;
@@ -1459,14 +1459,14 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         lputv %coreQual.4 %tmp.88;
         symbol [ coreQual %coreQual.4 273 17 25 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 275 13 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_13_277_13_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_17_275_94_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_13_277_13_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_17_275_94_begin:
         symbol [ mCoreQual %tmp.90 275 18 27 ];
         %tmp.90 = getv ? :mCoreQual;
         %tmp.91 = null;
         %tmp.92 = ne %tmp.90 %tmp.91;
-        bf %tmp.92 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_13_277_13_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_40_275_94_true:
+        bf %tmp.92 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_13_277_13_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_40_275_94_true:
         symbol [ mCoreQual %tmp.94 275 41 50 ];
         %tmp.94 = getv ? :mCoreQual;
         %tmp.95 = as %tmp.94 { (!Null) };
@@ -1479,11 +1479,11 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.100 = true;
         %tmp.101 = invoke %tmp.95 %tmp.96(%tmp.97, %tmp.99, %tmp.100);
         push %tmp.101;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_40_275_94_end:
-        %tmp.102 = phi [%tmp.92 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_17_275_94_begin] [%tmp.101 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_40_275_94_true] [%tmp.102 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_40_275_94_end];
-        bf %tmp.102 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_13_277_13_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_13_277_13_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_97_277_13_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_40_275_94_end:
+        %tmp.102 = phi [%tmp.92 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_17_275_94_begin] [%tmp.101 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_40_275_94_true] [%tmp.102 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_40_275_94_end];
+        bf %tmp.102 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_13_277_13_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_13_277_13_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_97_277_13_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 276 5 ]
         symbol [ mCoreQual %tmp.104 276 5 14 ];
         %tmp.104 = getv ? :mCoreQual;
@@ -1497,11 +1497,11 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.108 = getv function %tmp.107 :toNumber;
         %tmp.109 = invoke %tmp.107 %tmp.108();
         invoke %tmp.105 %tmp.106(%tmp.109);
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_97_277_13_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_13_277_13_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_13_277_13_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_97_277_13_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_13_277_13_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_275_13_277_13_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 281 13 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_stop" ]
         %coreResv.5 = local;
         symbol [ coreResv %coreResv.5 281 17 25 ];
         %tmp.110 = lgetv %sensor;
@@ -1514,14 +1514,14 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         lputv %coreResv.5 %tmp.113;
         symbol [ coreResv %coreResv.5 281 17 25 ];
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 283 13 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_13_285_13_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_17_283_94_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_13_285_13_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_17_283_94_begin:
         symbol [ mCoreResv %tmp.115 283 18 27 ];
         %tmp.115 = getv ? :mCoreResv;
         %tmp.116 = null;
         %tmp.117 = ne %tmp.115 %tmp.116;
-        bf %tmp.117 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_13_285_13_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_40_283_94_true:
+        bf %tmp.117 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_13_285_13_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_40_283_94_true:
         symbol [ mCoreResv %tmp.119 283 41 50 ];
         %tmp.119 = getv ? :mCoreResv;
         %tmp.120 = as %tmp.119 { (!Null) };
@@ -1534,11 +1534,11 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.125 = true;
         %tmp.126 = invoke %tmp.120 %tmp.121(%tmp.122, %tmp.124, %tmp.125);
         push %tmp.126;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_40_283_94_end:
-        %tmp.127 = phi [%tmp.117 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_17_283_94_begin] [%tmp.126 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_40_283_94_true] [%tmp.127 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_40_283_94_end];
-        bf %tmp.127 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_13_285_13_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_13_285_13_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_97_285_13_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_40_283_94_end:
+        %tmp.127 = phi [%tmp.117 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_17_283_94_begin] [%tmp.126 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_40_283_94_true] [%tmp.127 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_40_283_94_end];
+        bf %tmp.127 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_13_285_13_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_13_285_13_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_97_285_13_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 284 5 ]
         symbol [ mCoreResv %tmp.129 284 5 14 ];
         %tmp.129 = getv ? :mCoreResv;
@@ -1552,18 +1552,18 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.133 = getv function %tmp.132 :toNumber;
         %tmp.134 = invoke %tmp.132 %tmp.133();
         invoke %tmp.130 %tmp.131(%tmp.134);
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_97_285_13_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_13_285_13_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_13_285_13_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_97_285_13_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_13_285_13_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_283_13_285_13_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 287 4 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_4_289_4_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_7_287_58_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_4_289_4_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_7_287_58_begin:
         symbol [ mCoreHSI %tmp.136 287 7 15 ];
         %tmp.136 = getv ? :mCoreHSI;
         %tmp.137 = null;
         %tmp.138 = ne %tmp.136 %tmp.137;
-        bf %tmp.138 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_4_289_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_27_287_58_true:
+        bf %tmp.138 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_4_289_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_27_287_58_true:
         %tmp.139 = lgetv %sensor;
         symbol [ sensor %tmp.139 287 27 33 ];
         %tmp.140 = as %tmp.139 { (!Null) };
@@ -1574,11 +1574,11 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.143 = null;
         %tmp.144 = ne %tmp.142 %tmp.143;
         push %tmp.144;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_27_287_58_end:
-        %tmp.145 = phi [%tmp.138 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_7_287_58_begin] [%tmp.144 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_27_287_58_true] [%tmp.145 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_27_287_58_end];
-        bf %tmp.145 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_4_289_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_4_289_4_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_64_289_4_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_27_287_58_end:
+        %tmp.145 = phi [%tmp.138 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_7_287_58_begin] [%tmp.144 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_27_287_58_true] [%tmp.145 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_27_287_58_end];
+        bf %tmp.145 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_4_289_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_4_289_4_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_64_289_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 288 5 ]
         symbol [ mCoreHSI %tmp.147 288 5 13 ];
         %tmp.147 = getv ? :mCoreHSI;
@@ -1595,21 +1595,21 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         symbol [ HeatStrainIndex %tmp.154 288 44 59 ];
         %tmp.154 = getv %tmp.153 :HeatStrainIndex;
         invoke %tmp.149 %tmp.150(%tmp.154);
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_64_289_4_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_4_289_4_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_4_289_4_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_9_293_9_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_9_293_9_if_false:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_64_289_4_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_4_289_4_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_287_4_289_4_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_56_291_9_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_9_293_9_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_9_293_9_if_false:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 291 17 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_17_293_9_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_21_291_91_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_17_293_9_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_21_291_91_begin:
         symbol [ mCoreResv %tmp.156 291 22 31 ];
         %tmp.156 = getv ? :mCoreResv;
         %tmp.157 = null;
         %tmp.158 = ne %tmp.156 %tmp.157;
-        bf %tmp.158 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_17_293_9_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_44_291_91_true:
+        bf %tmp.158 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_17_293_9_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_44_291_91_true:
         symbol [ mCoreResv %tmp.160 291 45 54 ];
         %tmp.160 = getv ? :mCoreResv;
         %tmp.161 = as %tmp.160 { (!Null) };
@@ -1621,11 +1621,11 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.166 = true;
         %tmp.167 = invoke %tmp.161 %tmp.162(%tmp.163, %tmp.165, %tmp.166);
         push %tmp.167;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_44_291_91_end:
-        %tmp.168 = phi [%tmp.158 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_21_291_91_begin] [%tmp.167 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_44_291_91_true] [%tmp.168 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_44_291_91_end];
-        bf %tmp.168 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_17_293_9_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_17_293_9_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_94_293_9_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_44_291_91_end:
+        %tmp.168 = phi [%tmp.158 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_21_291_91_begin] [%tmp.167 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_44_291_91_true] [%tmp.168 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_44_291_91_end];
+        bf %tmp.168 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_17_293_9_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_17_293_9_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_94_293_9_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 292 4 ]
         symbol [ mCoreResv %tmp.170 292 4 13 ];
         %tmp.170 = getv ? :mCoreResv;
@@ -1635,54 +1635,54 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.172 = getv function %tmp.171 :setData;
         %tmp.173 = 0x3FFF;
         invoke %tmp.171 %tmp.172(%tmp.173);
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_94_293_9_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_17_293_9_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_17_293_9_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_9_293_9_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_29_294_8_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_8_294_8_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_8_294_8_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_240_31_295_4_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_94_293_9_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_17_293_9_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_291_17_293_9_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_242_9_293_9_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_29_294_8_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_8_294_8_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_241_8_294_8_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_240_31_295_4_stop:
     }
     [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc"; @line = 298; @symbol_functiondef = [setTimerRunning,298,13,28]; @symbol_param<0> = [state,298,30,35]; @symbol_param<1> = [sensor,298,37,43]; ]
     function setTimerRunning(state, sensor) {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_298_46_330_4_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_298_46_330_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 299 8 ]
         %tmp.1 = lgetv %state;
         symbol [ state %tmp.1 299 24 29 ];
         symbol [ mTimerRunning ? 299 8 21 ];
         putv self :mTimerRunning %tmp.1;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 301 5 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_stmt:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_9_301_77_begin:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_9_301_44_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_9_301_77_begin:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_9_301_44_begin:
         %tmp.2 = lgetv %state;
         symbol [ state %tmp.2 301 10 15 ];
         %tmp.3 = false;
         %tmp.4 = eq %tmp.2 %tmp.3;
-        bf %tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_29_301_44_true:
+        bf %tmp.4 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_29_301_44_true:
         %tmp.5 = lgetv %sensor;
         symbol [ sensor %tmp.5 301 30 36 ];
         %tmp.6 = null;
         %tmp.7 = ne %tmp.5 %tmp.6;
         push %tmp.7;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_29_301_44_end:
-        %tmp.8 = phi [%tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_9_301_44_begin] [%tmp.7 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_29_301_44_true] [%tmp.8 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_29_301_44_end];
-        bf %tmp.8 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_49_301_77_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_29_301_44_end:
+        %tmp.8 = phi [%tmp.4 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_9_301_44_begin] [%tmp.7 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_29_301_44_true] [%tmp.8 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_29_301_44_end];
+        bf %tmp.8 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_49_301_77_true:
         symbol [ mConnectIQinfoField %tmp.10 301 50 69 ];
         %tmp.10 = getv ? :mConnectIQinfoField;
         %tmp.11 = null;
         %tmp.12 = ne %tmp.10 %tmp.11;
         push %tmp.12;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_49_301_77_end:
-        %tmp.13 = phi [%tmp.8 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_9_301_77_begin] [%tmp.12 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_49_301_77_true] [%tmp.13 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_49_301_77_end];
-        bf %tmp.13 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_80_329_5_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_49_301_77_end:
+        %tmp.13 = phi [%tmp.8 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_9_301_77_begin] [%tmp.12 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_49_301_77_true] [%tmp.13 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_49_301_77_end];
+        bf %tmp.13 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_80_329_5_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 304 6 ]
-        [ "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_80_329_5_start" "C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_80_329_5_stop" ]
+        [ "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_80_329_5_start" "C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_80_329_5_stop" ]
         %deviceConnectIQinfo.1 = local;
         symbol [ deviceConnectIQinfo %deviceConnectIQinfo.1 304 10 29 ];
         %tmp.15 = 14;
@@ -1706,7 +1706,7 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.23 = 1;
         aputv %tmp.21 %tmp.23 %tmp.22;
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 309 3 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_3_311_3_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_3_311_3_if_stmt:
         %tmp.24 = lgetv %sensor;
         symbol [ sensor %tmp.24 309 8 14 ];
         %tmp.25 = as %tmp.24 { (!Null) };
@@ -1716,9 +1716,9 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.27 = getv %tmp.26 :deviceSerialNumber;
         %tmp.28 = 0;
         %tmp.29 = eq %tmp.27 %tmp.28;
-        bf %tmp.29 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_3_311_3_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_3_311_3_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_46_311_3_start:
+        bf %tmp.29 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_3_311_3_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_3_311_3_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_46_311_3_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 310 7 ]
         %tmp.30 = lgetv %sensor;
         symbol [ sensor %tmp.30 310 7 13 ];
@@ -1732,9 +1732,9 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.35 = getv %tmp.34 :ANTid;
         symbol [ deviceSerialNumber ? 310 19 37 ];
         putv %tmp.32 :deviceSerialNumber %tmp.35;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_46_311_3_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_3_311_3_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_3_311_3_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_46_311_3_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_3_311_3_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_309_3_311_3_if_end:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 312 6 ]
         %tmp.36 = lgetv %deviceConnectIQinfo.1;
         symbol [ deviceConnectIQinfo %tmp.36 312 6 25 ];
@@ -1920,23 +1920,23 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         %tmp.144 = lgetv %deviceConnectIQinfo.1;
         symbol [ deviceConnectIQinfo %tmp.144 328 35 54 ];
         invoke %tmp.142 %tmp.143(%tmp.144);
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_80_329_5_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_298_46_330_4_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_80_329_5_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_301_5_329_5_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_298_46_330_4_stop:
     }
     [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc"; @line = 333; @symbol_functiondef = [onTimerLap,333,13,23]; ]
     function onTimerLap() {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_333_26_335_4_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_333_26_335_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 334 8 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_8_334_62_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_8_334_62_if_stmt:
         symbol [ mCoreTemp %tmp.2 334 13 22 ];
         %tmp.2 = getv ? :mCoreTemp;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_8_334_62_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_8_334_62_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_33_334_62_start:
+        bf %tmp.4 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_8_334_62_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_8_334_62_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_33_334_62_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 334 35 ]
         symbol [ mCoreTemp %tmp.6 334 35 44 ];
         %tmp.6 = getv ? :mCoreTemp;
@@ -1944,23 +1944,23 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         symbol [ resetLapValue %tmp.8 334 45 58 ];
         %tmp.8 = getv function %tmp.7 :resetLapValue;
         invoke %tmp.7 %tmp.8();
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_33_334_62_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_8_334_62_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_8_334_62_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_333_26_335_4_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_33_334_62_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_8_334_62_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_334_8_334_62_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_333_26_335_4_stop:
     }
     [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc"; @line = 338; @symbol_functiondef = [onTimerReset,338,13,25]; ]
     function onTimerReset() {
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_338_28_340_4_start:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_338_28_340_4_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 339 8 ]
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_8_339_66_if_stmt:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_8_339_66_if_stmt:
         symbol [ mCoreTemp %tmp.2 339 13 22 ];
         %tmp.2 = getv ? :mCoreTemp;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_8_339_66_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_8_339_66_if_true:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_33_339_66_start:
+        bf %tmp.4 @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_8_339_66_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_8_339_66_if_true:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_33_339_66_start:
 [ "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc" 339 35 ]
         symbol [ mCoreTemp %tmp.6 339 35 44 ];
         %tmp.6 = getv ? :mCoreTemp;
@@ -1968,10 +1968,10 @@ C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_
         symbol [ resetSessionValue %tmp.8 339 45 62 ];
         %tmp.8 = getv function %tmp.7 :resetSessionValue;
         invoke %tmp.7 %tmp.8();
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_33_339_66_stop:
-        goto @C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_8_339_66_if_end;
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_8_339_66_if_end:
-C_Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_338_28_340_4_stop:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_33_339_66_stop:
+        goto @C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_8_339_66_if_end;
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_339_8_339_66_if_end:
+C__Users_jfsav_OneDrive_Coding_GitHub_Fellrnr_AL_Dev_source_CoreFitContributions_mc_338_28_340_4_stop:
     }
 }
 [ @file = "C:\Users\jfsav\OneDrive\Coding\GitHub\Fellrnr-AL-Dev\source\CoreFitContributions.mc"; @line = 17; ]
